@@ -1,0 +1,11 @@
+# Logs
+*.log
+*.tmp
+*.swp
+
+# Editor directories and files
+.DS_Store
+Thumbs.db
+.vscode/*
+.idea
+.info/
