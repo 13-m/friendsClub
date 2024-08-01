@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends Club</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__container container">
+        <button class="burger"></button>
+        <div class="header__logo-body">
+          <a href="#" class="header__logo"></a>
+        </div>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">О&nbsp;клубе</a>
+            </li>
+            <li class="nav__item">
+              <a href="#residents" class="nav__link">Резиденты</a>
+            </li>
+            <li class="nav__item">
+              <a href="#event" class="nav__link">Мероприятия</a>
+            </li>
+            <li class="nav__item">
+              <a href="#news" class="nav__link">Новости</a>
+            </li>
+            <li class="nav__item">
+              <a href="#article" class="nav__link">Статьи</a>
+            </li>
+            <li class="nav__item">
+              <a href="#video" class="nav__link">Видео</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__lk" href="#">
+          <p class="header__lk-user">Мария&nbsp;Л.</p>
+          <img
+            class="lk-img"
+            src="./img/user-icon-1.png"
+            alt="Аватарка пользователя"
+          />
+        </a>
+      </div>
+    </header>
+    <main>
+      <section id="news" class="news">
+        <div class="news__container container">
+          <div class="news__wrapp wrapp__title">
+            <h2 class="news__title title">Новости</h2>
+            <a href="#" class="news__link wrapp-link"
+              >Читать все<span>Все</span></a
+            >
+          </div>
+          <ul class="news__list-cards card-list">
+            <li class="news__card-item card-item">
+              <span class="news__span-teg span-teg">Недвижимость</span>
+              <h3 class="news__subtitle subtitle">
+                Какая она&nbsp;&mdash; аренда помещения под магазин
+                в&nbsp;центре Москвы
+              </h3>
+              <div class="news__info-body info-stat">
+                <p class="news__date">11&nbsp;ноября 2024</p>
+                <span class="view">512</span><span class="like">132</span
+                ><span class="bookmark">5</span>
+              </div>
+            </li>
+            <li class="news__card-item card-item">
+              <span class="news__span-teg span-teg">Кафе и&nbsp;рестораны</span>
+              <h3 class="news__subtitle subtitle">
+                Как добиться порядка в&nbsp;офисе
+              </h3>
+              <div class="news__info-body info-stat">
+                <p class="news__date">11&nbsp;ноября 2024</p>
+                <span class="view">3</span><span class="like">14</span>
+              </div>
+            </li>
+            <li class="news__card-item card-item">
+              <span class="news__span-teg span-teg">Успех</span>
+              <h3 class="news__subtitle subtitle">
+                Научиться учету времени&nbsp;всего&nbsp;за неделю&nbsp;&mdash;
+                легко!
+              </h3>
+              <div class="news__info-body info-stat">
+                <p class="news__date">11&nbsp;ноября 2024</p>
+                <span class="view">3</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="residents" class="residents">
+        <div class="residents__container container">
+          <div class="residents__wrapp wrapp__title">
+            <h2 class="residents__title title">Новые резиденты</h2>
+            <a href="#" class="residents__link wrapp-link">Смотреть всех</a>
+          </div>
+          <ul class="residents__list">
+            <li class="residents__item">
+              <div class="img-wrapp">
+                <img
+                  src="img/ava-img-1.jpg"
+                  alt="Аватарка пользователя Дарья Михайлова"
+                  class="residents__img"
+                />
+              </div>
+              <p class="residents__subtitle">Дарья Михайлова</p>
+              <p class="desc">Санкт-Петербург, Петроградский&nbsp;район</p>
+              <p class="info">
+                Менеджер по&nbsp;недвижимости, владелец салона красоты
+              </p>
+            </li>
+            <li class="residents__item">
+              <div class="img-wrapp">
+                <img
+                  src="img/ava-img-2.jpg"
+                  alt="Аватарка пользователя Константин Константинопольский"
+                  class="residents__img"
+                />
+              </div>
+              <p class="residents__subtitle">Константин Константинопольский</p>
+              <p class="desc">Москва, Красносельский&nbsp;район</p>
+              <p class="info">Руководитель</p>
+            </li>
+            <li class="residents__item">
+              <div class="img-wrapp">
+                <img
+                  src="img/ava-img-3.jpg"
+                  alt="Аватарка пользователя Мария Леонтьева"
+                  class="residents__img"
+                />
+              </div>
+              <p class="residents__subtitle">Мария Леонтьева</p>
+              <p class="desc">Нижний Новгород, Канавинский&nbsp;район</p>
+              <p class="info">Инвестор</p>
+            </li>
+            <li class="residents__item">
+              <div class="img-wrapp">
+                <img
+                  src="img/ava-img-4.jpg"
+                  alt="Аватарка пользователя Леонид Василевский"
+                  class="residents__img"
+                />
+              </div>
+              <p class="residents__subtitle">Леонид Василевский</p>
+              <p class="desc">Новосибирск, Калининский&nbsp;район</p>
+              <p class="info">Упраляющий, начальник отдела</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="article" class="article">
+        <div class="article__container container">
+          <div class="article__wrapp wrapp__title">
+            <h2 class="article__title title">Свежие статьи</h2>
+            <a href="#" class="article__link wrapp-link"
+              >Читать все<span>Все</span></a
+            >
+          </div>
+          <ul class="article__list card-list">
+            <li class="article__card-item card-item">
+              <span class="article__span-teg span-teg">Недвижимость</span>
+              <div class="article__body">
+                <h3 class="article__subtitle subtitle">
+                  Какая она&nbsp;&mdash; аренда помещения под магазин в центре
+                  Москвы
+                </h3>
+                <p class="article__name">Константинопольская</p>
+                <div class="article__info-body info-stat">
+                  <p class="article__date">11&nbsp;ноября 2024</p>
+                  <span class="view">512</span><span class="like">132</span
+                  ><span class="bookmark">5</span>
+                </div>
+              </div>
+            </li>
+            <li class="article__card-item card-item">
+              <span class="article__span-teg span-teg"
+                >Кафе и&nbsp;рестораны</span
+              >
+              <div class="article__body">
+                <h3 class="article__subtitle subtitle">
+                  Как добиться порядка в офисе
+                </h3>
+                <p class="article__name">Южный</p>
+                <div class="article__info-body info-stat">
+                  <p class="article__date">11&nbsp;ноября 2024</p>
+                  <span class="view">512</span><span class="like">132</span
+                  ><span class="bookmark">5</span>
+                </div>
+              </div>
+            </li>
+            <li class="article__card-item card-item">
+              <span class="article__span-teg span-teg">Успех</span>
+              <div class="article__body">
+                <h3 class="article__subtitle subtitle">
+                  Научиться учету времени всего за&nbsp;неделю&nbsp;&mdash;
+                  легко!
+                </h3>
+                <p class="article__name">Ушакова</p>
+                <div class="article__info-body info-stat">
+                  <p class="article__date">11&nbsp;ноября 2024</p>
+                  <span class="view">512</span><span class="like">132</span
+                  ><span class="bookmark">5</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="event" class="event">
+        <div class="event__container container">
+          <div class="event__wrapp wrapp__title">
+            <h2 class="event__title title">Мероприятия на&nbsp;этой неделе</h2>
+            <a href="#" class="event__link wrapp-link">Смотреть все</a>
+          </div>
+          <div class="event__body">
+            <div class="event__main-card">
+              <div class="left">
+                <!-- <div class="wrapp-mobile"> -->
+                <div class="event__info">
+                  <p class="event__date">9&nbsp;апреля в&nbsp;19:00</p>
+                  <p class="event__name">Леонид Макеев</p>
+                </div>
+                <h3 class="event__slogan">
+                  KODE Waves: технологии, которые волнуют всех
+                </h3>
+                <button class="event__btn">Присоединиться</button>
+                <!-- </div> -->
+              </div>
+              <ul class="event__list right">
+                <li class="event__item"></li>
+                <li class="event__item"></li>
+                <li class="event__item"></li>
+                <li class="event__item">+154</li>
+              </ul>
+            </div>
+            <ul class="event__wrapp-list">
+              <li class="event__card">
+                <div class="event__card-body">
+                  <div class="event__info">
+                    <p class="event__date">9&nbsp;апреля в&nbsp;19:00</p>
+                    <p class="event__name">Леонид Макеев</p>
+                  </div>
+                  <div class="event__wrapp">
+                    <button class="event__btn">Присоединиться</button>
+                    <ul class="event__list right">
+                      <li class="event__item"></li>
+                      <li class="event__item"></li>
+                      <li class="event__item"></li>
+                      <li class="event__item">+154</li>
+                    </ul>
+                  </div>
+                </div>
+                <h3 class="event__heading">
+                  Основы архитектуры и&nbsp;интеграции информационных систем
+                </h3>
+              </li>
+              <li class="event__card">
+                <div class="event__card-body">
+                  <div class="event__info">
+                    <p class="event__date">9&nbsp;апреля в&nbsp;19:00</p>
+                    <p class="event__name">Леонид Макеев</p>
+                  </div>
+                  <div class="event__wrapp">
+                    <button class="event__btn">Присоединиться</button>
+                    <ul class="event__list right">
+                      <li class="event__item"></li>
+                      <li class="event__item"></li>
+                      <li class="event__item"></li>
+                      <li class="event__item">+154</li>
+                    </ul>
+                  </div>
+                </div>
+                <h3 class="event__heading">
+                  Анализ &amp;&nbsp;Управление в&nbsp;ИТ-проектах 2024
+                </h3>
+              </li>
+            </ul>
+          </div>
+          <ul class="event__list-molile">
+            <li class="event__item-mobile">
+              <div class="event__body-mobile">
+                <div class="event__info">
+                  <p class="event__date">9&nbsp;апреля в&nbsp;19:00</p>
+                  <p class="event__name">Леонид Макеев</p>
+                </div>
+                <div class="event__wrapp-mobile">
+                  <button class="event__btn">Присоединиться</button>
+                  <ul class="event__list">
+                    <li class="event__item">+154</li>
+                  </ul>
+                </div>
+              </div>
+              <h3 class="event__subtitle">
+                KODE Waves: технологии, которые волнуют всех
+              </h3>
+            </li>
+            <li class="event__item-mobile">
+              <div class="event__body-mobile">
+                <div class="event__info">
+                  <p class="event__date">9&nbsp;апреля в&nbsp;19:00</p>
+                  <p class="event__name">Леонид Макеев</p>
+                </div>
+                <div class="event__wrapp-mobile">
+                  <button class="event__btn">Присоединиться</button>
+                  <ul class="event__list">
+                    <li class="event__item">+154</li>
+                  </ul>
+                </div>
+              </div>
+              <h3 class="event__subtitle">
+                Основы архитектуры и&nbsp;интеграции информационных систем
+              </h3>
+            </li>
+            <li class="event__item-mobile">
+              <div class="event__body-mobile">
+                <div class="event__info">
+                  <p class="event__date">9&nbsp;апреля в&nbsp;19:00</p>
+                  <p class="event__name">Леонид Макеев</p>
+                </div>
+                <div class="event__wrapp-mobile">
+                  <button class="event__btn">Присоединиться</button>
+                  <ul class="event__list">
+                    <li class="event__item">+154</li>
+                  </ul>
+                </div>
+              </div>
+              <h3 class="event__subtitle">
+                Анализ &amp;&nbsp;Управление в&nbsp;ИТ-проектах 2024
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="video" class="video">
+        <div class="video__container container">
+          <div class="video__wrapp wrapp__title">
+            <h2 class="video__title title">Новые видео</h2>
+            <a href="#" class="video__link link wrapp-link"
+              >Смотреть все<span>Все</span></a
+            >
+          </div>
+          <ul class="video__list card-list">
+            <li class="video__card-item card-item">
+              <span class="video__span-teg span-teg">Недвижимость</span>
+              <!-- <video class="video__video" src="#"></video> -->
+              <!-- заглушка в виде картинки -->
+              <div class="video__video"></div>
+              <div class="video__body">
+                <h3 class="video__subtitle subtitle">
+                  Какая она&nbsp;&mdash; аренда помещения под магазин
+                  в&nbsp;центре Москвы
+                </h3>
+                <p class="video__name">Константинопольская</p>
+                <div class="video__info-body info-stat">
+                  <p class="video__date">11&nbsp;ноября 2024</p>
+                  <span class="view">512</span><span class="like">132</span
+                  ><span class="bookmark">5</span>
+                </div>
+              </div>
+            </li>
+            <li class="video__card-item card-item">
+              <span class="video__span-teg span-teg"
+                >Кафе и&nbsp;рестораны</span
+              >
+              <!-- <video class="video__video" src="#"></video> -->
+              <!-- заглушка в виде картинки -->
+              <div class="video__video"></div>
+              <div class="video__body">
+                <h3 class="video__subtitle subtitle">
+                  Как добиться порядка в&nbsp;офисе
+                </h3>
+                <p class="video__name">Константинопольская</p>
+                <div class="video__info-body info-stat">
+                  <p class="video__date">11&nbsp;ноября 2024</p>
+                  <span class="view">512</span><span class="like">132</span
+                  ><span class="bookmark">5</span>
+                </div>
+              </div>
+            </li>
+            <li class="video__card-item card-item">
+              <span class="video__span-teg span-teg">Успех</span>
+              <!-- <video class="video__video" src="#"></video> -->
+              <!-- заглушка в виде картинки -->
+              <div class="video__video"></div>
+              <div class="video__body">
+                <h3 class="video__subtitle subtitle">
+                  Научиться учету времени всего за&nbsp;неделю&nbsp;&mdash;
+                  легко!
+                </h3>
+                <p class="video__name">Константинопольская</p>
+                <div class="video__info-body info-stat">
+                  <p class="video__date">11&nbsp;ноября 2024</p>
+                  <span class="view">512</span><span class="like">132</span
+                  ><span class="bookmark">5</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__container container">
+        <div class="left">
+          <a href="!#" class="footer__link">Правила клуба</a>
+          <a href="#!" class="footer__link">Договор оферты</a>
+        </div>
+        <div class="right">
+          <a href="#" class="footer__link">Правила продажи товаров</a>
+          <ul class="footer__list">
+            <li class="footer__item"></li>
+            <li class="footer__item"></li>
+            <li class="footer__item"></li>
+            <li class="footer__item"></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
