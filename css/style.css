@@ -349,6 +349,7 @@ main {
 
 .residents__item {
   width: 220px;
+  padding-bottom: 20px;
 }
 
 .residents__img {
@@ -770,21 +771,36 @@ main {
   position: relative;
   margin-bottom: 12px;
   width: 100%;
-  height: 210px;
+  aspect-ratio: 1.6 / 1;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .video__card-item:nth-child(1) .video__video {
-  background: url("../img/poster-img-4.png") no-repeat center center / cover;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.56) 100%
+    ),
+    url("../img/poster-img-4.png") no-repeat center center / cover;
 }
 
 .video__card-item:nth-child(2) .video__video {
-  background: url("../img/poster-img-5.png") no-repeat center center / cover;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.56) 100%
+    ),
+    url("../img/poster-img-5.png") no-repeat center center / cover;
 }
 
 .video__card-item:nth-child(3) .video__video {
-  background: url("../img/poster-img-6.png") no-repeat center center / cover;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.56) 100%
+    ),
+    url("../img/poster-img-6.png") no-repeat center center / cover;
 }
 
 .video__video::after {
@@ -932,6 +948,10 @@ footer .left {
   .event__list.right .event__item:nth-child(-n + 3) {
     display: none;
   }
+
+  .video {
+    padding-bottom: 0;
+  }
 }
 
 @media (max-width: 992px) {
@@ -970,16 +990,16 @@ footer .left {
     border-radius: 8px;
   }
 
-  .event__body-mobile:nth-child(1) {
-    background: url("../img/poster-img-7.jpg") no-repeat center center / cover;
+  .event__item-mobile:nth-child(1) .event__body-mobile {
+    background: url("../img/poster-img-7.png") no-repeat center center / cover;
   }
 
-  .event__body-mobile:nth-child(2) {
-    background: url("../img/poster-img-8.jpg") no-repeat center center / cover;
+  .event__item-mobile:nth-child(2) .event__body-mobile {
+    background: url("../img/poster-img-8.png") no-repeat center center / cover;
   }
 
-  .event__body-mobile:nth-child(2) {
-    background: url("../img/poster-img-9.jpg") no-repeat center center / cover;
+  .event__item-mobile:nth-child(3) .event__body-mobile {
+    background: url("../img/poster-img-9.png") no-repeat center center / cover;
   }
 
   .event__wrapp-mobile {
@@ -1040,7 +1060,11 @@ footer .left {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 790px) {
+  .container {
+    margin: 0 25px;
+    padding: 30px 20px;
+  }
   .header__lk-user {
     display: none;
   }
@@ -1052,24 +1076,24 @@ footer .left {
     left: -250px;
     width: 250px;
     height: 100%;
+    padding: 110px 20px 20px;
     background-color: #333;
     color: white;
-    transition: left 0.3s ease;
+    transition: left 0.3s ease-in-out;
     z-index: 100;
   }
 
   .nav.visible {
     left: 0;
-    padding: 110px 20px 20px;
   }
 
-  .nav.visible .nav__list {
+  .nav .nav__list {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
   }
 
-  .nav.visible .nav__link {
+  .nav .nav__link {
     font-size: 20px;
   }
 
@@ -1132,12 +1156,19 @@ footer .left {
   }
   /* Конец бургер меню */
 
+  .news {
+    padding-top: 20px;
+  }
   .news__list-cards {
     flex-direction: column;
   }
 
   .news__list-cards .news__card-item {
     width: 100%;
+  }
+
+  .news__card-item:nth-child(n + 2) {
+    margin-bottom: 20px;
   }
 
   .news__card-item:nth-child(1) {
@@ -1160,7 +1191,8 @@ footer .left {
   .card-item:nth-child(1):before {
     content: "";
     width: 100%;
-    height: 240px;
+    height: auto;
+    aspect-ratio: 1.6 / 1;
     margin-bottom: 12px;
     border-radius: 8px;
   }
@@ -1218,14 +1250,16 @@ footer .left {
 
   .card-item:nth-child(n + 2):before {
     position: absolute;
-    width: 115px;
-    height: 80px;
+    width: 180px;
+    height: auto;
+    aspect-ratio: 1.6 / 1;
     top: 0;
     right: 0;
   }
 
   .card-item:nth-child(1) .subtitle {
     max-width: 325px;
+    font-size: 18px;
   }
 
   .card-item:nth-child(n + 2) .subtitle {
@@ -1256,8 +1290,9 @@ footer .left {
 
   .card-item:nth-child(n + 2) .video__video {
     position: absolute;
-    width: 115px;
-    height: 80px;
+    width: 180px;
+    aspect-ratio: 1.6 / 1;
+    height: auto;
     top: 0;
     right: 0;
   }
@@ -1271,7 +1306,14 @@ footer .left {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 490px) {
+  .card-item:nth-child(n + 2):before,
+  .card-item:nth-child(n + 2) .video__video {
+    width: 150px;
+  }
+}
+
+@media (max-width: 460px) {
   .container {
     margin: 0 15px;
     padding: 0;
@@ -1294,6 +1336,12 @@ footer .left {
   .news {
     margin-bottom: 28px;
     padding-top: 15px;
+  }
+
+  .card-item:nth-child(n + 2):before,
+  .card-item:nth-child(n + 2) .video__video {
+    width: 125px;
+    height: auto;
   }
 
   .wrapp-link {
@@ -1326,7 +1374,7 @@ footer .left {
   }
 
   .residents__container {
-    padding: 20px 0 40px;
+    padding: 20px 0 20px;
   }
 
   .residents__img {
@@ -1402,5 +1450,11 @@ footer .left {
     display: flex;
     flex-direction: column;
     gap: 12px;
+  }
+}
+
+@media (max-width: 325px) {
+  .card-item:nth-child(n + 2) .subtitle {
+    max-width: 170px;
   }
 }
