@@ -4,8 +4,17 @@
   --color-text: #ababab;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
+}
+
+#article,
+#video {
+  display: none;
 }
 
 body {
@@ -66,7 +75,6 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px;
 }
 
 .nav__item {
@@ -76,6 +84,7 @@ main {
 }
 
 .nav__link {
+  padding: 10px 15px;
   color: var(--color-text);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -1087,7 +1096,7 @@ footer .left {
     left: 0;
   }
 
-  .nav .nav__list {
+  .nav__list--burger {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
