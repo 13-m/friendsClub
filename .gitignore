@@ -1,11 +1,29 @@
-# Logs
-*.log
-*.tmp
-*.swp
-
-# Editor directories and files
+# System files 
 .DS_Store
 Thumbs.db
-.vscode/*
-.idea
-.info/
+
+# Files build
+# node_modules/
+# bower_components/
+# dist/
+# build/
+
+# temp files
+*.sublime-workspace
+*.sublime-project
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Files environment 
+.env
+.env.local
+.env.*.local
+
+# temp files
+*.log
+*.tmp
+
+# info
+info/

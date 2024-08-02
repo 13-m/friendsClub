@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends Club</title>
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/resident-page.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__container container">
+        <button class="burger"></button>
+        <div class="header__logo-body">
+          <a href="#" class="header__logo"></a>
+        </div>
+        <nav id="burgerMenu" class="header__nav nav">
+          <ul class="nav__list nav__list--burger">
+            <li class="nav__item">
+              <a href="#" class="nav__link">О&nbsp;клубе</a>
+            </li>
+            <li class="nav__item">
+              <a href="#residents" class="nav__link">Резиденты</a>
+            </li>
+            <li class="nav__item">
+              <a href="#event" class="nav__link">Мероприятия</a>
+            </li>
+            <li class="nav__item">
+              <a href="#news" class="nav__link">Новости</a>
+            </li>
+            <li class="nav__item">
+              <a href="#article" class="nav__link">Статьи</a>
+            </li>
+            <li class="nav__item">
+              <a href="#video" class="nav__link">Видео</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__lk" href="#">
+          <p class="header__lk-user">Мария&nbsp;Л.</p>
+          <img
+            class="lk-img"
+            src="./img/user-icon-1.png"
+            alt="Аватарка пользователя"
+          />
+        </a>
+      </div>
+    </header>
+    <main>
+      <section class="residents">
+        <div class="container residents__container">
+          <div class="residenst__head">
+            <h1 class="residents__title">Резиденты</h1>
+            <div class="residents__head-wrapp">
+              <p id="arrowSort" class="residents__select-sort">
+                По популярности
+              </p>
+              <!-- <select
+                class="resident__select-sort"
+                name="sort"
+                id="select-js-sort"
+              >
+                <option value="popular">По популярности</option> -->
+              <!-- дальше заглушки -->
+              <!-- <option value="someValue0">По возрасту</option>
+                <option value="somevalue1">По стажу</option>
+                <option value="somevalue2">По достижениям</option>
+              </select> -->
+            </div>
+          </div>
+          <form action="#" class="residents__form-wrapp form">
+            <label class="form__label">
+              <input
+                type="text"
+                class="form__input"
+                placeholder="Найти резидента"
+              />
+            </label>
+            <select
+              class="form__select"
+              name="industry"
+              id="select-js-industry"
+            >
+              <option value="">Отрасль</option>
+              <option value="finance">Финансы</option>
+              <option value="auto">Авто</option>
+              <option value="medicine">Медицина</option>
+              <option value="house">Недвижимость</option>
+              <option value="education">Образование</option>
+              <option value="services">Услуги</option>
+            </select>
+            <select class="form__select" name="major" id="select-js-major">
+              <option value="">Специализация</option>
+              <option value="manager">Менеджер</option>
+              <option value="owner">Владелец</option>
+              <option value="director">Руководитель</option>
+              <option value="administrator">Администратор</option>
+            </select>
+            <select class="form__select" name="city" id="select-js-city">
+              <option value="">Город и район</option>
+              <option value="search">Найти город</option>
+              <option value="city1">Санкт-Петербург</option>
+              <option value="city2">Архангельск</option>
+              <option value="city3">Волгоград</option>
+              <option value="city4">Ижевск</option>
+              <option value="city5">Пермь</option>
+            </select>
+            <!-- заглушка -->
+            <div class="residents__plug"></div>
+          </form>
+          <ul class="residents__list">
+            <li class="residents__item card">
+              <div class="card__top">
+                <picture class="card__img">
+                  <source src="img/ava-img-1.jpg" />
+                  <img
+                    src="img/ava-img-1.jpg"
+                    alt="Фотография резидента клуба"
+                  />
+                </picture>
+                <ul class="card__list-body">
+                  <li class="card__item-decr">
+                    <h2 class="card__name">Юлиана Константинопольская</h2>
+                    <!-- награды, пока заглушка-->
+                    <!-- ul.card__list-awards>li.card__item-awards*4 -->
+                    <ul class="card__list-sector">
+                      <li class="card__item-sector">Недвижимость</li>
+                      <li class="card__item-sector">ИТ</li>
+                      <li class="card__item-sector">Бизнес</li>
+                      <li class="card__item-sector">+1</li>
+                    </ul>
+                  </li>
+                  <li class="card__item-decr">
+                    <p class="card__decr">
+                      Санкт-Петербург, Петроградский район
+                    </p>
+                  </li>
+                  <li class="card__item-decr">
+                    <ul class="card__major-list">
+                      <li class="card__item-major">
+                        Менеджер по&nbsp;недвижимости
+                      </li>
+                      <li class="card__item-major">Владелец салона красоты</li>
+                      <li class="card__item-major">Владелец салона красоты</li>
+                    </ul>
+                  </li>
+                  <li class="card__item-decr">
+                    <div class="card__info-wrapp">
+                      <h2 class="card__headline">Сильные компетенции</h2>
+                      <ul class="card__list-info">
+                        <li class="card__item-info">
+                          Определяю проблему и раскладываю ее на составные
+                          части.
+                        </li>
+                        <li class="card__item-info">
+                          Связываю воедино и оцениваю информацию из различных
+                          источников. Выявляю причины возникновения проблемы.
+                        </li>
+                        <li class="card__item-info">
+                          Придумываю оригинальные идеи, разрабатываю
+                          инновационные предложения
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card__info-wrapp">
+                      <h2 class="card__headline">Ищу помощь от&nbsp;клуба</h2>
+                      <ul class="card__list-info">
+                        <li class="card__item-info">
+                          Найти точку роста и&nbsp;повысить эффективность
+                        </li>
+                        <li class="card__item-info">Получить инвестиции</li>
+                        <li class="card__item-info">
+                          Создать стратегию продаж/маркетинга
+                        </li>
+                        <li class="card__item-info">
+                          Найти точку роста и повысить эффективность
+                        </li>
+                        <li class="card__item-info">Получить инвестиции</li>
+                        <li class="card__item-info">
+                          Создать стратегию продаж/маркетинга
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="card__bottom">
+                <ul class="card__list-interaction">
+                  <li class="card__item-btn">
+                    <button class="card__btn">Сообщение</button>
+                  </li>
+                </ul>
+                <ul class="card__list-achievements">
+                  <li class="card__item-span">
+                    <span class="card__span">3</span>
+                  </li>
+                  <li class="card__item-span">
+                    <span class="card__span">14</span>
+                  </li>
+                  <li class="card__item-span">
+                    <span class="card__span">1</span>
+                  </li>
+                  <li class="card__item-span">
+                    <span class="card__span">12</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="residents__item card">
+              <div class="card__top">
+                <picture class="card__img">
+                  <source src="img/ava-img-5.jpg" />
+                  <img
+                    src="img/ava-img-5.jpg"
+                    alt="Фотография резидента клуба"
+                  />
+                </picture>
+                <ul class="card__list-body">
+                  <li class="card__item-decr">
+                    <h2 class="card__name">Сергей Антонов</h2>
+                    <ul class="card__list-sector">
+                      <li class="card__item-sector">Недвижимость</li>
+                    </ul>
+                  </li>
+                  <li class="card__item-decr">
+                    <p class="card__decr">
+                      Санкт-Петербург, Петроградский район
+                    </p>
+                  </li>
+                  <li class="card__item-decr">
+                    <ul class="card__major-list">
+                      <li class="card__item-major">
+                        Менеджер по&nbsp;недвижимости
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="card__item-decr">
+                    <div class="card__info-wrapp">
+                      <h2 class="card__headline">Сильные компетенции</h2>
+                      <ul class="card__list-info">
+                        <li class="card__item-info">
+                          У&nbsp;меня большой опыт автоматизации процессов
+                          в&nbsp;компаниях, особенно в&nbsp;отделе продаж
+                          и&nbsp;макетинге (подключение умных роботов, чатботов,
+                          различной аналитики, например, звонков с&nbsp;помощью
+                          нейросетей, и&nbsp;настройка дэшбордов, CRM
+                          и&nbsp;т.д.)
+                        </li>
+                        <li class="card__item-info">
+                          С&nbsp;удовольствием расскажу о&nbsp;наших успешных
+                          и&nbsp;неуспешных экспериментах в&nbsp;найме (как
+                          мы&nbsp;выстравиваем воронку, как отбираем
+                          за&nbsp;счёт тестов и&nbsp;доводим до&nbsp;интересы
+                          с&nbsp;помощью ботов и&nbsp;другое)
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card__info-wrapp">
+                      <h2 class="card__headline">Ищу помощь от&nbsp;клуба</h2>
+                      <ul class="card__list-info">
+                        <li class="card__item-info">Операционное управление</li>
+                        <li class="card__item-info">
+                          Масштабирование компании
+                        </li>
+                        <li class="card__item-info">Онлайн реклама</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="card__bottom">
+                <ul class="card__list-interaction">
+                  <li class="card__item-btn">
+                    <button class="card__btn">Сообщение</button>
+                  </li>
+                </ul>
+                <ul class="card__list-achievements">
+                  <li class="card__item-span">
+                    <span class="card__span">23</span>
+                  </li>
+                  <li class="card__item-span">
+                    <span class="card__span">133</span>
+                  </li>
+                  <li class="card__item-span">
+                    <span class="card__span">51</span>
+                  </li>
+                  <li class="card__item-span">
+                    <span class="card__span">12</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="residents__item card">
+              <div class="card__top">
+                <picture class="card__img">
+                  <source src="img/ava-img-6.jpg" />
+                  <img
+                    src="img/ava-img-6.jpg"
+                    alt="Фотография резидента клуба"
+                  />
+                </picture>
+                <ul class="card__list-body">
+                  <li class="card__item-decr">
+                    <h2 class="card__name">Елена Петровская</h2>
+                    <ul class="card__list-sector">
+                      <li class="card__item-sector">Недвижимость</li>
+                      <li class="card__item-sector">ИТ</li>
+                      <li class="card__item-sector">Бизнес</li>
+                      <li class="card__item-sector">+1</li>
+                    </ul>
+                  </li>
+                  <li class="card__item-decr">
+                    <p class="card__decr">
+                      Санкт-Петербург, Петроградский район
+                    </p>
+                  </li>
+                  <li class="card__item-decr">
+                    <ul class="card__major-list">
+                      <li class="card__item-major">
+                        Менеджер по&nbsp;недвижимости
+                      </li>
+                      <li class="card__item-major">Владелец салона красоты</li>
+                      <li class="card__item-major">Владелец салона красоты</li>
+                    </ul>
+                  </li>
+                  <li class="card__item-decr">
+                    <div class="card__info-wrapp">
+                      <h2 class="card__headline">Сильные компетенции</h2>
+                      <ul class="card__list-info">
+                        <li class="card__item-info">
+                          Определяю проблему и раскладываю ее на составные
+                          части.
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card__info-wrapp">
+                      <h2 class="card__headline">Ищу помощь от&nbsp;клуба</h2>
+                      <ul class="card__list-info">
+                        <li class="card__item-info">
+                          Найти точку роста и&nbsp;повысить эффективность
+                        </li>
+                        <li class="card__item-info">Получить инвестиции</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="card__bottom">
+                <ul class="card__list-interaction">
+                  <li class="card__item-btn">
+                    <button class="card__btn">Сообщение</button>
+                  </li>
+                </ul>
+                <ul class="card__list-achievements">
+                  <li class="card__item-span">
+                    <span class="card__span">3</span>
+                  </li>
+                  <li class="card__item-span">
+                    <span class="card__span">14</span>
+                  </li>
+                  <li class="card__item-span">
+                    <span class="card__span">1</span>
+                  </li>
+                  <li class="card__item-span">
+                    <span class="card__span">12</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="residents__item card favorite">
+              <div class="card__top">
+                <picture class="card__img">
+                  <source src="img/ava-img-7.jpg" />
+                  <img
+                    src="img/ava-img-7.jpg"
+                    alt="Фотография резидента клуба"
+                  />
+                </picture>
+                <ul class="card__list-body">
+                  <li class="card__item-decr">
+                    <h2 class="card__name">Давид Романов</h2>
+                    <ul class="card__list-sector">
+                      <li class="card__item-sector">Недвижимость</li>
+                      <li class="card__item-sector">ИТ</li>
+                      <li class="card__item-sector">Бизнес</li>
+                      <li class="card__item-sector">+1</li>
+                    </ul>
+                  </li>
+                  <li class="card__item-decr">
+                    <p class="card__decr">
+                      Санкт-Петербург, Петроградский район
+                    </p>
+                  </li>
+                  <li class="card__item-decr">
+                    <ul class="card__major-list">
+                      <li class="card__item-major">
+                        Менеджер по&nbsp;недвижимости
+                      </li>
+                      <li class="card__item-major">Владелец салона красоты</li>
+                      <li class="card__item-major">Владелец салона красоты</li>
+                    </ul>
+                  </li>
+                  <li class="card__item-decr">
+                    <div class="card__info-wrapp">
+                      <h2 class="card__headline">Сильные компетенции</h2>
+                      <ul class="card__list-info">
+                        <li class="card__item-info">
+                          Знаю и&nbsp;умею все что касается внедрения
+                          управленческого учета
+                        </li>
+                        <li class="card__item-info">
+                          Мастерски строю финансовые модели, считаю
+                          Unit-экономику
+                        </li>
+                        <li class="card__item-info">
+                          Провожу стратегические сессии в&nbsp;роли внешнего
+                          модератора
+                        </li>
+                        <li class="card__item-info">
+                          Подбираем рабочих для производств
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card__info-wrapp">
+                      <h2 class="card__headline">Ищу помощь от&nbsp;клуба</h2>
+                      <ul class="card__list-info">
+                        <li class="card__item-info">Новые каналы трафика</li>
+                        <li class="card__item-info">
+                          Интересно развивать личный блог в&nbsp;телеграме,
+                          здорово, если тут есть специалисты в&nbsp;этой области
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="card__bottom">
+                <ul class="card__list-interaction">
+                  <li class="card__item-btn">
+                    <button class="card__btn">Сообщение</button>
+                  </li>
+                </ul>
+                <ul class="card__list-achievements">
+                  <li class="card__item-span">
+                    <span class="card__span">3</span>
+                  </li>
+                  <li class="card__item-span">
+                    <span class="card__span">14</span>
+                  </li>
+                  <li class="card__item-span">
+                    <span class="card__span">1</span>
+                  </li>
+                  <li class="card__item-span">
+                    <span class="card__span">12</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__container container">
+        <div class="left">
+          <a href="!#" class="footer__link">Правила клуба</a>
+          <a href="#!" class="footer__link">Договор оферты</a>
+        </div>
+        <div class="right">
+          <a href="#" class="footer__link">Правила продажи товаров</a>
+          <ul class="footer__list">
+            <li class="footer__item"></li>
+            <li class="footer__item"></li>
+            <li class="footer__item"></li>
+            <li class="footer__item"></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
