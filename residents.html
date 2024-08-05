@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Friends Club</title>
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
     />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/resident-page.css" />
-    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/resident-page.css" />
+    <link rel="stylesheet" href="./css/resident-media.css" />
+    .
   </head>
   <body>
     <header>
@@ -24,10 +25,10 @@
         <nav id="burgerMenu" class="header__nav nav">
           <ul class="nav__list nav__list--burger">
             <li class="nav__item">
-              <a href="#" class="nav__link">О&nbsp;клубе</a>
+              <a href="./main.html" class="nav__link">О&nbsp;клубе</a>
             </li>
             <li class="nav__item">
-              <a href="#residents" class="nav__link">Резиденты</a>
+              <a href="./residents.html" class="nav__link">Резиденты</a>
             </li>
             <li class="nav__item">
               <a href="#event" class="nav__link">Мероприятия</a>
@@ -45,11 +46,21 @@
         </nav>
         <a class="header__lk" href="#">
           <p class="header__lk-user">Мария&nbsp;Л.</p>
-          <img
-            class="lk-img"
-            src="./img/user-icon-1.png"
-            alt="Аватарка пользователя"
-          />
+          <picture>
+            <source
+              srcset="./img/user-icon-1-2x.jpg 2x, ./img/user-icon-1.jpg 1x"
+              media="(max-width: 600px)"
+            />
+            <source
+              srcset="./img/user-icon-1-2x.jpg 2x, ./img/user-icon-1.jpg 1x"
+              media="(min-width: 601px)"
+            />
+            <img
+              class="lk-img"
+              src="./img/user-icon-1.jpg"
+              alt="Аватарка пользователя"
+            />
+          </picture>
         </a>
       </div>
     </header>
@@ -119,9 +130,9 @@
             <li class="residents__item card">
               <div class="card__top">
                 <picture class="card__img">
-                  <source src="img/ava-img-1.jpg" />
+                  <source src="./img/ava-img-1.jpg" />
                   <img
-                    src="img/ava-img-1.jpg"
+                    src="./img/ava-img-1.jpg"
                     alt="Фотография резидента клуба"
                   />
                 </picture>
@@ -216,9 +227,9 @@
             <li class="residents__item card">
               <div class="card__top">
                 <picture class="card__img">
-                  <source src="img/ava-img-5.jpg" />
+                  <source src="./img/ava-img-5.jpg" />
                   <img
-                    src="img/ava-img-5.jpg"
+                    src="./img/ava-img-5.jpg"
                     alt="Фотография резидента клуба"
                   />
                 </picture>
@@ -300,9 +311,9 @@
             <li class="residents__item card">
               <div class="card__top">
                 <picture class="card__img">
-                  <source src="img/ava-img-6.jpg" />
+                  <source src="./img/ava-img-6.jpg" />
                   <img
-                    src="img/ava-img-6.jpg"
+                    src="./img/ava-img-6.jpg"
                     alt="Фотография резидента клуба"
                   />
                 </picture>
@@ -377,9 +388,9 @@
             <li class="residents__item card favorite">
               <div class="card__top">
                 <picture class="card__img">
-                  <source src="img/ava-img-7.jpg" />
+                  <source src="./img/ava-img-7.jpg" />
                   <img
-                    src="img/ava-img-7.jpg"
+                    src="./img/ava-img-7.jpg"
                     alt="Фотография резидента клуба"
                   />
                 </picture>
@@ -485,6 +496,6 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

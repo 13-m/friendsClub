@@ -37,6 +37,7 @@ footer {
 
 .container {
   max-width: 1200px;
+  /* padding: 0 88px; */
   margin: 0 auto;
 }
 
@@ -44,7 +45,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 11px 88px;
+  padding: 11px 0;
+  /* padding: 11px 88px; */
   align-items: center;
 }
 
@@ -106,6 +108,7 @@ footer {
 .lk-img {
   width: 36px;
   height: 36px;
+  border-radius: 4px;
 }
 
 /* footer */
@@ -114,7 +117,8 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 37px 88px;
+  padding: 37px 0;
+  /* padding: 37px 88px; */
 }
 
 .footer__link {
@@ -176,6 +180,8 @@ footer .left {
 
 .choices {
   margin: 0;
+  flex: 1 1;
+  border-radius: 8px;
 }
 
 .choices__inner {
@@ -205,9 +211,30 @@ footer .left {
 .is-open .choices__list--dropdown,
 .is-open .choices__list[aria-expanded] {
   background-color: #4b4949;
+  border: none;
 }
+
+.choices .choices__list.choices__list--dropdown .choices__placeholder {
+  display: none;
+}
+
+.choices.is-focused.is-open .choices[data-type*="select-one"] .choices__inner {
+  background-color: #4b4949;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: transparent;
+  background-color: #4b4949;
+  color: #fff;
+}
+
 .choices__list--single {
   padding-right: 28px;
+}
+
+.choices__list--single .choices__item {
+  opacity: 1;
 }
 
 .choices__list--dropdown .choices__list,
@@ -218,4 +245,35 @@ footer .left {
 .choices__list--dropdown .choices__item,
 .choices__list[aria-expanded] .choices__item {
   padding: 8px;
+  color: #ababab;
+}
+
+.is-open .choices__inner {
+  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
+  background-color: #4b4949;
+}
+
+/* .choices__placeholder {
+  display: none;
+} */
+
+#my-select option[disabled] {
+  display: none;
+}
+
+.choices[data-type*="select-one"] .choices__input {
+  /* background-color: #5b5b5b; */
+  padding-left: 30px;
+  border: none;
+  color: #fff;
+  background: url("../img/search-icon.svg") no-repeat 5% 50% / 15px, #5b5b5b;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+}
+
+.is-selected {
+  background: url("../img/check-green-icon.svg") no-repeat 95% center / 15px;
 }

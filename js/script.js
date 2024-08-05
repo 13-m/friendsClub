@@ -19,9 +19,9 @@ const element2 = document.getElementById("select-js-major");
 const element3 = document.getElementById("select-js-city");
 const choices1 = new Choices(element1, {
   searchEnabled: false,
+  itemSelectText: "",
   placeholder: true,
   placeholderValue: null,
-  itemSelectText: "",
 });
 
 const choices2 = new Choices(element2, {
@@ -32,7 +32,7 @@ const choices2 = new Choices(element2, {
 });
 
 const choices3 = new Choices(element3, {
-  searchEnabled: false,
+  searchEnabled: true,
   placeholder: true,
   placeholderValue: null,
   itemSelectText: "",
