@@ -19,7 +19,7 @@
 
 .news {
   padding-top: 82px;
-  margin-bottom: 164px;
+  margin-bottom: 82px;
 }
 
 .news__container {
@@ -235,6 +235,7 @@
 .residents__container {
   border-radius: 8px;
   position: relative;
+  padding: 64px 0;
   /* padding: 64px 88px 50px; */
   /* background-color: #1f1f1f; */
 }
@@ -242,9 +243,9 @@
 .residents__container::after {
   content: "";
   position: absolute;
-  top: -64px;
   left: -88px;
-  bottom: -50px;
+  top: 0;
+  bottom: 0;
   right: -88px;
   border-radius: 8px;
   background-color: #1f1f1f;
@@ -266,6 +267,7 @@
 }
 
 .residents__list {
+  overflow-x: auto;
   display: flex;
   flex-direction: row;
   margin: 0;
@@ -443,6 +445,7 @@
   position: relative;
   /* padding: 64px 0; */
   /* padding: 64px 88px; */
+  padding: 64px 0;
   border-radius: 8px;
   background-color: #fff;
 }
@@ -450,9 +453,9 @@
 .event__container::after {
   content: "";
   position: absolute;
-  top: -64px;
+  top: 0;
   left: -88px;
-  bottom: -50px;
+  bottom: 0;
   right: -88px;
   border-radius: 8px;
   background-color: #fff;

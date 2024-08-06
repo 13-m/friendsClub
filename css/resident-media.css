@@ -1,8 +1,4 @@
 @media (max-width: 1400px) {
-  .container {
-    margin: 0 50px;
-  }
-
   .header__container {
     gap: 20px;
   }
@@ -17,13 +13,31 @@
 
 @media (max-width: 1100px) {
   .container {
-    margin: 0 50px;
+    margin: 0 40px;
   }
 }
 
 @media (max-width: 900px) {
   .card__major-list {
     flex-direction: column;
+  }
+
+  .card__item-decr:nth-child(1) {
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+
+  .card__item-decr:nth-child(3) {
+    flex-direction: column;
+  }
+
+  .card__info-wrapp {
+    width: 100%;
+  }
+
+  .form__label {
+    flex: 20% 0 1;
   }
 }
 @media (max-width: 790px) {
@@ -129,6 +143,54 @@
       #ffffff 100%
     );
   }
+
+  .residents {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .card__img {
+    display: none;
+  }
+
+  .card-wrapp {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* align-items: center; */
+    /* padding-left: 23%; */
+  }
+
+  .card-wrapp::before {
+    content: "";
+    position: relative;
+    width: 30%;
+    /* left: 0; */
+    /* top: 0; */
+    display: block;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+  }
+
+  .card:nth-child(1) .card-wrapp::before {
+    background: url("../img/ava-img-1.jpg") no-repeat center center / cover;
+  }
+  .card:nth-child(2) .card-wrapp::before {
+    background: url("../img/ava-img-2.jpg") no-repeat center center / cover;
+  }
+  .card:nth-child(3) .card-wrapp::before {
+    background: url("../img/ava-img-3.jpg") no-repeat center center / cover;
+  }
+  .card:nth-child(4) .card-wrapp::before {
+    background: url("../img/ava-img-4.jpg") no-repeat center center / cover;
+  }
+
+  .card__item-decr:nth-child(1) {
+    gap: 10px;
+  }
 }
 
 @media (max-width: 460px) {
@@ -153,6 +215,10 @@
 
   .nav {
     padding: 80px 15px 20px;
+  }
+
+  .card__item-decr:nth-child(3) {
+    display: none;
   }
 
   footer {

@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
     <title>Friends Club</title>
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
@@ -13,7 +14,6 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/resident-page.css" />
     <link rel="stylesheet" href="./css/resident-media.css" />
-    .
   </head>
   <body>
     <header>
@@ -115,8 +115,7 @@
               <option value="administrator">Администратор</option>
             </select>
             <select class="form__select" name="city" id="select-js-city">
-              <option value="">Город и район</option>
-              <option value="search">Найти город</option>
+              <option value="">Город</option>
               <option value="city1">Санкт-Петербург</option>
               <option value="city2">Архангельск</option>
               <option value="city3">Волгоград</option>
@@ -138,7 +137,14 @@
                 </picture>
                 <ul class="card__list-body">
                   <li class="card__item-decr">
-                    <h2 class="card__name">Юлиана Константинопольская</h2>
+                    <div class="card-wrapp">
+                      <div class="card-wrapp-title">
+                        <h2 class="card__name">Юлиана Константинопольская</h2>
+                        <p class="card__decr">
+                          Санкт-Петербург, Петроградский район
+                        </p>
+                      </div>
+                    </div>
                     <!-- награды, пока заглушка-->
                     <!-- ul.card__list-awards>li.card__item-awards*4 -->
                     <ul class="card__list-sector">
@@ -147,11 +153,6 @@
                       <li class="card__item-sector">Бизнес</li>
                       <li class="card__item-sector">+1</li>
                     </ul>
-                  </li>
-                  <li class="card__item-decr">
-                    <p class="card__decr">
-                      Санкт-Петербург, Петроградский район
-                    </p>
                   </li>
                   <li class="card__item-decr">
                     <ul class="card__major-list">
@@ -235,15 +236,17 @@
                 </picture>
                 <ul class="card__list-body">
                   <li class="card__item-decr">
-                    <h2 class="card__name">Сергей Антонов</h2>
+                    <div class="card-wrapp">
+                      <div class="card-wrapp-title">
+                        <h2 class="card__name">Сергей Антонов</h2>
+                        <p class="card__decr">
+                          Санкт-Петербург, Петроградский район
+                        </p>
+                      </div>
+                    </div>
                     <ul class="card__list-sector">
                       <li class="card__item-sector">Недвижимость</li>
                     </ul>
-                  </li>
-                  <li class="card__item-decr">
-                    <p class="card__decr">
-                      Санкт-Петербург, Петроградский район
-                    </p>
                   </li>
                   <li class="card__item-decr">
                     <ul class="card__major-list">
@@ -319,18 +322,20 @@
                 </picture>
                 <ul class="card__list-body">
                   <li class="card__item-decr">
-                    <h2 class="card__name">Елена Петровская</h2>
+                    <div class="card-wrapp">
+                      <div class="card-wrapp-title">
+                        <h2 class="card__name">Елена Петровская</h2>
+                        <p class="card__decr">
+                          Санкт-Петербург, Петроградский район
+                        </p>
+                      </div>
+                    </div>
                     <ul class="card__list-sector">
                       <li class="card__item-sector">Недвижимость</li>
                       <li class="card__item-sector">ИТ</li>
                       <li class="card__item-sector">Бизнес</li>
                       <li class="card__item-sector">+1</li>
                     </ul>
-                  </li>
-                  <li class="card__item-decr">
-                    <p class="card__decr">
-                      Санкт-Петербург, Петроградский район
-                    </p>
                   </li>
                   <li class="card__item-decr">
                     <ul class="card__major-list">
@@ -396,18 +401,20 @@
                 </picture>
                 <ul class="card__list-body">
                   <li class="card__item-decr">
-                    <h2 class="card__name">Давид Романов</h2>
+                    <div class="card-wrapp">
+                      <div class="card-wrapp-title">
+                        <h2 class="card__name">Давид Романов</h2>
+                        <p class="card__decr">
+                          Санкт-Петербург, Петроградский район
+                        </p>
+                      </div>
+                    </div>
                     <ul class="card__list-sector">
                       <li class="card__item-sector">Недвижимость</li>
                       <li class="card__item-sector">ИТ</li>
                       <li class="card__item-sector">Бизнес</li>
                       <li class="card__item-sector">+1</li>
                     </ul>
-                  </li>
-                  <li class="card__item-decr">
-                    <p class="card__decr">
-                      Санкт-Петербург, Петроградский район
-                    </p>
                   </li>
                   <li class="card__item-decr">
                     <ul class="card__major-list">

@@ -36,7 +36,7 @@ footer {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1024px;
   /* padding: 0 88px; */
   margin: 0 auto;
 }
@@ -180,7 +180,7 @@ footer .left {
 
 .choices {
   margin: 0;
-  flex: 1 1;
+  flex: auto 1 1;
   border-radius: 8px;
 }
 
