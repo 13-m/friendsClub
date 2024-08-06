@@ -66,16 +66,16 @@
   }
 
   .card:nth-child(1) .card-wrapp::before {
-    background: url("../img/ava-img-1.jpg") no-repeat center center / cover;
+    background: url("../../img/ava-img-1.jpg") no-repeat center center / cover;
   }
   .card:nth-child(2) .card-wrapp::before {
-    background: url("../img/ava-img-5.jpg") no-repeat center center / cover;
+    background: url("../../img/ava-img-5.jpg") no-repeat center center / cover;
   }
   .card:nth-child(3) .card-wrapp::before {
-    background: url("../img/ava-img-3.jpg") no-repeat center center / cover;
+    background: url("../../img/ava-img-3.jpg") no-repeat center center / cover;
   }
   .card:nth-child(4) .card-wrapp::before {
-    background: url("../img/ava-img-7.jpg") no-repeat center center / cover;
+    background: url("../../img/ava-img-7.jpg") no-repeat center center / cover;
   }
 
   .card__item-decr:nth-child(1) {

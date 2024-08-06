@@ -89,15 +89,15 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0.45) 59.88%
     ),
-    url("../img/poster-img-1.png") no-repeat center center / cover;
+    url("../../img/poster-img-1.png") no-repeat center center / cover;
 }
 
 .news__card-item:nth-child(2)::before {
-  background: url("../img/poster-img-2.png") no-repeat center center / cover;
+  background: url("../../img/poster-img-2.png") no-repeat center center / cover;
 }
 
 .news__card-item:nth-child(3)::before {
-  background: url("../img/poster-img-3.png") no-repeat center center / cover;
+  background: url("../../img/poster-img-3.png") no-repeat center center / cover;
 }
 
 .news__card-item:nth-child(n + 2) {
@@ -201,26 +201,28 @@
 }
 
 .news__card-item:nth-child(1) .view::before {
-  background: url("../img/view-icon.svg") no-repeat center center / contain;
+  background: url("../../img/view-icon.svg") no-repeat center center / contain;
 }
 .news__card-item:nth-child(1) .like::before {
-  background: url("../img/like-icon.svg") no-repeat center center / contain;
+  background: url("../../img/like-icon.svg") no-repeat center center / contain;
 }
 .news__card-item:nth-child(1) .bookmark::before {
-  background: url("../img/bookmarks-icon.svg") no-repeat center center / contain;
+  background: url("../../img/bookmarks-icon.svg") no-repeat center center /
+    contain;
 }
 
 .view::before {
-  background: url("../img/view-dark-icon.svg") no-repeat center center / contain;
+  background: url("../../img/view-dark-icon.svg") no-repeat center center /
+    contain;
 }
 
 .like::before {
-  background: url("../img/liked-dark-icon.svg") no-repeat center center /
+  background: url("../../img/liked-dark-icon.svg") no-repeat center center /
     contain;
 }
 
 .bookmark::before {
-  background: url("../img/bookmarks-dark-icon.svg") no-repeat center center /
+  background: url("../../img/bookmarks-dark-icon.svg") no-repeat center center /
     contain;
 }
 
@@ -375,7 +377,7 @@
       rgba(0, 0, 0, 0) 20%,
       rgba(0, 0, 0, 0.56) 100%
     ),
-    url("../img/poster-img-4.png") no-repeat center center / cover;
+    url("../../img/poster-img-4.png") no-repeat center center / cover;
 }
 
 .article__card-item:nth-child(2):before {
@@ -384,7 +386,7 @@
       rgba(0, 0, 0, 0) 20%,
       rgba(0, 0, 0, 0.56) 100%
     ),
-    url("../img/poster-img-5.png") no-repeat center center / cover;
+    url("../../img/poster-img-5.png") no-repeat center center / cover;
 }
 
 .article__card-item:nth-child(3):before {
@@ -393,7 +395,7 @@
       rgba(0, 0, 0, 0) 20%,
       rgba(0, 0, 0, 0.56) 100%
     ),
-    url("../img/poster-img-6.png") no-repeat center center / cover;
+    url("../../img/poster-img-6.png") no-repeat center center / cover;
 }
 
 .article__span-teg {
@@ -422,7 +424,7 @@
   position: relative;
   width: 20px;
   height: 20px;
-  background: url("../img/user-icon.svg") no-repeat center center / cover;
+  background: url("../../img/user-icon.svg") no-repeat center center / cover;
 }
 
 .article__info-body {
@@ -493,7 +495,7 @@
   margin-bottom: 28px;
   padding: 29px 24px;
   border-radius: 8px;
-  background: url("../img/poster-img-7.png") no-repeat center center / cover;
+  background: url("../../img/poster-img-7.png") no-repeat center center / cover;
 }
 
 .left {
@@ -531,11 +533,12 @@
 }
 
 .event__name::before {
-  background: url("../img/microphone-icon.svg") no-repeat center center / cover;
+  background: url("../../img/microphone-icon.svg") no-repeat center center /
+    cover;
 }
 
 .event__date::before {
-  background: url("../img/calendar-icon.svg") no-repeat center center / cover;
+  background: url("../../img/calendar-icon.svg") no-repeat center center / cover;
 }
 
 .event__slogan {
@@ -565,7 +568,7 @@
   content: "";
   width: 12px;
   height: 13px;
-  background: url("../img/man-icon.svg") no-repeat center center / cover;
+  background: url("../../img/man-icon.svg") no-repeat center center / cover;
 }
 
 .event__btn:hover {
@@ -620,13 +623,13 @@
 }
 
 .event__item:nth-child(1) {
-  background: url("../img/user-icon-1.png") no-repeat center center / cover;
+  background: url("../../img/user-icon-1.png") no-repeat center center / cover;
 }
 .event__item:nth-child(2) {
-  background: url("../img/user-icon-2.png") no-repeat center center / cover;
+  background: url("../../img/user-icon-2.png") no-repeat center center / cover;
 }
 .event__item:nth-child(3) {
-  background: url("../img/user-icon-3.png") no-repeat center center / cover;
+  background: url("../../img/user-icon-3.png") no-repeat center center / cover;
 }
 .event__item:nth-child(4) {
   outline: 1px solid #ababab;
@@ -647,11 +650,11 @@
 }
 
 .event__card:nth-of-type(1) .event__card-body {
-  background: url("../img/poster-img-8.png") no-repeat center center / cover;
+  background: url("../../img/poster-img-8.png") no-repeat center center / cover;
 }
 
 .event__card:nth-of-type(2) .event__card-body {
-  background: url("../img/poster-img-9.png") no-repeat center center / cover;
+  background: url("../../img/poster-img-9.png") no-repeat center center / cover;
 }
 
 .event__heading {
@@ -722,7 +725,7 @@
       rgba(0, 0, 0, 0) 20%,
       rgba(0, 0, 0, 0.56) 100%
     ),
-    url("../img/poster-img-4.png") no-repeat center center / cover;
+    url("../../img/poster-img-4.png") no-repeat center center / cover;
 }
 
 .video__card-item:nth-child(2) .video__video {
@@ -731,7 +734,7 @@
       rgba(0, 0, 0, 0) 20%,
       rgba(0, 0, 0, 0.56) 100%
     ),
-    url("../img/poster-img-5.png") no-repeat center center / cover;
+    url("../../img/poster-img-5.png") no-repeat center center / cover;
 }
 
 .video__card-item:nth-child(3) .video__video {
@@ -740,7 +743,7 @@
       rgba(0, 0, 0, 0) 20%,
       rgba(0, 0, 0, 0.56) 100%
     ),
-    url("../img/poster-img-6.png") no-repeat center center / cover;
+    url("../../img/poster-img-6.png") no-repeat center center / cover;
 }
 
 .video__video::after {
@@ -751,7 +754,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url("../img/yt-icon.png") no-repeat center center / cover;
+  background: url("../../img/yt-icon.png") no-repeat center center / cover;
 }
 
 .video__body {
@@ -774,7 +777,7 @@
   content: "";
   width: 20px;
   height: 20px;
-  background: url("../img/user-icon.svg") no-repeat center center / cover;
+  background: url("../../img/user-icon.svg") no-repeat center center / cover;
 }
 
 .video__info-body {

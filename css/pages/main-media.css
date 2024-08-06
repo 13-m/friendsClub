@@ -79,15 +79,18 @@
   }
 
   .event__item-mobile:nth-child(1) .event__body-mobile {
-    background: url("../img/poster-img-7.png") no-repeat center center / cover;
+    background: url("../../img/poster-img-7.png") no-repeat center center /
+      cover;
   }
 
   .event__item-mobile:nth-child(2) .event__body-mobile {
-    background: url("../img/poster-img-8.png") no-repeat center center / cover;
+    background: url("../../img/poster-img-8.png") no-repeat center center /
+      cover;
   }
 
   .event__item-mobile:nth-child(3) .event__body-mobile {
-    background: url("../img/poster-img-9.png") no-repeat center center / cover;
+    background: url("../../img/poster-img-9.png") no-repeat center center /
+      cover;
   }
 
   .event__wrapp-mobile {
@@ -178,7 +181,7 @@
     height: 240px;
     margin-bottom: 12px;
     border-radius: 8px;
-    /* background: url("../img/poster-img-1.png") no-repeat center center / cover; */
+    /* background: url("../../img/poster-img-1.png") no-repeat center center / cover; */
   }
 
   .card-item:nth-child(1):before {
@@ -195,31 +198,40 @@
   }
 
   .card-list:nth-child(1) .card-item:nth-child(1):before {
-    background: url("../img/poster-img-1.png") no-repeat center center / cover;
+    background: url("../../img/poster-img-1.png") no-repeat center center /
+      cover;
   }
   .card-list:nth-child(1) .card-item:nth-child(2):before {
-    background: url("../img/poster-img-2.png") no-repeat center center / cover;
+    background: url("../../img/poster-img-2.png") no-repeat center center /
+      cover;
   }
   .card-list:nth-child(1) .card-item:nth-child(3):before {
-    background: url("../img/poster-img-3.png") no-repeat center center / cover;
+    background: url("../../img/poster-img-3.png") no-repeat center center /
+      cover;
   }
   .card-list:nth-child(2) .card-item:nth-child(1):before {
-    background: url("../img/poster-img-4.png") no-repeat center center / cover;
+    background: url("../../img/poster-img-4.png") no-repeat center center /
+      cover;
   }
   .card-list:nth-child(2) .card-item:nth-child(2):before {
-    background: url("../img/poster-img-5.png") no-repeat center center / cover;
+    background: url("../../img/poster-img-5.png") no-repeat center center /
+      cover;
   }
   .card-list:nth-child(2) .card-item:nth-child(3):before {
-    background: url("../img/poster-img-6.png") no-repeat center center / cover;
+    background: url("../../img/poster-img-6.png") no-repeat center center /
+      cover;
   }
   .card-list:nth-child(3) .card-item:nth-child(1):before {
-    background: url("../img/poster-img-4.png") no-repeat center center / cover;
+    background: url("../../img/poster-img-4.png") no-repeat center center /
+      cover;
   }
   .card-list:nth-child(3) .card-item:nth-child(2):before {
-    background: url("../img/poster-img-5.png") no-repeat center center / cover;
+    background: url("../../img/poster-img-5.png") no-repeat center center /
+      cover;
   }
   .card-list:nth-child(3) .card-item:nth-child(3):before {
-    background: url("../img/poster-img-6.png") no-repeat center center / cover;
+    background: url("../../img/poster-img-6.png") no-repeat center center /
+      cover;
   }
 
   .card-item:nth-child(1) .span-teg {
