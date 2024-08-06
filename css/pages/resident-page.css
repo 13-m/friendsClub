@@ -49,7 +49,7 @@
   display: inline-block;
   width: 9px;
   height: 6px;
-  background: url("/img/arrow-icon.svg") no-repeat center center / cover;
+  background: url("../img/arrow-icon.svg") no-repeat center center / cover;
   transition: transform 0.4s ease;
 }
 
@@ -91,7 +91,7 @@
   left: 8px;
   top: 50%;
   transform: translateY(-50%);
-  background: url("/img/search-icon.svg") no-repeat center center / cover;
+  background: url("../img/search-icon.svg") no-repeat center center / cover;
 }
 
 .form__input,
@@ -128,7 +128,7 @@
   background-color: #5b5b5b;
   padding: 5px;
   border-radius: 8px;
-  background: url("/img/filter-icon.svg") no-repeat center center / 20px,
+  background: url("../img/filter-icon.svg") no-repeat center center / 20px,
     #5b5b5b;
   cursor: pointer;
 }
@@ -333,7 +333,7 @@
   position: relative;
   width: 17px;
   height: 15px;
-  background: url("/img/message-icon.svg") no-repeat center center / cover;
+  background: url("../img/message-icon.svg") no-repeat center center / cover;
 }
 
 .card__list-achievements {
@@ -343,17 +343,17 @@
 }
 
 .card__item-span:nth-child(1) .card__span::before {
-  background: url("/img/microphone-icon.svg") no-repeat center center / cover;
+  background: url("../img/microphone-icon.svg") no-repeat center center / cover;
 }
 
 .card__item-span:nth-child(2) .card__span::before {
-  background: url("/img/post-icon.svg") no-repeat center center / cover;
+  background: url("../img/post-icon.svg") no-repeat center center / cover;
 }
 .card__item-span:nth-child(3) .card__span::before {
-  background: url("/img/play-icon.svg") no-repeat center center / cover;
+  background: url("../img/play-icon.svg") no-repeat center center / cover;
 }
 .card__item-span:nth-child(4) .card__span::before {
-  background: url("/img/stars-icon.svg") no-repeat center center / cover;
+  background: url("../img/stars-icon.svg") no-repeat center center / cover;
 }
 
 .card__span {

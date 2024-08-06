@@ -48,7 +48,7 @@
 }
 
 .choices[data-type*="select-one"]::after {
-  background: url("/img/arrow-icon.svg") no-repeat center center / cover;
+  background: url("../img/arrow-icon.svg") no-repeat center center / cover;
   width: 9px;
   height: 6px;
   border: none;
@@ -121,7 +121,7 @@
   padding-left: 30px;
   border: none;
   color: #fff;
-  background: url("/img/search-icon.svg") no-repeat 5% 50% / 15px, #5b5b5b;
+  background: url("../img/search-icon.svg") no-repeat 5% 50% / 15px, #5b5b5b;
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted,
@@ -129,7 +129,7 @@
 }
 
 .is-selected {
-  background: url("/img/check-green-icon.svg") no-repeat 95% center / 15px;
+  background: url("../img/check-green-icon.svg") no-repeat 95% center / 15px;
 }
 
 @media (max-width: 900px) {
