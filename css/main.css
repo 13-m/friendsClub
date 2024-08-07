@@ -132,10 +132,6 @@ footer {
   list-style: none;
 }
 
-/* .tooltipMenu ul li {
-  width: 100%;
-} */
-
 .tooltipMenu ul li:hover {
   color: white;
   cursor: pointer;
@@ -190,10 +186,6 @@ footer {
   visibility: visible;
   cursor: pointer;
 }
-
-/* .tooltipMenu--mobile {
-  display: none;
-} */
 
 .tooltipMenu__wrapp,
 .tooltipMenu__title,
@@ -437,7 +429,6 @@ footer .left {
     width: 100%;
   }
 
-  .header__tooltip:active .tooltipMenu,
   .header__tooltip:focus .tooltipMenu {
     visibility: visible;
     flex-direction: column;

@@ -118,6 +118,7 @@
   }
 
   .card__name {
+    width: min-content;
     font-size: 17px;
   }
 
