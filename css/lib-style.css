@@ -45,6 +45,11 @@
   border-radius: 8px;
   border: none;
   padding: 10px 8px;
+  transition: 0.3s ease background-color;
+}
+
+.choices:hover .choices__inner {
+  background-color: #767676;
 }
 
 .choices[data-type*="select-one"]::after {

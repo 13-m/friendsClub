@@ -117,7 +117,7 @@
   position: absolute;
   top: 13px;
   left: 13px;
-  padding: 3px 3px;
+  padding: 3px 5px;
   font-size: 14px;
   font-weight: 400;
   border-radius: 4px;
@@ -310,6 +310,11 @@
   font-weight: 700;
   font-size: 18px;
   white-space: normal;
+  transition: 0.3s ease color;
+}
+
+.residents__subtitle:hover {
+  color: #d8481a;
 }
 
 .desc {
@@ -568,7 +573,7 @@
   content: "";
   width: 12px;
   height: 13px;
-  background: url("../../img/man-icon.svg") no-repeat center center / cover;
+  background: url("../../img/man-gray-icon.svg") no-repeat center center / cover;
 }
 
 .event__btn:hover {

@@ -1,0 +1,231 @@
+.about,
+.appearance,
+.articles,
+.video,
+.feedback,
+.awards {
+  display: none;
+}
+
+.person {
+}
+.person__container {
+}
+.container {
+}
+.person__link {
+}
+.person__body {
+}
+.person__info-wrapp {
+}
+.person__picture {
+}
+.person__info-block {
+}
+.person__name-wrapp {
+}
+.person__name {
+}
+.person__span {
+}
+.person__decr {
+}
+.person__decr-span {
+}
+.person__text {
+}
+.person__list-interaction {
+}
+.person__item-interaction {
+}
+.person__btn-interaction {
+}
+.person__note {
+}
+.person__list-nav {
+}
+.person__item-nav {
+}
+.person__item-span {
+}
+.person__about-list {
+}
+.about {
+}
+.about__item {
+}
+.business {
+}
+.about__title {
+}
+.about__list-business {
+}
+.about__item-business {
+}
+.about__decr-business {
+}
+.about__subtitle-business {
+}
+.about__text-business {
+}
+.about__span-business {
+}
+.about__list-text {
+}
+.about__item-text {
+}
+.about__subtitle {
+}
+.about__text {
+}
+.about__list-photo {
+}
+.about__item-photo {
+}
+.about__img {
+}
+.about__list-tag {
+}
+.about__item-tag {
+}
+.person__appearance {
+}
+.appearance {
+}
+.appearance__item {
+}
+.appearance__list-wrapp {
+}
+.appearance__item-wrapp {
+}
+.appearance__span {
+}
+.appearance__body-wrapp {
+}
+.appearance__picture {
+}
+.appearance__body {
+}
+.appearance__title {
+}
+.appearance__text {
+}
+.appearance__decr-wrapp {
+}
+.appearance__list-entrant {
+}
+.appearance__entrant {
+}
+.appearance__link {
+}
+.appearance__btn {
+}
+.person__articles {
+}
+.articles {
+}
+.articles__list {
+}
+.articles__item {
+}
+.articles__picture {
+}
+.articles__decr-wrapp {
+}
+.articles__decr-span {
+}
+.articles__subtitle {
+}
+.articles__text {
+}
+.articles__info-stat {
+}
+.articles__data {
+}
+.articles__view {
+}
+.articles__like {
+}
+.articles__bookmark {
+}
+.articles__list-pagination {
+}
+.pagination-list {
+}
+.pagination__item {
+}
+.pagination-prev {
+}
+.pagination-next {
+}
+.person__video {
+}
+.video {
+}
+.video__list {
+}
+.video__item {
+}
+.video__picture {
+}
+.video__decr-wrapp {
+}
+.video__decr-span {
+}
+.video__subtitle {
+}
+.video__text {
+}
+.video__info-stat {
+}
+.video__data {
+}
+.video__view {
+}
+.video__like {
+}
+.video__bookmark {
+}
+.video__list-pagination {
+}
+.person__feedback {
+}
+.feedback {
+}
+.feedback__list {
+}
+.feedback__item {
+}
+.feedback__wrapp {
+}
+.feedback__picture {
+}
+.feedback__body {
+}
+.feedback__name-wrapp {
+}
+.feedback__subtitle {
+}
+.feedback__rating {
+}
+.feedback__days-span {
+}
+.feedback__text {
+}
+.feedback__btn-more {
+}
+.feedback__btn {
+}
+.person__awards {
+}
+.awards {
+}
+.awards__item {
+}
+.awards__svg {
+}
+.awards__subtitle {
+}
+.awards__text {
+}

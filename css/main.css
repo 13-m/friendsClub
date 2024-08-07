@@ -96,6 +96,7 @@ footer {
   display: flex;
   gap: 12px;
   align-items: center;
+  padding: 5px 0;
   text-decoration: none;
   color: #fff;
   font-weight: 400;
@@ -110,6 +111,96 @@ footer {
   height: 36px;
   border-radius: 4px;
 }
+
+/* tooltip */
+.header__tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltipMenu {
+  min-height: min-content;
+  width: max-content;
+}
+
+.tooltipMenu__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  list-style: none;
+}
+
+/* .tooltipMenu ul li {
+  width: 100%;
+} */
+
+.tooltipMenu ul li:hover {
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #5b5b5b;
+}
+
+.tooltipMenu {
+  visibility: hidden;
+  /* visibility: visible; */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  right: 0;
+  min-width: 250px;
+  background-color: #4b4949;
+  border-radius: 8px;
+}
+
+.tooltipMenu__list {
+  padding: 8px;
+}
+
+.tooltipMenu__item {
+  padding: 8px;
+}
+
+.tooltipMenu__link {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  color: #ababab;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.tooltipMenu__link svg {
+  display: block;
+  width: 20px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  fill: white;
+}
+
+.tooltipMenu__link svg path {
+  fill: #ababab;
+}
+
+.header__tooltip:focus .tooltipMenu {
+  visibility: visible;
+  cursor: pointer;
+}
+
+/* .tooltipMenu--mobile {
+  display: none;
+} */
+
+.tooltipMenu__wrapp,
+.tooltipMenu__title,
+.tooltipMenu__btn-cancel {
+  display: none;
+}
+/* tooltip end*/
 
 /* footer */
 .footer__container {
@@ -324,6 +415,155 @@ footer .left {
   .nav {
     padding: 80px 15px 20px;
   }
+
+  /* tooltip */
+
+  .tooltipMenu__wrapp,
+  .tooltipMenu__title,
+  .tooltipMenu__btn-cancel {
+    display: block;
+  }
+  .exit {
+    display: none;
+  }
+
+  .tooltipMenu {
+    visibility: hidden;
+    position: fixed;
+    display: flex;
+    top: auto;
+    bottom: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .header__tooltip:active .tooltipMenu,
+  .header__tooltip:focus .tooltipMenu {
+    visibility: visible;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 16px;
+    background-color: #fff;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+  }
+
+  .tooltipMenu__title {
+    margin: 0;
+    margin-bottom: 24px;
+    color: #2b2b2b;
+    font-size: 20px;
+  }
+  .tooltipMenu__wrapp {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .tooltipMenu__wrapp::before {
+    position: relative;
+    content: "";
+    width: 13%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    background: url("../img/user-icon-1-2x.jpg") no-repeat center center / cover;
+  }
+
+  .tooltipMenu__name-wrapp {
+  }
+
+  .tooltipMenu__name {
+    color: #2b2b2b;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 2px;
+  }
+
+  .tooltipMenu__awards-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 6px;
+  }
+
+  .tooltipMenu__awards-item {
+    width: 16px;
+    height: 16px;
+    color: #5b5b5b;
+    font-size: 14px;
+  }
+
+  .tooltipMenu__awards-item:nth-child(1) {
+    background: url("../img/awards-icon-1.svg") no-repeat center center / cover;
+  }
+  .tooltipMenu__awards-item:nth-child(2) {
+    background: url("../img/awards-icon-2.svg") no-repeat center center / cover;
+  }
+  .tooltipMenu__awards-item:nth-child(3) {
+    background: url("../img/awards-icon-3.svg") no-repeat center center / cover;
+  }
+
+  .awards-item-last {
+  }
+
+  .tooltipMenu__btn-exit {
+    margin-left: auto;
+    padding: 0;
+    font-size: 16px;
+    color: #d8481a;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .tooltipMenu__link {
+    color: #2b2b2b;
+    gap: 10px;
+  }
+  .tooltipMenu__list .tooltipMenu__item {
+    padding: 0;
+  }
+  .tooltipMenu__link svg path {
+    fill: #d8481a;
+  }
+
+  .tooltipMenu__item:nth-child(1) .tooltipMenu__link {
+  }
+  .tooltipMenu__item:nth-child(2) .tooltipMenu__link {
+  }
+  .tooltipMenu__item:nth-child(3) .tooltipMenu__link {
+  }
+  .tooltipMenu__item:nth-child(4) .tooltipMenu__link {
+  }
+  .tooltipMenu__item:nth-child(5) .tooltipMenu__link {
+  }
+  .tooltipMenu__list {
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .tooltipMenu__item {
+  }
+  .tooltipMenu__link {
+  }
+  .tooltipMenu__btn-cancel {
+    padding: 17px;
+    color: #5b5b5b;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+  }
+
+  /* tooltip end */
 
   footer {
     background: transparent;

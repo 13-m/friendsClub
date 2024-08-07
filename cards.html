@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Friends Club</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/pages/cards-page.css" />
+    <link rel="stylesheet" href="./css/pages/cards-media.css" />
+    <link rel="stylesheet" href="./css/lib-style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__container container">
+        <button class="burger"></button>
+        <div class="header__logo-body">
+          <a href="" class="header__logo"></a>
+        </div>
+        <nav id="burgerMenu" class="header__nav nav">
+          <ul class="nav__list nav__list--burger">
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link">О&nbsp;клубе</a>
+            </li>
+            <li class="nav__item">
+              <a href="./residents.html" class="nav__link">Резиденты</a>
+            </li>
+            <li class="nav__item">
+              <a href="#event" class="nav__link">Мероприятия</a>
+            </li>
+            <li class="nav__item">
+              <a href="#news" class="nav__link">Новости</a>
+            </li>
+            <li class="nav__item">
+              <a href="#article" class="nav__link">Статьи</a>
+            </li>
+            <li class="nav__item">
+              <a href="#video" class="nav__link">Видео</a>
+            </li>
+          </ul>
+        </nav>
+        <div tabindex="1" class="header__lk header__tooltip">
+          <p class="header__lk-user">Мария&nbsp;Л.</p>
+          <!-- <img
+            class="lk-img"
+            src="../img/user-icon-1.png"
+            alt="Аватарка пользователя"
+          /> -->
+          <picture>
+            <source
+              srcset="./img/user-icon-1-2x.jpg 2x, ./img/user-icon-1.jpg 1x"
+              media="(max-width: 600px)"
+            />
+            <source
+              srcset="./img/user-icon-1-2x.jpg 2x, ./img/user-icon-1.jpg 1x"
+              media="(min-width: 601px)"
+            />
+            <img
+              class="lk-img"
+              src="./img/user-icon-1.jpg"
+              alt="Аватарка пользователя"
+            />
+          </picture>
+          <div class="tooltipMenu tooltipMenu--mobile">
+            <h2 class="tooltipMenu__title">Личный кабинет</h2>
+            <div class="tooltipMenu__wrapp">
+              <div class="tooltipMenu__name-wrapp">
+                <h3 class="tooltipMenu__name">Мария Леонтьева</h3>
+                <ul class="tooltipMenu__awards-list">
+                  <li class="tooltipMenu__awards-item"></li>
+                  <li class="tooltipMenu__awards-item"></li>
+                  <li class="tooltipMenu__awards-item"></li>
+                  <li class="tooltipMenu__awards-item awards-item-last">+3</li>
+                </ul>
+              </div>
+              <button class="tooltipMenu__btn-exit">Выйти</button>
+            </div>
+            <ul class="tooltipMenu__list">
+              <li class="tooltipMenu__item">
+                <a href="#!" class="tooltipMenu__link"
+                  ><svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.8034 5.79419C13.8034 7.84368 12.1419 9.50513 10.0924 9.50513C8.04295 9.50513 6.38151 7.84368 6.38151 5.79419C6.38151 3.7447 8.04295 2.08325 10.0924 2.08325C12.1419 2.08325 13.8034 3.7447 13.8034 5.79419Z"
+                      fill="#D8481A"
+                    />
+                    <path
+                      d="M17.2669 14.7679C17.2669 17.1069 14.0548 17.9166 10.0924 17.9166C6.13009 17.9166 2.91797 17.035 2.91797 14.7679C2.91797 13.2674 6.13009 10.9895 10.0924 10.9895C14.0548 10.9895 17.2669 13.2674 17.2669 14.7679Z"
+                      fill="#D8481A"
+                    />
+                  </svg>
+                  Профиль</a
+                >
+              </li>
+              <li class="tooltipMenu__item">
+                <a href="#!" class="tooltipMenu__link"
+                  ><svg
+                    width="19"
+                    height="21"
+                    viewBox="0 0 19 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.9765 5.82091C14.8738 5.26734 15.4718 4.2753 15.4718 3.14358C15.4718 1.40743 14.0644 0 12.3283 0C10.5921 0 9.18468 1.40743 9.18468 3.14358C9.18468 4.08199 9.59587 4.92437 10.2479 5.50037C9.3719 5.86234 8.60637 6.45027 8.03022 7.20536L6.39075 9.35406C6.1445 9.67679 5.93566 10.0264 5.76822 10.3962L3.51685 15.3686C3.47444 15.4623 3.40581 15.5416 3.31925 15.5971L0.702723 17.2738C0.495746 17.4065 0.334117 17.5991 0.239385 17.8259L0.0941042 18.1738C-0.204333 18.8884 0.236659 19.6955 0.999278 19.8303L1.88928 19.9877C2.9092 20.168 3.95951 20.0495 4.91356 19.6463L6.53755 18.96C7.29623 18.6394 7.97096 18.1486 8.50953 17.5254L10.5441 15.1713C10.6197 15.0838 10.6824 14.9859 10.7302 14.8806L12.5886 10.7877C12.6491 10.6546 12.8129 10.6052 12.9369 10.6826L13.5819 11.0857C14.6111 11.7287 15.8278 12.0041 17.0335 11.8669L17.2422 11.8432C17.7124 11.7897 18.1081 11.4668 18.2549 11.017L18.3768 10.6434C18.5678 10.0582 18.2886 9.42298 17.7284 9.16792L16.2816 8.50923C16.1915 8.46822 16.1147 8.4029 16.0597 8.32061L15.3776 7.29984C15.1248 6.92138 14.8248 6.57663 14.4849 6.27387L13.9765 5.82091Z"
+                      fill="#D8481A"
+                    />
+                    <path
+                      d="M4.03406 6.81914C4.6794 6.21175 5.77171 5.84275 6.58592 5.65365C6.84337 5.59386 7.01569 5.83525 6.86402 6.0517C6.58393 6.45141 6.18591 6.95088 5.89602 7.27859C5.14473 8.12787 4.75542 8.89305 4.44104 9.51096C4.38854 9.61414 4.33813 9.71322 4.28848 9.80789C4.16368 10.0458 3.87386 10.068 3.73198 9.83982C3.55214 9.55064 3.35208 9.17715 3.23607 8.89874C2.99426 8.31838 3.13531 7.66501 4.03406 6.81914Z"
+                      fill="#D8481A"
+                    />
+                    <path
+                      d="M12.7648 14.5401C12.1834 15.5093 11.1103 17.226 10.6597 17.6766C10.3205 18.0158 10.0963 18.351 9.97039 18.5822C9.90051 18.7105 9.95911 18.8632 10.089 18.9301L11.5061 19.6594C12.3686 20.0544 14.5481 20.617 15.3026 19.9012C15.8148 19.4152 16.0142 18.8869 16.0945 18.4539C16.1593 18.1042 16.0864 17.7456 15.9221 17.4301C15.6134 16.8375 15.0601 15.9648 14.3837 15.4035C13.7494 14.8772 13.3292 14.587 13.0921 14.446C12.9748 14.3761 12.835 14.423 12.7648 14.5401Z"
+                      fill="#D8481A"
+                    />
+                  </svg>
+                  Мероприятия</a
+                >
+              </li>
+              <li class="tooltipMenu__item">
+                <a href="#!" class="tooltipMenu__link"
+                  ><svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2.67879 8.56903C3.01484 8.56903 3.28726 8.8436 3.28726 9.18225V10.8174C3.28726 14.5426 6.28391 17.5625 9.98047 17.5625C13.6771 17.5625 16.6737 14.5426 16.6737 10.8174V9.18225C16.6737 8.8436 16.9461 8.56903 17.2822 8.56903C17.6182 8.56903 17.8906 8.8436 17.8906 9.18225V10.8174C17.8906 15.2199 14.3492 18.7889 9.98047 18.7889C5.61181 18.7889 2.07031 15.2199 2.07031 10.8174V9.18225C2.07031 8.8436 2.34274 8.56903 2.67879 8.56903Z"
+                      fill="#D8481A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.98039 1.21094C6.95593 1.21094 4.50413 3.68175 4.50413 6.72965V10.8176C4.50413 13.8655 6.95593 16.3363 9.98039 16.3363C13.0049 16.3363 15.4567 13.8655 15.4567 10.8176V6.72965C15.4567 3.68175 13.0049 1.21094 9.98039 1.21094ZM7.93976 5.94884C7.69558 5.71619 7.68478 5.32809 7.91565 5.082L8.35775 5.50327C7.91565 5.082 7.91632 5.0813 7.91632 5.0813L7.91699 5.08058L7.92125 5.0761L7.92754 5.06965C7.93196 5.06518 7.93684 5.06035 7.9422 5.0552C7.95291 5.04489 7.96551 5.0333 7.98011 5.02065C8.00935 4.99533 8.04646 4.96591 8.09236 4.9341C8.18442 4.87033 8.31021 4.79811 8.47632 4.73041C8.80934 4.5947 9.29388 4.48129 9.98039 4.48129C10.6669 4.48129 11.1514 4.5947 11.4845 4.73041C11.6506 4.79811 11.7763 4.87033 11.8685 4.9341C11.9143 4.96591 11.9514 4.99533 11.9807 5.02065C11.9953 5.0333 12.0079 5.04489 12.0186 5.0552C12.0239 5.06035 12.0289 5.06518 12.0333 5.06965L12.0395 5.0761L12.0424 5.07913L12.0438 5.08058L12.0445 5.0813C12.0445 5.0813 12.0451 5.082 11.6118 5.49483L12.0451 5.082C12.276 5.32809 12.2652 5.71619 12.021 5.94884C11.7853 6.17345 11.4182 6.17108 11.1854 5.94923L11.179 5.94469C11.1604 5.93183 11.1129 5.90185 11.0282 5.86734C10.8596 5.79865 10.533 5.70767 9.98039 5.70767C9.42782 5.70767 9.10113 5.79865 8.93256 5.86734C8.84792 5.90185 8.80037 5.93183 8.78183 5.94469L8.77541 5.94923C8.54259 6.17108 8.17551 6.17345 7.93976 5.94884ZM7.93976 8.40162C7.69558 8.16895 7.68478 7.78085 7.91565 7.53477L8.35775 7.95604C7.91565 7.53477 7.91632 7.53406 7.91632 7.53406L7.91699 7.53334L7.91837 7.53188L7.92125 7.52887L7.92754 7.52242C7.93196 7.51794 7.93684 7.51311 7.9422 7.50796C7.95291 7.49765 7.96551 7.48606 7.98011 7.47341C8.00935 7.4481 8.04646 7.41866 8.09236 7.38686C8.18442 7.32309 8.31021 7.25087 8.47632 7.18317C8.80934 7.04747 9.29388 6.93405 9.98039 6.93405C10.6669 6.93405 11.1514 7.04747 11.4845 7.18317C11.6506 7.25087 11.7763 7.32309 11.8685 7.38686C11.9143 7.41866 11.9514 7.4481 11.9807 7.47341C11.9953 7.48606 12.0079 7.49765 12.0186 7.50796C12.0239 7.51311 12.0289 7.51794 12.0333 7.52242L12.0395 7.52887L12.0438 7.53334L12.0445 7.53406C12.0445 7.53406 12.0451 7.53476 11.6118 7.9476L12.0451 7.53477C12.276 7.78085 12.2652 8.16895 12.021 8.40162C11.7853 8.62618 11.4182 8.62381 11.1854 8.40197L11.179 8.39749C11.1604 8.38457 11.1129 8.3546 11.0282 8.32006C10.8596 8.25142 10.533 8.16043 9.98039 8.16043C9.42782 8.16043 9.10113 8.25142 8.93256 8.32006C8.84792 8.3546 8.80037 8.38457 8.78183 8.39749L8.77541 8.40197C8.54259 8.62381 8.17551 8.62618 7.93976 8.40162Z"
+                      fill="#D8481A"
+                    />
+                  </svg>
+                  Выступления</a
+                >
+              </li>
+              <li class="tooltipMenu__item">
+                <a href="#!" class="tooltipMenu__link"
+                  ><svg
+                    width="18"
+                    height="16"
+                    viewBox="0 0 18 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.279485 10.5924C0.00282 8.36279 0.629505 4.25808 0.987804 2.42705C0.995341 2.38856 1.00294 2.3517 1.01385 2.31403C1.05261 2.18011 1.17469 1.82551 1.47161 1.42531C1.76626 1.02818 2.40424 0.750823 2.84312 0.598194C3.14408 0.493538 3.45909 0.445184 3.77679 0.420635C5.06176 0.321358 8.71889 0.0718202 11.8925 0.171519C15.0331 0.270174 15.4757 2.13099 15.3044 3.04907C15.1634 3.80493 14.9899 5.75428 14.933 6.41958C14.9234 6.53152 14.9605 6.59531 15.0728 6.59244C15.2504 6.58788 15.5779 6.59985 16.1471 6.64601C18.039 6.79941 17.8753 9.57525 17.6697 11.4622C17.5819 12.268 17.4662 13.0855 17.3187 13.6755C17.0852 14.6094 16.1679 15.0979 15.6555 15.3026C15.4258 15.3944 15.1803 15.4313 14.9336 15.4487L9.86164 15.8061C9.75849 15.8133 9.65789 15.8167 9.55448 15.8157C8.72313 15.8079 4.70456 15.7533 2.84873 15.4226C0.831552 15.0631 0.638597 13.5003 0.308721 10.8287L0.30579 10.805C0.297129 10.7349 0.288377 10.664 0.279485 10.5924ZM14.8279 12.5219C14.7375 11.491 14.7457 9.09625 14.8279 8.00004H15.7939C15.9034 8.00004 16.0017 8.01343 16.0892 8.03511C16.5073 8.13878 16.6904 8.58621 16.7492 9.01291C16.7697 9.16168 16.7879 9.32013 16.8011 9.47993C16.87 10.3134 16.7481 11.0353 16.6359 11.6993C16.5881 11.9827 16.542 12.2555 16.5133 12.5219C16.438 12.9878 16.1557 13.9237 15.6295 13.9401C14.9718 13.9607 14.936 13.7552 14.8279 12.5219ZM11.2538 3.98078C9.95922 3.69783 6.72338 3.28739 4.17699 3.98984C3.80493 4.09247 3.58652 4.47729 3.68916 4.84935C3.7918 5.22141 4.17662 5.43981 4.54868 5.33716C6.77081 4.72418 9.74225 5.08106 10.9553 5.34622C11.3324 5.42863 11.7048 5.18977 11.7872 4.81274C11.8697 4.43568 11.6308 4.0632 11.2538 3.98078ZM4.36284 7.30121C3.97688 7.30121 3.664 7.6141 3.664 8.00004C3.664 8.38599 3.97688 8.69888 4.36284 8.69888H11.084C11.4699 8.69888 11.7828 8.38599 11.7828 8.00004C11.7828 7.6141 11.4699 7.30121 11.084 7.30121H4.36284ZM11.2904 12.0034C11.6624 11.9008 11.8808 11.516 11.7782 11.144C11.6756 10.7719 11.2907 10.5535 10.9187 10.6561C8.69656 11.2691 5.72511 10.9122 4.51206 10.6471C4.13501 10.5647 3.76254 10.8035 3.68012 11.1806C3.5977 11.5576 3.83655 11.9301 4.21361 12.0125C5.50814 12.2955 8.74399 12.7059 11.2904 12.0034Z"
+                      fill="#D8481A"
+                    />
+                  </svg>
+                  Статьи</a
+                >
+              </li>
+              <li class="tooltipMenu__item">
+                <a href="#!" class="tooltipMenu__link"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9 17.7891C13.8541 17.7891 17.7891 13.8541 17.7891 9C17.7891 4.14593 13.8541 0.210938 9 0.210938C4.14593 0.210938 0.210938 4.14593 0.210938 9C0.210938 13.8541 4.14593 17.7891 9 17.7891ZM8.26527 5.41986C7.29383 4.9136 6.12746 5.59796 6.09552 6.69293L6.03125 8.89657L6.09726 11.1359C6.12891 12.2098 7.25566 12.8955 8.22402 12.43L10.0283 11.5628C10.0994 11.5287 10.1671 11.4881 10.2307 11.4416L12.0363 10.1214C12.8579 9.52075 12.8451 8.29031 12.0112 7.7069L10.1351 6.3943L8.26527 5.41986Z"
+                      fill="#D8481A"
+                    />
+                  </svg>
+                  Видео</a
+                >
+              </li>
+              <li class="tooltipMenu__item exit">
+                <a href="#!" class="tooltipMenu__link">Выйти</a>
+              </li>
+            </ul>
+            <button class="tooltipMenu__btn-cancel">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="person">
+        <div class="person__container container">
+          <a href="residents.html" class="person__link"
+            >К&nbsp;списку резидентов</a
+          >
+          <div class="person__body">
+            <!-- статика -->
+            <div class="person__info-wrapp">
+              <picture class="person__picture"></picture>
+              <div class="person__info-block">
+                <div class="person__name-wrapp">
+                  <h2 class="person__name">Юлиана Константинопольская</h2>
+                  <p class="person__span">В&nbsp;клубе 4&nbsp;года</p>
+                </div>
+                <p class="person__decr">
+                  Санкт-Петербург, Петроградский район<span
+                    class="person__decr-span"
+                    >Замужем, 3&nbsp;ребенка</span
+                  >
+                </p>
+                <p class="person__text">
+                  На&nbsp;данный момент в&nbsp;управлении находятся прикладные
+                  проекты в&nbsp;сфере энергоиэффективности и&nbsp;&laquo;Умный
+                  город&raquo; на&nbsp;сумму более 2&nbsp;млрд. руб.
+                  Заинтересован в&nbsp;привлечении инновационных решений
+                  в&nbsp;реализуемые проекты, что может помочь стартапам
+                  получить выручку.
+                </p>
+                <ul class="person__list-interaction">
+                  <li class="person__item-interaction">
+                    <button class="person__btn-interaction">
+                      В&nbsp;избранное
+                    </button>
+                  </li>
+                  <li class="person__item-interaction">
+                    <button class="person__btn-interaction">Сообщение</button>
+                  </li>
+                  <li class="person__item-interaction">
+                    <button class="person__btn-interaction"></button>
+                  </li>
+                  <li class="person__item-interaction">
+                    <button class="person__btn-interaction"></button>
+                  </li>
+                  <li class="person__item-interaction">
+                    <button class="person__btn-interaction"></button>
+                  </li>
+                  <li class="person__item-interaction">
+                    <button class="person__btn-interaction"></button>
+                  </li>
+                  <li class="person__item-interaction">
+                    <button class="person__btn-interaction"></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <textarea class="person__note" name="note" id="noe">
+Сильная по&nbsp;недвижке, связаться при случае продажи</textarea
+            >
+            <ul class="person__list-nav">
+              <li class="person__item-nav">Обо мне</li>
+              <li class="person__item-nav">
+                Выступления<span class="person__item-span">2</span>
+              </li>
+              <li class="person__item-nav">
+                Статьи<span class="person__item-span">6</span>
+              </li>
+              <li class="person__item-nav">
+                Видео<span class="person__item-span">12</span>
+              </li>
+              <li class="person__item-nav">
+                Отзывы<span class="person__item-span">12</span>
+              </li>
+              <li class="person__item-nav">
+                Награды<span class="person__item-span">4</span>
+              </li>
+            </ul>
+            <!-- конец статики -->
+            <!-- отрисовка блоков -->
+            <ul class="person__about-list about">
+              <li class="about__item business">
+                <h3 class="about__title">Действующие бизнесы</h3>
+                <ul class="about__list-business">
+                  <li class="about__item-business">
+                    <span class="about__decr-business">Кафе и рестораны</span>
+                    <h4 class="about__subtitle-business">
+                      Пекарня &laquo;Мнем булки&raquo;
+                    </h4>
+                    <p class="about__text-business">
+                      Менеджер по&nbsp;недвижимости, владелец агенства
+                      недвижимости
+                    </p>
+                    <span class="about__span-business"
+                      >Круасан каждый день</span
+                    >
+                  </li>
+                  <li class="about__item-business">
+                    <span class="about__decr-business">Услуги</span>
+                    <h4 class="about__subtitle-business">
+                      Умное такси &laquo;Скоро буду&raquo;
+                    </h4>
+                    <p class="about__text-business">
+                      Менеджер по&nbsp;недвижимости, владелец агенства
+                      недвижимости
+                    </p>
+                    <span class="about__span-business"
+                      >300&nbsp;₽ на&nbsp;первую поездку</span
+                    >
+                  </li>
+                  <li class="about__item-business">
+                    <span class="about__decr-business">Недвижимость</span>
+                    <h4 class="about__subtitle-business">
+                      Агентство недвижимости &laquo;Ты&nbsp;мне,
+                      я&nbsp;тебе&raquo;
+                    </h4>
+                    <p class="about__text-business">
+                      Менеджер по&nbsp;недвижимости, владелец агенства
+                      недвижимости
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li class="about__item">
+                <h3 class="about__title">Успехи и&nbsp;факапы</h3>
+                <ul class="about__list-text">
+                  <li class="about__item-text">
+                    <h4 class="about__subtitle">Успехи</h4>
+                    <p class="about__text">
+                      Сделала первый миллион всего за&nbsp;6&nbsp;месяцев,
+                      организовала работу отдела в&nbsp;первый год
+                      и&nbsp;продала 5&nbsp;франшиз
+                    </p>
+                  </li>
+                  <li class="about__item-text">
+                    <h4 class="about__subtitle">Факапы</h4>
+                    <p class="about__text">
+                      Перепробовала 5&nbsp;видов бизнеса, пока нашла&nbsp;то,
+                      что приносит стабильный доход
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li class="about__item">
+                <h3 class="about__title">Компетенции</h3>
+                <ul class="about__list-text">
+                  <li class="about__item-text">
+                    <h4 class="about__subtitle">Сильные</h4>
+                    <p class="about__text">
+                      Сделала первый миллион всего за&nbsp;6&nbsp;месяцев,
+                      организовала работу отдела в&nbsp;первый год
+                      и&nbsp;продала 5&nbsp;франшиз
+                    </p>
+                  </li>
+                  <li class="about__item-text">
+                    <h4 class="about__subtitle">Слабые</h4>
+                    <p class="about__text">
+                      Перепробовала 5&nbsp;видов бизнеса, пока нашла&nbsp;то,
+                      что приносит стабильный доход
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li class="about__item">
+                <h3 class="about__title">Хобби и&nbsp;увлечения</h3>
+                <ul class="about__list-photo">
+                  <li class="about__item-photo">
+                    <img src="" alt="" class="about__img" />
+                  </li>
+                  <li class="about__item-photo">
+                    <img src="" alt="" class="about__img" />
+                  </li>
+                  <li class="about__item-photo">
+                    <img src="" alt="" class="about__img" />
+                  </li>
+                  <li class="about__item-photo">
+                    <img src="" alt="" class="about__img" />
+                  </li>
+                </ul>
+                <ul class="about__list-tag">
+                  <li class="about__item-tag">Футбол с&nbsp;мячом</li>
+                  <li class="about__item-tag">Фотография</li>
+                  <li class="about__item-tag">Вязание с&nbsp;3-х спиц</li>
+                </ul>
+              </li>
+              <li class="about__item">
+                <h3 class="about__title">
+                  Вклад в&nbsp;общую синергетическую сферу клуба
+                </h3>
+                <p class="about__text">
+                  Поиск решений, применимых в&nbsp;проектах повышения
+                  энероэффективности. Это и&nbsp;соответствует моим бизнес
+                  целям-профилированные энергосервисных проектов, и&nbsp;ведет
+                  к&nbsp;росту конкурентноспособности предприятий-заказчиков
+                  и&nbsp;экономики страны в&nbsp;целом.
+                </p>
+              </li>
+              <li class="about__item">
+                <h3 class="about__title">
+                  В&nbsp;чем вам нужна помощь от&nbsp;клуба
+                </h3>
+                <p class="about__text">
+                  С&nbsp;удовольствием расскажу о&nbsp;наших успешных
+                  и&nbsp;неуспешных экспериментах в&nbsp;найме (как
+                  мы&nbsp;выстравиваем воронку, как отбираем за&nbsp;счёт тестов
+                  и&nbsp;доводим до&nbsp;интересы с&nbsp;помощью ботов
+                  и&nbsp;другое). Могу помочь с&nbsp;исследованиями перед
+                  запуском нового направления или продукта (как сформировать
+                  гипотезу, как её&nbsp;проверить спомощью касдевов
+                  и&nbsp;анализа клиентов)
+                </p>
+              </li>
+            </ul>
+            <ul class="person__appearance appearance">
+              <li class="appearance__item">
+                <ul class="appearance__list-wrapp">
+                  <li class="appearance__item-wrapp">
+                    8&nbsp;апреля в&nbsp;15:45
+                  </li>
+                  <li class="appearance__item-wrapp">
+                    Пирогов, Морковин,
+                    <span class="appearance__span">Констанинопольская</span>
+                    и&nbsp;еще&nbsp;2
+                  </li>
+                  <li class="appearance__item-wrapp">
+                    Санкт-Петербург, Петроградка
+                  </li>
+                </ul>
+                <div class="appearance__body-wrapp">
+                  <picture class="appearance__picture"></picture>
+                  <div class="appearance__body">
+                    <h3 class="appearance__title">
+                      Как выстроить маркетинговую воронку
+                    </h3>
+                    <p class="appearance__text">
+                      Поиск решений, применимых в&nbsp;проектах повышения
+                      энероэффективности. Это и&nbsp;соответствует моим бизнес
+                      целям-профилированные энергосервисных проектов,
+                      и&nbsp;ведет к&nbsp;росту конкурентноспособности
+                      предприятий-заказчиков и&nbsp;экономики страны
+                    </p>
+                    <div class="appearance__decr-wrapp">
+                      <ul class="appearance__list-entrant">
+                        <li class="appearance__entrant"></li>
+                        <li class="appearance__entrant"></li>
+                        <li class="appearance__entrant"></li>
+                        <li class="appearance__entrant">+154</li>
+                      </ul>
+                      <!-- btn or link -->
+                      <a href="#!" class="appearance__link"
+                        >Фото и&nbsp;видео</a
+                      >
+                      <button class="appearance__btn">Фото и&nbsp;видео</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="person__articles articles">
+              <ul class="articles__list">
+                <li class="articles__item">
+                  <picture class="articles__picture"></picture>
+                  <div class="articles__decr-wrapp">
+                    <span class="articles__decr-span"
+                      >Кафе и&nbsp;рестораны</span
+                    ><span class="articles__decr-span">Дамир Алексеев</span>
+                  </div>
+                  <h3 class="articles__subtitle">
+                    Какая она&nbsp;&mdash; аренда помещения под магазин
+                    в&nbsp;центре Москвы
+                  </h3>
+                  <p class="articles__text">
+                    Я&nbsp;очень долго искала ответ на&nbsp;этот вопрос
+                    и&nbsp;теперь готова поделиться с&nbsp;вами всем, что
+                    удалось узнать
+                  </p>
+                  <div class="articles__info-stat">
+                    <p class="articles__data">11&nbsp;ноября 2024</p>
+                    <span class="articles__view">3</span
+                    ><span class="articles__like">14</span
+                    ><span class="articles__bookmark">1</span>
+                  </div>
+                </li>
+                <li class="articles__item">
+                  <picture class="articles__picture"></picture>
+                  <div class="articles__decr-wrapp">
+                    <span class="articles__decr-span"
+                      >Кафе и&nbsp;рестораны</span
+                    ><span class="articles__decr-span">Дамир Алексеев</span>
+                  </div>
+                  <h3 class="articles__subtitle">
+                    Как добиться порядка в&nbsp;офисе
+                  </h3>
+                  <p class="articles__text">
+                    Простая методика, недорогая crm и&nbsp;люди, близкие
+                    по&nbsp;духу
+                  </p>
+                  <div class="articles__info-stat">
+                    <p class="articles__data">11&nbsp;ноября 2024</p>
+                    <span class="articles__view">3</span
+                    ><span class="articles__like">14</span
+                    ><span class="articles__bookmark">1</span>
+                  </div>
+                </li>
+                <li class="articles__item">
+                  <picture class="articles__picture"></picture>
+                  <div class="articles__decr-wrapp">
+                    <span class="articles__decr-span"
+                      >Кафе и&nbsp;рестораны</span
+                    ><span class="articles__decr-span">Дамир Алексеев</span>
+                  </div>
+                  <h3 class="articles__subtitle">
+                    Научиться учету времени всего за&nbsp;неделю&nbsp;&mdash;
+                    легко!
+                  </h3>
+                  <p class="articles__text">
+                    Статья будет полезна абсолютно всем. Ключ к&nbsp;счастью
+                    и&nbsp;достатку лежит в&nbsp;умении распоряжаться своим
+                    временем
+                  </p>
+                  <div class="articles__info-stat">
+                    <p class="articles__data">11&nbsp;ноября 2024</p>
+                    <span class="articles__view">3</span
+                    ><span class="articles__like">14</span
+                    ><span class="articles__bookmark">1</span>
+                  </div>
+                </li>
+                <li class="articles__item">
+                  <picture class="articles__picture"></picture>
+                  <div class="articles__decr-wrapp">
+                    <span class="articles__decr-span"
+                      >Кафе и&nbsp;рестораны</span
+                    ><span class="articles__decr-span">Дамир Алексеев</span>
+                  </div>
+                  <h3 class="articles__subtitle">
+                    Мощный подъем&nbsp;&mdash; ворвалась в&nbsp;сферу
+                    с&nbsp;300&nbsp;000&nbsp;₽ в&nbsp;кармане
+                  </h3>
+                  <p class="articles__text">
+                    Думаете начать или нет, денег мало и&nbsp;непонятно где
+                    их&nbsp;взять. Мотивационная статья для начинающих, как
+                    стартануть в&nbsp;самом конкурентном бизнесе
+                  </p>
+                  <div class="articles__info-stat">
+                    <p class="articles__data">11&nbsp;ноября 2024</p>
+                    <span class="articles__view">3</span
+                    ><span class="articles__like">14</span
+                    ><span class="articles__bookmark">1</span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="articles__list-pagination pagination-list">
+                <li class="pagination__item pagination-prev"></li>
+                <li class="pagination__item">1</li>
+                <li class="pagination__item">2</li>
+                <li class="pagination__item">3</li>
+                <li class="pagination__item">4</li>
+                <li class="pagination__item">5</li>
+                <li class="pagination__item pagination-next"></li>
+              </ul>
+            </div>
+            <div class="person__video video">
+              <ul class="video__list">
+                <li class="video__item">
+                  <picture class="video__picture"></picture>
+                  <div class="video__decr-wrapp">
+                    <span class="video__decr-span">Кафе и&nbsp;рестораны</span
+                    ><span class="video__decr-span">Дамир Алексеев</span>
+                  </div>
+                  <h3 class="video__subtitle">
+                    Какая она&nbsp;&mdash; аренда помещения под магазин
+                    в&nbsp;центре Москвы
+                  </h3>
+                  <p class="video__text">
+                    Я&nbsp;очень долго искала ответ на&nbsp;этот вопрос
+                    и&nbsp;теперь готова поделиться с&nbsp;вами всем, что
+                    удалось узнать
+                  </p>
+                  <div class="video__info-stat">
+                    <p class="video__data">11&nbsp;ноября 2024</p>
+                    <span class="video__view">3</span
+                    ><span class="video__like">14</span
+                    ><span class="video__bookmark">1</span>
+                  </div>
+                </li>
+                <li class="video__item">
+                  <picture class="video__picture"></picture>
+                  <div class="video__decr-wrapp">
+                    <span class="video__decr-span">Кафе и&nbsp;рестораны</span
+                    ><span class="video__decr-span">Дамир Алексеев</span>
+                  </div>
+                  <h3 class="video__subtitle">
+                    Как добиться порядка в&nbsp;офисе
+                  </h3>
+                  <p class="video__text">
+                    Простая методика, недорогая crm и&nbsp;люди, близкие
+                    по&nbsp;духу
+                  </p>
+                  <div class="video__info-stat">
+                    <p class="video__data">11&nbsp;ноября 2024</p>
+                    <span class="video__view">3</span
+                    ><span class="video__like">14</span
+                    ><span class="video__bookmark">1</span>
+                  </div>
+                </li>
+                <li class="video__item">
+                  <picture class="video__picture"></picture>
+                  <div class="video__decr-wrapp">
+                    <span class="video__decr-span">Кафе и&nbsp;рестораны</span
+                    ><span class="video__decr-span">Дамир Алексеев</span>
+                  </div>
+                  <h3 class="video__subtitle">
+                    Научиться учету времени всего за&nbsp;неделю&nbsp;&mdash;
+                    легко!
+                  </h3>
+                  <p class="video__text">
+                    Статья будет полезна абсолютно всем. Ключ к&nbsp;счастью
+                    и&nbsp;достатку лежит в&nbsp;умении распоряжаться своим
+                    временем
+                  </p>
+                  <div class="video__info-stat">
+                    <p class="video__data">11&nbsp;ноября 2024</p>
+                    <span class="video__view">3</span
+                    ><span class="video__like">14</span
+                    ><span class="video__bookmark">1</span>
+                  </div>
+                </li>
+                <li class="video__item">
+                  <picture class="video__picture"></picture>
+                  <div class="video__decr-wrapp">
+                    <span class="video__decr-span">Кафе и&nbsp;рестораны</span
+                    ><span class="video__decr-span">Дамир Алексеев</span>
+                  </div>
+                  <h3 class="video__subtitle">
+                    Мощный подъем&nbsp;&mdash; ворвалась в&nbsp;сферу
+                    с&nbsp;300&nbsp;000&nbsp;₽ в&nbsp;кармане
+                  </h3>
+                  <p class="video__text">
+                    Думаете начать или нет, денег мало и&nbsp;непонятно где
+                    их&nbsp;взять. Мотивационная статья для начинающих, как
+                    стартануть в&nbsp;самом конкурентном бизнесе
+                  </p>
+                  <div class="video__info-stat">
+                    <p class="video__data">11&nbsp;ноября 2024</p>
+                    <span class="video__view">3</span
+                    ><span class="video__like">14</span
+                    ><span class="video__bookmark">1</span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="video__list-pagination pagination-list">
+                <li class="pagination__item pagination-prev"></li>
+                <li class="pagination__item">1</li>
+                <li class="pagination__item">2</li>
+                <li class="pagination__item">3</li>
+                <li class="pagination__item">4</li>
+                <li class="pagination__item">5</li>
+                <li class="pagination__item pagination-next"></li>
+              </ul>
+            </div>
+            <div class="person__feedback feedback">
+              <ul class="feedback__list">
+                <li class="feedback__item">
+                  <div class="feedback__wrapp">
+                    <picture class="feedback__picture">
+                      <source
+                        srcset="
+                          ./img/user-icon-1-2x.jpg 2x,
+                          ./img/user-icon-1.jpg    1x
+                        "
+                        media="(max-width: 600px)"
+                      />
+                      <source
+                        srcset="
+                          ./img/user-icon-1-2x.jpg 2x,
+                          ./img/user-icon-1.jpg    1x
+                        "
+                        media="(min-width: 601px)"
+                      />
+                      <img
+                        src="./img/user-icon-1.jpg"
+                        alt="Аватарка пользователя"
+                      />
+                    </picture>
+                    <div class="feedback__body">
+                      <div class="feedback__name-wrapp">
+                        <h3 class="feedback__subtitle">Феодора Леонтьева</h3>
+                        <span class="feedback__rating">Доволен</span>
+                      </div>
+                      <span class="feedback__days-span"
+                        >15&nbsp;дней назад</span
+                      >
+                      <p class="feedback__text">
+                        Вот побольше&nbsp;бы таких! Юлиана&nbsp;&mdash;
+                        совершенно позитивный человек, настоящий офицер:
+                        доброжелательный и&nbsp;спокойный, с&nbsp;очень хорошими
+                        жизненными установками. Искренне рад был общению,
+                        большое спасибо! :)
+                      </p>
+                      <button class="feedback__btn-more">
+                        Читать полностью
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="feedback__item">
+                  <div class="feedback__wrapp">
+                    <picture class="feedback__picture">
+                      <source
+                        srcset="
+                          ./img/user-icon-2-2x.jpg 2x,
+                          ./img/user-icon-2.jpg    1x
+                        "
+                        media="(max-width: 600px)"
+                      />
+                      <source
+                        srcset="
+                          ./img/user-icon-2-2x.jpg 2x,
+                          ./img/user-icon-2.jpg    1x
+                        "
+                        media="(min-width: 601px)"
+                      />
+                      <img
+                        src="./img/user-icon-2.jpg"
+                        alt="Аватарка пользователя"
+                      />
+                    </picture>
+                    <div class="feedback__body">
+                      <div class="feedback__name-wrapp">
+                        <h3 class="feedback__subtitle">Максимильян Пугачев</h3>
+                        <span class="feedback__rating">Недоволен</span>
+                      </div>
+                      <span class="feedback__days-span"
+                        >3&nbsp;месяца назад</span
+                      >
+                      <p class="feedback__text">
+                        Ответственная, оперативная и&nbsp;обязательная
+                        одариваемая! А&nbsp;так&nbsp;же, внимательная
+                        и&nbsp;щедрая Дарительница! Рада знакомству
+                        с&nbsp;Юлианой! Всего Вам самого лучшего
+                        и&nbsp;прекрасного!
+                      </p>
+                      <button class="feedback__btn-more">
+                        Читать полностью
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="feedback__item">
+                  <div class="feedback__wrapp">
+                    <picture class="feedback__picture">
+                      <source
+                        srcset="
+                          ./img/user-icon-3-2x.jpg 2x,
+                          ./img/user-icon-3.jpg    1x
+                        "
+                        media="(max-width: 600px)"
+                      />
+                      <source
+                        srcset="
+                          ./img/user-icon-3-2x.jpg 2x,
+                          ./img/user-icon-3.jpg    1x
+                        "
+                        media="(min-width: 601px)"
+                      />
+                      <img
+                        src="./img/user-icon-3.jpg"
+                        alt="Аватарка пользователя"
+                      />
+                    </picture>
+                    <div class="feedback__body">
+                      <div class="feedback__name-wrapp">
+                        <h3 class="feedback__subtitle">Антон Возщиков</h3>
+                        <span class="feedback__rating">Доволен</span>
+                      </div>
+                      <span class="feedback__days-span"
+                        >3&nbsp;месяца назад</span
+                      >
+                      <p class="feedback__text">
+                        Здесь все характеризуют Юлиану как гипер ответственного
+                        сообщника. Но&nbsp;вот что я&nbsp;вам скажу...
+                        Я&nbsp;в&nbsp;шоке. Не&nbsp;успел пожелать дар, как уже
+                        пишет-звонит-договаривается о&nbsp;встрече.
+                      </p>
+                      <button class="feedback__btn-more">
+                        Читать полностью
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="feedback__item">
+                  <div class="feedback__wrapp">
+                    <picture class="feedback__picture">
+                      <source
+                        srcset="
+                          ./img/user-icon-4-2x.jpg 2x,
+                          ./img/user-icon-4.jpg    1x
+                        "
+                        media="(max-width: 600px)"
+                      />
+                      <source
+                        srcset="
+                          ./img/user-icon-4-2x.jpg 2x,
+                          ./img/user-icon-4.jpg    1x
+                        "
+                        media="(min-width: 601px)"
+                      />
+                      <img
+                        src="./img/user-icon-4.jpg"
+                        alt="Аватарка пользователя"
+                      />
+                    </picture>
+                    <div class="feedback__body">
+                      <div class="feedback__name-wrapp">
+                        <h3 class="feedback__subtitle">Людмила Афанасьева</h3>
+                        <span class="feedback__rating">Недоволен</span>
+                      </div>
+                      <span class="feedback__days-span"
+                        >3&nbsp;месяца назад</span
+                      >
+                      <p class="feedback__text">
+                        Очень приятная в&nbsp;общении женщина, доброжелательная!
+                        Быстро договорились о&nbsp;встрече в&nbsp;удобное время!
+                      </p>
+                      <button class="feedback__btn-more">
+                        Читать полностью
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <button class="feedback__btn">Оставить отзыв</button>
+            </div>
+            <ul class="person__awards awards">
+              <li class="awards__item">
+                <svg
+                  class="awards__svg"
+                  width="91"
+                  height="92"
+                  viewBox="0 0 91 92"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1887_21163)">
+                    <path
+                      d="M0.333008 51.2082L12.583 39.1527L33.4163 35.4583L31.3608 46.3749L3.19412 55.0416L1.36079 54.2638L0.333008 51.236L0.333008 51.2082Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M14.6938 42.2361L1.41602 54.3194L11.1938 59.0694L26.0271 51.4861V47.9028L29.0549 39.7361L14.6938 42.2361ZM46.1382 63.4861L39.7216 66.2639L33.666 79.0972C33.666 79.0972 38.9993 90.9028 39.2493 90.9028C39.4993 90.9028 42.5271 91.1528 42.5271 91.1528L53.3049 79.0972L56.0271 58.5139L46.1382 63.4861Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M39.8331 73.0137C39.8331 73.0137 43.4164 72.2915 45.9442 71.0693C48.4998 69.8471 51.6387 68.0415 51.6387 68.0415L50.472 78.0971L39.1942 90.9304C39.1942 90.9304 38.7498 90.3748 36.8887 86.3193C35.3887 83.0693 34.8887 81.9026 34.8887 81.9026L39.8331 73.0137Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M21.1668 57.9028C21.1668 57.9028 16.8612 57.5417 12.1668 63.4861C7.86123 68.9306 5.86123 77.7639 5.08345 80.0417C4.30568 82.3194 2.44457 82.7917 3.05568 83.8194C3.66679 84.8472 6.36123 84.7917 9.69456 84.375C13.0001 83.9583 15.8612 82.9306 15.8612 82.9306C15.8612 82.9306 15.7223 83.2917 15.2501 84.0694C15.0835 84.3472 14.4723 84.7361 14.5279 85.1528C14.639 86.125 23.0279 86.1528 29.7501 79.2639C37.0001 71.8194 33.4723 65.7083 33.4723 65.7083L21.1946 57.875L21.1668 57.9028Z"
+                      fill="#F7D74D"
+                    />
+                    <path
+                      d="M22.4721 61.3471C22.4721 61.3471 17.8332 61.5971 13.9999 67.5416C10.1665 73.486 8.38877 80.4027 8.74988 80.8471C9.11099 81.3193 16.2499 78.736 17.9721 79.236C19.1388 79.5971 18.5277 80.7916 18.861 81.0971C19.111 81.3471 22.2221 81.7916 27.2499 76.3749C32.2777 70.9304 31.0832 63.2916 31.0832 63.2916L22.4721 61.3193V61.3471Z"
+                      fill="#FBF0B4"
+                    />
+                    <path
+                      d="M24.7217 53.2361C24.7217 53.2361 22.3884 55.3194 21.5551 56.5139C20.7217 57.7083 20.7217 57.8194 20.7773 58.1805C20.8329 58.5416 21.694 62.4861 25.2773 65.9583C29.694 70.2083 33.6106 70.7639 34.194 70.7639C34.7773 70.7639 38.5551 66.5139 38.5551 66.5139L24.7495 53.2639L24.7217 53.2361Z"
+                      fill="#858585"
+                    />
+                    <path
+                      d="M35.0273 65.8193C35.0273 65.8193 38.8051 68.2915 45.1385 66.1804C53.7773 63.2637 60.1385 56.7637 67.9996 48.5693C75.5829 40.6526 81.944 30.8193 81.944 30.8193L77.4996 15.9026L35.0551 65.847L35.0273 65.8193Z"
+                      fill="#D9D9D9"
+                    />
+                    <path
+                      d="M48.4443 57.6526L49.4721 54.4304L52.0832 54.7915C52.0832 54.7915 54.0554 55.736 55.5277 56.4026C56.9999 57.0971 58.861 57.5971 58.861 57.5971L55.1666 60.736C55.1666 60.736 53.1388 59.986 51.6666 59.3193C49.9999 58.5971 48.4443 57.6526 48.4443 57.6526Z"
+                      fill="#3F545F"
+                    />
+                    <path
+                      d="M60.6659 9.56928C60.6659 9.56928 53.4714 13.7359 43.1381 23.5137C33.8326 32.3193 26.9437 40.2915 25.2492 47.0693C23.8603 52.7359 24.6103 56.1804 27.777 59.9026C31.1381 63.8471 35.0548 65.7915 35.0548 65.7915C35.0548 65.7915 37.9992 65.8471 50.3326 56.3748C65.6937 44.5415 77.9992 24.7359 77.9992 24.7359L60.6937 9.5415L60.6659 9.56928Z"
+                      fill="#D9D9D9"
+                    />
+                    <path
+                      d="M75.5279 28.8192C75.5279 28.8192 69.2501 26.1526 64.7779 19.9026C60.3334 13.7081 60.6946 9.51367 60.6946 9.51367C60.6946 9.51367 64.4168 6.59701 72.7501 3.26367C78.3612 1.01367 86.0279 -0.125218 88.5279 1.73589C91.0557 3.59701 86.8057 12.9581 86.8057 12.9581L79.0834 27.9026L75.5001 28.7915L75.5279 28.8192Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M48.5552 57.7083C48.5552 57.7083 43.1386 54.9583 39.6941 51.0138C33.1663 43.5972 31.833 35.4305 31.833 35.4305L35.1108 31.5972C35.1108 31.5972 35.9163 40.2638 42.9163 47.7361C47.4719 52.6249 52.2219 54.8472 52.2219 54.8472C52.2219 54.8472 51.2774 55.6527 50.2497 56.4305C49.6108 56.9305 48.5552 57.7083 48.5552 57.7083Z"
+                      fill="#D9D9D9"
+                    />
+                    <path
+                      d="M81.9163 30.7916C81.9163 30.7916 85.1663 26.875 88.2497 18.0416C92.5552 5.73608 88.8052 1.98608 88.8052 1.98608C88.8052 1.98608 87.5274 7.8472 83.1386 15.9861C79.6108 22.5139 75.333 28.7083 75.333 28.7083C75.333 28.7083 77.6941 29.7639 78.9719 30.125C80.583 30.5972 81.9163 30.7639 81.9163 30.7639V30.7916Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M27.333 49.6527C28.3052 50.5693 29.7774 49.5971 30.7496 47.3193C31.7218 45.0416 31.7218 43.7638 30.9718 43.236C30.0552 42.5693 28.4718 44.0416 27.8052 45.3471C27.0552 46.7916 26.6107 48.9305 27.3607 49.6527H27.333ZM61.1385 12.5693C61.1385 12.5693 55.4441 16.6527 49.3607 22.236C43.7774 27.3471 40.083 31.3471 39.583 32.2916C39.0552 33.2916 39.0274 34.7082 39.4441 35.4027C39.8607 36.1249 40.8052 36.486 41.6385 35.8749C42.4718 35.236 48.5274 28.5693 53.9718 23.8193C58.9441 19.4582 62.8052 16.7082 62.8052 16.7082C62.8052 16.7082 64.3607 13.9582 64.1107 13.3193C63.8607 12.6804 61.1663 12.5971 61.1663 12.5971L61.1385 12.5693Z"
+                      fill="#D9D9D9"
+                    />
+                    <path
+                      d="M61.1387 12.5415C61.1387 12.5415 65.3609 9.31932 69.9442 7.04154C74.1942 4.93043 78.4442 3.18043 79.222 4.7082C79.9442 6.15265 75.1942 8.15265 71.0276 10.7915C66.8609 13.4582 62.8331 16.6526 62.8331 16.6526C62.8331 16.6526 62.222 15.5415 61.8331 14.486C61.5831 13.8471 61.3609 13.2082 61.1942 12.5415H61.1387Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M64.6108 26.875C60.4441 23.0416 54.6386 24.0694 51.7775 27.4861C48.833 31.0139 49.0553 36.375 52.5275 39.625C55.6942 42.5694 61.5553 43.2361 65.083 39.0972C68.2219 35.4305 68.0275 30.0139 64.6108 26.875Z"
+                      fill="#E1E1E1"
+                    />
+                    <path
+                      d="M53.9161 28.8472C51.4439 31.2916 51.5828 36.0972 54.5272 38.3194C57.1105 40.2361 60.7494 40.1527 63.055 37.7916C65.3605 35.4583 65.3605 31.1805 63.1939 28.9861C60.7217 26.4583 56.7494 26.0694 53.9161 28.8472Z"
+                      fill="#3F545F"
+                    />
+                    <path
+                      d="M34.9716 55.0694C34.9716 55.0694 39.6104 50.3749 40.1104 50.8749C40.6104 51.3749 40.5549 54.236 38.3327 57.4027C36.1104 60.5694 31.2216 66.236 27.3327 70.0416C23.4993 73.7916 18.1382 78.0972 17.6104 78.0138C17.2216 77.9583 15.6105 77.1527 14.9716 76.3749C14.3327 75.5972 16.2216 71.9583 16.9716 70.7638C17.7216 69.5694 34.9438 55.0694 34.9438 55.0694H34.9716Z"
+                      fill="#A02524"
+                    />
+                    <path
+                      d="M13.4164 73.7638C13.3609 74.8471 14.9998 76.4026 14.9998 76.4026L40.1109 50.8749C40.1109 50.8749 38.9442 49.5415 35.472 51.7082C31.972 53.8749 28.9164 56.486 24.4164 60.8471C18.1386 66.9304 13.472 72.6804 13.4164 73.7638Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M11.7779 25.1528C10.9446 25.9861 10.9168 27.3194 11.8335 28.0694C12.6668 28.7639 14.0002 28.3194 14.5002 27.7083C15.0002 27.0972 14.9446 25.7639 14.2779 25.0972C13.6113 24.4305 12.2779 24.6528 11.7779 25.1528Z"
+                      fill="white"
+                    />
+                    <g opacity="0.5">
+                      <path
+                        d="M28.2223 24.1803C27.5834 24.8748 27.8056 25.9026 28.389 26.2914C28.9723 26.6803 29.8612 26.6248 30.2779 26.1248C30.6667 25.6526 30.6945 24.7081 30.1112 24.1248C29.6112 23.6248 28.639 23.7359 28.2223 24.1803Z"
+                        fill="white"
+                      />
+                    </g>
+                    <path
+                      d="M39.1105 6.37495C39.1105 6.37495 40.0272 3.76384 40.555 3.73606C41.1105 3.70828 41.8883 6.34717 41.8883 6.34717C41.8883 6.34717 44.5828 6.37495 44.7772 6.76384C44.9994 7.26384 43.055 8.98606 43.055 8.98606C43.055 8.98606 43.6939 11.5416 43.3883 11.8472C43.055 12.1805 40.7216 10.8472 40.7216 10.8472C40.7216 10.8472 38.3328 12.5138 37.805 12.0694C37.3605 11.6805 38.305 8.98606 38.305 8.98606C38.305 8.98606 36.055 7.34717 36.1661 6.87495C36.3328 6.23606 39.1105 6.37495 39.1105 6.37495ZM70.1661 68.875C71.0828 69.375 72.2216 69.0972 72.6383 68.1249C73.0272 67.2638 72.305 66.2361 71.6661 65.9583C71.0272 65.6805 69.9161 66.0416 69.4994 66.7638C69.1105 67.4861 69.6105 68.5694 70.1383 68.875H70.1661ZM83.0272 46.7916C82.4994 45.9861 81.3883 45.7361 80.6661 46.3749C79.9716 47.0138 80.1383 47.9861 80.5272 48.4861C80.9161 48.9861 81.9994 49.1805 82.6383 48.7638C83.2772 48.3472 83.3328 47.2638 83.0272 46.7916Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1887_21163">
+                      <rect
+                        width="90"
+                        height="90.3611"
+                        fill="white"
+                        transform="translate(0.333008 0.819336)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3 class="awards__subtitle">Быстрый старт</h3>
+                <p class="awards__text">
+                  На&nbsp;100% заполненный профиль, 2&nbsp;статьи за&nbsp;первую
+                  неделю
+                </p>
+              </li>
+              <li class="awards__item">
+                <svg
+                  class="awards__svg"
+                  width="90"
+                  height="92"
+                  viewBox="0 0 90 92"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1887_7444)">
+                    <path
+                      d="M15.5054 17.4543C23.2117 9.67896 32.9297 5.68288 44.6285 5.43506C56.2035 5.68288 65.8596 9.67896 73.5659 17.4543C81.2722 25.2296 85.2956 34.9256 85.667 46.5111C85.2956 58.0967 81.2722 67.7926 73.5659 75.5679C65.8596 83.3433 56.2035 87.3393 44.6285 87.5872C32.9297 87.3393 23.2117 83.3433 15.5054 75.5679C7.79907 67.7926 3.77569 58.0967 3.4043 46.5111C3.77569 34.9256 7.79907 25.2296 15.5054 17.4543Z"
+                      fill="#E5E4DF"
+                    />
+                    <path
+                      d="M67.9337 46.511C67.6861 53.0783 65.3959 58.5922 61.0321 63.022C56.6682 67.4518 51.1903 69.7131 44.629 69.837C37.944 69.7131 32.4351 67.4518 28.1332 63.022C23.8312 58.5922 21.5101 53.1092 21.1387 46.511C21.2625 39.9438 23.4289 34.4918 27.6689 30.186C31.909 25.8801 37.5417 23.5568 44.5981 23.1851C51.1593 23.1851 56.6373 25.4154 61.0011 29.9072C65.3649 34.3989 67.6552 39.9129 67.9028 46.511H67.9337Z"
+                      fill="#E5E4DF"
+                    />
+                    <path
+                      d="M44.6286 91.1804C31.9704 90.8087 21.4168 86.4409 12.9986 78.077C4.58047 69.7131 0.247593 59.1807 0 46.511C0.247593 33.9651 4.58047 23.4638 12.9986 15.0379C21.4168 6.5811 31.9704 2.21328 44.6286 1.84155C57.163 2.21328 67.6547 6.5811 76.0729 15.0379C84.4911 23.4638 88.8239 33.9651 89.0715 46.511C88.8239 59.1807 84.4911 69.7131 76.0729 78.077C67.6547 86.4409 57.163 90.8087 44.6286 91.1804ZM44.6286 10.2984C34.3535 10.6701 25.8116 14.2015 19.0027 20.9856C12.1939 27.7387 8.66575 36.2575 8.41816 46.542C8.66575 56.8265 12.1939 65.3762 19.0027 72.1913C25.8116 79.0063 34.3535 82.5377 44.6286 82.7855C54.7799 82.5377 63.26 79.0063 70.0688 72.1913C76.8776 65.3762 80.4058 56.8265 80.6534 46.542C80.4058 36.2575 76.8776 27.7387 70.0688 20.9856C63.26 14.2325 54.7799 10.6701 44.6286 10.2984Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M44.6282 73.3995C36.9837 73.1517 30.6392 70.5496 25.6254 65.5932C20.6117 60.6368 17.981 54.2555 17.7334 46.4802C17.7334 38.9527 20.2093 32.6642 25.1612 27.6459C30.113 22.6276 36.5505 19.9325 44.4115 19.5608C52.056 19.6847 58.4315 22.2868 63.5071 27.3671C68.5828 32.4474 71.1825 38.8287 71.3063 46.4802C71.1825 54.1316 68.5828 60.482 63.5071 65.5003C58.4315 70.5186 52.1179 73.1517 44.5972 73.3995H44.6282ZM44.9996 28.7301H44.6282C39.3668 28.9779 35.0649 30.7436 31.7224 34.0272C28.3799 37.3109 26.7705 41.4928 26.8943 46.5731C27.0181 51.6534 28.7513 55.8353 32.0938 59.1189C35.4363 62.4026 39.6144 64.0444 44.6282 64.0444C49.6419 64.0444 53.8201 62.3716 57.1626 59.026C60.5051 55.6805 62.1763 51.4985 62.1763 46.4802C62.1763 41.4618 60.536 37.2799 57.2554 33.9343C53.9748 30.5887 49.8895 28.854 44.9686 28.7301H44.9996Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M39.3363 41.3997C40.698 40.0367 42.4312 39.3242 44.5357 39.3242C46.6403 39.3242 48.3734 40.0057 49.7352 41.3997C51.0969 42.7627 51.8088 44.4665 51.8088 46.511C51.8088 48.5555 51.1279 50.2592 49.7352 51.6222C48.3734 52.9853 46.6403 53.6977 44.5357 53.6977C42.4312 53.6977 40.698 53.0162 39.3363 51.6222C37.9745 50.2592 37.2627 48.5555 37.2627 46.511C37.2627 44.4665 37.9436 42.7627 39.3363 41.3997Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M45.5263 47.2236C44.8144 47.8121 44.1645 47.8121 43.5455 47.2236C42.9575 46.635 42.9575 45.9535 43.5455 45.241L49.0854 39.696L50.8805 41.6786L45.4953 47.2545L45.5263 47.2236Z"
+                      fill="#D9D9D9"
+                    />
+                    <path
+                      d="M89.9691 14.2325C90.5571 17.5781 84.8934 20.0873 72.9471 21.76L55.5537 41.3068C54.7181 42.1432 53.7277 42.5769 52.5826 42.5769C51.4375 42.5769 50.4471 42.1742 49.5496 41.3068C48.652 40.4704 48.2188 39.4791 48.2188 38.333C48.2188 37.1868 48.6211 36.1645 49.4877 35.2042L69.0165 17.9808C70.6568 6.02353 73.1637 0.323681 76.5062 0.850297C79.8487 1.37691 80.1582 5.58984 77.4038 13.4891C85.172 10.6082 89.3501 10.856 89.9381 14.2016L89.9691 14.2325Z"
+                      fill="#0074A8"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1887_7444">
+                      <rect
+                        width="90"
+                        height="90.3611"
+                        fill="white"
+                        transform="translate(0 0.819336)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3 class="awards__subtitle">Точно в&nbsp;цель!</h3>
+                <p class="awards__text">
+                  Быстрые контакты&nbsp;&mdash; ваш конек! 10&nbsp;друзей
+                  за&nbsp;7&nbsp;дней, так держать!
+                </p>
+              </li>
+              <li class="awards__item">
+                <svg
+                  class="awards__svg"
+                  width="91"
+                  height="92"
+                  viewBox="0 0 91 92"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1887_12878)">
+                    <path
+                      d="M90.6663 29.8875C90.6663 37.595 87.7241 44.4216 81.9152 50.294C77.1625 54.9185 71.7308 57.6344 65.5447 58.5887C59.3586 59.543 53.3989 58.5887 47.7409 55.9461L12.1331 90.6665C12.1331 90.6665 11.9068 90.6665 11.7559 90.8133L3.0049 91.1804C3.0049 91.1804 2.55226 91.1804 2.47682 91.0335L1.04346 89.6389C1.04346 89.6389 0.892579 89.4186 0.892579 89.2718L1.26978 80.4633C1.26978 80.4633 1.26978 80.2431 1.42066 80.0963L2.85402 78.4814C2.85402 78.4814 3.08034 77.9675 2.85402 77.6005L0.892579 75.692C0.892579 75.692 0.666259 75.1781 0.892579 74.8111L4.8909 70.9207C4.8909 70.9207 5.19266 70.7739 5.41898 70.7739L9.79451 71.1409C10.2471 71.1409 10.5489 70.9941 10.5489 70.6271L10.9261 65.4887C10.9261 65.4887 10.9261 65.2685 11.077 65.1217L15.6034 60.4972C15.6034 60.4972 15.9052 60.3504 16.1315 60.3504L20.2807 61.2313C20.2807 61.2313 20.7333 61.2313 20.8088 61.0845L25.1843 56.827C25.1843 56.827 25.3352 56.5334 25.3352 56.3132V51.395C25.3352 51.395 25.3352 50.9546 25.486 50.8812L33.8599 42.7333C31.0686 37.228 30.1633 31.429 31.144 25.4098C32.1248 19.3906 34.916 14.1055 39.5179 9.481C45.704 3.82885 52.7199 0.966064 60.7165 0.966064C68.7132 0.966064 75.7291 3.82885 81.9152 9.481C87.7241 15.5002 90.6663 22.3268 90.6663 30.1077V29.8875ZM79.5766 18.1427C79.5766 16.381 78.8976 14.8395 77.6151 13.5183C76.2572 12.197 74.673 11.6097 72.8624 11.6097C71.0518 11.6097 69.4676 12.2704 68.1097 13.5183C66.7518 14.8395 66.0728 16.381 66.0728 18.1427C66.0728 19.9045 66.7518 21.446 68.1097 22.7672C69.4676 24.0885 71.0518 24.6758 72.8624 24.6758C74.673 24.6758 76.2572 24.0151 77.6151 22.7672C78.973 21.5194 79.5766 19.9045 79.5766 18.1427Z"
+                      fill="#FFB636"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1887_12878">
+                      <rect
+                        width="90"
+                        height="90.3611"
+                        fill="white"
+                        transform="translate(0.666016 0.819336)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3 class="awards__subtitle">Ключевой резидент</h3>
+                <p class="awards__text">Сообщество активно поддерживает вас</p>
+              </li>
+              <li class="awards__item">
+                <svg
+                  class="awards__svg"
+                  width="91"
+                  height="92"
+                  viewBox="0 0 91 92"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1887_5703)">
+                    <g clip-path="url(#clip1_1887_5703)">
+                      <path
+                        d="M49.4056 53.4124C34.693 52.856 30.0239 61.9281 24.501 65.7343C20.265 68.6576 13.2737 68.1737 13.2737 68.1737C7.96526 69.0648 4.47168 71.9195 4.47168 77.0523C4.47168 82.185 7.15683 86.6525 14.3048 86.6525L62.39 85.0155C62.39 85.0155 64.3533 53.9809 49.3973 53.4165L49.4056 53.4124Z"
+                        fill="#D3CAC3"
+                      />
+                      <path
+                        d="M4.35171 62.662L19.4974 25.4785L30.0029 29.4178C30.0029 29.4178 26.5052 47.6426 26.101 52.1706C25.6968 56.6986 30.0029 67.3149 29.1037 76.6935C28.1014 87.2009 23.8613 89.9508 15.777 90.8499C10.118 91.483 3.73714 88.975 1.96354 85.8018C-0.651485 81.1166 -1.4063 75.258 4.35171 62.662Z"
+                        fill="#90A4AE"
+                      />
+                      <path
+                        d="M18.4006 28.0953C18.9863 28.059 19.8607 27.8211 21.4199 29.6638C22.5748 31.0306 25.1609 33.3652 28.1884 33.5224C28.7122 31.0226 29.0917 29.2767 29.0917 29.2767L19.4854 25.4866L18.3965 28.0953H18.4006Z"
+                        fill="#466B7D"
+                      />
+                      <path
+                        d="M7.52357 73.3791C7.52357 73.3791 19.0313 39.4576 23.5561 27.0913L19.485 25.4866L4.35171 62.662C-1.4063 75.258 -0.651485 81.1085 1.96354 85.8018C3.73714 88.9831 8.93007 91.6442 14.5891 91.0153C15.9873 90.858 17.2371 90.5919 18.3714 90.2209C14.3416 83.806 7.52357 73.3791 7.52357 73.3791Z"
+                        fill="url(#paint0_linear_1887_5703)"
+                      />
+                      <path
+                        d="M18.4005 28.0953C18.9862 28.059 19.8606 27.8211 21.4197 29.6638C22.5746 31.0306 26.0682 34.0224 29.0957 34.1756C29.6195 31.6757 29.9949 29.4259 29.9949 29.4259L19.4894 25.4866L18.4005 28.0953ZM26.5095 56.5292C26.5095 56.5292 26.5549 60.8919 22.752 64.0893C16.8661 69.0406 4.9005 66.2142 2.77631 79.911C2.21535 83.5318 0.693359 82.931 0.693359 82.931C0.693359 82.931 2.66907 91.6684 14.3377 91.0354C22.9417 90.2854 27.7469 84.2334 28.8441 77.3305C29.9907 70.1535 26.5095 56.5252 26.5095 56.5252V56.5292Z"
+                        fill="#466B7D"
+                      />
+                      <path
+                        d="M58.8304 52.8561C39.6178 52.8561 33.9423 58.5372 29.3928 63.1015C27.1737 65.3312 25.4166 67.0932 22.3108 67.8835C19.572 68.581 15.3277 69.4358 14.0945 69.6818C14.078 69.6818 14.0656 69.6898 14.0491 69.6898C8.07249 70.7019 4.50879 74.7823 4.50879 80.6046C4.50879 83.5278 5.50695 86.068 7.39192 87.9429C8.87679 89.4226 11.6816 91.1766 16.594 91.1766H16.6683L69.1131 89.4871C69.1131 89.4871 73.8359 64.8917 66.7621 56.4648C64.7699 54.102 62.0229 52.8521 58.8222 52.8521L58.8304 52.8561Z"
+                        fill="url(#paint1_linear_1887_5703)"
+                      />
+                      <path
+                        d="M54.6478 59.7104C41.4283 57.4202 36.2767 64.069 29.1039 69.5325C25.8496 72.0162 17.0393 72.9234 17.0393 72.9234C11.7309 73.8145 8.2373 76.6692 8.2373 81.8019C8.2373 86.9347 10.9225 91.1401 18.0705 91.1401L66.1556 89.5031C66.1556 89.5031 69.3728 62.2587 54.6396 59.7104H54.6478Z"
+                        fill="#D9D9D9"
+                      />
+                      <path
+                        d="M50.6475 65.5125C50.6722 62.5329 50.5856 60.1822 50.5237 58.4726V58.3839C50.4495 56.259 50.1731 54.6301 49.8143 53.364C49.6617 53.3882 49.5008 53.4003 49.3523 53.4245C46.1186 53.2229 42.9014 53.872 42.9014 53.872C42.9014 53.872 46.6053 54.7873 47.0178 60.5935C47.1539 62.5208 47.2075 63.0167 47.1621 66.1698C46.8033 91.8297 68.3752 89.5395 68.3752 89.5395L68.6103 88.2694C55.7414 85.9792 50.5361 79.3908 50.6433 65.5166L50.6475 65.5125Z"
+                        fill="#466B7D"
+                      />
+                      <path
+                        d="M18.2812 87.9872C21.3975 87.9872 23.9237 85.5177 23.9237 82.4714C23.9237 79.4251 21.3975 76.9556 18.2812 76.9556C15.1649 76.9556 12.6387 79.4251 12.6387 82.4714C12.6387 85.5177 15.1649 87.9872 18.2812 87.9872Z"
+                        fill="#D9D9D9"
+                      />
+                      <path
+                        d="M18.4171 86.4348C21.1689 86.4348 23.3997 84.2541 23.3997 81.5641C23.3997 78.874 21.1689 76.6934 18.4171 76.6934C15.6653 76.6934 13.4346 78.874 13.4346 81.5641C13.4346 84.2541 15.6653 86.4348 18.4171 86.4348Z"
+                        fill="#CA2C31"
+                      />
+                      <path
+                        d="M18.4171 86.4348C21.1689 86.4348 23.3997 84.2541 23.3997 81.5641C23.3997 78.874 21.1689 76.6934 18.4171 76.6934C15.6653 76.6934 13.4346 78.874 13.4346 81.5641C13.4346 84.2541 15.6653 86.4348 18.4171 86.4348Z"
+                        fill="#D9D9D9"
+                      />
+                      <path
+                        d="M22.0292 84.7148C23.6303 83.1497 23.6303 80.612 22.0292 79.0469C20.4281 77.4817 17.8322 77.4817 16.2311 79.0469C14.63 80.612 14.63 83.1497 16.2311 84.7148C17.8322 86.28 20.4281 86.28 22.0292 84.7148Z"
+                        fill="#C6B3A1"
+                      />
+                      <path
+                        d="M89.4148 66.061H89.4313C89.4395 53.3238 78.3112 45.0178 65.8053 45.4935C54.2522 45.9411 48.1064 53.4286 48.1064 53.4286C48.1064 53.4286 51.6578 56.7429 50.0079 65.436L50.0244 65.4521C49.9625 65.69 49.9089 65.936 49.8553 66.1819C47.7022 76.8749 54.8214 87.2453 65.7517 89.35C76.682 91.4547 87.2865 84.4874 89.4313 73.7944C89.9634 71.1534 89.9345 68.5366 89.4148 66.061Z"
+                        fill="#D9D9D9"
+                      />
+                      <path
+                        d="M89.4148 66.0609L90.7141 66.1859C90.3717 53.6947 78.3071 45.0177 65.8053 45.4935C54.2522 45.9411 48.1064 53.4285 48.1064 53.4285C48.1064 53.4285 48.7375 53.9205 49.0097 59.1984C49.1005 60.9604 49.1541 63.2506 49.1335 66.2383C49.0427 78.1812 54.8296 87.2452 65.7599 89.3459C76.6903 91.4507 88.0454 84.826 90.1902 74.1331C90.7141 71.4921 89.9304 68.5326 89.4148 66.0569V66.0609Z"
+                        fill="#CA2C31"
+                      />
+                      <path
+                        d="M71.3405 88.0719C82.154 88.0719 90.9202 79.5026 90.9202 68.9318C90.9202 58.3611 82.154 49.7917 71.3405 49.7917C60.5269 49.7917 51.7607 58.3611 51.7607 68.9318C51.7607 79.5026 60.5269 88.0719 71.3405 88.0719Z"
+                        fill="#90A4AE"
+                      />
+                      <path
+                        d="M81.5213 78.67C86.0862 74.2076 86.0862 66.9726 81.5213 62.5101C76.9563 58.0477 69.5551 58.0477 64.9902 62.5101C60.4252 66.9726 60.4252 74.2076 64.9902 78.67C69.5551 83.1325 76.9563 83.1325 81.5213 78.67Z"
+                        fill="#466B7D"
+                      />
+                      <path
+                        d="M81.3087 76.5063C85.5418 72.3682 85.5418 65.6591 81.3087 61.521C77.0755 57.383 70.2123 57.383 65.9792 61.521C61.7461 65.6591 61.7461 72.3682 65.9792 76.5063C70.2123 80.6444 77.0755 80.6444 81.3087 76.5063Z"
+                        fill="#A38E7A"
+                      />
+                      <path
+                        d="M81.3087 76.5066C85.5418 72.3685 85.5418 65.6593 81.3087 61.5213C77.0755 57.3832 70.2123 57.3832 65.9792 61.5213C61.7461 65.6593 61.7461 72.3685 65.9792 76.5066C70.2123 80.6446 77.0755 80.6446 81.3087 76.5066Z"
+                        fill="url(#paint2_radial_1887_5703)"
+                      />
+                      <path
+                        d="M74.9868 78.6206C80.2376 78.6206 84.4941 74.4597 84.4941 69.3268C84.4941 64.194 80.2376 60.033 74.9868 60.033C69.7361 60.033 65.4795 64.194 65.4795 69.3268C65.4795 74.4597 69.7361 78.6206 74.9868 78.6206Z"
+                        fill="#C6B3A1"
+                      />
+                      <path
+                        d="M48.7665 14.9146L42.1711 11.5479L36.1409 17.8459L35.9512 22.894L45.6565 26.3535C45.6565 26.3535 50.6473 23.8415 50.8535 23.7448C51.0598 23.648 50.771 19.624 50.771 19.624L48.7706 14.9186L48.7665 14.9146Z"
+                        fill="#212121"
+                      />
+                      <path
+                        d="M40.3236 16.5031C41.3713 13.9831 42.3612 14.0718 43.512 14.3903C44.6834 14.7169 45.4671 16.0555 44.5597 18.0272L43.0005 22.5713L48.2347 21.0109L50.4249 23.2326L51.6788 25.926C51.6788 25.926 46.8117 27.6799 43.7512 27.8009C40.6949 27.9218 39.012 25.4663 39.012 25.4663L36.8672 24.4986C36.8672 24.4986 40.0019 17.2853 40.3195 16.5071L40.3236 16.5031Z"
+                        fill="#466B7D"
+                      />
+                      <path
+                        d="M45.6318 9.93898C45.7226 7.9915 45.8298 5.48358 45.8298 5.43116L45.7844 5.41503C45.4792 5.35455 43.4788 4.97554 40.9008 4.68523C37.9187 4.35057 36.306 4.86264 34.8459 6.50771L26.3656 14.9024C23.9857 17.8014 25.8789 21.7367 25.8789 21.7367L36.603 23.5511C36.603 23.5511 43.3138 14.971 45.0667 12.7171C45.1657 12.2493 45.3843 11.1486 45.6277 9.93494L45.6318 9.93898Z"
+                        fill="#6D94A5"
+                      />
+                      <path
+                        d="M25.8782 21.7367C25.8782 21.7367 23.9932 17.8015 26.3649 14.9024L34.8534 6.49966C36.3053 4.85458 37.9263 4.34252 40.9084 4.67718C43.7091 4.99571 45.8291 5.41504 45.8291 5.41504C45.8291 5.41504 45.561 12.0477 45.4868 12.1647C45.4043 12.2856 36.6023 23.539 36.6023 23.539L25.8782 21.7327V21.7367Z"
+                        fill="#D3CAC3"
+                      />
+                      <path
+                        d="M31.7441 16.7934L42.8436 5.86255L44.0975 14.2935L37.4032 22.5673L33.6621 19.0272L31.7441 16.7894V16.7934Z"
+                        fill="#90A4AE"
+                      />
+                      <path
+                        d="M48.8033 8.45932C48.1888 6.48765 47.5247 5.87881 45.8295 5.42722C42.5421 4.54421 40.1622 8.02386 42.1709 11.5479C44.3528 15.3864 47.4958 21.7046 47.4958 21.7046L52.334 25.4906C53.0352 25.2366 53.8313 24.0391 53.2373 22.0916L48.8033 8.46335V8.45932Z"
+                        fill="#90A4AE"
+                      />
+                      <path
+                        d="M47.991 7.06009C47.9002 6.97945 47.9662 6.4956 47.2692 6.00369C46.8443 5.70532 46.3246 5.55211 45.8255 5.41502C42.5382 4.532 40.1583 8.01165 42.167 11.5356C43.9488 14.6645 47.4094 21.6198 47.4094 21.6198C47.4094 21.6198 47.925 23.406 48.2632 23.4947C48.6757 23.5995 49.1088 23.3455 49.3191 22.9907C49.5336 22.6318 49.381 22.2851 49.3562 21.8738C49.3562 21.8738 44.5098 12.1929 44.0313 11.3099C43.5529 10.4268 47.2403 6.3948 47.9951 7.06412L47.991 7.06009Z"
+                        fill="#466B7D"
+                      />
+                      <path
+                        d="M45.8747 12.8461C47.8064 12.8461 49.3724 11.3153 49.3724 9.42698C49.3724 7.53863 47.8064 6.00781 45.8747 6.00781C43.9429 6.00781 42.377 7.53863 42.377 9.42698C42.377 11.3153 43.9429 12.8461 45.8747 12.8461Z"
+                        fill="#466B7D"
+                      />
+                      <path
+                        d="M46.1718 12.2412C47.9737 12.2412 49.4344 10.8133 49.4344 9.05189C49.4344 7.29047 47.9737 5.86255 46.1718 5.86255C44.3699 5.86255 42.9092 7.29047 42.9092 9.05189C42.9092 10.8133 44.3699 12.2412 46.1718 12.2412Z"
+                        fill="#A38E7A"
+                      />
+                      <path
+                        d="M46.1718 12.2412C47.9737 12.2412 49.4344 10.8133 49.4344 9.05189C49.4344 7.29047 47.9737 5.86255 46.1718 5.86255C44.3699 5.86255 42.9092 7.29047 42.9092 9.05189C42.9092 10.8133 44.3699 12.2412 46.1718 12.2412Z"
+                        fill="url(#paint3_radial_1887_5703)"
+                      />
+                      <path
+                        d="M46.7497 11.6485C48.203 11.6485 49.3812 10.4968 49.3812 9.0761C49.3812 7.65538 48.203 6.50366 46.7497 6.50366C45.2963 6.50366 44.1182 7.65538 44.1182 9.0761C44.1182 10.4968 45.2963 11.6485 46.7497 11.6485Z"
+                        fill="#C6B3A1"
+                      />
+                      <path
+                        d="M50.5237 26.1761C52.1866 26.1761 53.5347 24.8583 53.5347 23.2327C53.5347 21.6071 52.1866 20.2893 50.5237 20.2893C48.8608 20.2893 47.5127 21.6071 47.5127 23.2327C47.5127 24.8583 48.8608 26.1761 50.5237 26.1761Z"
+                        fill="#466B7D"
+                      />
+                      <path
+                        d="M50.6759 20.4829C52.1567 20.4829 53.3528 21.6562 53.3528 23.0997C53.3528 24.5432 52.1525 25.7165 50.6759 25.7165C49.1993 25.7165 47.999 24.5432 47.999 23.0997C47.999 21.6562 49.1993 20.4829 50.6759 20.4829Z"
+                        fill="#A38E7A"
+                      />
+                      <path
+                        d="M50.6759 20.4829C52.1567 20.4829 53.3528 21.6562 53.3528 23.0997C53.3528 24.5432 52.1525 25.7165 50.6759 25.7165C49.1993 25.7165 47.999 24.5432 47.999 23.0997C47.999 21.6562 49.1993 20.4829 50.6759 20.4829Z"
+                        fill="url(#paint4_radial_1887_5703)"
+                      />
+                      <path
+                        d="M51.2248 21.1279C52.4168 21.1279 53.3861 22.0714 53.3861 23.2407C53.3861 24.41 52.4209 25.3535 51.2248 25.3535C50.0286 25.3535 49.0635 24.41 49.0635 23.2407C49.0635 22.0714 50.0286 21.1279 51.2248 21.1279Z"
+                        fill="#C6B3A1"
+                      />
+                      <path
+                        d="M17.8687 20.3861C18.8215 15.8057 23.0699 14.3985 27.1574 14.7735C30.7252 15.092 32.9319 15.6283 32.9319 15.6283C32.4988 17.2209 32.4823 28.5066 31.5419 29.8734C30.4942 31.3814 25.3426 30.325 22.0511 27.9018C20.096 26.4664 18.9535 26.8091 18.9535 26.8091C18.9535 26.8091 17.2871 23.1803 17.8728 20.3861H17.8687Z"
+                        fill="#D9C6B6"
+                      />
+                      <path
+                        d="M22.6289 20.894C23.7591 16.7531 27.9208 14.2371 31.9217 15.2814C35.9226 16.3257 38.2531 20.5271 37.1229 24.672C35.9928 28.817 31.831 31.3289 27.8301 30.2846C23.8292 29.2403 21.4987 25.0389 22.6289 20.894Z"
+                        fill="#90A4AE"
+                      />
+                      <path
+                        d="M25.7796 21.8417C26.39 19.4789 28.836 17.6564 31.8717 18.5838C34.2846 19.3217 46.2172 23.64 46.2172 23.64L46.4895 29.3413C46.4895 29.3413 32.676 28.805 31.352 28.6558C25.6229 28.0107 25.1609 24.2327 25.7755 21.8377L25.7796 21.8417Z"
+                        fill="#466B7D"
+                      />
+                      <path
+                        d="M48.432 27.4422C48.729 26.1035 47.9082 24.7931 46.5924 24.4101V24.3859C46.5924 24.3859 35.5549 20.3256 33.0842 19.7974C30.6135 19.2733 28.18 20.8095 27.6479 23.2206C27.1117 25.6358 28.6832 28.0147 31.1498 28.5348C32.3583 28.7889 44.0352 29.3977 45.7139 29.4864C45.7428 29.4864 45.784 29.4945 45.8129 29.4945C45.883 29.4945 45.9201 29.5025 45.9201 29.5025V29.4864C47.1204 29.4259 48.1639 28.6155 48.432 27.4341V27.4422Z"
+                        fill="#90A4AE"
+                      />
+                      <path
+                        d="M32.7457 27.9904C34.6775 27.9904 36.2435 26.4596 36.2435 24.5713C36.2435 22.6829 34.6775 21.1521 32.7457 21.1521C30.814 21.1521 29.248 22.6829 29.248 24.5713C29.248 26.4596 30.814 27.9904 32.7457 27.9904Z"
+                        fill="#466B7D"
+                      />
+                      <path
+                        d="M36.2173 24.9381C36.6313 23.2238 35.5451 21.506 33.7914 21.1014C32.0377 20.6968 30.2805 21.7585 29.8666 23.4728C29.4527 25.1872 30.5388 26.9049 32.2925 27.3095C34.0462 27.7141 35.8034 26.6524 36.2173 24.9381Z"
+                        fill="#A38E7A"
+                      />
+                      <path
+                        d="M36.2173 24.9381C36.6313 23.2238 35.5451 21.506 33.7914 21.1014C32.0377 20.6968 30.2805 21.7585 29.8666 23.4728C29.4527 25.1872 30.5388 26.9049 32.2925 27.3095C34.0462 27.7141 35.8034 26.6524 36.2173 24.9381Z"
+                        fill="url(#paint5_radial_1887_5703)"
+                      />
+                      <path
+                        d="M33.6081 21.8296C35.06 21.8296 36.2396 22.9828 36.2396 24.402C36.2396 25.8213 35.06 26.9745 33.6081 26.9745C32.1562 26.9745 30.9766 25.8213 30.9766 24.402C30.9766 22.9828 32.1562 21.8296 33.6081 21.8296Z"
+                        fill="#C6B3A1"
+                      />
+                    </g>
+                  </g>
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_1887_5703"
+                      x1="-23.2281"
+                      y1="4.0427"
+                      x2="-55.4102"
+                      y2="91.3405"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0.31" stop-color="#D3CAC3" />
+                      <stop offset="0.74" stop-color="#6D94A5" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint1_linear_1887_5703"
+                      x1="-14.892"
+                      y1="46.1826"
+                      x2="-14.892"
+                      y2="61.5518"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0.29" stop-color="#D3CAC3" />
+                      <stop offset="1" stop-color="#6D94A5" />
+                    </linearGradient>
+                    <radialGradient
+                      id="paint2_radial_1887_5703"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(15.8822 32.9134) scale(14.783 14.4511)"
+                    >
+                      <stop stop-color="white" />
+                      <stop offset="0.92" stop-color="#CDD7DB" />
+                    </radialGradient>
+                    <radialGradient
+                      id="paint3_radial_1887_5703"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(-7.1153 -17.2313) rotate(11.934) scale(4.79287 4.69456)"
+                    >
+                      <stop stop-color="white" />
+                      <stop offset="0.92" stop-color="#CDD7DB" />
+                    </radialGradient>
+                    <radialGradient
+                      id="paint4_radial_1887_5703"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(-2.71224 -3.38593) rotate(11.934) scale(3.93027 3.84966)"
+                    >
+                      <stop stop-color="white" />
+                      <stop offset="0.92" stop-color="#CDD7DB" />
+                    </radialGradient>
+                    <radialGradient
+                      id="paint5_radial_1887_5703"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(-19.6474 -2.8489) rotate(11.9242) scale(4.79288 4.69455)"
+                    >
+                      <stop stop-color="white" />
+                      <stop offset="0.92" stop-color="#CDD7DB" />
+                    </radialGradient>
+                    <clipPath id="clip0_1887_5703">
+                      <rect
+                        width="90"
+                        height="90.3611"
+                        fill="white"
+                        transform="translate(0.333008 0.819336)"
+                      />
+                    </clipPath>
+                    <clipPath id="clip1_1887_5703">
+                      <rect
+                        width="90.932"
+                        height="86.5961"
+                        fill="white"
+                        transform="translate(-0.0117188 4.58447)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3 class="awards__subtitle">Сильные высказывания</h3>
+                <p class="awards__text">100 очков за&nbsp;ваши статьи</p>
+              </li>
+              <li class="awards__item">
+                <svg
+                  class="awards__svg"
+                  width="90"
+                  height="92"
+                  viewBox="0 0 90 92"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1887_7444)">
+                    <path
+                      d="M15.5054 17.4543C23.2117 9.67896 32.9297 5.68288 44.6285 5.43506C56.2035 5.68288 65.8596 9.67896 73.5659 17.4543C81.2722 25.2296 85.2956 34.9256 85.667 46.5111C85.2956 58.0967 81.2722 67.7926 73.5659 75.5679C65.8596 83.3433 56.2035 87.3393 44.6285 87.5872C32.9297 87.3393 23.2117 83.3433 15.5054 75.5679C7.79907 67.7926 3.77569 58.0967 3.4043 46.5111C3.77569 34.9256 7.79907 25.2296 15.5054 17.4543Z"
+                      fill="#E5E4DF"
+                    />
+                    <path
+                      d="M67.9337 46.511C67.6861 53.0783 65.3959 58.5922 61.0321 63.022C56.6682 67.4518 51.1903 69.7131 44.629 69.837C37.944 69.7131 32.4351 67.4518 28.1332 63.022C23.8312 58.5922 21.5101 53.1092 21.1387 46.511C21.2625 39.9438 23.4289 34.4918 27.6689 30.186C31.909 25.8801 37.5417 23.5568 44.5981 23.1851C51.1593 23.1851 56.6373 25.4154 61.0011 29.9072C65.3649 34.3989 67.6552 39.9129 67.9028 46.511H67.9337Z"
+                      fill="#E5E4DF"
+                    />
+                    <path
+                      d="M44.6286 91.1804C31.9704 90.8087 21.4168 86.4409 12.9986 78.077C4.58047 69.7131 0.247593 59.1807 0 46.511C0.247593 33.9651 4.58047 23.4638 12.9986 15.0379C21.4168 6.5811 31.9704 2.21328 44.6286 1.84155C57.163 2.21328 67.6547 6.5811 76.0729 15.0379C84.4911 23.4638 88.8239 33.9651 89.0715 46.511C88.8239 59.1807 84.4911 69.7131 76.0729 78.077C67.6547 86.4409 57.163 90.8087 44.6286 91.1804ZM44.6286 10.2984C34.3535 10.6701 25.8116 14.2015 19.0027 20.9856C12.1939 27.7387 8.66575 36.2575 8.41816 46.542C8.66575 56.8265 12.1939 65.3762 19.0027 72.1913C25.8116 79.0063 34.3535 82.5377 44.6286 82.7855C54.7799 82.5377 63.26 79.0063 70.0688 72.1913C76.8776 65.3762 80.4058 56.8265 80.6534 46.542C80.4058 36.2575 76.8776 27.7387 70.0688 20.9856C63.26 14.2325 54.7799 10.6701 44.6286 10.2984Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M44.6282 73.3995C36.9837 73.1517 30.6392 70.5496 25.6254 65.5932C20.6117 60.6368 17.981 54.2555 17.7334 46.4802C17.7334 38.9527 20.2093 32.6642 25.1612 27.6459C30.113 22.6276 36.5505 19.9325 44.4115 19.5608C52.056 19.6847 58.4315 22.2868 63.5071 27.3671C68.5828 32.4474 71.1825 38.8287 71.3063 46.4802C71.1825 54.1316 68.5828 60.482 63.5071 65.5003C58.4315 70.5186 52.1179 73.1517 44.5972 73.3995H44.6282ZM44.9996 28.7301H44.6282C39.3668 28.9779 35.0649 30.7436 31.7224 34.0272C28.3799 37.3109 26.7705 41.4928 26.8943 46.5731C27.0181 51.6534 28.7513 55.8353 32.0938 59.1189C35.4363 62.4026 39.6144 64.0444 44.6282 64.0444C49.6419 64.0444 53.8201 62.3716 57.1626 59.026C60.5051 55.6805 62.1763 51.4985 62.1763 46.4802C62.1763 41.4618 60.536 37.2799 57.2554 33.9343C53.9748 30.5887 49.8895 28.854 44.9686 28.7301H44.9996Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M39.3363 41.3997C40.698 40.0367 42.4312 39.3242 44.5357 39.3242C46.6403 39.3242 48.3734 40.0057 49.7352 41.3997C51.0969 42.7627 51.8088 44.4665 51.8088 46.511C51.8088 48.5555 51.1279 50.2592 49.7352 51.6222C48.3734 52.9853 46.6403 53.6977 44.5357 53.6977C42.4312 53.6977 40.698 53.0162 39.3363 51.6222C37.9745 50.2592 37.2627 48.5555 37.2627 46.511C37.2627 44.4665 37.9436 42.7627 39.3363 41.3997Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M45.5263 47.2236C44.8144 47.8121 44.1645 47.8121 43.5455 47.2236C42.9575 46.635 42.9575 45.9535 43.5455 45.241L49.0854 39.696L50.8805 41.6786L45.4953 47.2545L45.5263 47.2236Z"
+                      fill="#D9D9D9"
+                    />
+                    <path
+                      d="M89.9691 14.2325C90.5571 17.5781 84.8934 20.0873 72.9471 21.76L55.5537 41.3068C54.7181 42.1432 53.7277 42.5769 52.5826 42.5769C51.4375 42.5769 50.4471 42.1742 49.5496 41.3068C48.652 40.4704 48.2188 39.4791 48.2188 38.333C48.2188 37.1868 48.6211 36.1645 49.4877 35.2042L69.0165 17.9808C70.6568 6.02353 73.1637 0.323681 76.5062 0.850297C79.8487 1.37691 80.1582 5.58984 77.4038 13.4891C85.172 10.6082 89.3501 10.856 89.9381 14.2016L89.9691 14.2325Z"
+                      fill="#0074A8"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1887_7444">
+                      <rect
+                        width="90"
+                        height="90.3611"
+                        fill="white"
+                        transform="translate(0 0.819336)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3 class="awards__subtitle">Личность</h3>
+                <p class="awards__text">Заполнить все поля в&nbsp;карточке</p>
+              </li>
+              <li class="awards__item">
+                <svg
+                  class="awards__svg"
+                  width="91"
+                  height="92"
+                  viewBox="0 0 91 92"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1887_21163)">
+                    <path
+                      d="M0.333008 51.2082L12.583 39.1527L33.4163 35.4583L31.3608 46.3749L3.19412 55.0416L1.36079 54.2638L0.333008 51.236L0.333008 51.2082Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M14.6938 42.2361L1.41602 54.3194L11.1938 59.0694L26.0271 51.4861V47.9028L29.0549 39.7361L14.6938 42.2361ZM46.1382 63.4861L39.7216 66.2639L33.666 79.0972C33.666 79.0972 38.9993 90.9028 39.2493 90.9028C39.4993 90.9028 42.5271 91.1528 42.5271 91.1528L53.3049 79.0972L56.0271 58.5139L46.1382 63.4861Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M39.8331 73.0137C39.8331 73.0137 43.4164 72.2915 45.9442 71.0693C48.4998 69.8471 51.6387 68.0415 51.6387 68.0415L50.472 78.0971L39.1942 90.9304C39.1942 90.9304 38.7498 90.3748 36.8887 86.3193C35.3887 83.0693 34.8887 81.9026 34.8887 81.9026L39.8331 73.0137Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M21.1668 57.9028C21.1668 57.9028 16.8612 57.5417 12.1668 63.4861C7.86123 68.9306 5.86123 77.7639 5.08345 80.0417C4.30568 82.3194 2.44457 82.7917 3.05568 83.8194C3.66679 84.8472 6.36123 84.7917 9.69456 84.375C13.0001 83.9583 15.8612 82.9306 15.8612 82.9306C15.8612 82.9306 15.7223 83.2917 15.2501 84.0694C15.0835 84.3472 14.4723 84.7361 14.5279 85.1528C14.639 86.125 23.0279 86.1528 29.7501 79.2639C37.0001 71.8194 33.4723 65.7083 33.4723 65.7083L21.1946 57.875L21.1668 57.9028Z"
+                      fill="#F7D74D"
+                    />
+                    <path
+                      d="M22.4721 61.3471C22.4721 61.3471 17.8332 61.5971 13.9999 67.5416C10.1665 73.486 8.38877 80.4027 8.74988 80.8471C9.11099 81.3193 16.2499 78.736 17.9721 79.236C19.1388 79.5971 18.5277 80.7916 18.861 81.0971C19.111 81.3471 22.2221 81.7916 27.2499 76.3749C32.2777 70.9304 31.0832 63.2916 31.0832 63.2916L22.4721 61.3193V61.3471Z"
+                      fill="#FBF0B4"
+                    />
+                    <path
+                      d="M24.7217 53.2361C24.7217 53.2361 22.3884 55.3194 21.5551 56.5139C20.7217 57.7083 20.7217 57.8194 20.7773 58.1805C20.8329 58.5416 21.694 62.4861 25.2773 65.9583C29.694 70.2083 33.6106 70.7639 34.194 70.7639C34.7773 70.7639 38.5551 66.5139 38.5551 66.5139L24.7495 53.2639L24.7217 53.2361Z"
+                      fill="#858585"
+                    />
+                    <path
+                      d="M35.0273 65.8193C35.0273 65.8193 38.8051 68.2915 45.1385 66.1804C53.7773 63.2637 60.1385 56.7637 67.9996 48.5693C75.5829 40.6526 81.944 30.8193 81.944 30.8193L77.4996 15.9026L35.0551 65.847L35.0273 65.8193Z"
+                      fill="#D9D9D9"
+                    />
+                    <path
+                      d="M48.4443 57.6526L49.4721 54.4304L52.0832 54.7915C52.0832 54.7915 54.0554 55.736 55.5277 56.4026C56.9999 57.0971 58.861 57.5971 58.861 57.5971L55.1666 60.736C55.1666 60.736 53.1388 59.986 51.6666 59.3193C49.9999 58.5971 48.4443 57.6526 48.4443 57.6526Z"
+                      fill="#3F545F"
+                    />
+                    <path
+                      d="M60.6659 9.56928C60.6659 9.56928 53.4714 13.7359 43.1381 23.5137C33.8326 32.3193 26.9437 40.2915 25.2492 47.0693C23.8603 52.7359 24.6103 56.1804 27.777 59.9026C31.1381 63.8471 35.0548 65.7915 35.0548 65.7915C35.0548 65.7915 37.9992 65.8471 50.3326 56.3748C65.6937 44.5415 77.9992 24.7359 77.9992 24.7359L60.6937 9.5415L60.6659 9.56928Z"
+                      fill="#D9D9D9"
+                    />
+                    <path
+                      d="M75.5279 28.8192C75.5279 28.8192 69.2501 26.1526 64.7779 19.9026C60.3334 13.7081 60.6946 9.51367 60.6946 9.51367C60.6946 9.51367 64.4168 6.59701 72.7501 3.26367C78.3612 1.01367 86.0279 -0.125218 88.5279 1.73589C91.0557 3.59701 86.8057 12.9581 86.8057 12.9581L79.0834 27.9026L75.5001 28.7915L75.5279 28.8192Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M48.5552 57.7083C48.5552 57.7083 43.1386 54.9583 39.6941 51.0138C33.1663 43.5972 31.833 35.4305 31.833 35.4305L35.1108 31.5972C35.1108 31.5972 35.9163 40.2638 42.9163 47.7361C47.4719 52.6249 52.2219 54.8472 52.2219 54.8472C52.2219 54.8472 51.2774 55.6527 50.2497 56.4305C49.6108 56.9305 48.5552 57.7083 48.5552 57.7083Z"
+                      fill="#D9D9D9"
+                    />
+                    <path
+                      d="M81.9163 30.7916C81.9163 30.7916 85.1663 26.875 88.2497 18.0416C92.5552 5.73608 88.8052 1.98608 88.8052 1.98608C88.8052 1.98608 87.5274 7.8472 83.1386 15.9861C79.6108 22.5139 75.333 28.7083 75.333 28.7083C75.333 28.7083 77.6941 29.7639 78.9719 30.125C80.583 30.5972 81.9163 30.7639 81.9163 30.7639V30.7916Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M27.333 49.6527C28.3052 50.5693 29.7774 49.5971 30.7496 47.3193C31.7218 45.0416 31.7218 43.7638 30.9718 43.236C30.0552 42.5693 28.4718 44.0416 27.8052 45.3471C27.0552 46.7916 26.6107 48.9305 27.3607 49.6527H27.333ZM61.1385 12.5693C61.1385 12.5693 55.4441 16.6527 49.3607 22.236C43.7774 27.3471 40.083 31.3471 39.583 32.2916C39.0552 33.2916 39.0274 34.7082 39.4441 35.4027C39.8607 36.1249 40.8052 36.486 41.6385 35.8749C42.4718 35.236 48.5274 28.5693 53.9718 23.8193C58.9441 19.4582 62.8052 16.7082 62.8052 16.7082C62.8052 16.7082 64.3607 13.9582 64.1107 13.3193C63.8607 12.6804 61.1663 12.5971 61.1663 12.5971L61.1385 12.5693Z"
+                      fill="#D9D9D9"
+                    />
+                    <path
+                      d="M61.1387 12.5415C61.1387 12.5415 65.3609 9.31932 69.9442 7.04154C74.1942 4.93043 78.4442 3.18043 79.222 4.7082C79.9442 6.15265 75.1942 8.15265 71.0276 10.7915C66.8609 13.4582 62.8331 16.6526 62.8331 16.6526C62.8331 16.6526 62.222 15.5415 61.8331 14.486C61.5831 13.8471 61.3609 13.2082 61.1942 12.5415H61.1387Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M64.6108 26.875C60.4441 23.0416 54.6386 24.0694 51.7775 27.4861C48.833 31.0139 49.0553 36.375 52.5275 39.625C55.6942 42.5694 61.5553 43.2361 65.083 39.0972C68.2219 35.4305 68.0275 30.0139 64.6108 26.875Z"
+                      fill="#E1E1E1"
+                    />
+                    <path
+                      d="M53.9161 28.8472C51.4439 31.2916 51.5828 36.0972 54.5272 38.3194C57.1105 40.2361 60.7494 40.1527 63.055 37.7916C65.3605 35.4583 65.3605 31.1805 63.1939 28.9861C60.7217 26.4583 56.7494 26.0694 53.9161 28.8472Z"
+                      fill="#3F545F"
+                    />
+                    <path
+                      d="M34.9716 55.0694C34.9716 55.0694 39.6104 50.3749 40.1104 50.8749C40.6104 51.3749 40.5549 54.236 38.3327 57.4027C36.1104 60.5694 31.2216 66.236 27.3327 70.0416C23.4993 73.7916 18.1382 78.0972 17.6104 78.0138C17.2216 77.9583 15.6105 77.1527 14.9716 76.3749C14.3327 75.5972 16.2216 71.9583 16.9716 70.7638C17.7216 69.5694 34.9438 55.0694 34.9438 55.0694H34.9716Z"
+                      fill="#A02524"
+                    />
+                    <path
+                      d="M13.4164 73.7638C13.3609 74.8471 14.9998 76.4026 14.9998 76.4026L40.1109 50.8749C40.1109 50.8749 38.9442 49.5415 35.472 51.7082C31.972 53.8749 28.9164 56.486 24.4164 60.8471C18.1386 66.9304 13.472 72.6804 13.4164 73.7638Z"
+                      fill="#CA2C31"
+                    />
+                    <path
+                      d="M11.7779 25.1528C10.9446 25.9861 10.9168 27.3194 11.8335 28.0694C12.6668 28.7639 14.0002 28.3194 14.5002 27.7083C15.0002 27.0972 14.9446 25.7639 14.2779 25.0972C13.6113 24.4305 12.2779 24.6528 11.7779 25.1528Z"
+                      fill="white"
+                    />
+                    <g opacity="0.5">
+                      <path
+                        d="M28.2223 24.1803C27.5834 24.8748 27.8056 25.9026 28.389 26.2914C28.9723 26.6803 29.8612 26.6248 30.2779 26.1248C30.6667 25.6526 30.6945 24.7081 30.1112 24.1248C29.6112 23.6248 28.639 23.7359 28.2223 24.1803Z"
+                        fill="white"
+                      />
+                    </g>
+                    <path
+                      d="M39.1105 6.37495C39.1105 6.37495 40.0272 3.76384 40.555 3.73606C41.1105 3.70828 41.8883 6.34717 41.8883 6.34717C41.8883 6.34717 44.5828 6.37495 44.7772 6.76384C44.9994 7.26384 43.055 8.98606 43.055 8.98606C43.055 8.98606 43.6939 11.5416 43.3883 11.8472C43.055 12.1805 40.7216 10.8472 40.7216 10.8472C40.7216 10.8472 38.3328 12.5138 37.805 12.0694C37.3605 11.6805 38.305 8.98606 38.305 8.98606C38.305 8.98606 36.055 7.34717 36.1661 6.87495C36.3328 6.23606 39.1105 6.37495 39.1105 6.37495ZM70.1661 68.875C71.0828 69.375 72.2216 69.0972 72.6383 68.1249C73.0272 67.2638 72.305 66.2361 71.6661 65.9583C71.0272 65.6805 69.9161 66.0416 69.4994 66.7638C69.1105 67.4861 69.6105 68.5694 70.1383 68.875H70.1661ZM83.0272 46.7916C82.4994 45.9861 81.3883 45.7361 80.6661 46.3749C79.9716 47.0138 80.1383 47.9861 80.5272 48.4861C80.9161 48.9861 81.9994 49.1805 82.6383 48.7638C83.2772 48.3472 83.3328 47.2638 83.0272 46.7916Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1887_21163">
+                      <rect
+                        width="90"
+                        height="90.3611"
+                        fill="white"
+                        transform="translate(0.333008 0.819336)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3 class="awards__subtitle">Хитро придумал</h3>
+                <p class="awards__text">Первое успешное мероприятие</p>
+              </li>
+            </ul>
+            <!-- конец отрисовка блоков -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__container container">
+        <div class="left">
+          <a href="!#" class="footer__link">Правила клуба</a>
+          <a href="#!" class="footer__link">Договор оферты</a>
+        </div>
+        <div class="right">
+          <a href="#" class="footer__link">Правила продажи товаров</a>
+          <ul class="footer__list">
+            <li class="footer__item"></li>
+            <li class="footer__item"></li>
+            <li class="footer__item"></li>
+            <li class="footer__item"></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
