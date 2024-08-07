@@ -181,7 +181,6 @@
     height: 240px;
     margin-bottom: 12px;
     border-radius: 8px;
-    /* background: url("../../img/poster-img-1.png") no-repeat center center / cover; */
   }
 
   .card-item:nth-child(1):before {

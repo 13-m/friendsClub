@@ -166,6 +166,7 @@
   display: flex;
   flex-direction: row;
   gap: 24px;
+  align-items: flex-start;
   margin-bottom: 24px;
 }
 
@@ -361,17 +362,17 @@
 
 .card__item-span:nth-child(1) .card__span::before {
   background: url("../../img/microphone-icon.svg") no-repeat center center /
-    cover;
+    contain;
 }
 
 .card__item-span:nth-child(2) .card__span::before {
-  background: url("../../img/post-icon.svg") no-repeat center center / cover;
+  background: url("../../img/post-icon.svg") no-repeat center center / contain;
 }
 .card__item-span:nth-child(3) .card__span::before {
-  background: url("../../img/play-icon.svg") no-repeat center center / cover;
+  background: url("../../img/play-icon.svg") no-repeat center center / contain;
 }
 .card__item-span:nth-child(4) .card__span::before {
-  background: url("../../img/stars-icon.svg") no-repeat center center / cover;
+  background: url("../../img/stars-icon.svg") no-repeat center center / contain;
 }
 
 .card__span {
@@ -446,7 +447,7 @@
   background-color: #191919;
 }
 
-.not-found__img {
+.not-found__svg {
   width: 64px;
   height: auto;
   aspect-ratio: 1 / 1;
