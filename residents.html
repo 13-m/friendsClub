@@ -45,7 +45,7 @@
             </li>
           </ul>
         </nav>
-        <div tabindex="1" class="header__lk header__tooltip">
+        <div id="tooltip" tabindex="1" class="header__lk header__tooltip">
           <p class="header__lk-user">Мария&nbsp;Л.</p>
           <!-- <img
             class="lk-img"
@@ -67,7 +67,7 @@
               alt="Аватарка пользователя"
             />
           </picture>
-          <div class="tooltipMenu tooltipMenu--mobile">
+          <div id="tooltipContent" class="tooltipMenu">
             <h2 class="tooltipMenu__title">Личный кабинет</h2>
             <div class="tooltipMenu__wrapp">
               <div class="tooltipMenu__name-wrapp">
@@ -195,7 +195,9 @@
                 <a href="#!" class="tooltipMenu__link">Выйти</a>
               </li>
             </ul>
-            <button class="tooltipMenu__btn-cancel">Закрыть</button>
+            <button id="tooltipClose" class="tooltipMenu__btn-cancel">
+              Закрыть
+            </button>
           </div>
         </div>
       </div>
@@ -620,7 +622,7 @@
             <li class="residents__item card not-found">
               <img
                 class="not-found__img"
-                src="/img/404-icon.svg"
+                src="./img/404-icon.svg"
                 alt="не найдено"
               />
               <p class="not-found__text">Резидент не&nbsp;найден</p>

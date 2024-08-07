@@ -141,7 +141,6 @@ footer {
 
 .tooltipMenu {
   visibility: hidden;
-  /* visibility: visible; */
   position: absolute;
   z-index: 1;
   top: 100%;
@@ -182,9 +181,8 @@ footer {
   fill: #ababab;
 }
 
-.header__tooltip:focus .tooltipMenu {
+.tooltipMenu.tooltip-open {
   visibility: visible;
-  cursor: pointer;
 }
 
 .tooltipMenu__wrapp,
@@ -429,7 +427,7 @@ footer .left {
     width: 100%;
   }
 
-  .header__tooltip:focus .tooltipMenu {
+  .tooltipMenu.tooltip-open {
     visibility: visible;
     flex-direction: column;
     bottom: 0;

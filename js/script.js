@@ -1,6 +1,6 @@
 const burger = document.querySelector(".burger");
 const burgerMenu = document.getElementById("burgerMenu");
-const arrowSort = document.getElementById("arrowSort");
+// const arrowSort = document.getElementById("arrowSort");
 
 burger.addEventListener("click", () => {
   burger.classList.toggle("active");
@@ -8,9 +8,9 @@ burger.addEventListener("click", () => {
   document.body.classList.toggle("lock-scroll");
 });
 
-arrowSort.addEventListener("click", () => {
-  arrowSort.classList.toggle("active");
-});
+// arrowSort.addEventListener("click", () => {
+//   arrowSort.classList.toggle("active");
+// });
 
 // select
 
@@ -36,4 +36,24 @@ const choices3 = new Choices(element3, {
   placeholder: true,
   placeholderValue: null,
   itemSelectText: "",
+});
+
+// tooltip
+const tooltip = document.getElementById("tooltip");
+const tooltiClose = document.getElementById("tooltipClose");
+const tooltipContent = document.getElementById("tooltipContent");
+
+tooltip.addEventListener("click", () => {
+  tooltipContent.classList.add("tooltip-open");
+});
+
+tooltiClose.addEventListener("click", (e) => {
+  e.stopPropagation();
+  tooltipContent.classList.remove("tooltip-open");
+});
+
+document.addEventListener("click", (e) => {
+  if (!tooltip.contains(e.target)) {
+    tooltipContent.classList.remove("tooltip-open");
+  }
 });

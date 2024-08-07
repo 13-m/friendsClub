@@ -2,7 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
     <meta name="robots" content="noindex" />
     <title>Friends Club</title>
     <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon" />
@@ -46,7 +51,7 @@
             </li>
           </ul>
         </nav>
-        <div tabindex="1" class="header__lk header__tooltip">
+        <div id="tooltip" tabindex="1" class="header__lk header__tooltip">
           <p class="header__lk-user">Мария&nbsp;Л.</p>
           <!-- <img
             class="lk-img"
@@ -68,7 +73,7 @@
               alt="Аватарка пользователя"
             />
           </picture>
-          <div class="tooltipMenu tooltipMenu--mobile">
+          <div id="tooltipContent" class="tooltipMenu">
             <h2 class="tooltipMenu__title">Личный кабинет</h2>
             <div class="tooltipMenu__wrapp">
               <div class="tooltipMenu__name-wrapp">
@@ -196,7 +201,9 @@
                 <a href="#!" class="tooltipMenu__link">Выйти</a>
               </li>
             </ul>
-            <button class="tooltipMenu__btn-cancel">Закрыть</button>
+            <button id="tooltipClose" class="tooltipMenu__btn-cancel">
+              Закрыть
+            </button>
           </div>
         </div>
       </div>

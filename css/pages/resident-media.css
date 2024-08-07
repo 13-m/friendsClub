@@ -63,6 +63,7 @@
     height: auto;
     aspect-ratio: 1 / 1;
     border-radius: 8px;
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.7);
   }
 
   .card:nth-child(1) .card-wrapp::before {
@@ -106,7 +107,7 @@
   }
 
   .residents__list {
-    gap: 12px;
+    gap: 20px;
   }
 
   .card__major-list {
@@ -120,6 +121,7 @@
   .card__name {
     width: min-content;
     font-size: 17px;
+    line-height: 21px;
   }
 
   .card__item-major {
