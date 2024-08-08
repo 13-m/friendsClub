@@ -21,13 +21,9 @@
 }
 
 @media (max-width: 1050px) {
-  .news {
-    padding-top: 46px;
-  }
   .news,
   .residents,
   .article,
-  .event,
   .video {
     margin-bottom: 46px;
   }
@@ -152,9 +148,6 @@
 }
 
 @media (max-width: 790px) {
-  .news {
-    padding-top: 20px;
-  }
   .news__list-cards {
     flex-direction: column;
   }
@@ -320,7 +313,6 @@
 @media (max-width: 460px) {
   .news {
     margin-bottom: 28px;
-    padding-top: 15px;
   }
 
   .card-item:nth-child(n + 2):before,
@@ -407,7 +399,6 @@
   }
 
   .event {
-    margin-bottom: 25px;
     background-color: #fff;
   }
 

@@ -1,3 +1,7 @@
+.awards-svg path {
+  fill: inherit;
+}
+
 /* временная заглушка */
 .residents__plug {
   display: none;
@@ -8,7 +12,6 @@
 }
 
 .residents {
-  padding: 64px 0;
 }
 
 /* .container {
@@ -99,7 +102,12 @@
   background-color: #767676;
 }
 
+.search-svg path {
+  fill: #ababab;
+}
+
 .form__input {
+  padding: 10px 0;
   border: none;
   background-color: transparent;
   outline: none;
@@ -138,9 +146,19 @@
   background-color: #5b5b5b;
   padding: 5px;
   border-radius: 8px;
-  background: url("../../img/filter-icon.svg") no-repeat center center / 20px,
-    #5b5b5b;
+  /* background: url("../../img/filter-icon.svg") no-repeat center center / 20px,
+    #5b5b5b; */
   cursor: pointer;
+}
+
+.filter-svg {
+  width: 42px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.filter-svg path {
+  fill: #ababab;
 }
 
 .residents__list {
@@ -429,6 +447,10 @@
   width: 64px;
   height: auto;
   aspect-ratio: 1 / 1;
+}
+
+.not-found__svg path {
+  fill: #5b5b5b;
 }
 
 .not-found__text {
