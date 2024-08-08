@@ -48,14 +48,18 @@
   cursor: pointer;
 }
 
-.residents__select-sort::after {
+.down-svg path {
+  fill: #e0e0e0;
+}
+
+/* .residents__select-sort::after {
   content: "";
   display: inline-block;
   width: 9px;
   height: 6px;
   background: url("../../img/arrow-icon.svg") no-repeat center center / cover;
   transition: transform 0.4s ease;
-}
+} */
 
 .residents__select-sort::before {
   content: "";
@@ -84,28 +88,24 @@
 .form__label {
   position: relative;
   flex: 40% 0 1;
-}
-
-.form__label::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 15px;
-  height: 16px;
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: url("../../img/search-icon.svg") no-repeat center center / cover;
-}
-
-.form__input {
+  display: flex;
+  padding-left: 8px;
+  background-color: #5b5b5b;
+  border-radius: 8px;
   transition: 0.3s ease background-color;
 }
-.form__input:hover {
+
+.form__label:hover {
   background-color: #767676;
 }
 
-.form__input,
+.form__input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: #e0e0e0;
+}
+
 .form__select {
   background-color: #5b5b5b;
   padding: 10px 8px;
@@ -122,7 +122,6 @@
 
 .form__input {
   width: 100%;
-  padding-left: 36px;
 }
 
 .form__input::placeholder {
@@ -210,6 +209,10 @@
 }
 
 .card-wrapp {
+}
+
+.card__img--mobile {
+  display: none;
 }
 
 .card__name {
@@ -336,7 +339,6 @@
 }
 
 .card__btn {
-  position: relative;
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -346,33 +348,8 @@
   background-color: transparent;
   cursor: pointer;
 }
-.card__btn::before {
-  content: "";
-  position: relative;
-  width: 17px;
-  height: 15px;
-  background: url("../../img/message-icon.svg") no-repeat center center / cover;
-}
 
 .card__list-achievements {
-}
-
-.card__item-span {
-}
-
-.card__item-span:nth-child(1) .card__span::before {
-  background: url("../../img/microphone-icon.svg") no-repeat center center /
-    contain;
-}
-
-.card__item-span:nth-child(2) .card__span::before {
-  background: url("../../img/post-icon.svg") no-repeat center center / contain;
-}
-.card__item-span:nth-child(3) .card__span::before {
-  background: url("../../img/play-icon.svg") no-repeat center center / contain;
-}
-.card__item-span:nth-child(4) .card__span::before {
-  background: url("../../img/stars-icon.svg") no-repeat center center / contain;
 }
 
 .card__span {
@@ -383,11 +360,12 @@
   color: #2b2b2b;
 }
 
-.card__span::before {
-  content: "";
-  position: relative;
-  width: 17px;
-  height: 15px;
+.message-svg path,
+.microphone-svg path,
+.article-svg path,
+.video-svg path,
+.review-svg path {
+  fill: #d8481a;
 }
 
 /* модификации */

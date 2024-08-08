@@ -24,7 +24,7 @@
   }
 
   .form__label {
-    flex: 20% 1 1;
+    flex: auto 0 0;
   }
 }
 
@@ -55,28 +55,17 @@
     align-items: flex-start;
   }
 
-  .card-wrapp::before {
+  .card__img--mobile,
+  .card__img--mobile img {
     display: block;
-    content: "";
-    position: relative;
     width: 20%;
     height: auto;
     aspect-ratio: 1 / 1;
     border-radius: 8px;
     box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.7);
   }
-
-  .card:nth-child(1) .card-wrapp::before {
-    background: url("../../img/ava-img-1.jpg") no-repeat center center / cover;
-  }
-  .card:nth-child(2) .card-wrapp::before {
-    background: url("../../img/ava-img-5.jpg") no-repeat center center / cover;
-  }
-  .card:nth-child(3) .card-wrapp::before {
-    background: url("../../img/ava-img-3.jpg") no-repeat center center / cover;
-  }
-  .card:nth-child(4) .card-wrapp::before {
-    background: url("../../img/ava-img-7.jpg") no-repeat center center / cover;
+  .card__img--mobile img {
+    width: 100%;
   }
 
   .card__item-decr:nth-child(1) {

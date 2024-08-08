@@ -27,6 +27,16 @@ body {
     linear-gradient(0deg, #2b2b2b, #2b2b2b);
 }
 
+svg {
+  width: 20px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+svg path {
+  fill: #ababab;
+}
+
 header {
   background-color: #2b2b2b;
 }
@@ -408,6 +418,10 @@ footer .left {
 
   /* tooltip */
 
+  .tooltipMenu__img--mobile {
+    display: block;
+  }
+
   .tooltipMenu__wrapp,
   .tooltipMenu__title,
   .tooltipMenu__btn-cancel {
@@ -445,8 +459,8 @@ footer .left {
     color: #2b2b2b;
     font-size: 20px;
   }
+
   .tooltipMenu__wrapp {
-    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -454,14 +468,14 @@ footer .left {
     margin-bottom: 24px;
   }
 
-  .tooltipMenu__wrapp::before {
-    position: relative;
-    content: "";
+  .tooltipMenu__img--mobile {
     width: 13%;
     height: auto;
     aspect-ratio: 1 / 1;
     border-radius: 8px;
-    background: url("../img/user-icon-1-2x.jpg") no-repeat center center / cover;
+  }
+  .tooltipMenu__img--mobile img {
+    width: 100%;
   }
 
   .tooltipMenu__name-wrapp {
