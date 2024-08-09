@@ -514,10 +514,14 @@ footer .left {
   }
 
   .tooltipMenu__awards-item {
-    width: 16px;
-    height: 16px;
     color: #5b5b5b;
     font-size: 14px;
+  }
+
+  .tooltipMenu__awards-item .awards-svg {
+    width: 16px;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
   .awards-item-last {

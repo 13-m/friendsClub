@@ -84,4 +84,25 @@ document.addEventListener("DOMContentLoaded", function () {
   } catch (error) {
     console.error("Error in tooltip script:", error);
   }
+
+  try {
+    function showTab(tabId) {
+      var tabs = document.querySelectorAll(".tab-content");
+      tabs.forEach(function (tab) {
+        if (tab.id === tabId) {
+          tab.classList.remove("hide");
+          tab.classList.add("show");
+          tab.style.display = "block";
+        } else {
+          tab.classList.remove("show");
+          tab.classList.add("hide");
+          setTimeout(function () {
+            tab.style.display = "none";
+          }, 500);
+        }
+      });
+    }
+  } catch (error) {
+    console.warn("Tabs elements not found", error);
+  }
 });

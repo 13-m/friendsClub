@@ -24,6 +24,22 @@
   display: none;
 }
 
+.about__list-business .simplebar-content {
+  gap: 12px;
+}
+
+.person__list-nav .simplebar-content {
+  gap: 20px;
+}
+
+.about__list-photo .simplebar-content {
+  gap: 8px;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  display: none;
+}
+
 @media (max-width: 460px) {
   .simplebar-content {
     gap: 16px;
