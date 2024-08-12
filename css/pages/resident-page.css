@@ -179,6 +179,10 @@
   border-radius: 8px;
 }
 
+.residents__link {
+  text-decoration: none;
+}
+
 .card__top {
   display: flex;
   flex-direction: row;

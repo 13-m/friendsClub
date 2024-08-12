@@ -251,6 +251,10 @@
   padding-bottom: 20px;
 }
 
+.residents__link {
+  text-decoration: none;
+}
+
 .residents__img {
   display: inline-block;
   width: 200px;
@@ -289,6 +293,7 @@
   font-size: 18px;
   white-space: normal;
   transition: 0.3s ease color;
+  color: #fff;
 }
 
 .residents__subtitle:hover {
@@ -307,6 +312,7 @@
 .info {
   font-size: 14px;
   line-height: 19px;
+  color: #fff;
 }
 
 .article {
