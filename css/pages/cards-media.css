@@ -21,6 +21,18 @@
     padding: 28px 0 0;
   }
 
+  .person__name {
+    width: min-content;
+  }
+
+  .person__list-interaction {
+    flex-wrap: wrap;
+  }
+
+  .person__info-wrapp {
+    gap: 20px;
+  }
+
   .appearance__item {
     padding: 20px;
   }
@@ -36,12 +48,23 @@
 }
 
 @media (max-width: 820px) {
+  .person__note {
+    max-width: 460px;
+  }
+
+  .person__name {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
   .appearance__list-entrant {
     display: none;
   }
+
   .appearance__body-wrapp {
     justify-content: space-between;
   }
+
   .appearance__body {
     width: 47%;
   }
@@ -82,6 +105,13 @@
 }
 
 @media (max-width: 660px) {
+  .person__info-wrapp {
+    flex-direction: column;
+  }
+
+  .person__note {
+    max-width: 300px;
+  }
   .appearance__item {
     padding: 12px;
   }
@@ -193,18 +223,32 @@
   .person__body {
     padding: 28px 24px;
   }
-}
 
-@media (max-width: 460px) {
-  svg {
-    width: 22px;
-  }
-  .person__item-nav {
-    font-size: 18px;
+  .person__link {
+    font-size: 0;
   }
 
   .person__container {
     margin: 0;
+  }
+
+  .person__link.desktop {
+    display: none;
+  }
+
+  .person__link.mobile {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    z-index: 10;
+  }
+
+  .person__link.mobile .back-svg {
+    width: 36px;
+    height: 36px;
   }
 
   .person__content {
@@ -215,6 +259,159 @@
     gap: 30px;
   }
 
+  .mobile-header {
+    height: 390px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .person__info-block {
+    padding: 200px 15px 0;
+  }
+
+  .person__info-wrapp {
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .person__picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .person__picture img {
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+  }
+
+  .person__picture::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.1155) 36.41%,
+      rgba(0, 0, 0, 0.77) 73.85%
+    );
+    pointer-events: none;
+  }
+
+  .person__info-block {
+    z-index: 1;
+    width: 100%;
+  }
+
+  .person__name-wrapp {
+    justify-content: center;
+  }
+
+  .person__name {
+    width: min-content;
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .person__span {
+    display: none;
+  }
+
+  .person__decr {
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    line-height: 19px;
+    gap: 0;
+  }
+
+  .person__text {
+    display: none;
+  }
+
+  .person__list-interaction {
+    flex-wrap: nowrap;
+  }
+
+  .person__item-interaction {
+    min-width: 44px;
+  }
+
+  .person__btn-interaction,
+  .person__note-label {
+    background-color: transparent;
+    border: 1px solid #ffffff73;
+    color: #fff;
+    min-height: 44px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .person__item-interaction:nth-child(n + 5) {
+    display: none;
+  }
+
+  .person__item-interaction.message {
+    order: -1;
+    width: 100%;
+  }
+
+  .person__item-interaction.message .person__btn-interaction {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .person__item-interaction.add .person__btn-interaction {
+    font-size: 0;
+    padding: 0;
+  }
+
+  .person__note-label.desktop {
+    display: none;
+  }
+
+  .person__note-label.mobile {
+    display: flex;
+    margin: 0;
+  }
+
+  .person__note-label.mobile .person__note {
+    display: none;
+  }
+
+  .person__item-interaction.note {
+  }
+
+  .person__item-interaction.more {
+    display: flex;
+  }
+
+  .person__item-interaction.more .person__btn-interaction {
+    display: flex;
+  }
+
+  .user-add-svg circle,
+  .user-add-svg rect {
+    fill: #fff;
+  }
+
+  .person__btn-interaction svg path,
+  .person__note-label svg path {
+    fill: #fff;
+  }
+
+  .mobile-body {
+    padding: 24px 16px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
   .about__item {
     display: flex;
     flex-direction: column;
@@ -222,8 +419,19 @@
   }
 
   .person__body {
-    padding: 24px 16px;
+    padding: 0;
     border-radius: 8px;
+    background-color: transparent;
+  }
+
+  .person__item-nav {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 460px) {
+  svg {
+    width: 22px;
   }
 
   .about__title {

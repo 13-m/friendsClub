@@ -27,6 +27,10 @@
   font-size: 16px;
 }
 
+.person__link.mobile {
+  display: none;
+}
+
 .back-svg {
   width: 20px;
   height: auto;
@@ -160,6 +164,19 @@
   width: max-content;
   background-color: #f0f0f0;
   border-radius: 4px;
+}
+
+.person__note-label.desktop,
+.person__item-interaction.note {
+  display: block;
+}
+
+.person__note-label.mobile {
+  display: none;
+}
+
+.person__item-interaction.more {
+  display: none;
 }
 
 .person__note {
