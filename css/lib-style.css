@@ -148,9 +148,9 @@
     #5b5b5b;
 }
 
-.choices__list--dropdown .choices__item--selectable.is-highlighted,
+/* .choices__list--dropdown .choices__item--selectable.is-highlighted,
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
-}
+} */
 
 .is-selected {
   background: url("../img/ok-green-icon.svg") no-repeat 95% center / 20px;
@@ -170,4 +170,16 @@
   .choices {
     display: none;
   }
+}
+
+/* Tabs */
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.tab-content.active {
+  display: flex;
+  opacity: 1;
 }

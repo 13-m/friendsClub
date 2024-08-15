@@ -61,10 +61,7 @@
 .news__list-cards {
   display: flex;
   flex-direction: row;
-  list-style: none;
   gap: 28px;
-  margin: 0;
-  padding: 0;
 }
 
 .news__card-item {
@@ -240,10 +237,7 @@
   overflow-x: auto;
   display: flex;
   flex-direction: row;
-  margin: 0;
-  padding: 0;
   gap: 48px;
-  list-style: none;
 }
 
 .residents__item {
@@ -339,10 +333,7 @@
 .article__list {
   display: flex;
   flex-direction: row;
-  list-style: none;
   gap: 28px;
-  margin: 0;
-  padding: 0;
 }
 
 .article__card-item {
@@ -556,16 +547,10 @@
 
 .event__list {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   gap: 4px;
 }
 
 .event__wrapp-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: row;
   gap: 28px;
@@ -673,9 +658,6 @@
   display: flex;
   flex-direction: row;
   gap: 28px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .video__card-item {

@@ -57,10 +57,7 @@
 
   .event__list-molile {
     display: flex;
-    list-style: none;
     gap: 15px;
-    margin: 0;
-    padding: 0;
     overflow-y: auto;
   }
 

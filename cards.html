@@ -679,24 +679,39 @@
                 data-simplebar-auto-hide="false"
               >
                 <li
-                  class="person__item-nav active"
+                  class="person__item-nav tab-nav active"
                   onclick="showTab('tab1', this)"
                 >
                   Обо мне
                 </li>
-                <li class="person__item-nav" onclick="showTab('tab2', this)">
+                <li
+                  class="person__item-nav tab-nav"
+                  onclick="showTab('tab2', this)"
+                >
                   Выступления<span class="person__item-span">2</span>
                 </li>
-                <li class="person__item-nav" onclick="showTab('tab3', this)">
+                <li
+                  class="person__item-nav tab-nav"
+                  onclick="showTab('tab3', this)"
+                >
                   Статьи<span class="person__item-span">6</span>
                 </li>
-                <li class="person__item-nav" onclick="showTab('tab4', this)">
+                <li
+                  class="person__item-nav tab-nav"
+                  onclick="showTab('tab4', this)"
+                >
                   Видео<span class="person__item-span">12</span>
                 </li>
-                <li class="person__item-nav" onclick="showTab('tab5', this)">
+                <li
+                  class="person__item-nav tab-nav"
+                  onclick="showTab('tab5', this)"
+                >
                   Отзывы<span class="person__item-span">12</span>
                 </li>
-                <li class="person__item-nav" onclick="showTab('tab6', this)">
+                <li
+                  class="person__item-nav tab-nav"
+                  onclick="showTab('tab6', this)"
+                >
                   Награды<span class="person__item-span">4</span>
                 </li>
               </ul>
@@ -3665,26 +3680,5 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
-    <script>
-      function showTab(tabId, element) {
-        let tabs = document.querySelectorAll(".tab-content");
-        tabs.forEach((tab) => {
-          tab.classList.remove("active");
-          tab.style.display = "none";
-        });
-
-        let activeTab = document.getElementById(tabId);
-        activeTab.style.display = "flex";
-        setTimeout(() => {
-          activeTab.classList.add("active");
-        }, 100);
-
-        let tabsBtn = document.querySelectorAll(".person__item-nav");
-        tabsBtn.forEach((btn) => {
-          btn.classList.remove("active");
-        });
-        element.classList.add("active");
-      }
-    </script>
   </body>
 </html>

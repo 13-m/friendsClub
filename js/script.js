@@ -85,24 +85,65 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Error in tooltip script:", error);
   }
 
+  // files
   try {
-    function showTab(tabId) {
-      var tabs = document.querySelectorAll(".tab-content");
-      tabs.forEach(function (tab) {
-        if (tab.id === tabId) {
-          tab.classList.remove("hide");
-          tab.classList.add("show");
-          tab.style.display = "block";
-        } else {
-          tab.classList.remove("show");
-          tab.classList.add("hide");
-          setTimeout(function () {
-            tab.style.display = "none";
-          }, 500);
+    document
+      .getElementById("file-input")
+      .addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const imagePreview = document.getElementById("image-preview");
+            imagePreview.src = e.target.result;
+            imagePreview.style.display = "block";
+          };
+          reader.readAsDataURL(file);
         }
       });
-    }
   } catch (error) {
-    console.warn("Tabs elements not found", error);
+    console.warn("fillex elements not found1", error);
   }
+});
+// tabs
+function showTab(tabId, element) {
+  try {
+    let tabs = document.querySelectorAll(".tab-content");
+    tabs.forEach((tab) => {
+      tab.classList.remove("active");
+      tab.style.display = "none";
+    });
+
+    let activeTab = document.getElementById(tabId);
+    activeTab.style.display = "flex";
+    setTimeout(() => {
+      activeTab.classList.add("active");
+    }, 100);
+
+    let tabsBtn = document.querySelectorAll(".tab-nav");
+    tabsBtn.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    element.classList.add("active");
+  } catch (error) {
+    console.warn("Tabs elements not found:", error);
+  }
+}
+
+// fields
+
+const inputs = document.querySelectorAll(".lk__input");
+
+function updatePlace(input) {
+  if (input.value.trim() !== "") {
+    input.classList.add("has-content");
+  } else {
+    input.classList.remove("has-content");
+  }
+}
+inputs.forEach((input) => {
+  input.addEventListener("focus", () => updatePlace(input));
+  input.addEventListener("input", () => updatePlace(input));
+  input.addEventListener("blur", () => updatePlace(input));
+  updatePlace(input);
 });
