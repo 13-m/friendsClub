@@ -255,7 +255,7 @@
             </div>
             <ul class="tooltipMenu__list">
               <li class="tooltipMenu__item">
-                <a href="#!" class="tooltipMenu__link"
+                <a href="lk.html?tab=tab1" class="tooltipMenu__link"
                   ><svg
                     class="user-svg"
                     width="48"
@@ -278,7 +278,7 @@
                 >
               </li>
               <li class="tooltipMenu__item">
-                <a href="#!" class="tooltipMenu__link"
+                <a href="lk.html?tab=tab2" class="tooltipMenu__link"
                   ><svg
                     class="adv-svg"
                     width="48"
@@ -305,7 +305,7 @@
                 >
               </li>
               <li class="tooltipMenu__item">
-                <a href="#!" class="tooltipMenu__link"
+                <a href="lk.html?tab=tab3" class="tooltipMenu__link"
                   ><svg
                     class="microphone-svg"
                     width="48"
@@ -331,8 +331,9 @@
                   Выступления</a
                 >
               </li>
+
               <li class="tooltipMenu__item">
-                <a href="#!" class="tooltipMenu__link"
+                <a href="lk.html?tab=tab4" class="tooltipMenu__link"
                   ><svg
                     class="article-svg"
                     width="48"
@@ -353,7 +354,7 @@
                 >
               </li>
               <li class="tooltipMenu__item">
-                <a href="#!" class="tooltipMenu__link"
+                <a href="lk.html?tab=tab5" class="tooltipMenu__link"
                   ><svg
                     class="video-svg"
                     width="48"
@@ -680,44 +681,44 @@
               >
                 <li
                   class="person__item-nav tab-nav active"
-                  onclick="showTab('tab1', this)"
+                  onclick="showTab('container1','tab1', this)"
                 >
                   Обо мне
                 </li>
                 <li
                   class="person__item-nav tab-nav"
-                  onclick="showTab('tab2', this)"
+                  onclick="showTab('container1','tab2', this)"
                 >
                   Выступления<span class="person__item-span">2</span>
                 </li>
                 <li
                   class="person__item-nav tab-nav"
-                  onclick="showTab('tab3', this)"
+                  onclick="showTab('container1','tab3', this)"
                 >
                   Статьи<span class="person__item-span">6</span>
                 </li>
                 <li
                   class="person__item-nav tab-nav"
-                  onclick="showTab('tab4', this)"
+                  onclick="showTab('container1','tab4', this)"
                 >
                   Видео<span class="person__item-span">12</span>
                 </li>
                 <li
                   class="person__item-nav tab-nav"
-                  onclick="showTab('tab5', this)"
+                  onclick="showTab('container1','tab5', this)"
                 >
                   Отзывы<span class="person__item-span">12</span>
                 </li>
                 <li
                   class="person__item-nav tab-nav"
-                  onclick="showTab('tab6', this)"
+                  onclick="showTab('container1','tab6', this)"
                 >
                   Награды<span class="person__item-span">4</span>
                 </li>
               </ul>
               <!-- конец статики -->
               <!-- отрисовка блоков -->
-              <div class="person__content">
+              <div class="person__content" id="container1">
                 <ul
                   class="tab-content person__about-list about active"
                   id="tab1"

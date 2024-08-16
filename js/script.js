@@ -6,6 +6,9 @@
 
 // Burger Menu
 document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
   try {
     const burger = document.querySelector(".burger");
     const burgerMenu = document.getElementById("burgerMenu");
@@ -105,33 +108,75 @@ document.addEventListener("DOMContentLoaded", function () {
     console.warn("fillex elements not found1", error);
   }
 });
+
 // tabs
-function showTab(tabId, element) {
-  try {
-    let tabs = document.querySelectorAll(".tab-content");
-    tabs.forEach((tab) => {
-      tab.classList.remove("active");
-      tab.style.display = "none";
-    });
 
-    let activeTab = document.getElementById(tabId);
-    activeTab.style.display = "flex";
-    setTimeout(() => {
-      activeTab.classList.add("active");
-    }, 100);
+function getUrlParameter(name) {
+  const url = new URL(window.location.href);
+  return url.searchParams.get(name);
+}
 
-    let tabsBtn = document.querySelectorAll(".tab-nav");
-    tabsBtn.forEach((btn) => {
-      btn.classList.remove("active");
-    });
+function showTab(containerId, tabId, element) {
+  const container = document.getElementById(containerId);
+  const tabs = container.getElementsByClassName("tab-content");
+  const buttons = element ? element.parentElement.children : null;
+
+  for (let i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove("active");
+  }
+  if (buttons) {
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove("active");
+    }
+  }
+
+  document.getElementById(tabId).classList.add("active");
+
+  if (element) {
     element.classList.add("active");
-  } catch (error) {
-    console.warn("Tabs elements not found:", error);
+  }
+
+  if (tabId === "tab1") {
+    const defaultInnerTab = document.getElementById("tab1_1");
+    if (defaultInnerTab) {
+      defaultInnerTab.classList.add("active");
+    }
+  } else if (containerId === "container3") {
+    const innerTabs = container.getElementsByClassName("tab-content");
+    for (let i = 0; i < innerTabs.length; i++) {
+      innerTabs[i].classList.remove(active);
+    }
   }
 }
 
-// fields
+window.onload = function () {
+  const mainTab = getUrlParameter("tab");
+  let mainTabToActivate = "tab1";
 
+  if (mainTab) {
+    mainTabToActivate = mainTab;
+  }
+
+  const mainTabElement = document.querySelector(
+    `.tooltipMenu__list a[href="lk.html?tab=${mainTabToActivate}"]`
+  );
+  if (mainTabElement) {
+    showTab("container2", mainTabToActivate, null);
+  }
+
+  if (mainTabToActivate === "tab1") {
+    showTab("container3", "tab1_1", null);
+  } else if (mainTabToActivate !== "tab1") {
+    const innerTabs = document
+      .getElementById("container3")
+      .getElementsByClassName("tab-content");
+    for (let i = 0; i < innerTabs.length; i++) {
+      innerTabs[i].classList.remove("active");
+    }
+  }
+};
+
+// fields
 const inputs = document.querySelectorAll(".lk__input");
 
 function updatePlace(input) {

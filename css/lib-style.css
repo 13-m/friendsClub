@@ -183,3 +183,8 @@
   display: flex;
   opacity: 1;
 }
+
+/* .tab-content.hidden {
+  display: none;
+  transition: opacity 0.5s ease; 
+} */
