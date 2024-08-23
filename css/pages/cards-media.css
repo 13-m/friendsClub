@@ -220,6 +220,9 @@
 }
 
 @media (max-width: 520px) {
+  .person__container {
+    padding: 0;
+  }
   .person__body {
     padding: 28px 24px;
   }
@@ -239,8 +242,8 @@
   .person__link.mobile {
     display: block;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 25px;
+    top: 15px;
     width: 36px;
     height: 36px;
     z-index: 10;
@@ -249,6 +252,10 @@
   .person__link.mobile .back-svg {
     width: 36px;
     height: 36px;
+  }
+
+  .person__link.mobile .back-svg path {
+    fill: #fff;
   }
 
   .person__content {
@@ -266,7 +273,9 @@
   }
 
   .person__info-block {
-    padding: 200px 15px 0;
+    padding: 200px 30px 0;
+    z-index: 1;
+    width: 100%;
   }
 
   .person__info-wrapp {
@@ -299,11 +308,6 @@
       rgba(0, 0, 0, 0.77) 73.85%
     );
     pointer-events: none;
-  }
-
-  .person__info-block {
-    z-index: 1;
-    width: 100%;
   }
 
   .person__name-wrapp {
@@ -407,7 +411,7 @@
   }
 
   .mobile-body {
-    padding: 24px 16px;
+    padding: 24px 30px;
     background-color: #fff;
     border-radius: 8px;
   }
@@ -430,8 +434,19 @@
 }
 
 @media (max-width: 460px) {
+  .person__info-block {
+    padding: 200px 15px 0;
+  }
+
+  .mobile-body {
+    padding: 24px 16px;
+  }
   svg {
     width: 22px;
+  }
+
+  .person__link.mobile {
+    left: 10px;
   }
 
   .about__title {

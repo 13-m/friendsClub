@@ -90,22 +90,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // files
   try {
-    document
-      .getElementById("file-input")
-      .addEventListener("change", function (event) {
+    document.querySelectorAll(".file-input").forEach((fileInput) => {
+      fileInput.addEventListener("change", function (event) {
         const file = event.target.files[0];
         if (file) {
           const reader = new FileReader();
           reader.onload = function (e) {
-            const imagePreview = document.getElementById("image-preview");
-            imagePreview.src = e.target.result;
-            imagePreview.style.display = "block";
+            const imagePreview = fileInput.nextElementSibling;
+            if (
+              imagePreview &&
+              imagePreview.classList.contains("image-preview")
+            ) {
+              imagePreview.src = e.target.result;
+              imagePreview.style.display = "block";
+            }
           };
           reader.readAsDataURL(file);
         }
       });
+    });
   } catch (error) {
-    console.warn("fillex elements not found1", error);
+    console.warn("file input elements not found", error);
   }
 });
 
@@ -134,6 +139,14 @@ function showTab(containerId, tabId, element) {
 
   if (element) {
     element.classList.add("active");
+    // console.log(`click on this ${tabId}`);
+  }
+
+  if (tabId === "tab4") {
+    const defaultInnerTab = document.getElementById("tab4_1");
+    if (defaultInnerTab) {
+      defaultInnerTab.classList.add("active");
+    }
   }
 
   if (tabId === "tab1") {
@@ -141,12 +154,13 @@ function showTab(containerId, tabId, element) {
     if (defaultInnerTab) {
       defaultInnerTab.classList.add("active");
     }
-  } else if (containerId === "container3") {
-    const innerTabs = container.getElementsByClassName("tab-content");
-    for (let i = 0; i < innerTabs.length; i++) {
-      innerTabs[i].classList.remove(active);
-    }
   }
+  // else if (containerId === "container3") {
+  //   const innerTabs = container.getElementsByClassName("tab-content");
+  //   for (let i = 1; i < innerTabs.length; i++) {
+  //     innerTabs[i].classList.remove("active");
+  //   }
+  // }
 }
 
 window.onload = function () {
@@ -164,16 +178,17 @@ window.onload = function () {
     showTab("container2", mainTabToActivate, null);
   }
 
-  if (mainTabToActivate === "tab1") {
-    showTab("container3", "tab1_1", null);
-  } else if (mainTabToActivate !== "tab1") {
-    const innerTabs = document
-      .getElementById("container3")
-      .getElementsByClassName("tab-content");
-    for (let i = 0; i < innerTabs.length; i++) {
-      innerTabs[i].classList.remove("active");
-    }
-  }
+  // if (mainTabToActivate === "tab1") {
+  //   console.log("here ?");
+  //   showTab("container3", "tab1_1", null);
+  // } else if (mainTabToActivate !== "tab1") {
+  //   const innerTabs = document
+  //     .getElementById("container3")
+  //     .getElementsByClassName("tab-content");
+  //   for (let i = 0; i < innerTabs.length; i++) {
+  //     innerTabs[i].classList.remove("active");
+  //   }
+  // }
 };
 
 // fields
@@ -191,4 +206,27 @@ inputs.forEach((input) => {
   input.addEventListener("input", () => updatePlace(input));
   input.addEventListener("blur", () => updatePlace(input));
   updatePlace(input);
+});
+
+const allForm = document.querySelectorAll("form");
+allForm.forEach((form) => {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+});
+
+// popup
+
+const btnPopup = document.getElementById("popup-busines-open");
+const btnClosePopup = document.getElementById("closePopup");
+const popup = document.getElementById("popupBusines");
+
+btnPopup.addEventListener("click", () => {
+  popup.classList.add("visible");
+  document.body.classList.add("lock-scroll");
+});
+
+btnClosePopup.addEventListener("click", () => {
+  popup.classList.remove("visible");
+  document.body.classList.remove("lock-scroll");
 });

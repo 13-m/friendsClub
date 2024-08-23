@@ -194,6 +194,8 @@
   word-wrap: break-word;
 }
 
+/* nav bar witch border-bottom */
+
 .person__list-nav {
   white-space: nowrap;
   position: relative;
@@ -260,6 +262,8 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+/* end nav bar */
 
 .person__about-list {
   display: flex;

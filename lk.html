@@ -2,12 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Friends Club</title>
-    <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+    />
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/pages/lk-page.css" />
+    <link rel="stylesheet" href="./css/pages/popup.css" />
+
     <link rel="stylesheet" href="./css/pages/lk-media.css" />
     <link rel="stylesheet" href="./css/lib-style.css" />
   </head>
@@ -44,11 +55,11 @@
           <p class="header__lk-user">Мария&nbsp;Л.</p>
           <picture>
             <source
-              srcset="./img/user-img-1.jpg 2x, ./img/user-img-1.jpg 1x"
+              srcset="./img/user-img-1.jpg 1, ./img/user-img-1.jpg 1x"
               media="(max-width: 600px)"
             />
             <source
-              srcset="./img/user-img-1.jpg 2x, ./img/user-img-1.jpg 1x"
+              srcset="./img/user-img-1.jpg 1, ./img/user-img-1.jpg 1x"
               media="(min-width: 601px)"
             />
             <img
@@ -465,6 +476,7 @@
                         </button>
                         <input
                           type="file"
+                          class="file-input"
                           id="file-input"
                           placeholder="Загрузи"
                           accept="image/*"
@@ -516,12 +528,14 @@
                         </label>
                       </li>
                       <li class="lk__item-input">
-                        <label for="input" class="lk__label">
+                        <label for="input" class="lk__label bd">
                           <input
                             class="lk__input"
                             name="birthday"
-                            type="text"
+                            type="date"
                             id="input"
+                            min="1028-01-01"
+                            max="2028-01-01"
                           />
                           <span class="label-placeholder"
                             >Дата рождения<span class="label-span"></span
@@ -562,10 +576,11 @@
                       <li class="lk__item-input">
                         <label for="tel" class="lk__label">
                           <input
-                            class="lk__input"
+                            class="lk__input mask-phone form-contro"
                             name="tel"
-                            type="tel"
+                            type="text"
                             id="input"
+                            placeholder="+7 (___) ___-__-__"
                           />
                           <span class="label-placeholder"
                             >Телефон<span class="label-span"></span
@@ -622,107 +637,644 @@
                   </li>
                 </ul>
               </form>
-              <form id="tab1_2" class="tab-content" action="">
-                <h2>New page 1</h2>
+              <form
+                id="tab1_2"
+                action="#!"
+                method="post"
+                class="lk__form tab-content"
+              >
+                <ul class="lk__list">
+                  <li class="lk__item">
+                    <h2 class="lk__subtitle">Действующие бизнесы</h2>
+                    <ul class="lk__list-input">
+                      <li class="lk__item-input">
+                        <div class="lk__item-label">
+                          <button class="lk__delete-btn">
+                            <svg
+                              class="delete-svg"
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M24 45C35.598 45 45 35.598 45 24C45 12.402 35.598 3 24 3C12.402 3 3 12.402 3 24C3 35.598 12.402 45 24 45ZM14 20C12.8954 20 12 20.8954 12 22V25C12 26.1046 12.8954 27 14 27H34C35.1046 27 36 26.1046 36 25V22C36 20.8954 35.1046 20 34 20H14Z"
+                                fill="black"
+                              />
+                            </svg>
+                          </button>
+                          <p class="lk__name-label">
+                            Пекарня &laquo;Мнем булки&raquo;
+                          </p>
+                          <button class="lk__edit-btn">
+                            <svg
+                              class="edit-svg"
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M39.2491 23.3889C39.5521 24.0061 40.3776 24.1534 40.7881 23.6026C42.3136 21.5554 43.2174 19.0119 43.2174 16.2559C43.2174 9.48715 37.7658 4 31.041 4C28.3832 4 25.9243 4.85707 23.9223 6.3116C23.3814 6.70453 23.4895 7.51423 24.0729 7.83968C26.4954 9.19102 28.9687 10.9735 31.325 13.1383C34.8715 16.3968 37.5849 19.9998 39.2491 23.3889ZM8.87841 43.043L14.765 42.3593L20.0738 41.013C23.1983 40.2205 26.1369 38.8158 28.7215 36.8791L31.9226 34.4805L36.3837 30.1724C37.1936 29.3902 37.348 28.1438 36.7537 27.1854L34.097 22.9011L31.398 19.5864C30.3274 18.2715 29.1246 17.0716 27.8089 16.0056L24.9251 13.6694L20.9119 11.2574C20.0285 10.7264 18.9058 10.8293 18.1321 11.512L16.0408 13.3574C14.458 14.7541 13.0479 16.3373 11.8408 18.073L11.0196 19.2539C9.46841 21.4843 8.29473 23.9578 7.54614 26.574L6.42564 30.49C6.02939 31.8749 5.7424 33.2891 5.56734 34.7194L5.02676 39.1363C4.75136 41.3865 6.64074 43.3029 8.87841 43.043ZM12.4835 37.1124L14.8186 36.8414L16.9245 36.3079C18.164 35.9939 19.3297 35.4372 20.355 34.6698L21.6249 33.7192L23.3945 32.012C23.7158 31.7021 23.7771 31.2081 23.5413 30.8284L22.4874 29.1306L21.4168 27.817C20.9921 27.296 20.5149 26.8205 19.993 26.398L18.849 25.4723L17.257 24.5164C16.9066 24.306 16.4612 24.3468 16.1543 24.6173L15.3247 25.3486C14.6968 25.9021 14.1375 26.5295 13.6586 27.2173L13.3328 27.6853C12.7175 28.5691 12.2519 29.5493 11.955 30.5861L11.5105 32.1379C11.3533 32.6867 11.2394 33.2471 11.17 33.8139L10.9556 35.5642C10.8463 36.4559 11.5958 37.2153 12.4835 37.1124Z"
+                                fill="black"
+                              />
+                            </svg>
+                          </button>
+                          <button class="lk__list-btn">
+                            <svg
+                              class="menu-svg"
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M7 10C7 8.89543 7.89543 8 9 8H40C41.1046 8 42 8.89543 42 10C42 11.1046 41.1046 12 40 12H9C7.89543 12 7 11.1046 7 10ZM7 23C7 21.8954 7.89543 21 9 21H40C41.1046 21 42 21.8954 42 23C42 24.1046 41.1046 25 40 25H9C7.89543 25 7 24.1046 7 23ZM9 34C7.89543 34 7 34.8954 7 36C7 37.1046 7.89543 38 9 38H40C41.1046 38 42 37.1046 42 36C42 34.8954 41.1046 34 40 34H9Z"
+                                fill="black"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </li>
+                      <li class="lk__item-input">
+                        <div class="lk__item-label">
+                          <button class="lk__delete-btn">
+                            <svg
+                              class="delete-svg"
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M24 45C35.598 45 45 35.598 45 24C45 12.402 35.598 3 24 3C12.402 3 3 12.402 3 24C3 35.598 12.402 45 24 45ZM14 20C12.8954 20 12 20.8954 12 22V25C12 26.1046 12.8954 27 14 27H34C35.1046 27 36 26.1046 36 25V22C36 20.8954 35.1046 20 34 20H14Z"
+                                fill="black"
+                              />
+                            </svg>
+                          </button>
+                          <p class="lk__name-label">
+                            Умное такси &laquo;Скоро буду&raquo;
+                          </p>
+                          <button class="lk__edit-btn">
+                            <svg
+                              class="edit-svg"
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M39.2491 23.3889C39.5521 24.0061 40.3776 24.1534 40.7881 23.6026C42.3136 21.5554 43.2174 19.0119 43.2174 16.2559C43.2174 9.48715 37.7658 4 31.041 4C28.3832 4 25.9243 4.85707 23.9223 6.3116C23.3814 6.70453 23.4895 7.51423 24.0729 7.83968C26.4954 9.19102 28.9687 10.9735 31.325 13.1383C34.8715 16.3968 37.5849 19.9998 39.2491 23.3889ZM8.87841 43.043L14.765 42.3593L20.0738 41.013C23.1983 40.2205 26.1369 38.8158 28.7215 36.8791L31.9226 34.4805L36.3837 30.1724C37.1936 29.3902 37.348 28.1438 36.7537 27.1854L34.097 22.9011L31.398 19.5864C30.3274 18.2715 29.1246 17.0716 27.8089 16.0056L24.9251 13.6694L20.9119 11.2574C20.0285 10.7264 18.9058 10.8293 18.1321 11.512L16.0408 13.3574C14.458 14.7541 13.0479 16.3373 11.8408 18.073L11.0196 19.2539C9.46841 21.4843 8.29473 23.9578 7.54614 26.574L6.42564 30.49C6.02939 31.8749 5.7424 33.2891 5.56734 34.7194L5.02676 39.1363C4.75136 41.3865 6.64074 43.3029 8.87841 43.043ZM12.4835 37.1124L14.8186 36.8414L16.9245 36.3079C18.164 35.9939 19.3297 35.4372 20.355 34.6698L21.6249 33.7192L23.3945 32.012C23.7158 31.7021 23.7771 31.2081 23.5413 30.8284L22.4874 29.1306L21.4168 27.817C20.9921 27.296 20.5149 26.8205 19.993 26.398L18.849 25.4723L17.257 24.5164C16.9066 24.306 16.4612 24.3468 16.1543 24.6173L15.3247 25.3486C14.6968 25.9021 14.1375 26.5295 13.6586 27.2173L13.3328 27.6853C12.7175 28.5691 12.2519 29.5493 11.955 30.5861L11.5105 32.1379C11.3533 32.6867 11.2394 33.2471 11.17 33.8139L10.9556 35.5642C10.8463 36.4559 11.5958 37.2153 12.4835 37.1124Z"
+                                fill="black"
+                              />
+                            </svg>
+                          </button>
+                          <button class="lk__list-btn">
+                            <svg
+                              class="menu-svg"
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M7 10C7 8.89543 7.89543 8 9 8H40C41.1046 8 42 8.89543 42 10C42 11.1046 41.1046 12 40 12H9C7.89543 12 7 11.1046 7 10ZM7 23C7 21.8954 7.89543 21 9 21H40C41.1046 21 42 21.8954 42 23C42 24.1046 41.1046 25 40 25H9C7.89543 25 7 24.1046 7 23ZM9 34C7.89543 34 7 34.8954 7 36C7 37.1046 7.89543 38 9 38H40C41.1046 38 42 37.1046 42 36C42 34.8954 41.1046 34 40 34H9Z"
+                                fill="black"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </li>
+                      <li class="lk__item-input add">
+                        <button id="popup-busines-open" class="lk_add-btn">
+                          <svg
+                            class="add-svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M28 21C27.4477 21 27 20.5523 27 20V11C27 10.4477 26.5523 10 26 10H23C22.4477 10 22 10.4477 22 11V20C22 20.5523 21.5523 21 21 21H12C11.4477 21 11 21.4477 11 22V25C11 25.5523 11.4477 26 12 26H21C21.5523 26 22 26.4477 22 27V36C22 36.5523 22.4477 37 23 37H26C26.5523 37 27 36.5523 27 36V27C27 26.4477 27.4477 26 28 26H37C37.5523 26 38 25.5523 38 25V22C38 21.4477 37.5523 21 37 21H28Z"
+                              fill="black"
+                            />
+                          </svg>
+                          Добавить бизнес
+                        </button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="lk__item">
+                    <h2 class="lk__subtitle">Успехи и&nbsp;факапы</h2>
+                    <ul class="lk__list-input">
+                      <li class="lk__item-input">
+                        <label for="success" class="lk__label">
+                          <textarea
+                            class="lk__textarea lk__input"
+                            name="success"
+                            rows="1"
+                          ></textarea>
+
+                          <span class="label-placeholder"
+                            >Успехи<span class="label-span"></span
+                          ></span>
+                        </label>
+                      </li>
+                      <li class="lk__item-input">
+                        <label for="fakup" class="lk__label">
+                          <textarea
+                            class="lk__textarea lk__input"
+                            rows="1"
+                            name="fakup"
+                          ></textarea>
+
+                          <span class="label-placeholder"
+                            >Факапы<span class="label-span"></span
+                          ></span>
+                        </label>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="lk__item">
+                    <h2 class="lk__subtitle">Компетенции</h2>
+                    <ul class="lk__list-input">
+                      <!-- Вставить стили с плавным переходом из placeholder -->
+                      <li class="lk__item-input">
+                        <label for="strong" class="lk__label">
+                          <textarea
+                            class="lk__textarea lk__input"
+                            rows="1"
+                            name="strong"
+                          ></textarea>
+
+                          <span class="label-placeholder"
+                            >Сильные<span class="label-span"></span
+                          ></span>
+                        </label>
+                      </li>
+                      <li class="lk__item-input">
+                        <label for="weak" class="lk__label">
+                          <textarea
+                            class="lk__textarea lk__input"
+                            rows="1"
+                            name="weak"
+                          ></textarea>
+
+                          <span class="label-placeholder"
+                            >Слабые<span class="label-span"></span
+                          ></span>
+                        </label>
+                      </li>
+                      <li class="lk__item">
+                        <button class="lk__btn">
+                          Продолжить
+                          <svg
+                            class="right-svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M20.5896 35.2054C19.9262 36.0856 18.6749 36.2613 17.7947 35.5979C16.9145 34.9345 16.7388 33.6832 17.4022 32.803C18.7837 30.97 20.6111 28.8075 23.1856 26.5041C24.2812 25.5238 25.3428 24.6656 26.2144 23.99C25.3477 23.3174 24.2963 22.4666 23.2115 21.4959C20.637 19.1925 18.8096 17.03 17.4281 15.197C16.7647 14.3168 16.9404 13.0655 17.8206 12.4021C18.7008 11.7387 19.9521 11.9144 20.6155 12.7946C21.8776 14.4691 23.5328 16.4276 25.8729 18.5214C27.0525 19.5768 28.2009 20.4885 29.0891 21.1657C29.5325 21.5037 29.909 21.7818 30.1942 21.9919L30.281 22.0557C30.4873 22.2072 30.7405 22.3931 30.8702 22.5084C31.694 23.2407 31.7682 24.5021 31.0359 25.3259C30.8943 25.4852 30.7329 25.6164 30.5588 25.7193C30.459 25.7946 30.3519 25.8732 30.2551 25.9443L30.1683 26.0081C29.8831 26.2182 29.5066 26.4963 29.0632 26.8343C28.175 27.5115 27.0266 28.4232 25.847 29.4786C23.5069 31.5724 21.8517 33.5309 20.5896 35.2054Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="popup-busines" id="popupBusines">
+                  <div class="popup__container">
+                    <div class="popup__wrapp-title">
+                      <h2 class="popup__title lk__subtitle">Добавить бизнес</h2>
+                      <button class="popup__close" id="closePopup">
+                        <svg
+                          class="close-svg"
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M33.4504 16.6001C34.334 15.9374 34.5131 14.6838 33.8504 13.8001C33.1876 12.9165 31.934 12.7374 31.0504 13.4001C30.3498 13.9255 27.246 16.7556 23.811 20.1254C20.8427 17.4754 18.0793 15.5151 16.0293 14.2851C15.0821 13.7168 13.8536 14.024 13.2853 14.9711C12.717 15.9183 13.0241 17.1468 13.9713 17.7151C15.7704 18.7945 18.2704 20.5587 20.9921 22.9715C17.7709 26.3948 15.4322 29.643 14.0354 31.9711C13.4671 32.9183 13.7742 34.1468 14.7214 34.7151C15.6685 35.2834 16.897 34.9763 17.4653 34.0291C18.7127 31.9502 20.8745 28.9351 23.8948 25.7237C27.7771 29.6226 31.0105 33.1804 31.4003 33.7001C32.063 34.5838 33.3166 34.7629 34.2003 34.1001C35.084 33.4374 35.263 32.1838 34.6003 31.3001C34.0154 30.5202 30.5739 26.7616 26.7114 22.8834C30.1 19.5634 32.9863 16.9482 33.4504 16.6001Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <ul class="lk__list-input popup__list-input">
+                      <li class="lk__item-input">
+                        <label for="text" class="lk__label">
+                          <input class="lk__input" name="text" type="text" />
+                          <span class="label-placeholder"
+                            >Название компании<span class="label-span"></span
+                          ></span>
+                        </label>
+                      </li>
+                      <li class="lk__item-input">
+                        <label for="text" class="lk__label">
+                          <input class="lk__input" name="text" type="text" />
+                          <span class="label-placeholder"
+                            >Отрасль<span class="label-span"></span
+                          ></span>
+                        </label>
+                      </li>
+                      <li class="lk__item-input">
+                        <label for="text" class="lk__label">
+                          <input class="lk__input" name="text" type="text" />
+                          <span class="label-placeholder"
+                            >Специализация<span class="label-span"></span
+                          ></span>
+                        </label>
+                      </li>
+                      <li class="lk__item-input">
+                        <label for="text" class="lk__label">
+                          <input class="lk__input" name="text" type="text" />
+                          <span class="label-placeholder"
+                            >Предложение для клуба<span
+                              class="label-span"
+                            ></span
+                          ></span>
+                        </label>
+                      </li>
+                    </ul>
+                    <h3 class="popup__subtitle lk__subtitle">
+                      Фотография бизнеса
+                    </h3>
+                    <div class="lk__wrapp popup__wrapp">
+                      <div id="image-container" class="lk__img">
+                        <p class="lk__img-placeholder">
+                          Пока фото не&nbsp;загружено
+                        </p>
+                        <button class="lk__img-btn">
+                          <svg
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle cx="28.5" cy="14.5" r="7.5" fill="black" />
+                            <path
+                              d="M43 32.6364C43 37.3636 36.5081 39 28.5 39C20.4919 39 14 37.2182 14 32.6364C14 29.6038 20.4919 25 28.5 25C36.5081 25 43 29.6038 43 32.6364Z"
+                              fill="black"
+                            />
+                            <rect
+                              x="6"
+                              y="19"
+                              width="13"
+                              height="3"
+                              fill="black"
+                            />
+                            <rect
+                              x="14"
+                              y="14"
+                              width="13"
+                              height="3"
+                              transform="rotate(90 14 14)"
+                              fill="black"
+                            />
+                          </svg>
+                          Загрузить
+                        </button>
+                        <input
+                          class="file-input"
+                          type="file"
+                          id="popup-file-input"
+                          placeholder="Загрузи"
+                          accept="image/*"
+                        />
+                        <img
+                          id="image-preview"
+                          class="image-preview"
+                          src=""
+                          alt="Image Preview"
+                        />
+                      </div>
+                      <div class="lk__photo-wrapp">
+                        <h3 class="lk__heading">Как выбрать удачное фото</h3>
+                        <p class="lk__desc">
+                          Подойдет любая фотография отображающая специфику
+                          бизнеса.
+                        </p>
+                      </div>
+                    </div>
+                    <button class="lk__btn">Добавить</button>
+                  </div>
+                </div>
               </form>
-              <form id="tab1_3" class="tab-content" action="">
-                <h2>New page 2</h2>
+              <form id="tab1_3" class="lk__form tab-content synergy" action="">
+                <h2 class="lk__subtitle">Синергия клуба</h2>
+                <ul class="lk__list-input">
+                  <li class="lk__item-input">
+                    <label for="synergyDeposit" class="lk__label">
+                      <textarea
+                        class="lk__textarea lk__input"
+                        name="synergyDeposit"
+                        rows="1"
+                      ></textarea>
+
+                      <span class="label-placeholder"
+                        >Вклад в&nbsp;общую синергетическую сферу клуба<span
+                          class="label-span"
+                        ></span
+                      ></span>
+                    </label>
+                  </li>
+                  <li class="lk__item-input">
+                    <label for="synergyHelp" class="lk__label">
+                      <textarea
+                        class="lk__textarea lk__input"
+                        rows="1"
+                        name="synergyHelp"
+                      ></textarea>
+
+                      <span class="label-placeholder"
+                        >В чем вам нужна помощь от клуба<span
+                          class="label-span"
+                        ></span
+                      ></span>
+                    </label>
+                  </li>
+                </ul>
+                <button class="lk__btn">
+                  Продолжить
+                  <svg
+                    class="right-svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20.5896 35.2054C19.9262 36.0856 18.6749 36.2613 17.7947 35.5979C16.9145 34.9345 16.7388 33.6832 17.4022 32.803C18.7837 30.97 20.6111 28.8075 23.1856 26.5041C24.2812 25.5238 25.3428 24.6656 26.2144 23.99C25.3477 23.3174 24.2963 22.4666 23.2115 21.4959C20.637 19.1925 18.8096 17.03 17.4281 15.197C16.7647 14.3168 16.9404 13.0655 17.8206 12.4021C18.7008 11.7387 19.9521 11.9144 20.6155 12.7946C21.8776 14.4691 23.5328 16.4276 25.8729 18.5214C27.0525 19.5768 28.2009 20.4885 29.0891 21.1657C29.5325 21.5037 29.909 21.7818 30.1942 21.9919L30.281 22.0557C30.4873 22.2072 30.7405 22.3931 30.8702 22.5084C31.694 23.2407 31.7682 24.5021 31.0359 25.3259C30.8943 25.4852 30.7329 25.6164 30.5588 25.7193C30.459 25.7946 30.3519 25.8732 30.2551 25.9443L30.1683 26.0081C29.8831 26.2182 29.5066 26.4963 29.0632 26.8343C28.175 27.5115 27.0266 28.4232 25.847 29.4786C23.5069 31.5724 21.8517 33.5309 20.5896 35.2054Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
               </form>
-              <form id="tab1_4" class="tab-content" action="">
-                <h2>New page 3</h2>
+              <form id="tab1_4" class="lk__form tab-content hobby" action="">
+                <ul class="lk__list">
+                  <li class="lk__item">
+                    <h2 class="lk__subtitle">О&nbsp;вас</h2>
+                    <ul class="lk__list-input">
+                      <li class="lk__item-input">
+                        <label for="aboutSelf" class="lk__label">
+                          <textarea
+                            class="lk__textarea lk__input"
+                            name="aboutSelf"
+                            rows="1"
+                          ></textarea>
+
+                          <span class="label-placeholder"
+                            >Пару предложений о&nbsp;себе<span
+                              class="label-span"
+                            ></span
+                          ></span>
+                        </label>
+                      </li>
+                      <li class="lk__item-input">
+                        <label for="text" class="lk__label">
+                          <input class="lk__input" name="text" type="text" />
+                          <span class="label-placeholder"
+                            >Семейное положение и&nbsp;дети<span
+                              class="label-span"
+                            ></span
+                          ></span>
+                        </label>
+                      </li>
+                      <li class="lk__item-input">
+                        <label for="text" class="lk__label">
+                          <input class="lk__input" name="number" type="text" />
+                          <span class="label-placeholder"
+                            >Количество детей<span class="label-span"></span
+                          ></span>
+                        </label>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="lk__item">
+                    <h2 class="lk__subtitle">Хобби и&nbsp;увлечения</h2>
+                    <label for="text" class="lk__label">
+                      <input class="lk__input" name="text" type="text" />
+                      <span class="label-placeholder"
+                        >Выберите из&nbsp;списка<span class="label-span"></span
+                      ></span>
+                    </label>
+                  </li>
+                  <li class="lk__item">
+                    <h2 class="lk__subtitle">
+                      Фотографии, связанные с&nbsp;вашими увлечениями
+                    </h2>
+                    <ul class="hobby__list">
+                      <li class="hobby__item">
+                        <div class="img"></div>
+                      </li>
+                      <li class="hobby__item">
+                        <div class="img"></div>
+                      </li>
+                      <li class="hobby__item">
+                        <div class="img"></div>
+                      </li>
+                      <li class="hobby__item">
+                        <div class="img"></div>
+                      </li>
+                      <!-- сетка 4  -->
+                    </ul>
+                    <label for="file-hobby" class="input"
+                      ><svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M28 21C27.4477 21 27 20.5523 27 20V11C27 10.4477 26.5523 10 26 10H23C22.4477 10 22 10.4477 22 11V20C22 20.5523 21.5523 21 21 21H12C11.4477 21 11 21.4477 11 22V25C11 25.5523 11.4477 26 12 26H21C21.5523 26 22 26.4477 22 27V36C22 36.5523 22.4477 37 23 37H26C26.5523 37 27 36.5523 27 36V27C27 26.4477 27.4477 26 28 26H37C37.5523 26 38 25.5523 38 25V22C38 21.4477 37.5523 21 37 21H28Z"
+                          fill="black"
+                        />
+                      </svg>
+                      Загрузить ещё
+                      <input type="file" name="file-hobby" id="fileHobby" />
+                    </label>
+                  </li>
+                </ul>
+
+                <button class="lk__btn">
+                  Зарегистрироваться
+                  <svg
+                    class="right-svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20.5896 35.2054C19.9262 36.0856 18.6749 36.2613 17.7947 35.5979C16.9145 34.9345 16.7388 33.6832 17.4022 32.803C18.7837 30.97 20.6111 28.8075 23.1856 26.5041C24.2812 25.5238 25.3428 24.6656 26.2144 23.99C25.3477 23.3174 24.2963 22.4666 23.2115 21.4959C20.637 19.1925 18.8096 17.03 17.4281 15.197C16.7647 14.3168 16.9404 13.0655 17.8206 12.4021C18.7008 11.7387 19.9521 11.9144 20.6155 12.7946C21.8776 14.4691 23.5328 16.4276 25.8729 18.5214C27.0525 19.5768 28.2009 20.4885 29.0891 21.1657C29.5325 21.5037 29.909 21.7818 30.1942 21.9919L30.281 22.0557C30.4873 22.2072 30.7405 22.3931 30.8702 22.5084C31.694 23.2407 31.7682 24.5021 31.0359 25.3259C30.8943 25.4852 30.7329 25.6164 30.5588 25.7193C30.459 25.7946 30.3519 25.8732 30.2551 25.9443L30.1683 26.0081C29.8831 26.2182 29.5066 26.4963 29.0632 26.8343C28.175 27.5115 27.0266 28.4232 25.847 29.4786C23.5069 31.5724 21.8517 33.5309 20.5896 35.2054Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
               </form>
             </div>
             <aside class="lk__aside">
-              <div id="status-progress" class="lk__progressbar">
-                <div class="lk__progress"></div>
+              <div class="lk__aside-desktop">
+                <div id="status-progress" class="lk__progressbar">
+                  <div class="lk__progress"></div>
+                </div>
+                <ul class="lk__list-progress">
+                  <li
+                    class="lk__item-progress tab-nav active"
+                    onclick="showTab('container3','tab1_1', this)"
+                  >
+                    <svg
+                      class="user-svg"
+                      width="48"
+                      height="48"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M33.125 13.9062C33.125 18.825 29.1375 22.8125 24.2188 22.8125C19.3 22.8125 15.3125 18.825 15.3125 13.9062C15.3125 8.98746 19.3 5 24.2188 5C29.1375 5 33.125 8.98746 33.125 13.9062Z"
+                        fill="black"
+                      />
+                      <path
+                        d="M41.4375 35.4432C41.4375 41.0568 33.7284 43 24.2188 43C14.7091 43 7 40.8841 7 35.4432C7 31.842 14.7091 26.375 24.2188 26.375C33.7284 26.375 41.4375 31.842 41.4375 35.4432Z"
+                        fill="black"
+                      />
+                    </svg>
+                    <p class="lk__text-progress">Личные данные</p>
+                  </li>
+                  <li
+                    class="lk__item-progress tab-nav"
+                    onclick="showTab('container3','tab1_2', this)"
+                  >
+                    <svg
+                      class="bussines-svg"
+                      width="48"
+                      height="48"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M24 6C28.6672 6 33.0341 8.6875 33.5365 12.6369L35.8218 12.6917C40.2307 12.7975 43.9448 15.6547 44.701 19.5222L44.9414 20.752C45.0045 21.0747 45.0166 21.4033 44.9777 21.7283C44.9858 21.7856 44.9933 21.8428 45 21.9L44.8889 26.2825C44.9696 26.9717 44.9708 27.667 44.8925 28.3565L44.1912 34.5342C43.7111 38.7625 39.9758 42.0306 35.4017 42.2241L23.6507 42.7213L12.2679 42.2397C7.53576 42.0395 3.72898 38.556 3.44413 34.1652L3 27.3193V21.9C3.00492 21.8261 3.01095 21.7521 3.01809 21.6781L3.01738 21.6716C2.99392 21.4551 2.99421 21.2372 3.01824 21.0208L3.12268 20.0802C3.58293 15.9351 7.44341 12.746 12.1218 12.6462L14.4687 12.5962C14.9959 8.66903 19.3487 6 24 6ZM23.6507 12.4L23.6556 12.4002L23.6649 12.4L30.4523 12.5629C29.9046 10.5942 27.4708 8.8 24 8.8C20.5482 8.8 18.1222 10.5745 17.5568 12.5303L23.6296 12.4008L23.6507 12.4ZM12.9628 30.6869C10.249 30.4103 7.82815 29.2824 6.04849 27.6068L6.46302 33.9964C6.65486 36.9534 9.21861 39.2994 12.4056 39.4343L23.6507 39.91L35.264 39.4187C38.3445 39.2884 40.8602 37.0874 41.1835 34.2398L41.8848 28.062C41.9105 27.8358 41.9242 27.6087 41.9258 27.3815C39.9473 29.2697 37.2045 30.5019 34.152 30.7088L33.9567 30.722V32.838C33.9567 33.7382 33.2269 34.4679 32.3267 34.4679C31.4265 34.4679 30.6968 33.7382 30.6968 32.838V30.943L24.2431 31.3804C23.8582 31.4065 23.4716 31.4065 23.0867 31.3804L16.2228 30.9152V32.838C16.2228 33.7382 15.493 34.4679 14.5928 34.4679C13.6926 34.4679 12.9628 33.7382 12.9628 32.838V30.6869Z"
+                        fill="black"
+                      />
+                    </svg>
+                    <p class="lk__text-progress">Бизнес и&nbsp;карьера</p>
+                  </li>
+                  <li
+                    class="lk__item-progress tab-nav"
+                    onclick="showTab('container3','tab1_3', this)"
+                  >
+                    <svg
+                      class="plus-svg"
+                      width="48"
+                      height="48"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M24 45C35.598 45 45 35.598 45 24C45 12.402 35.598 3 24 3C12.402 3 3 12.402 3 24C3 35.598 12.402 45 24 45ZM27.2727 16.7273C27.2727 18.9364 29.0636 20.7273 31.2727 20.7273H34C35.1046 20.7273 36 21.6227 36 22.7273V25.2727C36 26.3773 35.1046 27.2727 34 27.2727H31.2727C29.0636 27.2727 27.2727 29.0636 27.2727 31.2727V34C27.2727 35.1046 26.3773 36 25.2727 36H22.7273C21.6227 36 20.7273 35.1046 20.7273 34V31.2727C20.7273 29.0636 18.9364 27.2727 16.7273 27.2727H14C12.8954 27.2727 12 26.3773 12 25.2727V22.7273C12 21.6227 12.8954 20.7273 14 20.7273H16.7273C18.9364 20.7273 20.7273 18.9364 20.7273 16.7273V14C20.7273 12.8954 21.6227 12 22.7273 12H25.2727C26.3773 12 27.2727 12.8954 27.2727 14V16.7273Z"
+                        fill="black"
+                      />
+                    </svg>
+                    <p class="lk__text-progress">Синергия клуба</p>
+                  </li>
+                  <li
+                    class="lk__item-progress tab-nav"
+                    onclick="showTab('container3','tab1_4', this)"
+                  >
+                    <svg
+                      class="hobby-svg"
+                      width="48"
+                      height="48"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M41.7895 11.5572L41.0244 10.7228C36.5221 5.81233 28.7147 5.79299 24.1875 10.6811C24.1424 10.7297 24.0647 10.7297 24.0196 10.6811C19.4817 5.78145 11.6645 5.77147 7.11459 10.6603L6.30916 11.5257C2.67891 15.4263 1.96168 21.173 4.52428 25.8266L7.24247 30.7627C7.27114 30.8148 7.30362 30.8647 7.33967 30.9121L9.64811 33.9457C16.8482 43.4078 31.2551 43.3397 38.3631 33.8101L40.5777 30.8409L43.4513 25.7076C46.0167 21.1247 45.349 15.4394 41.7895 11.5572Z"
+                        fill="black"
+                      />
+                    </svg>
+                    <p class="lk__text-progress">Хобби и&nbsp;увлечения</p>
+                  </li>
+                </ul>
               </div>
-              <ul class="lk__list-progress">
-                <li
-                  class="lk__item-progress tab-nav active"
-                  onclick="showTab('container3','tab1_1', this)"
+              <div class="lk__aside-mobile">
+                <ul
+                  class="article__nav-list"
+                  id="simplebar-initials"
+                  data-simplebar="init"
+                  data-simplebar-auto-hide="false"
                 >
-                  <svg
-                    class="user-svg"
-                    width="48"
-                    height="48"
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <li
+                    class="article__nav-item tab-nav active"
+                    onclick="showTab('container3','tab1_1', this)"
                   >
-                    <path
-                      d="M33.125 13.9062C33.125 18.825 29.1375 22.8125 24.2188 22.8125C19.3 22.8125 15.3125 18.825 15.3125 13.9062C15.3125 8.98746 19.3 5 24.2188 5C29.1375 5 33.125 8.98746 33.125 13.9062Z"
-                      fill="black"
-                    />
-                    <path
-                      d="M41.4375 35.4432C41.4375 41.0568 33.7284 43 24.2188 43C14.7091 43 7 40.8841 7 35.4432C7 31.842 14.7091 26.375 24.2188 26.375C33.7284 26.375 41.4375 31.842 41.4375 35.4432Z"
-                      fill="black"
-                    />
-                  </svg>
-                  <p class="lk__text-progress">Личные данные</p>
-                </li>
-                <li
-                  class="lk__item-progress tab-nav"
-                  onclick="showTab('container3','tab1_2', this)"
-                >
-                  <svg
-                    class="bussines-svg"
-                    width="48"
-                    height="48"
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                    <p class="lk__text-progress">Личные данные</p>
+                  </li>
+                  <li
+                    class="article__nav-item tab-nav"
+                    onclick="showTab('container3','tab1_2', this)"
                   >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M24 6C28.6672 6 33.0341 8.6875 33.5365 12.6369L35.8218 12.6917C40.2307 12.7975 43.9448 15.6547 44.701 19.5222L44.9414 20.752C45.0045 21.0747 45.0166 21.4033 44.9777 21.7283C44.9858 21.7856 44.9933 21.8428 45 21.9L44.8889 26.2825C44.9696 26.9717 44.9708 27.667 44.8925 28.3565L44.1912 34.5342C43.7111 38.7625 39.9758 42.0306 35.4017 42.2241L23.6507 42.7213L12.2679 42.2397C7.53576 42.0395 3.72898 38.556 3.44413 34.1652L3 27.3193V21.9C3.00492 21.8261 3.01095 21.7521 3.01809 21.6781L3.01738 21.6716C2.99392 21.4551 2.99421 21.2372 3.01824 21.0208L3.12268 20.0802C3.58293 15.9351 7.44341 12.746 12.1218 12.6462L14.4687 12.5962C14.9959 8.66903 19.3487 6 24 6ZM23.6507 12.4L23.6556 12.4002L23.6649 12.4L30.4523 12.5629C29.9046 10.5942 27.4708 8.8 24 8.8C20.5482 8.8 18.1222 10.5745 17.5568 12.5303L23.6296 12.4008L23.6507 12.4ZM12.9628 30.6869C10.249 30.4103 7.82815 29.2824 6.04849 27.6068L6.46302 33.9964C6.65486 36.9534 9.21861 39.2994 12.4056 39.4343L23.6507 39.91L35.264 39.4187C38.3445 39.2884 40.8602 37.0874 41.1835 34.2398L41.8848 28.062C41.9105 27.8358 41.9242 27.6087 41.9258 27.3815C39.9473 29.2697 37.2045 30.5019 34.152 30.7088L33.9567 30.722V32.838C33.9567 33.7382 33.2269 34.4679 32.3267 34.4679C31.4265 34.4679 30.6968 33.7382 30.6968 32.838V30.943L24.2431 31.3804C23.8582 31.4065 23.4716 31.4065 23.0867 31.3804L16.2228 30.9152V32.838C16.2228 33.7382 15.493 34.4679 14.5928 34.4679C13.6926 34.4679 12.9628 33.7382 12.9628 32.838V30.6869Z"
-                      fill="black"
-                    />
-                  </svg>
-
-                  <p class="lk__text-progress">Бизнес и&nbsp;карьера</p>
-                </li>
-                <li
-                  class="lk__item-progress tab-nav"
-                  onclick="showTab('container3','tab1_3', this)"
-                >
-                  <svg
-                    class="plus-svg"
-                    width="48"
-                    height="48"
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                    <p class="lk__text-progress">Бизнес и&nbsp;карьера</p>
+                  </li>
+                  <li
+                    class="article__nav-item tab-nav"
+                    onclick="showTab('container3','tab1_3', this)"
                   >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M24 45C35.598 45 45 35.598 45 24C45 12.402 35.598 3 24 3C12.402 3 3 12.402 3 24C3 35.598 12.402 45 24 45ZM27.2727 16.7273C27.2727 18.9364 29.0636 20.7273 31.2727 20.7273H34C35.1046 20.7273 36 21.6227 36 22.7273V25.2727C36 26.3773 35.1046 27.2727 34 27.2727H31.2727C29.0636 27.2727 27.2727 29.0636 27.2727 31.2727V34C27.2727 35.1046 26.3773 36 25.2727 36H22.7273C21.6227 36 20.7273 35.1046 20.7273 34V31.2727C20.7273 29.0636 18.9364 27.2727 16.7273 27.2727H14C12.8954 27.2727 12 26.3773 12 25.2727V22.7273C12 21.6227 12.8954 20.7273 14 20.7273H16.7273C18.9364 20.7273 20.7273 18.9364 20.7273 16.7273V14C20.7273 12.8954 21.6227 12 22.7273 12H25.2727C26.3773 12 27.2727 12.8954 27.2727 14V16.7273Z"
-                      fill="black"
-                    />
-                  </svg>
-                  <p class="lk__text-progress">Синергия клуба</p>
-                </li>
-                <li
-                  class="lk__item-progress tab-nav"
-                  onclick="showTab('container3','tab1_4', this)"
-                >
-                  <svg
-                    class="hobby-svg"
-                    width="48"
-                    height="48"
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                    <p class="lk__text-progress">Синергия клуба</p>
+                  </li>
+                  <li
+                    class="article__nav-item tab-nav"
+                    onclick="showTab('container3','tab1_4', this)"
                   >
-                    <path
-                      d="M41.7895 11.5572L41.0244 10.7228C36.5221 5.81233 28.7147 5.79299 24.1875 10.6811C24.1424 10.7297 24.0647 10.7297 24.0196 10.6811C19.4817 5.78145 11.6645 5.77147 7.11459 10.6603L6.30916 11.5257C2.67891 15.4263 1.96168 21.173 4.52428 25.8266L7.24247 30.7627C7.27114 30.8148 7.30362 30.8647 7.33967 30.9121L9.64811 33.9457C16.8482 43.4078 31.2551 43.3397 38.3631 33.8101L40.5777 30.8409L43.4513 25.7076C46.0167 21.1247 45.349 15.4394 41.7895 11.5572Z"
-                      fill="black"
-                    />
-                  </svg>
-                  <p class="lk__text-progress">Хобби и&nbsp;увлечений</p>
-                </li>
-              </ul>
+                    <p class="lk__text-progress">Хобби и&nbsp;увлечения</p>
+                  </li>
+                </ul>
+              </div>
             </aside>
           </div>
           <div id="tab2" class="lk__content tab-content events">
@@ -799,14 +1351,14 @@
                     <picture class="events__picture">
                       <source
                         srcset="
-                          ./img/apperance-img-2.jpg 2x,
+                          ./img/apperance-img-2.jpg 1,
                           ./img/apperance-img-2.jpg 1x
                         "
                         media="(max-width: 600px)"
                       />
                       <source
                         srcset="
-                          ./img/apperance-img-2.jpg 2x,
+                          ./img/apperance-img-2.jpg 1,
                           ./img/apperance-img-2.jpg 1x
                         "
                         media="(min-width: 601px)"
@@ -855,14 +1407,14 @@
                             <picture class="events__img">
                               <source
                                 srcset="
-                                  ./img/user-img-1.jpg 2x,
+                                  ./img/user-img-1.jpg 1,
                                   ./img/user-img-1.jpg 1x
                                 "
                                 media="(max-width: 600px)"
                               />
                               <source
                                 srcset="
-                                  ./img/user-img-1.jpg 2x,
+                                  ./img/user-img-1.jpg 1,
                                   ./img/user-img-1.jpg 1x
                                 "
                                 media="(min-width: 601px)"
@@ -1625,59 +2177,66 @@
                   Новая статья
                 </button>
               </div>
-              <ul class="article__nav-list">
+              <ul
+                class="article__nav-list"
+                data-simplebar="init"
+                data-simplebar-auto-hide="false"
+              >
                 <li
                   class="article__nav-item tab-nav active"
-                  onclick="showTab('container4','tab1', this)"
+                  onclick="showTab('container4','tab4_1', this)"
                 >
                   Все
                 </li>
                 <li
                   class="article__nav-item tab-nav"
-                  onclick="showTab('container4','tab2', this)"
+                  onclick="showTab('container4','tab4_2', this)"
                 >
                   Опубликованы
                 </li>
                 <li
                   class="article__nav-item tab-nav"
-                  onclick="showTab('container4','tab3', this)"
+                  onclick="showTab('container4','tab4_3', this)"
                 >
                   На&nbsp;доработку
                 </li>
                 <li
                   class="article__nav-item tab-nav"
-                  onclick="showTab('container4','tab4', this)"
+                  onclick="showTab('container4','tab4_4', this)"
                 >
                   Отправлены
                 </li>
                 <li
                   class="article__nav-item tab-nav"
-                  onclick="showTab('container4','tab5', this)"
+                  onclick="showTab('container4','tab4_5', this)"
                 >
                   Черновики
                 </li>
               </ul>
-              <ul class="article__content-list">
-                <li class="article__content-item all">
+              <ul class="article__content-list" id="container4">
+                <li
+                  id="tab4_1"
+                  class="article__content-item tab-content all active"
+                >
                   <ul class="article__list">
                     <li class="article__item">
                       <picture class="article__picture">
                         <source
                           srcset="
-                            ./img/user-img-2.jpg 2x,
-                            ./img/user-img-2.jpg 1x
+                            ./img/apperance-img-2.jpg    1x,
+                            ./img/apperance-img-2-2x.jpg 2x
                           "
                           media="(max-width: 600px)"
                         />
                         <source
                           srcset="
-                            ./img/user-img-2.jpg 2x,
-                            ./img/user-img-2.jpg 1x
+                            ./img/apperance-img-2.jpg    1x,
+                            ./img/apperance-img-2-2x.jpg 2x
                           "
                           media="(min-width: 601px)"
                         />
                         <img
-                          src="./img/user-img-2.jpg"
+                          src="./img/apperance-img-2.jpg"
                           alt="Аватарка пользователя"
                         />
                       </picture>
@@ -1694,7 +2253,7 @@
                         </p>
                         <div class="article__info-stat">
                           <p class="article__desc">Кафе и&nbsp;рестораны</p>
-                          <p class="article__data">
+                          <p class="article__data data">
                             <svg
                               width="48"
                               height="48"
@@ -1770,20 +2329,20 @@
                       <picture class="article__picture">
                         <source
                           srcset="
-                            ./img/user-img-4.jpg 2x,
-                            ./img/user-img-4.jpg 1x
+                            ./img/apperance-img-4.jpg    1x,
+                            ./img/apperance-img-4-2x.jpg 2x
                           "
                           media="(max-width: 600px)"
                         />
                         <source
                           srcset="
-                            ./img/user-img-4.jpg 2x,
-                            ./img/user-img-4.jpg 1x
+                            ./img/apperance-img-4.jpg    1x,
+                            ./img/apperance-img-4-2x.jpg 2x
                           "
                           media="(min-width: 601px)"
                         />
                         <img
-                          src="./img/user-img-4.jpg"
+                          src="./img/apperance-img-4.jpg"
                           alt="Аватарка пользователя"
                         />
                       </picture>
@@ -1876,20 +2435,20 @@
                       <picture class="article__picture">
                         <source
                           srcset="
-                            ./img/user-img-5.jpg 2x,
-                            ./img/user-img-5.jpg 1x
+                            ./img/apperance-img-5.jpg    1x,
+                            ./img/apperance-img-5-2x.jpg 2x
                           "
                           media="(max-width: 600px)"
                         />
                         <source
                           srcset="
-                            ./img/user-img-5.jpg 2x,
-                            ./img/user-img-5.jpg 1x
+                            ./img/apperance-img-5.jpg    1x,
+                            ./img/apperance-img-5-2x.jpg 2x
                           "
                           media="(min-width: 601px)"
                         />
                         <img
-                          src="./img/user-img-5.jpg"
+                          src="./img/apperance-img-5.jpg"
                           alt="Аватарка пользователя"
                         />
                       </picture>
@@ -1906,7 +2465,7 @@
                         </p>
                         <div class="article__info-stat">
                           <p class="article__desc">Кафе и&nbsp;рестораны</p>
-                          <p class="article__data">
+                          <p class="article__data data">
                             <svg
                               width="48"
                               height="48"
@@ -1982,20 +2541,20 @@
                       <picture class="article__picture">
                         <source
                           srcset="
-                            ./img/user-img-6.jpg 2x,
-                            ./img/user-img-6.jpg 1x
+                            ./img/apperance-img-6.jpg    1x,
+                            ./img/apperance-img-6-2x.jpg 2x
                           "
                           media="(max-width: 600px)"
                         />
                         <source
                           srcset="
-                            ./img/user-img-6.jpg 2x,
-                            ./img/user-img-6.jpg 1x
+                            ./img/apperance-img-6.jpg    1x,
+                            ./img/apperance-img-6-2x.jpg 2x
                           "
                           media="(min-width: 601px)"
                         />
                         <img
-                          src="./img/user-img-6.jpg"
+                          src="./img/apperance-img-6.jpg"
                           alt="Аватарка пользователя"
                         />
                       </picture>
@@ -2088,20 +2647,20 @@
                       <picture class="article__picture">
                         <source
                           srcset="
-                            ./img/user-img-7.jpg 2x,
-                            ./img/user-img-7.jpg 1x
+                            ./img/apperance-img-7.jpg    1x,
+                            ./img/apperance-img-7-2x.jpg 2x
                           "
                           media="(max-width: 600px)"
                         />
                         <source
                           srcset="
-                            ./img/user-img-7.jpg 2x,
-                            ./img/user-img-7.jpg 1x
+                            ./img/apperance-img-7.jpg    1x,
+                            ./img/apperance-img-7-2x.jpg 2x
                           "
                           media="(min-width: 601px)"
                         />
                         <img
-                          src="./img/user-img-7.jpg"
+                          src="./img/apperance-img-7.jpg"
                           alt="Аватарка пользователя"
                         />
                       </picture>
@@ -2192,10 +2751,558 @@
                     </li>
                   </ul>
                 </li>
-                <li class="article__content-item"></li>
-                <li class="article__content-item"></li>
-                <li class="article__content-item"></li>
-                <li class="article__content-item"></li>
+                <li
+                  id="tab4_2"
+                  class="article__content-item tab-content publick"
+                >
+                  <ul class="article__list">
+                    <li class="article__item">
+                      <picture class="article__picture">
+                        <source
+                          srcset="
+                            ./img/apperance-img-2.jpg    1x,
+                            ./img/apperance-img-2-2x.jpg 2x
+                          "
+                          media="(max-width: 600px)"
+                        />
+                        <source
+                          srcset="
+                            ./img/apperance-img-2.jpg    1x,
+                            ./img/apperance-img-2-2x.jpg 2x
+                          "
+                          media="(min-width: 601px)"
+                        />
+                        <img
+                          src="./img/apperance-img-2.jpg"
+                          alt="Аватарка пользователя"
+                        />
+                      </picture>
+                      <div class="article__inner">
+                        <h3 class="article__subtitle">
+                          Как выстроить маркетинговую воронку
+                        </h3>
+                        <p class="article__text">
+                          Поиск решений, применимых в&nbsp;проектах повышения
+                          энероэффективности. Это и&nbsp;соответствует моим
+                          бизнес целям-профилированные энергосервисных проектов,
+                          и&nbsp;ведет к&nbsp;росту конкурентноспособности
+                          предприятий-заказчиков и&nbsp;экономики страны
+                        </p>
+                        <div class="article__info-stat">
+                          <p class="article__desc">Кафе и&nbsp;рестораны</p>
+                          <p class="article__data data">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M13.2513 4.51354C13.2513 3.67763 13.9289 3 14.7648 3C15.6007 3 16.2783 3.67763 16.2783 4.51353V10.6628C16.548 11.0792 17.0166 11.3547 17.5497 11.3547C18.3856 11.3547 19.0632 10.6771 19.0632 9.84118V5.99089C22.6108 5.70348 26.1793 5.76099 29.7186 6.16344V4.51354C29.7186 3.67763 30.3962 3 31.2321 3C32.068 3 32.7456 3.67763 32.7456 4.51353V10.6628C33.0153 11.0792 33.4839 11.3547 34.017 11.3547C34.8528 11.3547 35.5305 10.6771 35.5305 9.84118V6.83633L37.2833 7.03931C39.568 7.30387 41.3776 9.09292 41.6681 11.3745L42.5685 18.4445C43.156 23.0578 43.156 27.7271 42.5685 32.3404L41.6681 39.4104C41.3776 41.692 39.568 43.4811 37.2833 43.7456L29.8312 44.6086C25.6275 45.0954 21.3816 45.0954 17.1779 44.6086L9.72576 43.7456C7.44105 43.4811 5.63152 41.692 5.34097 39.4104L4.44062 32.3404C3.85313 27.7271 3.85313 23.0578 4.44062 18.4445L5.34097 11.3745C5.63152 9.09292 7.44104 7.30387 9.72576 7.03931L13.2513 6.63106V4.51354ZM23.9267 22.4943C25.2084 22.4943 26.2475 21.4553 26.2475 20.1736C26.2475 18.8919 25.2084 17.8528 23.9267 17.8528C22.645 17.8528 21.606 18.8919 21.606 20.1736C21.606 21.4553 22.645 22.4943 23.9267 22.4943ZM32.2814 22.4943C33.5631 22.4943 34.6022 21.4553 34.6022 20.1736C34.6022 18.8919 33.5631 17.8528 32.2814 17.8528C30.9997 17.8528 29.9607 18.8919 29.9607 20.1736C29.9607 21.4553 30.9997 22.4943 32.2814 22.4943ZM34.6022 27.6C34.6022 28.8817 33.5631 29.9207 32.2814 29.9207C30.9997 29.9207 29.9607 28.8817 29.9607 27.6C29.9607 26.3183 30.9997 25.2792 32.2814 25.2792C33.5631 25.2792 34.6022 26.3183 34.6022 27.6ZM23.9267 29.9207C25.2084 29.9207 26.2475 28.8817 26.2475 27.6C26.2475 26.3183 25.2084 25.2792 23.9267 25.2792C22.645 25.2792 21.606 26.3183 21.606 27.6C21.606 28.8817 22.645 29.9207 23.9267 29.9207ZM26.2475 35.0264C26.2475 36.3081 25.2084 37.3471 23.9267 37.3471C22.645 37.3471 21.606 36.3081 21.606 35.0264C21.606 33.7447 22.645 32.7056 23.9267 32.7056C25.2084 32.7056 26.2475 33.7447 26.2475 35.0264ZM15.572 37.3471C16.8537 37.3471 17.8928 36.3081 17.8928 35.0264C17.8928 33.7447 16.8537 32.7056 15.572 32.7056C14.2903 32.7056 13.2513 33.7447 13.2513 35.0264C13.2513 36.3081 14.2903 37.3471 15.572 37.3471Z"
+                                fill="black"
+                              />
+                            </svg>
+                            11.04.24&nbsp;в 19:00
+                          </p>
+                          <p class="article__view view">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M44.9997 23.7051H45L44.9999 23.6606L45 23.6154H44.9997C44.9351 14.983 35.5579 8 24 8C12.4421 8 3.06492 14.983 3.00033 23.6154H3L3.00009 23.6601L3 23.7051H3.00033C3.06492 32.3375 12.4421 39.3205 24 39.3205C35.5579 39.3205 44.9351 32.3375 44.9997 23.7051ZM33.6923 20.5641C33.6923 25.917 29.3529 30.2564 24 30.2564C18.6471 30.2564 14.3077 25.917 14.3077 20.5641C14.3077 15.2112 18.6471 10.8718 24 10.8718C29.3529 10.8718 33.6923 15.2112 33.6923 20.5641ZM24 24.6923C26.2799 24.6923 28.1282 22.844 28.1282 20.5641C28.1282 18.2842 26.2799 16.4359 24 16.4359C21.7201 16.4359 19.8718 18.2842 19.8718 20.5641C19.8718 22.844 21.7201 24.6923 24 24.6923Z"
+                                fill="black"
+                              />
+                            </svg>
+                            3
+                          </p>
+                          <p class="article__like like">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M30.5576 10.7663C32.3203 8.95643 32.2821 6.06025 30.4723 4.29749C28.6624 2.53473 25.7663 2.57291 24.0035 4.38277C20.9401 7.528 17.3863 12.9573 14.786 18.1972C12.7294 22.3414 11.7432 27.1685 11.9906 31.0435C12.2352 34.876 13.0213 38.6522 16.0586 41.2413C18.8107 43.5873 22.6006 44.1597 26.0474 44.5485C29.4078 44.9276 32.4152 43.5578 34.6738 41.9453C36.9834 40.2963 39.0017 38.0564 40.5924 35.7541C42.1874 33.4458 43.4979 30.8642 44.2619 28.3832C44.9526 26.1402 45.5002 23.0071 44.2655 20.2447C43.221 17.9078 41.6551 15.9373 39.2879 14.7812C37.0519 13.6892 34.6949 13.6255 32.6889 13.794C31.0666 13.9302 29.2774 14.2625 27.4836 14.6215C28.5872 13.0331 29.6509 11.6972 30.5576 10.7663Z"
+                                fill="black"
+                              />
+                              <path
+                                d="M10.4126 19.1509C11.1075 18.3049 10.985 17.0558 10.139 16.3609C9.29306 15.6659 8.04393 15.7884 7.34902 16.6344C5.31151 19.1148 5.07583 22.5032 4.46972 25.6215C3.86991 28.7074 3.8146 31.9077 4.47806 34.0767C5.51638 37.4712 6.69835 40.6703 7.61759 42.018C7.72694 42.1783 7.81877 42.313 7.88829 42.4181C8.49233 43.3311 9.72219 43.5817 10.6353 42.9776C11.5483 42.3736 11.7989 41.1437 11.1948 40.2307C11.1036 40.0928 10.9948 39.9321 10.8721 39.7509C10.3505 38.9806 9.95124 37.9978 9.55937 36.8164C8.82175 34.5927 8.45976 32.891 8.48994 30.5483C8.51592 28.5313 8.69639 25.8882 8.99093 23.8926C9.2481 22.1502 9.56465 20.4889 10.4126 19.1509Z"
+                                fill="black"
+                              />
+                            </svg>
+                            14
+                          </p>
+                          <p class="article__bookmark bookmark">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M23.9585 38.2764L24.0555 38.3277V38.349L24.1525 38.2976C24.4891 38.4796 35.1185 44.2168 37.0476 43.9937C39.0077 43.7669 40.5601 38.5701 40.8094 36.6145L41.7329 29.3695C42.237 25.4153 42.237 21.4133 41.7329 17.4591L40.8094 10.2141C40.5734 8.36234 37.0478 7.07947 34.4767 6.14395L34.474 6.14294C34.3307 6.09082 34.1905 6.03979 34.0539 5.98979L27.2103 4.29102C25.8514 4.04394 25.0747 4.01867 24.0555 4C24.0247 4.00086 23.9942 4.00171 23.9639 4.00255C22.9451 4.03088 22.2204 4.05103 20.9006 4.29083L14.057 5.98854C13.9204 6.03855 13.78 6.08959 13.6367 6.14171L13.6342 6.14261C11.0632 7.07755 7.53756 8.35962 7.30153 10.2102L6.37803 17.4507C5.87399 21.4024 5.87399 25.402 6.37803 29.3538L7.30153 36.5943C7.5508 38.5486 9.10326 43.7422 11.0634 43.9688C12.9924 44.1919 23.6219 38.4582 23.9585 38.2764Z"
+                                fill="black"
+                              />
+                            </svg>
+                            3
+                          </p>
+                        </div>
+                      </div>
+                      <p class="article__status green">Опубликован</p>
+                    </li>
+                    <li class="article__item">
+                      <picture class="article__picture">
+                        <source
+                          srcset="
+                            ./img/apperance-img-4.jpg    1x,
+                            ./img/apperance-img-4-2x.jpg 2x
+                          "
+                          media="(max-width: 600px)"
+                        />
+                        <source
+                          srcset="
+                            ./img/apperance-img-4.jpg    1x,
+                            ./img/apperance-img-4-2x.jpg 2x
+                          "
+                          media="(min-width: 601px)"
+                        />
+                        <img
+                          src="./img/apperance-img-4.jpg"
+                          alt="Аватарка пользователя"
+                        />
+                      </picture>
+                      <div class="article__inner">
+                        <h3 class="article__subtitle">
+                          Как положить кадровый&nbsp;IT кризис на&nbsp;лопатки
+                        </h3>
+                        <p class="article__text">
+                          Начнем со&nbsp;спойлера aka основной мысли, которую
+                          хотим донести&nbsp;&mdash; к&nbsp;найму нужно
+                          подходить не&nbsp;сточки зрения поиска,
+                          а&nbsp;продажи. Не&nbsp;выставлять требования,
+                          а&nbsp;продавать себя, все как в&nbsp;тиндере.
+                        </p>
+                        <div class="article__info-stat">
+                          <p class="article__desc">Кафе и&nbsp;рестораны</p>
+                          <p class="article__data">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M13.2513 4.51354C13.2513 3.67763 13.9289 3 14.7648 3C15.6007 3 16.2783 3.67763 16.2783 4.51353V10.6628C16.548 11.0792 17.0166 11.3547 17.5497 11.3547C18.3856 11.3547 19.0632 10.6771 19.0632 9.84118V5.99089C22.6108 5.70348 26.1793 5.76099 29.7186 6.16344V4.51354C29.7186 3.67763 30.3962 3 31.2321 3C32.068 3 32.7456 3.67763 32.7456 4.51353V10.6628C33.0153 11.0792 33.4839 11.3547 34.017 11.3547C34.8528 11.3547 35.5305 10.6771 35.5305 9.84118V6.83633L37.2833 7.03931C39.568 7.30387 41.3776 9.09292 41.6681 11.3745L42.5685 18.4445C43.156 23.0578 43.156 27.7271 42.5685 32.3404L41.6681 39.4104C41.3776 41.692 39.568 43.4811 37.2833 43.7456L29.8312 44.6086C25.6275 45.0954 21.3816 45.0954 17.1779 44.6086L9.72576 43.7456C7.44105 43.4811 5.63152 41.692 5.34097 39.4104L4.44062 32.3404C3.85313 27.7271 3.85313 23.0578 4.44062 18.4445L5.34097 11.3745C5.63152 9.09292 7.44104 7.30387 9.72576 7.03931L13.2513 6.63106V4.51354ZM23.9267 22.4943C25.2084 22.4943 26.2475 21.4553 26.2475 20.1736C26.2475 18.8919 25.2084 17.8528 23.9267 17.8528C22.645 17.8528 21.606 18.8919 21.606 20.1736C21.606 21.4553 22.645 22.4943 23.9267 22.4943ZM32.2814 22.4943C33.5631 22.4943 34.6022 21.4553 34.6022 20.1736C34.6022 18.8919 33.5631 17.8528 32.2814 17.8528C30.9997 17.8528 29.9607 18.8919 29.9607 20.1736C29.9607 21.4553 30.9997 22.4943 32.2814 22.4943ZM34.6022 27.6C34.6022 28.8817 33.5631 29.9207 32.2814 29.9207C30.9997 29.9207 29.9607 28.8817 29.9607 27.6C29.9607 26.3183 30.9997 25.2792 32.2814 25.2792C33.5631 25.2792 34.6022 26.3183 34.6022 27.6ZM23.9267 29.9207C25.2084 29.9207 26.2475 28.8817 26.2475 27.6C26.2475 26.3183 25.2084 25.2792 23.9267 25.2792C22.645 25.2792 21.606 26.3183 21.606 27.6C21.606 28.8817 22.645 29.9207 23.9267 29.9207ZM26.2475 35.0264C26.2475 36.3081 25.2084 37.3471 23.9267 37.3471C22.645 37.3471 21.606 36.3081 21.606 35.0264C21.606 33.7447 22.645 32.7056 23.9267 32.7056C25.2084 32.7056 26.2475 33.7447 26.2475 35.0264ZM15.572 37.3471C16.8537 37.3471 17.8928 36.3081 17.8928 35.0264C17.8928 33.7447 16.8537 32.7056 15.572 32.7056C14.2903 32.7056 13.2513 33.7447 13.2513 35.0264C13.2513 36.3081 14.2903 37.3471 15.572 37.3471Z"
+                                fill="black"
+                              />
+                            </svg>
+                            11.04.24&nbsp;в 19:00
+                          </p>
+                          <p class="article__view view">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M44.9997 23.7051H45L44.9999 23.6606L45 23.6154H44.9997C44.9351 14.983 35.5579 8 24 8C12.4421 8 3.06492 14.983 3.00033 23.6154H3L3.00009 23.6601L3 23.7051H3.00033C3.06492 32.3375 12.4421 39.3205 24 39.3205C35.5579 39.3205 44.9351 32.3375 44.9997 23.7051ZM33.6923 20.5641C33.6923 25.917 29.3529 30.2564 24 30.2564C18.6471 30.2564 14.3077 25.917 14.3077 20.5641C14.3077 15.2112 18.6471 10.8718 24 10.8718C29.3529 10.8718 33.6923 15.2112 33.6923 20.5641ZM24 24.6923C26.2799 24.6923 28.1282 22.844 28.1282 20.5641C28.1282 18.2842 26.2799 16.4359 24 16.4359C21.7201 16.4359 19.8718 18.2842 19.8718 20.5641C19.8718 22.844 21.7201 24.6923 24 24.6923Z"
+                                fill="black"
+                              />
+                            </svg>
+                            3
+                          </p>
+                          <p class="article__like like">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M30.5576 10.7663C32.3203 8.95643 32.2821 6.06025 30.4723 4.29749C28.6624 2.53473 25.7663 2.57291 24.0035 4.38277C20.9401 7.528 17.3863 12.9573 14.786 18.1972C12.7294 22.3414 11.7432 27.1685 11.9906 31.0435C12.2352 34.876 13.0213 38.6522 16.0586 41.2413C18.8107 43.5873 22.6006 44.1597 26.0474 44.5485C29.4078 44.9276 32.4152 43.5578 34.6738 41.9453C36.9834 40.2963 39.0017 38.0564 40.5924 35.7541C42.1874 33.4458 43.4979 30.8642 44.2619 28.3832C44.9526 26.1402 45.5002 23.0071 44.2655 20.2447C43.221 17.9078 41.6551 15.9373 39.2879 14.7812C37.0519 13.6892 34.6949 13.6255 32.6889 13.794C31.0666 13.9302 29.2774 14.2625 27.4836 14.6215C28.5872 13.0331 29.6509 11.6972 30.5576 10.7663Z"
+                                fill="black"
+                              />
+                              <path
+                                d="M10.4126 19.1509C11.1075 18.3049 10.985 17.0558 10.139 16.3609C9.29306 15.6659 8.04393 15.7884 7.34902 16.6344C5.31151 19.1148 5.07583 22.5032 4.46972 25.6215C3.86991 28.7074 3.8146 31.9077 4.47806 34.0767C5.51638 37.4712 6.69835 40.6703 7.61759 42.018C7.72694 42.1783 7.81877 42.313 7.88829 42.4181C8.49233 43.3311 9.72219 43.5817 10.6353 42.9776C11.5483 42.3736 11.7989 41.1437 11.1948 40.2307C11.1036 40.0928 10.9948 39.9321 10.8721 39.7509C10.3505 38.9806 9.95124 37.9978 9.55937 36.8164C8.82175 34.5927 8.45976 32.891 8.48994 30.5483C8.51592 28.5313 8.69639 25.8882 8.99093 23.8926C9.2481 22.1502 9.56465 20.4889 10.4126 19.1509Z"
+                                fill="black"
+                              />
+                            </svg>
+                            14
+                          </p>
+                          <p class="article__bookmark bookmark">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M23.9585 38.2764L24.0555 38.3277V38.349L24.1525 38.2976C24.4891 38.4796 35.1185 44.2168 37.0476 43.9937C39.0077 43.7669 40.5601 38.5701 40.8094 36.6145L41.7329 29.3695C42.237 25.4153 42.237 21.4133 41.7329 17.4591L40.8094 10.2141C40.5734 8.36234 37.0478 7.07947 34.4767 6.14395L34.474 6.14294C34.3307 6.09082 34.1905 6.03979 34.0539 5.98979L27.2103 4.29102C25.8514 4.04394 25.0747 4.01867 24.0555 4C24.0247 4.00086 23.9942 4.00171 23.9639 4.00255C22.9451 4.03088 22.2204 4.05103 20.9006 4.29083L14.057 5.98854C13.9204 6.03855 13.78 6.08959 13.6367 6.14171L13.6342 6.14261C11.0632 7.07755 7.53756 8.35962 7.30153 10.2102L6.37803 17.4507C5.87399 21.4024 5.87399 25.402 6.37803 29.3538L7.30153 36.5943C7.5508 38.5486 9.10326 43.7422 11.0634 43.9688C12.9924 44.1919 23.6219 38.4582 23.9585 38.2764Z"
+                                fill="black"
+                              />
+                            </svg>
+                            3
+                          </p>
+                        </div>
+                      </div>
+                      <p class="article__status green">Опубликован</p>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  id="tab4_3"
+                  class="article__content-item tab-content refining"
+                >
+                  <ul class="article__list">
+                    <li class="article__item">
+                      <picture class="article__picture">
+                        <source
+                          srcset="
+                            ./img/apperance-img-5.jpg    1x,
+                            ./img/apperance-img-5-2x.jpg 2x
+                          "
+                          media="(max-width: 600px)"
+                        />
+                        <source
+                          srcset="
+                            ./img/apperance-img-5.jpg    1x,
+                            ./img/apperance-img-5-2x.jpg 2x
+                          "
+                          media="(min-width: 601px)"
+                        />
+                        <img
+                          src="./img/apperance-img-5.jpg"
+                          alt="Аватарка пользователя"
+                        />
+                      </picture>
+                      <div class="article__inner">
+                        <h3 class="article__subtitle">
+                          Apple извинилась за&nbsp;рекламу нового iPad Pro, где
+                          прессом давят инструменты для творчества
+                        </h3>
+                        <p class="article__text">
+                          Чтобы продемонстрировать его возможности&nbsp;&mdash;
+                          в&nbsp;нём показано, как гидравлический пресс
+                          раздавливает инструменты для творчества
+                          и&nbsp;предметы искусства &mdash;
+                        </p>
+                        <div class="article__info-stat">
+                          <p class="article__desc">Кафе и&nbsp;рестораны</p>
+                          <p class="article__data data">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M13.2513 4.51354C13.2513 3.67763 13.9289 3 14.7648 3C15.6007 3 16.2783 3.67763 16.2783 4.51353V10.6628C16.548 11.0792 17.0166 11.3547 17.5497 11.3547C18.3856 11.3547 19.0632 10.6771 19.0632 9.84118V5.99089C22.6108 5.70348 26.1793 5.76099 29.7186 6.16344V4.51354C29.7186 3.67763 30.3962 3 31.2321 3C32.068 3 32.7456 3.67763 32.7456 4.51353V10.6628C33.0153 11.0792 33.4839 11.3547 34.017 11.3547C34.8528 11.3547 35.5305 10.6771 35.5305 9.84118V6.83633L37.2833 7.03931C39.568 7.30387 41.3776 9.09292 41.6681 11.3745L42.5685 18.4445C43.156 23.0578 43.156 27.7271 42.5685 32.3404L41.6681 39.4104C41.3776 41.692 39.568 43.4811 37.2833 43.7456L29.8312 44.6086C25.6275 45.0954 21.3816 45.0954 17.1779 44.6086L9.72576 43.7456C7.44105 43.4811 5.63152 41.692 5.34097 39.4104L4.44062 32.3404C3.85313 27.7271 3.85313 23.0578 4.44062 18.4445L5.34097 11.3745C5.63152 9.09292 7.44104 7.30387 9.72576 7.03931L13.2513 6.63106V4.51354ZM23.9267 22.4943C25.2084 22.4943 26.2475 21.4553 26.2475 20.1736C26.2475 18.8919 25.2084 17.8528 23.9267 17.8528C22.645 17.8528 21.606 18.8919 21.606 20.1736C21.606 21.4553 22.645 22.4943 23.9267 22.4943ZM32.2814 22.4943C33.5631 22.4943 34.6022 21.4553 34.6022 20.1736C34.6022 18.8919 33.5631 17.8528 32.2814 17.8528C30.9997 17.8528 29.9607 18.8919 29.9607 20.1736C29.9607 21.4553 30.9997 22.4943 32.2814 22.4943ZM34.6022 27.6C34.6022 28.8817 33.5631 29.9207 32.2814 29.9207C30.9997 29.9207 29.9607 28.8817 29.9607 27.6C29.9607 26.3183 30.9997 25.2792 32.2814 25.2792C33.5631 25.2792 34.6022 26.3183 34.6022 27.6ZM23.9267 29.9207C25.2084 29.9207 26.2475 28.8817 26.2475 27.6C26.2475 26.3183 25.2084 25.2792 23.9267 25.2792C22.645 25.2792 21.606 26.3183 21.606 27.6C21.606 28.8817 22.645 29.9207 23.9267 29.9207ZM26.2475 35.0264C26.2475 36.3081 25.2084 37.3471 23.9267 37.3471C22.645 37.3471 21.606 36.3081 21.606 35.0264C21.606 33.7447 22.645 32.7056 23.9267 32.7056C25.2084 32.7056 26.2475 33.7447 26.2475 35.0264ZM15.572 37.3471C16.8537 37.3471 17.8928 36.3081 17.8928 35.0264C17.8928 33.7447 16.8537 32.7056 15.572 32.7056C14.2903 32.7056 13.2513 33.7447 13.2513 35.0264C13.2513 36.3081 14.2903 37.3471 15.572 37.3471Z"
+                                fill="black"
+                              />
+                            </svg>
+                            11.04.24&nbsp;в 19:00
+                          </p>
+                          <p class="article__view view">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M44.9997 23.7051H45L44.9999 23.6606L45 23.6154H44.9997C44.9351 14.983 35.5579 8 24 8C12.4421 8 3.06492 14.983 3.00033 23.6154H3L3.00009 23.6601L3 23.7051H3.00033C3.06492 32.3375 12.4421 39.3205 24 39.3205C35.5579 39.3205 44.9351 32.3375 44.9997 23.7051ZM33.6923 20.5641C33.6923 25.917 29.3529 30.2564 24 30.2564C18.6471 30.2564 14.3077 25.917 14.3077 20.5641C14.3077 15.2112 18.6471 10.8718 24 10.8718C29.3529 10.8718 33.6923 15.2112 33.6923 20.5641ZM24 24.6923C26.2799 24.6923 28.1282 22.844 28.1282 20.5641C28.1282 18.2842 26.2799 16.4359 24 16.4359C21.7201 16.4359 19.8718 18.2842 19.8718 20.5641C19.8718 22.844 21.7201 24.6923 24 24.6923Z"
+                                fill="black"
+                              />
+                            </svg>
+                            3
+                          </p>
+                          <p class="article__like like">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M30.5576 10.7663C32.3203 8.95643 32.2821 6.06025 30.4723 4.29749C28.6624 2.53473 25.7663 2.57291 24.0035 4.38277C20.9401 7.528 17.3863 12.9573 14.786 18.1972C12.7294 22.3414 11.7432 27.1685 11.9906 31.0435C12.2352 34.876 13.0213 38.6522 16.0586 41.2413C18.8107 43.5873 22.6006 44.1597 26.0474 44.5485C29.4078 44.9276 32.4152 43.5578 34.6738 41.9453C36.9834 40.2963 39.0017 38.0564 40.5924 35.7541C42.1874 33.4458 43.4979 30.8642 44.2619 28.3832C44.9526 26.1402 45.5002 23.0071 44.2655 20.2447C43.221 17.9078 41.6551 15.9373 39.2879 14.7812C37.0519 13.6892 34.6949 13.6255 32.6889 13.794C31.0666 13.9302 29.2774 14.2625 27.4836 14.6215C28.5872 13.0331 29.6509 11.6972 30.5576 10.7663Z"
+                                fill="black"
+                              />
+                              <path
+                                d="M10.4126 19.1509C11.1075 18.3049 10.985 17.0558 10.139 16.3609C9.29306 15.6659 8.04393 15.7884 7.34902 16.6344C5.31151 19.1148 5.07583 22.5032 4.46972 25.6215C3.86991 28.7074 3.8146 31.9077 4.47806 34.0767C5.51638 37.4712 6.69835 40.6703 7.61759 42.018C7.72694 42.1783 7.81877 42.313 7.88829 42.4181C8.49233 43.3311 9.72219 43.5817 10.6353 42.9776C11.5483 42.3736 11.7989 41.1437 11.1948 40.2307C11.1036 40.0928 10.9948 39.9321 10.8721 39.7509C10.3505 38.9806 9.95124 37.9978 9.55937 36.8164C8.82175 34.5927 8.45976 32.891 8.48994 30.5483C8.51592 28.5313 8.69639 25.8882 8.99093 23.8926C9.2481 22.1502 9.56465 20.4889 10.4126 19.1509Z"
+                                fill="black"
+                              />
+                            </svg>
+                            14
+                          </p>
+                          <p class="article__bookmark bookmark">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M23.9585 38.2764L24.0555 38.3277V38.349L24.1525 38.2976C24.4891 38.4796 35.1185 44.2168 37.0476 43.9937C39.0077 43.7669 40.5601 38.5701 40.8094 36.6145L41.7329 29.3695C42.237 25.4153 42.237 21.4133 41.7329 17.4591L40.8094 10.2141C40.5734 8.36234 37.0478 7.07947 34.4767 6.14395L34.474 6.14294C34.3307 6.09082 34.1905 6.03979 34.0539 5.98979L27.2103 4.29102C25.8514 4.04394 25.0747 4.01867 24.0555 4C24.0247 4.00086 23.9942 4.00171 23.9639 4.00255C22.9451 4.03088 22.2204 4.05103 20.9006 4.29083L14.057 5.98854C13.9204 6.03855 13.78 6.08959 13.6367 6.14171L13.6342 6.14261C11.0632 7.07755 7.53756 8.35962 7.30153 10.2102L6.37803 17.4507C5.87399 21.4024 5.87399 25.402 6.37803 29.3538L7.30153 36.5943C7.5508 38.5486 9.10326 43.7422 11.0634 43.9688C12.9924 44.1919 23.6219 38.4582 23.9585 38.2764Z"
+                                fill="black"
+                              />
+                            </svg>
+                            3
+                          </p>
+                        </div>
+                      </div>
+                      <p class="article__status red">На&nbsp;доработку</p>
+                    </li>
+                  </ul>
+                </li>
+                <li id="tab4_4" class="article__content-item tab-content send">
+                  <ul class="article__list">
+                    <li class="article__item">
+                      <picture class="article__picture">
+                        <source
+                          srcset="
+                            ./img/apperance-img-6.jpg    1x,
+                            ./img/apperance-img-6-2x.jpg 2x
+                          "
+                          media="(max-width: 600px)"
+                        />
+                        <source
+                          srcset="
+                            ./img/apperance-img-6.jpg    1x,
+                            ./img/apperance-img-6-2x.jpg 2x
+                          "
+                          media="(min-width: 601px)"
+                        />
+                        <img
+                          src="./img/apperance-img-6.jpg"
+                          alt="Аватарка пользователя"
+                        />
+                      </picture>
+                      <div class="article__inner">
+                        <h3 class="article__subtitle">
+                          Метаморфозы с&nbsp;доставкой сборного груза через
+                          Союзные республики
+                        </h3>
+                        <p class="article__text">
+                          Периодически попадаются тематические статьи о Карго.
+                          Ключевой целью этого контента является, скорее всего
+                          пиар собственных компаний или антипиар «Карго» как
+                          такового способа доставки, ибо никакой конкретики,
+                        </p>
+                        <div class="article__info-stat">
+                          <p class="article__desc">Кафе и&nbsp;рестораны</p>
+                          <p class="article__data">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M13.2513 4.51354C13.2513 3.67763 13.9289 3 14.7648 3C15.6007 3 16.2783 3.67763 16.2783 4.51353V10.6628C16.548 11.0792 17.0166 11.3547 17.5497 11.3547C18.3856 11.3547 19.0632 10.6771 19.0632 9.84118V5.99089C22.6108 5.70348 26.1793 5.76099 29.7186 6.16344V4.51354C29.7186 3.67763 30.3962 3 31.2321 3C32.068 3 32.7456 3.67763 32.7456 4.51353V10.6628C33.0153 11.0792 33.4839 11.3547 34.017 11.3547C34.8528 11.3547 35.5305 10.6771 35.5305 9.84118V6.83633L37.2833 7.03931C39.568 7.30387 41.3776 9.09292 41.6681 11.3745L42.5685 18.4445C43.156 23.0578 43.156 27.7271 42.5685 32.3404L41.6681 39.4104C41.3776 41.692 39.568 43.4811 37.2833 43.7456L29.8312 44.6086C25.6275 45.0954 21.3816 45.0954 17.1779 44.6086L9.72576 43.7456C7.44105 43.4811 5.63152 41.692 5.34097 39.4104L4.44062 32.3404C3.85313 27.7271 3.85313 23.0578 4.44062 18.4445L5.34097 11.3745C5.63152 9.09292 7.44104 7.30387 9.72576 7.03931L13.2513 6.63106V4.51354ZM23.9267 22.4943C25.2084 22.4943 26.2475 21.4553 26.2475 20.1736C26.2475 18.8919 25.2084 17.8528 23.9267 17.8528C22.645 17.8528 21.606 18.8919 21.606 20.1736C21.606 21.4553 22.645 22.4943 23.9267 22.4943ZM32.2814 22.4943C33.5631 22.4943 34.6022 21.4553 34.6022 20.1736C34.6022 18.8919 33.5631 17.8528 32.2814 17.8528C30.9997 17.8528 29.9607 18.8919 29.9607 20.1736C29.9607 21.4553 30.9997 22.4943 32.2814 22.4943ZM34.6022 27.6C34.6022 28.8817 33.5631 29.9207 32.2814 29.9207C30.9997 29.9207 29.9607 28.8817 29.9607 27.6C29.9607 26.3183 30.9997 25.2792 32.2814 25.2792C33.5631 25.2792 34.6022 26.3183 34.6022 27.6ZM23.9267 29.9207C25.2084 29.9207 26.2475 28.8817 26.2475 27.6C26.2475 26.3183 25.2084 25.2792 23.9267 25.2792C22.645 25.2792 21.606 26.3183 21.606 27.6C21.606 28.8817 22.645 29.9207 23.9267 29.9207ZM26.2475 35.0264C26.2475 36.3081 25.2084 37.3471 23.9267 37.3471C22.645 37.3471 21.606 36.3081 21.606 35.0264C21.606 33.7447 22.645 32.7056 23.9267 32.7056C25.2084 32.7056 26.2475 33.7447 26.2475 35.0264ZM15.572 37.3471C16.8537 37.3471 17.8928 36.3081 17.8928 35.0264C17.8928 33.7447 16.8537 32.7056 15.572 32.7056C14.2903 32.7056 13.2513 33.7447 13.2513 35.0264C13.2513 36.3081 14.2903 37.3471 15.572 37.3471Z"
+                                fill="black"
+                              />
+                            </svg>
+                            11.04.24&nbsp;в 19:00
+                          </p>
+                          <p class="article__view view">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M44.9997 23.7051H45L44.9999 23.6606L45 23.6154H44.9997C44.9351 14.983 35.5579 8 24 8C12.4421 8 3.06492 14.983 3.00033 23.6154H3L3.00009 23.6601L3 23.7051H3.00033C3.06492 32.3375 12.4421 39.3205 24 39.3205C35.5579 39.3205 44.9351 32.3375 44.9997 23.7051ZM33.6923 20.5641C33.6923 25.917 29.3529 30.2564 24 30.2564C18.6471 30.2564 14.3077 25.917 14.3077 20.5641C14.3077 15.2112 18.6471 10.8718 24 10.8718C29.3529 10.8718 33.6923 15.2112 33.6923 20.5641ZM24 24.6923C26.2799 24.6923 28.1282 22.844 28.1282 20.5641C28.1282 18.2842 26.2799 16.4359 24 16.4359C21.7201 16.4359 19.8718 18.2842 19.8718 20.5641C19.8718 22.844 21.7201 24.6923 24 24.6923Z"
+                                fill="black"
+                              />
+                            </svg>
+                            3
+                          </p>
+                          <p class="article__like like">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M30.5576 10.7663C32.3203 8.95643 32.2821 6.06025 30.4723 4.29749C28.6624 2.53473 25.7663 2.57291 24.0035 4.38277C20.9401 7.528 17.3863 12.9573 14.786 18.1972C12.7294 22.3414 11.7432 27.1685 11.9906 31.0435C12.2352 34.876 13.0213 38.6522 16.0586 41.2413C18.8107 43.5873 22.6006 44.1597 26.0474 44.5485C29.4078 44.9276 32.4152 43.5578 34.6738 41.9453C36.9834 40.2963 39.0017 38.0564 40.5924 35.7541C42.1874 33.4458 43.4979 30.8642 44.2619 28.3832C44.9526 26.1402 45.5002 23.0071 44.2655 20.2447C43.221 17.9078 41.6551 15.9373 39.2879 14.7812C37.0519 13.6892 34.6949 13.6255 32.6889 13.794C31.0666 13.9302 29.2774 14.2625 27.4836 14.6215C28.5872 13.0331 29.6509 11.6972 30.5576 10.7663Z"
+                                fill="black"
+                              />
+                              <path
+                                d="M10.4126 19.1509C11.1075 18.3049 10.985 17.0558 10.139 16.3609C9.29306 15.6659 8.04393 15.7884 7.34902 16.6344C5.31151 19.1148 5.07583 22.5032 4.46972 25.6215C3.86991 28.7074 3.8146 31.9077 4.47806 34.0767C5.51638 37.4712 6.69835 40.6703 7.61759 42.018C7.72694 42.1783 7.81877 42.313 7.88829 42.4181C8.49233 43.3311 9.72219 43.5817 10.6353 42.9776C11.5483 42.3736 11.7989 41.1437 11.1948 40.2307C11.1036 40.0928 10.9948 39.9321 10.8721 39.7509C10.3505 38.9806 9.95124 37.9978 9.55937 36.8164C8.82175 34.5927 8.45976 32.891 8.48994 30.5483C8.51592 28.5313 8.69639 25.8882 8.99093 23.8926C9.2481 22.1502 9.56465 20.4889 10.4126 19.1509Z"
+                                fill="black"
+                              />
+                            </svg>
+                            14
+                          </p>
+                          <p class="article__bookmark bookmark">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M23.9585 38.2764L24.0555 38.3277V38.349L24.1525 38.2976C24.4891 38.4796 35.1185 44.2168 37.0476 43.9937C39.0077 43.7669 40.5601 38.5701 40.8094 36.6145L41.7329 29.3695C42.237 25.4153 42.237 21.4133 41.7329 17.4591L40.8094 10.2141C40.5734 8.36234 37.0478 7.07947 34.4767 6.14395L34.474 6.14294C34.3307 6.09082 34.1905 6.03979 34.0539 5.98979L27.2103 4.29102C25.8514 4.04394 25.0747 4.01867 24.0555 4C24.0247 4.00086 23.9942 4.00171 23.9639 4.00255C22.9451 4.03088 22.2204 4.05103 20.9006 4.29083L14.057 5.98854C13.9204 6.03855 13.78 6.08959 13.6367 6.14171L13.6342 6.14261C11.0632 7.07755 7.53756 8.35962 7.30153 10.2102L6.37803 17.4507C5.87399 21.4024 5.87399 25.402 6.37803 29.3538L7.30153 36.5943C7.5508 38.5486 9.10326 43.7422 11.0634 43.9688C12.9924 44.1919 23.6219 38.4582 23.9585 38.2764Z"
+                                fill="black"
+                              />
+                            </svg>
+                            3
+                          </p>
+                        </div>
+                      </div>
+                      <p class="article__status yellow">Отправлены</p>
+                    </li>
+                  </ul>
+                </li>
+                <li id="tab4_5" class="article__content-item tab-content draft">
+                  <ul class="article__list">
+                    <li class="article__item">
+                      <picture class="article__picture">
+                        <source
+                          srcset="
+                            ./img/apperance-img-7.jpg    1x,
+                            ./img/apperance-img-7-2x.jpg 2x
+                          "
+                          media="(max-width: 600px)"
+                        />
+                        <source
+                          srcset="
+                            ./img/apperance-img-7.jpg    1x,
+                            ./img/apperance-img-7-2x.jpg 2x
+                          "
+                          media="(min-width: 601px)"
+                        />
+                        <img
+                          src="./img/apperance-img-7.jpg"
+                          alt="Аватарка пользователя"
+                        />
+                      </picture>
+                      <div class="article__inner">
+                        <h3 class="article__subtitle">
+                          Как положить кадровый&nbsp;IT кризис на&nbsp;лопатки
+                        </h3>
+                        <p class="article__text">
+                          Начнем со&nbsp;спойлера aka основной мысли, которую
+                          хотим донести&nbsp;&mdash; к&nbsp;найму нужно
+                          подходить не&nbsp;сточки зрения поиска,
+                          а&nbsp;продажи. Не&nbsp;выставлять требования,
+                          а&nbsp;продавать себя, все как в&nbsp;тиндере.
+                        </p>
+                        <div class="article__info-stat">
+                          <p class="article__desc">Кафе и&nbsp;рестораны</p>
+                          <p class="article__data">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M13.2513 4.51354C13.2513 3.67763 13.9289 3 14.7648 3C15.6007 3 16.2783 3.67763 16.2783 4.51353V10.6628C16.548 11.0792 17.0166 11.3547 17.5497 11.3547C18.3856 11.3547 19.0632 10.6771 19.0632 9.84118V5.99089C22.6108 5.70348 26.1793 5.76099 29.7186 6.16344V4.51354C29.7186 3.67763 30.3962 3 31.2321 3C32.068 3 32.7456 3.67763 32.7456 4.51353V10.6628C33.0153 11.0792 33.4839 11.3547 34.017 11.3547C34.8528 11.3547 35.5305 10.6771 35.5305 9.84118V6.83633L37.2833 7.03931C39.568 7.30387 41.3776 9.09292 41.6681 11.3745L42.5685 18.4445C43.156 23.0578 43.156 27.7271 42.5685 32.3404L41.6681 39.4104C41.3776 41.692 39.568 43.4811 37.2833 43.7456L29.8312 44.6086C25.6275 45.0954 21.3816 45.0954 17.1779 44.6086L9.72576 43.7456C7.44105 43.4811 5.63152 41.692 5.34097 39.4104L4.44062 32.3404C3.85313 27.7271 3.85313 23.0578 4.44062 18.4445L5.34097 11.3745C5.63152 9.09292 7.44104 7.30387 9.72576 7.03931L13.2513 6.63106V4.51354ZM23.9267 22.4943C25.2084 22.4943 26.2475 21.4553 26.2475 20.1736C26.2475 18.8919 25.2084 17.8528 23.9267 17.8528C22.645 17.8528 21.606 18.8919 21.606 20.1736C21.606 21.4553 22.645 22.4943 23.9267 22.4943ZM32.2814 22.4943C33.5631 22.4943 34.6022 21.4553 34.6022 20.1736C34.6022 18.8919 33.5631 17.8528 32.2814 17.8528C30.9997 17.8528 29.9607 18.8919 29.9607 20.1736C29.9607 21.4553 30.9997 22.4943 32.2814 22.4943ZM34.6022 27.6C34.6022 28.8817 33.5631 29.9207 32.2814 29.9207C30.9997 29.9207 29.9607 28.8817 29.9607 27.6C29.9607 26.3183 30.9997 25.2792 32.2814 25.2792C33.5631 25.2792 34.6022 26.3183 34.6022 27.6ZM23.9267 29.9207C25.2084 29.9207 26.2475 28.8817 26.2475 27.6C26.2475 26.3183 25.2084 25.2792 23.9267 25.2792C22.645 25.2792 21.606 26.3183 21.606 27.6C21.606 28.8817 22.645 29.9207 23.9267 29.9207ZM26.2475 35.0264C26.2475 36.3081 25.2084 37.3471 23.9267 37.3471C22.645 37.3471 21.606 36.3081 21.606 35.0264C21.606 33.7447 22.645 32.7056 23.9267 32.7056C25.2084 32.7056 26.2475 33.7447 26.2475 35.0264ZM15.572 37.3471C16.8537 37.3471 17.8928 36.3081 17.8928 35.0264C17.8928 33.7447 16.8537 32.7056 15.572 32.7056C14.2903 32.7056 13.2513 33.7447 13.2513 35.0264C13.2513 36.3081 14.2903 37.3471 15.572 37.3471Z"
+                                fill="black"
+                              />
+                            </svg>
+                            11.04.24&nbsp;в 19:00
+                          </p>
+                          <p class="article__view view">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M44.9997 23.7051H45L44.9999 23.6606L45 23.6154H44.9997C44.9351 14.983 35.5579 8 24 8C12.4421 8 3.06492 14.983 3.00033 23.6154H3L3.00009 23.6601L3 23.7051H3.00033C3.06492 32.3375 12.4421 39.3205 24 39.3205C35.5579 39.3205 44.9351 32.3375 44.9997 23.7051ZM33.6923 20.5641C33.6923 25.917 29.3529 30.2564 24 30.2564C18.6471 30.2564 14.3077 25.917 14.3077 20.5641C14.3077 15.2112 18.6471 10.8718 24 10.8718C29.3529 10.8718 33.6923 15.2112 33.6923 20.5641ZM24 24.6923C26.2799 24.6923 28.1282 22.844 28.1282 20.5641C28.1282 18.2842 26.2799 16.4359 24 16.4359C21.7201 16.4359 19.8718 18.2842 19.8718 20.5641C19.8718 22.844 21.7201 24.6923 24 24.6923Z"
+                                fill="black"
+                              />
+                            </svg>
+                            3
+                          </p>
+                          <p class="article__like like">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M30.5576 10.7663C32.3203 8.95643 32.2821 6.06025 30.4723 4.29749C28.6624 2.53473 25.7663 2.57291 24.0035 4.38277C20.9401 7.528 17.3863 12.9573 14.786 18.1972C12.7294 22.3414 11.7432 27.1685 11.9906 31.0435C12.2352 34.876 13.0213 38.6522 16.0586 41.2413C18.8107 43.5873 22.6006 44.1597 26.0474 44.5485C29.4078 44.9276 32.4152 43.5578 34.6738 41.9453C36.9834 40.2963 39.0017 38.0564 40.5924 35.7541C42.1874 33.4458 43.4979 30.8642 44.2619 28.3832C44.9526 26.1402 45.5002 23.0071 44.2655 20.2447C43.221 17.9078 41.6551 15.9373 39.2879 14.7812C37.0519 13.6892 34.6949 13.6255 32.6889 13.794C31.0666 13.9302 29.2774 14.2625 27.4836 14.6215C28.5872 13.0331 29.6509 11.6972 30.5576 10.7663Z"
+                                fill="black"
+                              />
+                              <path
+                                d="M10.4126 19.1509C11.1075 18.3049 10.985 17.0558 10.139 16.3609C9.29306 15.6659 8.04393 15.7884 7.34902 16.6344C5.31151 19.1148 5.07583 22.5032 4.46972 25.6215C3.86991 28.7074 3.8146 31.9077 4.47806 34.0767C5.51638 37.4712 6.69835 40.6703 7.61759 42.018C7.72694 42.1783 7.81877 42.313 7.88829 42.4181C8.49233 43.3311 9.72219 43.5817 10.6353 42.9776C11.5483 42.3736 11.7989 41.1437 11.1948 40.2307C11.1036 40.0928 10.9948 39.9321 10.8721 39.7509C10.3505 38.9806 9.95124 37.9978 9.55937 36.8164C8.82175 34.5927 8.45976 32.891 8.48994 30.5483C8.51592 28.5313 8.69639 25.8882 8.99093 23.8926C9.2481 22.1502 9.56465 20.4889 10.4126 19.1509Z"
+                                fill="black"
+                              />
+                            </svg>
+                            14
+                          </p>
+                          <p class="article__bookmark bookmark">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M23.9585 38.2764L24.0555 38.3277V38.349L24.1525 38.2976C24.4891 38.4796 35.1185 44.2168 37.0476 43.9937C39.0077 43.7669 40.5601 38.5701 40.8094 36.6145L41.7329 29.3695C42.237 25.4153 42.237 21.4133 41.7329 17.4591L40.8094 10.2141C40.5734 8.36234 37.0478 7.07947 34.4767 6.14395L34.474 6.14294C34.3307 6.09082 34.1905 6.03979 34.0539 5.98979L27.2103 4.29102C25.8514 4.04394 25.0747 4.01867 24.0555 4C24.0247 4.00086 23.9942 4.00171 23.9639 4.00255C22.9451 4.03088 22.2204 4.05103 20.9006 4.29083L14.057 5.98854C13.9204 6.03855 13.78 6.08959 13.6367 6.14171L13.6342 6.14261C11.0632 7.07755 7.53756 8.35962 7.30153 10.2102L6.37803 17.4507C5.87399 21.4024 5.87399 25.402 6.37803 29.3538L7.30153 36.5943C7.5508 38.5486 9.10326 43.7422 11.0634 43.9688C12.9924 44.1919 23.6219 38.4582 23.9585 38.2764Z"
+                                fill="black"
+                              />
+                            </svg>
+                            3
+                          </p>
+                        </div>
+                      </div>
+                      <p class="article__status grey">Черновик</p>
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
@@ -2224,6 +3331,12 @@
         </div>
       </div>
     </footer>
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://snipp.ru/cdn/maskedinput/jquery.maskedinput.min.js"></script>
     <script src="./js/script.js"></script>
+
+    <script>
+      $(".mask-phone").mask("+7 (999) 999-99-99");
+    </script>
   </body>
 </html>

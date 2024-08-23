@@ -184,6 +184,10 @@
   opacity: 1;
 }
 
+.tab-nav {
+  cursor: pointer;
+}
+
 /* .tab-content.hidden {
   display: none;
   transition: opacity 0.5s ease; 
