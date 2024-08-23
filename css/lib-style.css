@@ -112,6 +112,8 @@
 
 .choices__list--single .choices__item {
   opacity: 1;
+  font-size: 16px;
+  color: #e0e0e0;
 }
 
 .choices__list--dropdown .choices__list,
@@ -143,7 +145,8 @@
   /* background-color: #5b5b5b; */
   padding-left: 30px;
   border: none;
-  color: #fff;
+  font-size: 16px;
+  color: #e0e0e0;
   background: url("../img/search-grey-icon.svg") no-repeat 5% 50% / 15px,
     #5b5b5b;
 }

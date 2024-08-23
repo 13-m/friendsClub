@@ -89,6 +89,7 @@
 }
 
 .form__label {
+  gap: 8px;
   position: relative;
   flex: 40% 0 1;
   display: flex;

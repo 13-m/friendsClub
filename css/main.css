@@ -124,6 +124,10 @@ footer {
   color: #d8481a;
 }
 
+.nav__item.active .nav__link {
+  color: #d8481a;
+}
+
 .header__lk {
   display: flex;
   gap: 12px;
