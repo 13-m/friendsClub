@@ -1,20 +1,16 @@
-@media (max-width: 1400px) {
-}
-@media (max-width: 900px) {
-}
 @media (max-width: 840px) {
-  .news__list {
+  .video__list {
     flex-direction: column;
     gap: 32px;
   }
 
-  .news__item {
+  .video__item {
     width: 100%;
   }
 }
 
 @media (max-width: 790px) {
-  .news__form-wrapp {
+  .video__form-wrapp {
     flex-wrap: wrap;
   }
   .form__label {
@@ -26,26 +22,26 @@
 @media (max-width: 620px) {
 }
 @media (max-width: 520px) {
-  .news {
+  .video {
     margin: 0;
     border-radius: 8px;
     background-color: #fff;
   }
 
-  .news__container {
+  .video__container {
     padding: 24px 0;
   }
 
-  .news__title {
+  .video__title {
     font-size: 24px;
     color: #000;
   }
 
-  .news__head-wrapp {
+  .video__head-wrapp {
     display: none;
   }
 
-  .news__content {
+  .video__content {
     padding: 0;
   }
 

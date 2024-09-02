@@ -12,8 +12,8 @@
       href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/pages/news-page.css" />
-    <link rel="stylesheet" href="./css/pages/news-media.css" />
+    <link rel="stylesheet" href="./css/pages/video-page.css" />
+    <link rel="stylesheet" href="./css/pages/video-media.css" />
     <link rel="stylesheet" href="./css/lib-style.css" />
   </head>
   <body>
@@ -34,13 +34,13 @@
             <li class="nav__item">
               <a href="./event.html" class="nav__link">Мероприятия</a>
             </li>
-            <li class="nav__item active">
+            <li class="nav__item">
               <a href="./news.html" class="nav__link">Новости</a>
             </li>
             <li class="nav__item">
               <a href="#article" class="nav__link">Статьи</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item active">
               <a href="./video.html" class="nav__link">Видео</a>
             </li>
           </ul>
@@ -385,12 +385,12 @@
       </div>
     </header>
     <main>
-      <section class="news">
-        <div class="container news__container">
-          <div class="news__head">
-            <h1 class="news__title title">Новости</h1>
-            <div class="news__head-wrapp">
-              <p id="arrowSort" class="news__select-sort">
+      <section class="video">
+        <div class="container video__container">
+          <div class="video__head">
+            <h1 class="video__title title">Видео</h1>
+            <div class="video__head-wrapp">
+              <p id="arrowSort" class="video__select-sort">
                 По популярности
                 <svg
                   class="down-svg"
@@ -421,7 +421,7 @@
               </select> -->
             </div>
           </div>
-          <form action="#" class="news__form-wrapp form">
+          <form action="#" class="video__form-wrapp form">
             <label class="form__label">
               <svg
                 class="search-svg"
@@ -442,7 +442,7 @@
               <input
                 type="text"
                 class="form__input"
-                placeholder="Найти новость"
+                placeholder="Найти видео"
               />
             </label>
             <select
@@ -466,11 +466,11 @@
               <option value="author3">Автор</option>
             </select>
           </form>
-          <div class="news__content">
-            <ul class="news__list">
-              <li class="news__item">
-                <a href="./news-post.html" class="news__link">
-                  <picture class="news__picture">
+          <div class="video__content">
+            <ul class="video__list">
+              <li class="video__item">
+                <a href="./video-post.html" class="video__link">
+                  <picture class="video__picture">
                     <source
                       srcset="
                         ./img/articles-img-1.jpg 2x,
@@ -487,22 +487,22 @@
                       src="./img/articles-img-1.jpg"
                       alt="Изображение мероприятия"
                   /></picture>
-                  <div class="news__decr-wrapp">
-                    <span class="news__decr-span">Кафе и&nbsp;рестораны</span
-                    ><span class="news__decr-span">Дамир Алексеев</span>
+                  <div class="video__decr-wrapp">
+                    <span class="video__decr-span">Кафе и&nbsp;рестораны</span
+                    ><span class="video__decr-span">Дамир Алексеев</span>
                   </div>
-                  <h3 class="news__subtitle">
+                  <h3 class="video__subtitle">
                     Какая она&nbsp;&mdash; аренда помещения под магазин
                     в&nbsp;центре Москвы
                   </h3>
-                  <p class="news__text">
+                  <p class="video__text">
                     Я&nbsp;очень долго искала ответ на&nbsp;этот вопрос
                     и&nbsp;теперь готова поделиться с&nbsp;вами всем, что
                     удалось узнать
                   </p>
-                  <div class="news__info-stat">
-                    <p class="news__data">11&nbsp;ноября 2024</p>
-                    <span class="news__view"
+                  <div class="video__info-stat">
+                    <p class="video__data">11&nbsp;ноября 2024</p>
+                    <span class="video__view"
                       ><svg
                         class="view-svg"
                         width="48"
@@ -519,7 +519,7 @@
                         />
                       </svg>
                       3</span
-                    ><span class="news__like"
+                    ><span class="video__like"
                       ><svg
                         class="like-svg"
                         width="48"
@@ -538,7 +538,7 @@
                         />
                       </svg>
                       14</span
-                    ><span class="news__bookmark"
+                    ><span class="video__bookmark"
                       ><svg
                         class="bookmark-svg"
                         width="48"
@@ -557,9 +557,9 @@
                   </div>
                 </a>
               </li>
-              <li class="news__item">
-                <a href="./news-post.html" class="news__link">
-                  <picture class="news__picture">
+              <li class="video__item">
+                <a href="./video-post.html" class="video__link">
+                  <picture class="video__picture">
                     <source
                       srcset="
                         ./img/articles-img-2.jpg 2x,
@@ -576,20 +576,20 @@
                       src="./img/articles-img-2.jpg"
                       alt="Изображение мероприятия"
                   /></picture>
-                  <div class="news__decr-wrapp">
-                    <span class="news__decr-span">Кафе и&nbsp;рестораны</span
-                    ><span class="news__decr-span">Дамир Алексеев</span>
+                  <div class="video__decr-wrapp">
+                    <span class="video__decr-span">Кафе и&nbsp;рестораны</span
+                    ><span class="video__decr-span">Дамир Алексеев</span>
                   </div>
-                  <h3 class="news__subtitle">
+                  <h3 class="video__subtitle">
                     Как добиться порядка в&nbsp;офисе
                   </h3>
-                  <p class="news__text">
+                  <p class="video__text">
                     Простая методика, недорогая crm и&nbsp;люди, близкие
                     по&nbsp;духу
                   </p>
-                  <div class="news__info-stat">
-                    <p class="news__data">11&nbsp;ноября 2024</p>
-                    <span class="news__view"
+                  <div class="video__info-stat">
+                    <p class="video__data">11&nbsp;ноября 2024</p>
+                    <span class="video__view"
                       ><svg
                         class="view-svg"
                         width="48"
@@ -606,7 +606,7 @@
                         />
                       </svg>
                       3</span
-                    ><span class="news__like"
+                    ><span class="video__like"
                       ><svg
                         class="like-svg"
                         width="48"
@@ -625,7 +625,7 @@
                         />
                       </svg>
                       14</span
-                    ><span class="news__bookmark"
+                    ><span class="video__bookmark"
                       ><svg
                         class="bookmark-svg"
                         width="48"
@@ -644,9 +644,9 @@
                   </div>
                 </a>
               </li>
-              <li class="news__item">
-                <a href="./news-post.html" class="news__link">
-                  <picture class="news__picture">
+              <li class="video__item">
+                <a href="./video-post.html" class="video__link">
+                  <picture class="video__picture">
                     <source
                       srcset="
                         ./img/articles-img-3.jpg 2x,
@@ -663,22 +663,22 @@
                       src="./img/articles-img-3.jpg"
                       alt="Изображение мероприятия"
                   /></picture>
-                  <div class="news__decr-wrapp">
-                    <span class="news__decr-span">Кафе и&nbsp;рестораны</span
-                    ><span class="news__decr-span">Дамир Алексеев</span>
+                  <div class="video__decr-wrapp">
+                    <span class="video__decr-span">Кафе и&nbsp;рестораны</span
+                    ><span class="video__decr-span">Дамир Алексеев</span>
                   </div>
-                  <h3 class="news__subtitle">
+                  <h3 class="video__subtitle">
                     Научиться учету времени всего за&nbsp;неделю&nbsp;&mdash;
                     легко!
                   </h3>
-                  <p class="news__text">
+                  <p class="video__text">
                     Статья будет полезна абсолютно всем. Ключ к&nbsp;счастью
                     и&nbsp;достатку лежит в&nbsp;умении распоряжаться своим
                     временем
                   </p>
-                  <div class="news__info-stat">
-                    <p class="news__data">11&nbsp;ноября 2024</p>
-                    <span class="news__view"
+                  <div class="video__info-stat">
+                    <p class="video__data">11&nbsp;ноября 2024</p>
+                    <span class="video__view"
                       ><svg
                         class="view-svg"
                         width="48"
@@ -695,7 +695,7 @@
                         />
                       </svg>
                       3</span
-                    ><span class="news__like"
+                    ><span class="video__like"
                       ><svg
                         class="like-svg"
                         width="48"
@@ -714,7 +714,7 @@
                         />
                       </svg>
                       14</span
-                    ><span class="news__bookmark"
+                    ><span class="video__bookmark"
                       ><svg
                         class="bookmark-svg"
                         width="48"
@@ -733,9 +733,9 @@
                   </div>
                 </a>
               </li>
-              <li class="news__item">
-                <a href="./news-post.html" class="news__link">
-                  <picture class="news__picture">
+              <li class="video__item">
+                <a href="./video-post.html" class="video__link">
+                  <picture class="video__picture">
                     <source
                       srcset="
                         ./img/articles-img-4.jpg 2x,
@@ -752,22 +752,22 @@
                       src="./img/articles-img-4.jpg"
                       alt="Изображение мероприятия"
                   /></picture>
-                  <div class="news__decr-wrapp">
-                    <span class="news__decr-span">Кафе и&nbsp;рестораны</span
-                    ><span class="news__decr-span">Дамир Алексеев</span>
+                  <div class="video__decr-wrapp">
+                    <span class="video__decr-span">Кафе и&nbsp;рестораны</span
+                    ><span class="video__decr-span">Дамир Алексеев</span>
                   </div>
-                  <h3 class="news__subtitle">
+                  <h3 class="video__subtitle">
                     Мощный подъем&nbsp;&mdash; ворвалась в&nbsp;сферу
                     с&nbsp;300&nbsp;000&nbsp;₽ в&nbsp;кармане
                   </h3>
-                  <p class="news__text">
+                  <p class="video__text">
                     Думаете начать или нет, денег мало и&nbsp;непонятно где
                     их&nbsp;взять. Мотивационная статья для начинающих, как
                     стартануть в&nbsp;самом конкурентном бизнесе
                   </p>
-                  <div class="news__info-stat">
-                    <p class="news__data">11&nbsp;ноября 2024</p>
-                    <span class="news__view"
+                  <div class="video__info-stat">
+                    <p class="video__data">11&nbsp;ноября 2024</p>
+                    <span class="video__view"
                       ><svg
                         class="view-svg"
                         width="48"
@@ -784,7 +784,7 @@
                         />
                       </svg>
                       3</span
-                    ><span class="news__like"
+                    ><span class="video__like"
                       ><svg
                         class="like-svg"
                         width="48"
@@ -803,7 +803,7 @@
                         />
                       </svg>
                       14</span
-                    ><span class="news__bookmark"
+                    ><span class="video__bookmark"
                       ><svg
                         class="bookmark-svg"
                         width="48"
@@ -823,7 +823,7 @@
                 </a>
               </li>
             </ul>
-            <ul class="news__list-pagination pagination__wrapp-list">
+            <ul class="video__list-pagination pagination__wrapp-list">
               <li class="pagination__item pagination-prev">
                 <svg
                   class="prev-svg"

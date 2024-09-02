@@ -1,0 +1,157 @@
+@media (max-width: 1050px) {
+  .post__body {
+    width: 100%;
+  }
+}
+
+@media (max-width: 790px) {
+  .post__body {
+    padding: 28px 38px;
+  }
+}
+
+@media (max-width: 520px) {
+  main {
+    padding: 0;
+  }
+
+  .post__container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .post__link {
+    position: absolute;
+    top: 20px;
+    left: 26px;
+  }
+  .post--desktop {
+    display: none;
+  }
+
+  .post--mobile {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 390px;
+    color: #fff;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.1155) 50.05%,
+        rgba(0, 0, 0, 0.77) 113.13%
+      ),
+      url("../../img/post-img-1.png") no-repeat center center / cover;
+  }
+
+  .post__link {
+    font-size: 0;
+  }
+
+  .back-svg {
+    width: 36px;
+  }
+
+  .post__title {
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+  }
+
+  .post__awards-list {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .post__awards-item {
+    color: #5b5b5b;
+    font-size: 14px;
+  }
+
+  .post__author-name {
+    color: #fff;
+  }
+
+  .post__awards-item svg {
+    width: 16px;
+  }
+  .post__desc {
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+
+  .post__author-wrapp {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .post__author-img {
+    width: 36px;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 8px;
+  }
+
+  .post__info-wrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .post__info-stat--mobile {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .post__stat {
+    margin: 0;
+    color: #2b2b2b;
+  }
+  .post__stat.data {
+    margin-right: auto;
+  }
+
+  .post__text-wrapp {
+    gap: 13px;
+    margin-bottom: 40px;
+  }
+
+  .post-img-2 {
+    margin-bottom: 40px;
+  }
+
+  .post__subtitle {
+    margin-bottom: 16px;
+  }
+
+  .post__text {
+    margin-bottom: 40px;
+  }
+
+  .post__btn {
+    color: #fff;
+    padding: 17px 17px;
+    background-color: var(--color-text-red);
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .post__btn path {
+    fill: #fff;
+  }
+}
+
+@media (max-width: 460px) {
+  .post--mobile {
+    padding: 16px;
+  }
+  .post__body {
+    padding: 24px 16px;
+  }
+}

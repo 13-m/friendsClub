@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   margin-bottom: 32px;
   color: #fff;
   text-decoration: none;
@@ -436,6 +436,7 @@
   display: flex;
   flex-direction: row;
   gap: 4px;
+  flex-wrap: wrap;
 }
 
 .about__item-tag {
@@ -513,6 +514,9 @@
 
 .appearance__body {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .appearance__title {
