@@ -26,6 +26,9 @@
 
 .event__select-sort {
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .event__form-wrapp {
@@ -47,6 +50,28 @@
   background-color: #5b5b5b;
   border-radius: 8px;
   transition: 0.3s ease background-color;
+}
+
+.form-control[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  outline: none;
+  border: none;
+}
+
+.form-control {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #e0e0e0;
 }
 
 .form__label:hover {
@@ -92,10 +117,79 @@
   font-size: 16px;
 }
 
+.event__date-name {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #5b5b5b;
+}
+
+.event__date-wrapp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.event__date-list {
+  gap: 8px;
+  overflow: hidden;
+}
+
+.event__date-item {
+  padding: 2px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ababab;
+  border: 1px solid #5b5b5b;
+  border-radius: 8px;
+  aspect-ratio: 1;
+  height: 48px;
+  cursor: pointer;
+}
+
+.event__date-item span {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.event__date-item:nth-child(4n + 2) {
+  border: 1px solid #2b2b2b;
+  background-color: #2b2b2b;
+  color: #444;
+}
+
+.event__date-arrow {
+  width: 48px;
+  height: auto;
+  display: flex;
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rigth-svg {
+  width: 28px;
+}
+
+.rigth-svg path {
+  fill: #ababab;
+}
+
 .event__item {
   padding: 24px;
   background-color: #f3f3f3;
   border-radius: 8px;
+}
+
+.event__link {
+  text-decoration: none;
 }
 
 .event__list-wrapp {
@@ -230,7 +324,6 @@
   padding: 8px 40px;
   border: none;
   border-radius: 4px;
-  background-color: ;
   color: #5b5b5b;
   cursor: pointer;
 }

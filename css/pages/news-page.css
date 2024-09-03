@@ -20,6 +20,9 @@
 
 .news__select-sort {
   margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 
 .news__form-wrapp {

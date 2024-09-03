@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("loaded");
   });
 });
-
+// burger menu
 try {
   const burger = document.querySelector(".burger");
   const burgerMenu = document.getElementById("burgerMenu");
@@ -20,7 +20,7 @@ try {
 } catch (error) {
   console.warn("Error in burger menu script:", error);
 }
-
+// select js
 try {
   const selectElements1 = [
     { id: "select-js-industry", searchEnabled: false },
@@ -44,7 +44,7 @@ try {
 } catch (error) {
   console.warn("Error in select elements script:", error);
 }
-
+// select 2 js
 try {
   const selectElements2 = [
     { id: "select-js-category", searchEnabled: false },
@@ -67,7 +67,7 @@ try {
 } catch (error) {
   console.warn("Error in select elements script:", error);
 }
-
+// tooltip
 try {
   const tooltip = document.getElementById("tooltip");
   const tooltiClose = document.getElementById("tooltipClose");
@@ -94,7 +94,7 @@ try {
 } catch (error) {
   console.warn("Error in tooltip script:", error);
 }
-
+//  file upload
 try {
   document.querySelectorAll(".file-input").forEach((fileInput) => {
     fileInput.addEventListener("change", function (event) {
@@ -118,7 +118,7 @@ try {
 } catch (error) {
   console.warn("file input elements not found", error);
 }
-
+// tab
 try {
   function getUrlParameter(name) {
     const url = new URL(window.location.href);
