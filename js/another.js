@@ -1,18 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll(".post__content-item");
-  const wrapp = document.getElementsByClassName("wrapp-tab")[0];
+document.addEventListener("DOMContentLoaded", function () {
+  const tab = document.getElementById("tab1");
+  const wrappTab = document.getElementById("wrappTab");
 
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      tabs.forEach((t) => t.classList.remove("active"));
+  console.log("here1");
 
-      tab.classList.add("active");
-
-      if (tab.id === "tab2" || tab.id === "tab3") {
-        wrapp.setAttribute("hidden", "");
-      } else {
-        wrapp.removeAttribute("hidden");
-      }
-    });
-  });
+  if (tab.classList.contains("active")) {
+    wrappTab.style.display = "block";
+    console.log("Есть");
+  } else if (!tab.classList.contains("active")) {
+    console.log("Нет");
+    wrappTab.style.display = "none";
+  }
 });

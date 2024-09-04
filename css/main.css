@@ -70,6 +70,12 @@ footer {
   background-color: #191919;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .container {
   max-width: 1024px;
   /* padding: 0 88px; */

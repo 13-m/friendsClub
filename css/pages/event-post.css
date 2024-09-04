@@ -18,7 +18,8 @@
   display: block;
 }
 
-.post__body--mobile {
+.post__body--mobile,
+.post__head--mobile {
   display: none;
 }
 
@@ -254,6 +255,7 @@
   margin: 0;
   margin-bottom: 48px;
   color: #5b5b5b;
+  line-height: 21px;
 }
 .person__list-nav {
 }
@@ -313,6 +315,7 @@
 .about__item-photo img {
   width: 100%;
   font-size: 0;
+  border-radius: 8px;
 }
 
 .about__item-photo:last-child {
