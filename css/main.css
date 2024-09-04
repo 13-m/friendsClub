@@ -76,6 +76,10 @@ button {
   cursor: pointer;
 }
 
+.disable-pointer-events {
+  pointer-events: none;
+}
+
 .container {
   max-width: 1024px;
   /* padding: 0 88px; */
@@ -502,6 +506,7 @@ footer .left {
     background-color: #fff;
     border-radius: 8px 8px 0 0;
     cursor: pointer;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.3);
   }
 
   .tooltipMenu__title {

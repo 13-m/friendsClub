@@ -72,20 +72,27 @@ try {
   const tooltip = document.getElementById("tooltip");
   const tooltiClose = document.getElementById("tooltipClose");
   const tooltipContent = document.getElementById("tooltipContent");
+  const body = document.body;
 
   if (tooltip && tooltiClose && tooltipContent) {
-    tooltip.addEventListener("click", () => {
+    tooltip.addEventListener("click", (e) => {
+      e.stopPropagation();
       tooltipContent.classList.add("tooltip-open");
+      body.classList.add("disable-pointer-events");
+      tooltipContent.style.pointerEvents = "auto";
     });
 
     tooltiClose.addEventListener("click", (e) => {
+      // console.log("here2");
       e.stopPropagation();
       tooltipContent.classList.remove("tooltip-open");
+      body.classList.remove("disable-pointer-events");
     });
 
     document.addEventListener("click", (e) => {
       if (!tooltip.contains(e.target)) {
         tooltipContent.classList.remove("tooltip-open");
+        body.classList.remove("disable-pointer-events");
       }
     });
   } else {

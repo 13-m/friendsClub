@@ -500,6 +500,10 @@
   gap: 24px;
 }
 
+.events .article__nav-list {
+  display: none;
+}
+
 .events__title {
   margin: 0;
   margin-bottom: 16px;
@@ -510,7 +514,7 @@
 
 .events__item {
   padding: 24px;
-  background-color: #f3f3f3;
+  background-color: #fff;
   border-radius: 8px;
 }
 
@@ -682,6 +686,10 @@
   gap: 24px;
 }
 
+.appearance .article__nav-list {
+  display: none;
+}
+
 .appearance__title {
   margin: 0;
   margin-bottom: 16px;
@@ -692,7 +700,7 @@
 
 .appearance__item {
   padding: 24px;
-  background-color: #f3f3f3;
+  background-color: #fff;
   border-radius: 8px;
 }
 

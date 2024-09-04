@@ -31,6 +31,10 @@ body.lock-scroll {
   padding: 48px;
   border-radius: 8px;
   max-width: 600px;
+  position: relative;
+  overflow: scroll;
+  height: min-content;
+  max-height: 100%;
 }
 
 .popup__wrapp-title {

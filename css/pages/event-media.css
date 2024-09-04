@@ -4,13 +4,24 @@
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 860px) {
   .event__body-wrapp {
     gap: 32px;
   }
 
   .event__list-entrant {
     display: none;
+  }
+}
+
+@media (max-width: 790px) {
+  .event__decr-wrapp {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event__place-info {
+    margin: 0;
   }
 }
 
@@ -70,5 +81,10 @@
   }
   .hide--mobile {
     display: none;
+  }
+
+  .event__decr-wrapp {
+    flex-direction: row;
+    align-items: center;
   }
 }
