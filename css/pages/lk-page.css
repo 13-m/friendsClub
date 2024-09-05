@@ -504,6 +504,11 @@
   display: none;
 }
 
+.events.active .tab-content {
+  display: block;
+  opacity: 1;
+}
+
 .events__title {
   margin: 0;
   margin-bottom: 16px;
@@ -690,6 +695,11 @@
   display: none;
 }
 
+.appearance.active .tab-content {
+  display: block;
+  opacity: 1;
+}
+
 .appearance__title {
   margin: 0;
   margin-bottom: 16px;
@@ -752,6 +762,10 @@
   height: auto;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.appearance__caption-wrap {
+  display: none;
 }
 
 .appearance__body {
@@ -1075,6 +1089,7 @@
 }
 
 .article__status {
+  margin: 0;
   margin-left: auto;
   padding: 2px 6px;
   border-radius: 4px;

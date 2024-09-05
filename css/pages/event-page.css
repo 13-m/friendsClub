@@ -10,7 +10,6 @@
 
 .event__title {
   margin: 0;
-  margin-bottom: 16px;
   font-size: 24px;
   line-height: 28px;
   color: #fff;
@@ -323,8 +322,10 @@
   align-items: center;
   padding: 8px 40px;
   border: none;
+  gap: 8px;
   border-radius: 4px;
   color: #5b5b5b;
+  background-color: #f0f0f0;
   cursor: pointer;
 }
 

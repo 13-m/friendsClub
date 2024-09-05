@@ -185,6 +185,13 @@ try {
         defaultInnerTab.classList.add("active");
       }
     }
+    if (tabId === "tab2") {
+      document.getElementById("tab6-1").classList.add("active");
+    }
+
+    if (tabId === "tab3") {
+      document.getElementById("tab7-1").classList.add("active");
+    }
   }
 
   window.onload = function () {
@@ -238,4 +245,14 @@ try {
   });
 } catch (error) {
   console.warn("Error in form fields script:", error);
+}
+
+try {
+  let allArticle = document.getElementById("allArticle");
+  let newContent = document.getElementById("newContent");
+  let btnChange = document.getElementById("changeBody");
+  let backBtn = document.getElementById("backBtn");
+  let form;
+} catch (error) {
+  console.error("Error in some container", error);
 }
