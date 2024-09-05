@@ -250,9 +250,20 @@ try {
 try {
   let allArticle = document.getElementById("allArticle");
   let newContent = document.getElementById("newContent");
-  let btnChange = document.getElementById("changeBody");
+  let changeBtn = document.getElementById("changeBtn");
   let backBtn = document.getElementById("backBtn");
-  let form;
+  let form = document.getElementById("articleForm");
+
+  changeBtn.addEventListener("click", () => {
+    allArticle.classList.toggle("hidden");
+    newContent.classList.toggle("hidden");
+  });
+
+  backBtn.addEventListener("click", () => {
+    form.reset();
+    newContent.classList.toggle("hidden");
+    allArticle.classList.toggle("hidden");
+  });
 } catch (error) {
   console.error("Error in some container", error);
 }

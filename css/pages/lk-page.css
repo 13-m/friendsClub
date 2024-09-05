@@ -31,6 +31,10 @@
   cursor: pointer;
 }
 
+.lk__nav-item.tab-nav:nth-child(n + 2) {
+  display: none;
+}
+
 .lk__nav-item:hover {
   color: var(--color-text-red);
 }

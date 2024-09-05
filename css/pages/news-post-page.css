@@ -196,6 +196,10 @@
   gap: 12px;
 }
 
+.post__wrapp-btn {
+  display: none;
+}
+
 .post__btn {
   display: flex;
   flex-direction: row;

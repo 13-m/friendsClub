@@ -5,6 +5,10 @@
   --color-text-red: #d8481a;
 }
 
+.tooltipMenu__item:nth-child(n + 2) {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -30,6 +34,7 @@ body {
     ),
     linear-gradient(0deg, #2b2b2b, #2b2b2b);
   opacity: 0;
+  overflow-x: hidden;
   transition: opacity 2s ease-in-out;
   display: flex;
   min-height: 100vh;
@@ -74,6 +79,10 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 
 .disable-pointer-events {

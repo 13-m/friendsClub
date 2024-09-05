@@ -1,6 +1,6 @@
-.awards-svg path {
+/* .awards-svg path {
   fill: inherit;
-}
+} */
 
 /* временная заглушка */
 .residents__plug {
@@ -204,6 +204,7 @@
 }
 
 .card__item-decr {
+  gap: 12px;
 }
 
 .card__item-decr:nth-child(1) {
@@ -226,6 +227,12 @@
 }
 
 .card-wrapp {
+}
+
+.card__list-awards {
+  gap: 8px;
+  color: #000;
+  margin-right: auto;
 }
 
 .card__img--mobile {

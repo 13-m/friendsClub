@@ -150,6 +150,18 @@
   aspect-ratio: 1;
   height: 48px;
   cursor: pointer;
+  transition: color 0.3s ease, border 0.3s ease;
+}
+
+.event__date-item:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.event__date-item:focus,
+.event__date-item:active {
+  color: var(--color-text-red);
+  border: 1px solid #fff;
 }
 
 .event__date-item span {

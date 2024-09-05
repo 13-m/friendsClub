@@ -1112,7 +1112,7 @@
                           fill="black"
                         />
                       </svg>
-                      Загрузить ещё
+                      Загрузить
                       <input type="file" name="file-hobby" id="fileHobby" />
                     </label>
                   </li>
@@ -2228,7 +2228,6 @@
                       fill="black"
                     />
                   </svg>
-
                   Новая статья
                 </button>
               </div>
@@ -3755,8 +3754,159 @@
                 </li>
               </ul>
             </div>
-            <div class="lk__body-post" id="newContent">
-              <button id="backBtn">Back</button>
+            <div class="lk__body-post hidden" id="newContent">
+              <form id="articleForm" action="#!" method="post" class="lk__form">
+                <h2 class="lk__subtitle">Новая статья</h2>
+                <ul class="lk__list">
+                  <li class="lk__item">
+                    <ul class="lk__list-input">
+                      <li class="lk__item-input">
+                        <label for="input" class="lk__label">
+                          <input
+                            class="lk__input"
+                            name="lastName"
+                            type="text"
+                            id="input"
+                          />
+                          <span class="label-placeholder"
+                            >Заголовок<span class="label-span"></span
+                          ></span>
+                        </label>
+                      </li>
+                      <li class="lk__item-input">
+                        <label for="input" class="lk__label">
+                          <input
+                            class="lk__input"
+                            name="name"
+                            type="text"
+                            id="input"
+                          />
+                          <span class="label-placeholder"
+                            >Категория<span class="label-span"></span
+                          ></span>
+                        </label>
+                      </li>
+                      <li class="lk__item-input">
+                        <label for="input" class="lk__label bd">
+                          <input
+                            class="lk__input"
+                            name="birthday"
+                            type="date"
+                            id="input"
+                            min="1028-01-01"
+                            max="2028-01-01"
+                          />
+                          <span class="label-placeholder"
+                            >Дата<span class="label-span"></span
+                          ></span>
+                        </label>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="lk__item">
+                    <h2 class="lk__subtitle">Фотография для обложки</h2>
+                    <div class="lk__wrapp">
+                      <div id="image-container" class="lk__img">
+                        <p class="lk__img-placeholder">
+                          Пока фото не&nbsp;загружено
+                        </p>
+                        <button class="lk__img-btn">
+                          <svg
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle cx="28.5" cy="14.5" r="7.5" fill="black" />
+                            <path
+                              d="M43 32.6364C43 37.3636 36.5081 39 28.5 39C20.4919 39 14 37.2182 14 32.6364C14 29.6038 20.4919 25 28.5 25C36.5081 25 43 29.6038 43 32.6364Z"
+                              fill="black"
+                            />
+                            <rect
+                              x="6"
+                              y="19"
+                              width="13"
+                              height="3"
+                              fill="black"
+                            />
+                            <rect
+                              x="14"
+                              y="14"
+                              width="13"
+                              height="3"
+                              transform="rotate(90 14 14)"
+                              fill="black"
+                            />
+                          </svg>
+                          Загрузить
+                        </button>
+                        <input
+                          type="file"
+                          class="file-input"
+                          id="file-input"
+                          placeholder="Загрузи"
+                          accept="image/*"
+                        />
+                        <img
+                          id="image-preview"
+                          class="image-preview"
+                          src=""
+                          alt="Image Preview"
+                        />
+                      </div>
+                      <div class="lk__photo-wrapp">
+                        <h3 class="lk__heading">Как выбрать удачное фото</h3>
+                        <p class="lk__desc">
+                          Будьте естественны, используйте портретные фотографии
+                          с&nbsp;хорошим освещением на&nbsp;однородном
+                          контрастном фоне.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="lk__item">
+                    <h2 class="lk__subtitle">Текст статьи</h2>
+                    <label for="success" class="lk__label">
+                      <textarea
+                        class="lk__textarea lk__input"
+                        name="success"
+                        rows="1"
+                      ></textarea>
+                    </label>
+                  </li>
+                  <li class="lk__item">
+                    <button class="lk__btn send">
+                      Отравить на&nbsp;проверку
+                    </button>
+                    <button class="lk__btn drow">В&nbsp;черновики</button>
+                    <button id="backBtn" class="lk__btn delete">
+                      <svg
+                        class="trash-svg"
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M14.9994 9.17272C11.6916 8.87351 8.4914 8.50036 6.59681 8.25324C5.82255 8.15225 5.11302 8.69804 5.01203 9.4723C4.91104 10.2466 5.45683 10.9561 6.23109 11.0571C9.8421 11.5281 18.3761 12.4827 23.3795 12.4827C28.3768 12.4827 37.5359 11.5293 41.456 11.0589C42.2312 10.9659 42.7843 10.262 42.6912 9.48671C42.5982 8.71146 41.8943 8.15841 41.1191 8.25144C39.1744 8.4848 35.9919 8.83043 32.6902 9.12032C32.344 7.62469 31.2504 6.41935 29.9318 5.5952C28.3091 4.58105 26.1555 4 23.8507 4C21.5459 4 19.3923 4.58105 17.7696 5.5952C16.4356 6.42895 15.332 7.65283 14.9994 9.17272ZM17.8902 9.4106C18.1033 8.94521 18.5361 8.4506 19.2683 7.99299C20.3746 7.30149 21.9911 6.82759 23.8507 6.82759C25.7103 6.82759 27.3267 7.30149 28.4331 7.99299C29.137 8.43293 29.5642 8.90706 29.7855 9.35655C27.394 9.53383 25.1135 9.65516 23.3795 9.65516C21.8288 9.65516 19.9054 9.55802 17.8902 9.4106Z"
+                          fill="#D8481A"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10.6438 14.9562C9.60781 14.8914 8.71441 15.6764 8.64536 16.7122L7.8277 28.977L8.30055 37.0154C8.56429 41.499 12.2772 45 16.7687 45H30.9327C35.4241 45 39.1371 41.499 39.4008 37.0154L39.8737 28.977L39.056 16.7122C38.987 15.6764 38.0936 14.8914 37.0576 14.9562L23.8507 15.7816L10.6438 14.9562ZM16.9401 22.1455C17.5897 21.7124 18.4675 21.8879 18.9006 22.5376L19.0229 22.7211C20.0414 24.2509 21.4309 26.3379 23.5672 28.3539C23.7627 28.1231 23.9567 27.8845 24.1485 27.6378C25.4792 25.9269 26.5503 24.6176 27.2912 23.7334C27.6616 23.2913 27.9495 22.9554 28.1459 22.7287C28.2442 22.6154 28.3195 22.5293 28.371 22.4709L28.43 22.4041L28.4458 22.3864L28.4515 22.38C28.4515 22.38 28.4523 22.3791 29.5059 23.3218L28.4523 22.3791C28.9729 21.7972 29.8667 21.7476 30.4486 22.2682C31.0305 22.7888 31.0802 23.6825 30.5597 24.2644L30.5567 24.2677L30.5445 24.2814L30.4928 24.3399C30.4463 24.3927 30.3759 24.473 30.2827 24.5806C30.0963 24.7957 29.8186 25.1196 29.4586 25.5493C28.7385 26.4088 27.6889 27.6914 26.3805 29.3737C26.167 29.6483 25.9511 29.9138 25.7337 30.1708C27.1805 31.3057 28.3062 32.2284 29.0943 32.8887C29.5364 33.2591 29.8723 33.547 30.099 33.7435C30.2124 33.8417 30.2984 33.9171 30.3568 33.9685L30.4236 34.0276L30.4413 34.0433L30.4478 34.0491C30.4478 34.0491 30.4486 34.0498 29.5059 35.1035L30.4486 34.0498C31.0305 34.5705 31.0802 35.4643 30.5595 36.0462C30.0389 36.628 29.1452 36.6777 28.5633 36.1572L28.56 36.1542L28.5463 36.1421L28.4879 36.0904C28.4351 36.0439 28.3547 35.9735 28.2471 35.8802C28.032 35.6938 27.7081 35.4162 27.2784 35.0561C26.4756 34.3835 25.3036 33.4235 23.7817 32.2336C21.8807 34.0364 20.0313 35.2667 18.7268 36.1345L18.5085 36.2798C17.8588 36.7129 16.9811 36.5373 16.5479 35.8877C16.1148 35.238 16.2904 34.3602 16.9401 33.9271L17.1235 33.8049C18.3642 32.9788 19.9715 31.9088 21.6101 30.3942C19.2398 28.1523 17.7152 25.8605 16.6932 24.3243L16.5479 24.1061C16.1148 23.4564 16.2904 22.5786 16.9401 22.1455Z"
+                          fill="#D8481A"
+                        />
+                      </svg>
+                      Удалить
+                    </button>
+                  </li>
+                </ul>
+              </form>
             </div>
           </div>
           <div id="tab5" class="lk__content tab-content video">

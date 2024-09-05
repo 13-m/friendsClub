@@ -7,6 +7,18 @@
   display: none;
 } */
 
+.about__item.business {
+  display: none;
+}
+
+.person__item-interaction.add {
+  display: none;
+}
+
+.person__body .person__note-label.desktop {
+  display: none;
+}
+
 .person {
 }
 
@@ -222,6 +234,10 @@
   gap: 6px;
   padding-bottom: 16px;
   cursor: pointer;
+}
+
+.person__item-nav:nth-child(n + 6) {
+  display: none;
 }
 
 .person__item-span {
