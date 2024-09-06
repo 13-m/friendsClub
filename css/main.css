@@ -25,6 +25,10 @@ body.lock-scroll {
 }
 
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   color: #fff;
   background: radial-gradient(
@@ -36,9 +40,6 @@ body {
   opacity: 0;
   overflow-x: hidden;
   transition: opacity 2s ease-in-out;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
 }
 
 body.loaded {

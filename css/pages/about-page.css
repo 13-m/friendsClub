@@ -1,0 +1,30 @@
+.about {
+}
+.about__container {
+  border-radius: 8px;
+  padding: 48px 64px;
+  background-color: #fff;
+}
+.container {
+}
+.about__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 32px;
+  line-height: 41px;
+  color: #2b2b2b;
+}
+
+.about__img {
+  width: 75%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.about__text {
+  max-width: 75%;
+  margin: 0;
+  color: #5b5b5b;
+  font-size: 16px;
+  line-height: 24px;
+}
