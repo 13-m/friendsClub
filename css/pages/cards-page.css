@@ -7,11 +7,11 @@
   display: none;
 } */
 
-.about__item.business {
+.person__item-interaction.add {
   display: none;
 }
 
-.person__item-interaction.add {
+.person__item-nav:nth-child(n + 5) {
   display: none;
 }
 
@@ -234,10 +234,6 @@
   gap: 6px;
   padding-bottom: 16px;
   cursor: pointer;
-}
-
-.person__item-nav:nth-child(n + 6) {
-  display: none;
 }
 
 .person__item-span {

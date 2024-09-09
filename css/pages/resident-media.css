@@ -71,6 +71,18 @@
   .card__list-body {
     width: 100%;
   }
+
+  .card__name {
+    width: min-content;
+  }
+
+  .card__list-awards--dektop {
+    display: none;
+  }
+
+  .card__list-awards--mobile {
+    display: flex;
+  }
 }
 
 @media (max-width: 520px) {
@@ -100,7 +112,6 @@
   }
 
   .card__name {
-    width: min-content;
     font-size: 17px;
     line-height: 21px;
   }
@@ -113,6 +124,19 @@
 
   .card__item-major:not(:last-child)::after {
     content: ",";
+  }
+
+  .card__list-awards--desktop {
+    display: none;
+  }
+
+  .card__list-awards--mobile {
+    display: flex;
+    gap: 6px;
+  }
+
+  .card-wrapp-title {
+    margin-right: auto;
   }
 
   .card__item-decr:nth-child(1) {

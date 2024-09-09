@@ -83,7 +83,6 @@ try {
     });
 
     tooltiClose.addEventListener("click", (e) => {
-      // console.log("here2");
       e.stopPropagation();
       tooltipContent.classList.remove("tooltip-open");
       body.classList.remove("disable-pointer-events");

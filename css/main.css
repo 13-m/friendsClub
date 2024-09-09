@@ -544,9 +544,6 @@ footer .left {
     width: 100%;
   }
 
-  .tooltipMenu__name-wrapp {
-  }
-
   .tooltipMenu__name {
     color: #2b2b2b;
     font-size: 16px;
@@ -571,9 +568,6 @@ footer .left {
     aspect-ratio: 1 / 1;
   }
 
-  .awards-item-last {
-  }
-
   .tooltipMenu__btn-exit {
     margin-left: auto;
     padding: 0;
@@ -595,25 +589,11 @@ footer .left {
     fill: #d8481a;
   }
 
-  .tooltipMenu__item:nth-child(1) .tooltipMenu__link {
-  }
-  .tooltipMenu__item:nth-child(2) .tooltipMenu__link {
-  }
-  .tooltipMenu__item:nth-child(3) .tooltipMenu__link {
-  }
-  .tooltipMenu__item:nth-child(4) .tooltipMenu__link {
-  }
-  .tooltipMenu__item:nth-child(5) .tooltipMenu__link {
-  }
   .tooltipMenu__list {
     gap: 14px;
     margin-bottom: 24px;
   }
 
-  .tooltipMenu__item {
-  }
-  .tooltipMenu__link {
-  }
   .tooltipMenu__btn-cancel {
     padding: 17px;
     color: #5b5b5b;

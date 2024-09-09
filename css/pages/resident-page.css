@@ -229,10 +229,15 @@
 .card-wrapp {
 }
 
-.card__list-awards {
+.card__list-awards--desktop {
+  display: flex;
   gap: 8px;
   color: #000;
   margin-right: auto;
+}
+
+.card__list-awards--mobile {
+  display: none;
 }
 
 .card__img--mobile {
