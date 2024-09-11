@@ -82,6 +82,11 @@
 
   .card__list-awards--mobile {
     display: flex;
+    gap: 6px;
+  }
+
+  .card__list-awards--desktop {
+    display: none;
   }
 }
 
@@ -126,13 +131,8 @@
     content: ",";
   }
 
-  .card__list-awards--desktop {
-    display: none;
-  }
-
   .card__list-awards--mobile {
     display: flex;
-    gap: 6px;
   }
 
   .card-wrapp-title {

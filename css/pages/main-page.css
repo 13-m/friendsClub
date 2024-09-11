@@ -1,7 +1,7 @@
 /* временная заглушка */
 #article,
 #video {
-  display: none;
+  /* display: none; */
 }
 
 /* временные отступы */
@@ -69,6 +69,20 @@
   display: flex;
   flex-direction: column;
   border-radius: 8px;
+  gap: 12px;
+}
+
+.news__card-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .news__card-item:nth-child(1) {
@@ -78,23 +92,23 @@
   justify-content: flex-end;
   padding: 16px;
   background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.45) 59.88%
-    ),
-    url("../../img/poster-img-1.png") no-repeat center center / cover;
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.45) 59.88%
+  );
+  /* url("../../img/poster-img-1.png") no-repeat center center / cover; */
 }
 
 .news__card-item:nth-child(1) .view-svg path {
   fill: #ababab;
 }
 
-.news__card-item:nth-child(2)::before {
-  background: url("../../img/poster-img-2.png") no-repeat center center / cover;
+.news__card-item:nth-child(2) .news__card-img {
+  height: auto;
 }
 
-.news__card-item:nth-child(3)::before {
-  background: url("../../img/poster-img-3.png") no-repeat center center / cover;
+.news__card-item:nth-child(3) .news__card-img {
+  height: auto;
 }
 
 .news__card-item:nth-child(n + 2) {
@@ -102,12 +116,16 @@
   width: 25%;
 }
 
-.news__card-item:nth-child(n + 2):before {
+/* .news__card-item:nth-child(n + 2):before {
   content: "";
   margin-bottom: 12px;
   width: 100%;
   height: 170px;
   border-radius: 8px;
+} */
+
+.news__card-item:nth-child(n + 2) .news__card-img {
+  position: relative;
 }
 
 .span-teg {
@@ -136,11 +154,11 @@
   line-height: 28px;
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 0;
 }
 
 .subtitle {
   margin: 0;
-  margin-bottom: 12px;
   max-width: 300px;
   line-height: 25px;
   font-size: 20px;
@@ -339,16 +357,22 @@
 .article__card-item {
   position: relative;
   width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 
-.article__card-item::before {
-  display: flex;
-  content: "";
-  margin-bottom: 12px;
+.article__card-img {
+  position: relative;
   width: 100%;
-  height: 210px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  object-fit: cover;
   border-radius: 8px;
+  aspect-ratio: 1.6;
 }
 
 .article__card-item:nth-child(1):before {
@@ -419,16 +443,21 @@
   /* margin-bottom: 82px; */
 }
 
+.event__bg {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
 .event__container {
   position: relative;
-  /* padding: 64px 0; */
-  /* padding: 64px 88px; */
   padding: 64px 0;
   border-radius: 8px;
   background-color: #fff;
 }
 
-.event__container::after {
+/* .event__container::after {
   content: "";
   position: absolute;
   top: 0;
@@ -438,7 +467,7 @@
   border-radius: 8px;
   background-color: #fff;
   z-index: -1;
-}
+} */
 
 .event__list-molile {
   display: none;
@@ -450,6 +479,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
+  z-index: 1;
 }
 
 .event__title {
@@ -467,6 +497,7 @@
 }
 
 .event__main-card {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -475,10 +506,22 @@
   margin-bottom: 28px;
   padding: 29px 24px;
   border-radius: 8px;
-  background: url("../../img/poster-img-7.png") no-repeat center center / cover;
+}
+
+.event__card-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .left {
+  z-index: 1;
 }
 
 .event__info {
@@ -602,6 +645,7 @@
 }
 
 .event__card-body {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -611,13 +655,13 @@
   border-radius: 8px;
 }
 
-.event__card:nth-of-type(1) .event__card-body {
+/* .event__card:nth-of-type(1) .event__card-body {
   background: url("../../img/poster-img-8.png") no-repeat center center / cover;
 }
 
 .event__card:nth-of-type(2) .event__card-body {
   background: url("../../img/poster-img-9.png") no-repeat center center / cover;
-}
+} */
 
 .event__heading {
   max-width: 350px;

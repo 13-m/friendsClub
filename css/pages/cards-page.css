@@ -321,6 +321,7 @@
 }
 
 .about__item-business {
+  position: relative;
   padding: 20px;
   width: 33%;
   border-radius: 8px;
@@ -331,31 +332,41 @@
   );
 }
 
+.about__item-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 .about__item-business:nth-child(1) {
   background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.525) 0%,
-      rgba(0, 0, 0, 0.75) 100%
-    ),
-    url("../../img/bussness-img-1.png") no-repeat center center / cover;
+    180deg,
+    rgba(0, 0, 0, 0.525) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
 }
 
 .about__item-business:nth-child(2) {
   background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.525) 0%,
-      rgba(0, 0, 0, 0.75) 100%
-    ),
-    url("../../img/bussness-img-2.png") no-repeat center center / cover;
+    180deg,
+    rgba(0, 0, 0, 0.525) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
 }
 
 .about__item-business:nth-child(3) {
   background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.525) 0%,
-      rgba(0, 0, 0, 0.75) 100%
-    ),
-    url("../../img/bussness-img-3.png") no-repeat center center / cover;
+    180deg,
+    rgba(0, 0, 0, 0.525) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
 }
 
 .about__decr-business {
