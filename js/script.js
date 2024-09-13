@@ -266,3 +266,13 @@ try {
 } catch (error) {
   console.error("Error in some container", error);
 }
+
+window.addEventListener("beforeunload", function () {
+  localStorage.setItem("scrollPosition", window.scrollY);
+});
+window.addEventListener("load", function () {
+  const scrollPosition = localStorage.getItem("scrollPosition");
+  if (scrollPosition) {
+    window.scrollTo(0, parseInt(scrollPosition, 10));
+  }
+});

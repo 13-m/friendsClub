@@ -1,0 +1,266 @@
+.svg {
+  width: 20px;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.notFound-icon {
+  background: url("../img/404-icon.svg") no-repeat center center / cover;
+}
+.add-icon {
+  background: url("../img/add-icon.svg") no-repeat center center / cover;
+}
+.add-red-icon {
+  background: url("../img/add-red-icon.svg") no-repeat center center / cover;
+}
+.add-light-icon {
+  background: url("../img/add-light-icon.svg") no-repeat center center / cover;
+}
+.adv-grey-icon {
+  background: url("../img/adv-grey-icon.svg") no-repeat center center / cover;
+}
+.adv-icon {
+  background: url("../img/adv-icon.svg") no-repeat center center / cover;
+}
+.adv-light-icon {
+  background: url("../img/adv-light-icon.svg") no-repeat center center / cover;
+}
+.articles-grey-icon {
+  background: url("../img/articles-grey-icon.svg") no-repeat center center /
+    cover;
+}
+.articles-icon {
+  background: url("../img/articles-icon.svg") no-repeat center center / cover;
+}
+.awards-icon-1 {
+  background: url("../img/awards-icon-1.svg") no-repeat center center / cover;
+}
+.awards-icon-2 {
+  background: url("../img/awards-icon-2.svg") no-repeat center center / cover;
+}
+.awards-icon-3 {
+  background: url("../img/awards-icon-3.svg") no-repeat center center / cover;
+}
+.awards-icon-4 {
+  background: url("../img/awards-icon-4.svg") no-repeat center center / cover;
+}
+.awards-icon-5 {
+  background: url("../img/awards-icon-5.svg") no-repeat center center / cover;
+}
+.awards-icon-6 {
+  background: url("../img/awards-icon-6.svg") no-repeat center center / cover;
+}
+.awards-icon-7 {
+  background: url("../img/awards-icon-7.svg") no-repeat center center / cover;
+}
+.back-icon {
+  background: url("../img/back-icon.svg") no-repeat center center / cover;
+}
+.bookmarks-icon {
+  background: url("../img/bookmarks-icon.svg") no-repeat center center / cover;
+}
+.bookmarks-light-icon {
+  background: url("../img/bookmarks-light-icon.svg") no-repeat center center /
+    cover;
+}
+.bookmarks-red-icon {
+  background: url("../img/bookmarks-red-icon.svg") no-repeat center center /
+    cover;
+}
+.business-icon {
+  background: url("../img/business-icon.svg") no-repeat center center / cover;
+}
+.business-light-icon {
+  background: url("../img/business-light-icon.svg") no-repeat center center /
+    cover;
+}
+.business-red-icon {
+  background: url("../img/business-red-icon.svg") no-repeat center center /
+    cover;
+}
+.calendar-grey-icon {
+  background: url("../img/calendar-grey-icon.svg") no-repeat center center /
+    cover;
+}
+.calendar-icon {
+  background: url("../img/calendar-icon.svg") no-repeat center center / cover;
+}
+.close-icon {
+  background: url("../img/close-icon.svg") no-repeat center center / cover;
+}
+.delete-icon {
+  background: url("../img/delete-icon.svg") no-repeat center center / cover;
+}
+.delete-red-icon {
+  background: url("../img/delete-red-icon.svg") no-repeat center center / cover;
+}
+.dislike-icon {
+  background: url("../img/dislike-icon.svg") no-repeat center center / cover;
+}
+.dislike-red-icon {
+  background: url("../img/dislike-red-icon.svg") no-repeat center center / cover;
+}
+.down-grey-icon {
+  background: url("../img/down-grey-icon.svg") no-repeat center center / cover;
+}
+.down-icon {
+  background: url("../img/down-icon.svg") no-repeat center center / cover;
+}
+.edit-icon {
+  background: url("../img/edit-icon.svg") no-repeat center center / cover;
+}
+.favicon {
+  background: url("../img/favicon.svg") no-repeat center center / cover;
+}
+.filters-icon {
+  background: url("../img/filters-icon.svg") no-repeat center center / cover;
+}
+.flame-icon {
+  background: url("../img/flame-icon.svg") no-repeat center center / cover;
+}
+.friends-icon {
+  background: url("../img/friends-icon.svg") no-repeat center center / cover;
+}
+.hobby-grey-icon {
+  background: url("../img/hobby-grey-icon.svg") no-repeat center center / cover;
+}
+.hobby-light-icon {
+  background: url("../img/hobby-light-icon.svg") no-repeat center center / cover;
+}
+.hobby-red-icon {
+  background: url("../img/hobby-red-icon.svg") no-repeat center center / cover;
+}
+.insta-icon {
+  background: url("../img/insta-icon.svg") no-repeat center center / cover;
+}
+.like-green-icon {
+  background: url("../img/like-green-icon.svg") no-repeat center center / cover;
+}
+.like-icon {
+  background: url("../img/like-icon.svg") no-repeat center center / cover;
+}
+.like-light-icon {
+  background: url("../img/like-light-icon.svg") no-repeat center center / cover;
+}
+.like-red-icon {
+  background: url("../img/like-red-icon.svg") no-repeat center center / cover;
+}
+.list-icon {
+  background: url("../img/list-icon.svg") no-repeat center center / cover;
+}
+.mail-icon {
+  background: url("../img/mail-icon.svg") no-repeat center center / cover;
+}
+.map-icon {
+  background: url("../img/map-icon.svg") no-repeat center center / cover;
+}
+.menu-icon {
+  background: url("../img/menu-icon.svg") no-repeat center center / cover;
+}
+.message-icon {
+  background: url("../img/message-icon.svg") no-repeat center center / cover;
+}
+.microphone-grey-icon {
+  background: url("../img/microphone-grey-icon.svg") no-repeat center center /
+    cover;
+}
+.microphone-icon {
+  background: url("../img/microphone-icon.svg") no-repeat center center / cover;
+}
+.more-icon {
+  background: url("../img/more-icon.svg") no-repeat center center / cover;
+}
+.note-icon {
+  background: url("../img/note-icon.svg") no-repeat center center / cover;
+}
+.note--light-icon {
+  background: url("../img/note-light-icon.svg") no-repeat center center / cover;
+}
+.note-red-icon {
+  background: url("../img/note-red-icon.svg") no-repeat center center / cover;
+}
+.ok-green-icon {
+  background: url("../img/ok-green-icon.svg") no-repeat center center / cover;
+}
+.ok-icon {
+  background: url("../img/ok-icon.svg") no-repeat center center / cover;
+}
+.phone-icon {
+  background: url("../img/phone-icon.svg") no-repeat center center / cover;
+}
+.planet-icon {
+  background: url("../img/planet-icon.svg") no-repeat center center / cover;
+}
+.plus-icon {
+  background: url("../img/plus-icon.svg") no-repeat center center / cover;
+}
+.plus-light-icon {
+  background: url("../img/plus-light-icon.svg") no-repeat center center / cover;
+}
+.plus-red-icon {
+  background: url("../img/plus-red-icon.svg") no-repeat center center / cover;
+}
+.question-icon {
+  background: url("../img/question-icon.svg") no-repeat center center / cover;
+}
+.question-team-icon {
+  background: url("../img/question-team-icon.svg") no-repeat center center /
+    cover;
+}
+.review-icon {
+  background: url("../img/review-icon.svg") no-repeat center center / cover;
+}
+.right-icon {
+  background: url("../img/right-icon.svg") no-repeat center center / cover;
+}
+.right-light-icon {
+  background: url("../img/right-light-icon.svg") no-repeat center center / cover;
+}
+.search-grey-icon {
+  background: url("../img/search-grey-icon.svg") no-repeat center center / cover;
+}
+.search-icon {
+  background: url("../img/search-icon.svg") no-repeat center center / cover;
+}
+.tg-icon {
+  background: url("../img/tg-icon.svg") no-repeat center center / cover;
+}
+.trash-icon {
+  background: url("../img/trash-icon.svg") no-repeat center center / cover;
+}
+.trash-red-icon {
+  background: url("../img/trash-red-icon.svg") no-repeat center center / cover;
+}
+.up-icon {
+  background: url("../img/up-icon.svg") no-repeat center center / cover;
+}
+.user-add-icon {
+  background: url("../img/user-add-icon.svg") no-repeat center center / cover;
+}
+.user-grey-icon {
+  background: url("../img/user-grey-icon.svg") no-repeat center center / cover;
+}
+.user-icon {
+  background: url("../img/user-icon.svg") no-repeat center center / cover;
+}
+.user-red-icon {
+  background: url("../img/user-red-icon.svg") no-repeat center center / cover;
+}
+.video-grey-icon {
+  background: url("../img/video-grey-icon.svg") no-repeat center center / cover;
+}
+.video-icon {
+  background: url("../img/video-icon.svg") no-repeat center center / cover;
+}
+.view-icon {
+  background: url("../img/view-icon.svg") no-repeat center center / cover;
+}
+.view-light-icon {
+  background: url("../img/view-light-icon.svg") no-repeat center center / cover;
+}
+.view-red-icon {
+  background: url("../img/view-red-icon.svg") no-repeat center center / cover;
+}
+.vk {
+  background: url("../img/vk.svg") no-repeat center center / cover;
+}

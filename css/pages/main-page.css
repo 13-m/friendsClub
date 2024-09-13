@@ -440,7 +440,7 @@
 }
 
 .event {
-  /* margin-bottom: 82px; */
+  margin-bottom: 82px;
 }
 
 .event__bg {
@@ -672,7 +672,6 @@
 }
 
 .video {
-  padding-bottom: 82px;
 }
 
 .video__container {
