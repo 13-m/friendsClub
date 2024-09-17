@@ -219,6 +219,10 @@
 .search-grey-icon {
   background: url("../img/search-grey-icon.svg") no-repeat center center / cover;
 }
+.search-light-icon {
+  background: url("../img/search-light-icon.svg") no-repeat center center /
+    contain;
+}
 .search-icon {
   background: url("../img/search-icon.svg") no-repeat center center / cover;
 }
