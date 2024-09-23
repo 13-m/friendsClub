@@ -81,6 +81,7 @@
 }
 
 .person__info-block {
+  width: 100%;
 }
 
 .person__name-wrapp {

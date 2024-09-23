@@ -148,6 +148,9 @@
 .list-icon {
   background: url("../img/list-icon.svg") no-repeat center center / cover;
 }
+.list-red-icon {
+  background: url("../img/list-red-icon.svg") no-repeat center center / cover;
+}
 .mail-icon {
   background: url("../img/mail-icon.svg") no-repeat center center / cover;
 }
@@ -205,6 +208,10 @@
 }
 .question-team-icon {
   background: url("../img/question-team-icon.svg") no-repeat center center /
+    cover;
+}
+.question-team-red-icon {
+  background: url("../img/question-team-red-icon.svg") no-repeat center center /
     cover;
 }
 .review-icon {

@@ -163,6 +163,10 @@ button {
 }
 
 .header__lk-user {
+  width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
 }
 

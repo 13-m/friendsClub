@@ -235,6 +235,7 @@
 
 .bd .lk__input {
   color: transparent;
+  transition: color 0.3s ease;
 }
 .bd .has-content.lk__input {
   color: #2b2b2b;
