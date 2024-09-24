@@ -101,6 +101,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 .person__name {
@@ -111,6 +113,7 @@
 }
 
 .person__span {
+  margin: 0;
 }
 
 .person__decr {
