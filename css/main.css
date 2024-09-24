@@ -166,6 +166,7 @@ button {
   width: 140px;
   white-space: nowrap;
   overflow: hidden;
+  text-align: end;
   text-overflow: ellipsis;
   margin: 0;
 }

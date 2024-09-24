@@ -20,6 +20,11 @@
 
 .video__select-sort {
   margin: 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
 }
 
 .video__form-wrapp {

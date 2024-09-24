@@ -43,6 +43,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 12px;
   margin: 0;
   /* padding: 10px 20px; */
@@ -191,10 +192,25 @@
 
 .card__img,
 .card__img img {
+  position: relative;
   width: 200px;
   height: 200px;
   border-radius: 9px;
-  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
+.card__img::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 4px;
+  outline: 4px solid #fff;
+  background-color: #2fbc0c;
+}
+.residents__item.favorite .card__img::after {
+  outline: 4px solid #191919;
 }
 
 .card__list-body {
@@ -242,6 +258,12 @@
 
 .card__img--mobile {
   display: none;
+}
+
+.card-wrapp-title {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 
 .card__name {
@@ -293,6 +315,7 @@
 
 .card__decr {
   margin: 0;
+  width: 100%;
   font-size: 14px;
   line-height: 19px;
   color: #ababab;

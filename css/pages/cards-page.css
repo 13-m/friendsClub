@@ -68,12 +68,25 @@
 }
 
 .person__picture {
+  position: relative;
   width: 25%;
   height: auto;
   aspect-ratio: 1 / 1;
   border-radius: 8px;
   font-size: 0;
   flex: auto 1 0;
+}
+
+.person__picture::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 4px;
+  outline: 4px solid #fff;
+  background-color: #2fbc0c;
 }
 
 .person__picture img {
