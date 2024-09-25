@@ -139,6 +139,11 @@
   font-size: 16px;
 }
 
+.form__input:placeholder-shown {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .form__select {
 }
 
@@ -198,7 +203,7 @@
   border-radius: 9px;
 }
 
-.card__img::after {
+.card__img.online::after {
   content: "";
   position: absolute;
   width: 14px;

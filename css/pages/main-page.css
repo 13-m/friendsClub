@@ -285,7 +285,7 @@
   font-size: 0;
 }
 
-.img-wrapp::after {
+.img-wrapp.online::after {
   content: "";
   position: absolute;
   width: 14px;
@@ -621,7 +621,7 @@
   border-radius: 4px;
 }
 
-.event__item::after {
+.event__img.online::after {
   content: "";
   position: absolute;
   width: 4px;

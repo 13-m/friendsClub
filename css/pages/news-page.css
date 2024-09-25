@@ -154,6 +154,10 @@
   font-size: 14px;
   line-height: 20px;
   color: #5b5b5b;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 
 .news__info-stat {
