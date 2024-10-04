@@ -245,7 +245,10 @@
   }
 
   .lk__text-progress {
-    color: inherit;
+    white-space: nowrap;
+  }
+  .lk__item-progress .svg {
+    display: none;
   }
 
   .profile .lk__body {
@@ -253,16 +256,16 @@
   }
 
   .lk__aside-desktop {
-    display: none;
+    display: flex;
+  }
+
+  .lk__list-progress {
+    flex-direction: row;
   }
 
   .lk__aside-mobile {
-    display: flex;
+    display: none;
     overflow: auto;
-  }
-
-  .lk__text-progress {
-    white-space: nowrap;
   }
 
   .lk__btn {

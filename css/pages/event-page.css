@@ -308,6 +308,7 @@
 .event__decr-wrapp {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   gap: 16px;
 }
@@ -386,6 +387,25 @@
 .event__btn.add {
   color: #fff;
   background-color: #d8481a;
+}
+
+.event__wrapp-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.decline {
+  padding: 8px 10px;
+}
+
+.test1 {
+  font-weight: 600;
+}
+
+.test2 {
+  background: var(--color-text-red);
+  color: #fff;
 }
 
 .pagination__wrapp-list,
