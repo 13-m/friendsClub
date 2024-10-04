@@ -87,31 +87,31 @@
             <ul class="tooltipMenu__list">
               <li class="tooltipMenu__item">
                 <a href="lk.html?tab=tab1" class="tooltipMenu__link">
-                  <div class="svg user-icon"></div>
+                  <div class="svg user-l-icon"></div>
                   Профиль
                 </a>
               </li>
               <li class="tooltipMenu__item">
                 <a href="lk.html?tab=tab2" class="tooltipMenu__link">
-                  <div class="svg adv-icon"></div>
+                  <div class="svg adv-l-icon"></div>
                   Мероприятия
                 </a>
               </li>
               <li class="tooltipMenu__item">
                 <a href="lk.html?tab=tab3" class="tooltipMenu__link">
-                  <div class="svg microphone-grey-icon"></div>
+                  <div class="svg microphone-l-icon"></div>
                   Выступления</a
                 >
               </li>
               <li class="tooltipMenu__item">
                 <a href="lk.html?tab=tab4" class="tooltipMenu__link">
-                  <div class="svg articles-grey-icon"></div>
+                  <div class="svg articles-l-icon"></div>
                   Статьи</a
                 >
               </li>
               <li class="tooltipMenu__item">
                 <a href="lk.html?tab=tab5" class="tooltipMenu__link">
-                  <div class="svg video-grey-icon"></div>
+                  <div class="svg video-l-icon"></div>
                   Видео
                 </a>
               </li>
@@ -130,18 +130,35 @@
       <section class="post">
         <div class="container__post container">
           <a href="event.html" class="post__link">
-            <div class="svg back-icon"></div>
+            <div class="svg back-w-icon"></div>
             К&nbsp;мероприятиям</a
           >
           <div class="post__body--mobile">
-            <h2 class="post__subtitle">
-              Как проверить идею IT-продукта на&nbsp;жизнеспособность
-            </h2>
-            <div class="post__wrapp-desc">
-              <div class="svg user-icon"></div>
-              <p class="post__desc">
-                Иван&nbsp;Пирогов Леонид&nbsp;Василевский Ольга&nbsp;Андреева
-              </p>
+            <picture class="post__picture-bg">
+              <source
+                srcset="
+                  ./img/apperance-img-8.jpg 2x,
+                  ./img/apperance-img-8.jpg 1x
+                "
+                media="(max-width: 600px)" />
+              <source
+                srcset="
+                  ./img/apperance-img-8.jpg 2x,
+                  ./img/apperance-img-8.jpg 1x
+                "
+                media="(min-width: 601px)" />
+              <img src="./img/apperance-img-8.jpg" alt="Аватарка пользователя"
+            /></picture>
+            <div class="post__inner-info">
+              <h2 class="post__subtitle">
+                Как проверить идею IT-продукта на&nbsp;жизнеспособность
+              </h2>
+              <div class="post__wrapp-desc">
+                <div class="svg user-r-icon"></div>
+                <p class="post__desc">
+                  Иван&nbsp;Пирогов Леонид&nbsp;Василевский Ольга&nbsp;Андреева
+                </p>
+              </div>
             </div>
           </div>
           <div class="post__body">
@@ -153,22 +170,22 @@
                   </h1>
                   <div class="post__head-wrapp">
                     <button class="post__btn">
-                      <div class="svg adv-icon"></div>
+                      <div class="svg adv-w-icon"></div>
                       Присоедениться
                     </button>
                     <span class="post__place">
-                      <div class="svg flame-icon"></div>
+                      <div class="svg flame-r-icon"></div>
                       Осталось 5&nbsp;мест</span
                     >
                   </div>
                 </div>
                 <div class="post__wrapp">
                   <span class="post__info">
-                    <div class="svg calendar-icon"></div>
+                    <div class="svg calendar-r-icon"></div>
                     11.04.24&nbsp;в 19:00
                   </span>
                   <span class="post__info">
-                    <div class="svg microphone-icon"></div>
+                    <div class="svg microphone-r-icon"></div>
                     Иван Пирогов, Сергей Морковин, Виктория Констанинопольская
                     и&nbsp;еще&nbsp;2
                   </span>
@@ -195,11 +212,11 @@
                   />
                   <figcaption class="event__picture-caption">
                     <div class="member">
-                      <div class="svg friends-icon"></div>
+                      <div class="svg friends-r-icon"></div>
                       321 участника
                     </div>
                     <div class="place">
-                      <div class="svg map-icon"></div>
+                      <div class="svg map-r-icon"></div>
                       Санкт-Петербург, Петроградка
                     </div>
                   </figcaption>
@@ -208,20 +225,20 @@
               <div class="post__head--mobile">
                 <ul class="post__list-m">
                   <li class="post__item-m">
-                    <div class="svg calendar-icon"></div>
+                    <div class="svg calendar-r-icon"></div>
                     <p class="post__desc">11.04.24&nbsp;в 19:00</p>
                   </li>
                   <li class="post__item-m">
-                    <div class="svg friends-icon"></div>
+                    <div class="svg friends-r-icon"></div>
                     <p class="post__desc">321 участника</p>
                   </li>
                   <li class="post__item-m">
-                    <div class="svg map-icon"></div>
+                    <div class="svg map-r-icon"></div>
                     <p class="post__desc">Санкт-Петербург, Петроградка</p>
                   </li>
                 </ul>
                 <button class="post-btn">
-                  <div class="svg adv-icon"></div>
+                  <div class="svg adv-w-icon"></div>
                   Присоединиться
                 </button>
               </div>
@@ -263,7 +280,7 @@
                 <ul class="about__list">
                   <li class="about__item">
                     <h3 class="about__title">
-                      <div class="svg list-icon"></div>
+                      <div class="svg list-r-icon"></div>
                       Программа мероприятия
                     </h3>
                     <p class="about__text">
@@ -277,7 +294,7 @@
                   </li>
                   <li class="about__item">
                     <h3 class="about__title">
-                      <div class="svg business-icon"></div>
+                      <div class="svg business-r-icon"></div>
                       Разбор кейсов участников
                     </h3>
                     <p class="about__text">
@@ -291,7 +308,7 @@
                   </li>
                   <li class="about__item">
                     <h3 class="about__title">
-                      <div class="svg adv-icon"></div>
+                      <div class="svg adv-r-icon"></div>
                       Уже идут
                     </h3>
                     <ul class="about__list-photo">

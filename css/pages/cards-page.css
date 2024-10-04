@@ -418,12 +418,24 @@
   flex-direction: row;
   gap: 4px;
   width: max-content;
+  max-width: 100%;
   align-items: center;
   padding: 4px 6px;
   color: #fff;
   font-weight: 500;
   border-radius: 4px;
   background-color: #d8481a;
+}
+
+.about__span-business .svg.planet-icon {
+  flex-shrink: 0;
+}
+
+.about__span-desc {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .about__list-text {
@@ -790,14 +802,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-
-.pagination-prev svg path {
-  fill: #ababab;
-}
-
-.pagination-next svg path {
-  fill: #ababab;
 }
 
 .person__video {

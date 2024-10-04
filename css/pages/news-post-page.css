@@ -63,6 +63,23 @@
   align-items: center;
 }
 
+.post__info-wrapp-name {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.post__info-wrapp-name .post__awards-list {
+  align-items: center;
+  gap: 6px;
+  color: #5b5b5b;
+}
+
+.post__info-wrapp .svg {
+  width: 16px;
+  height: 16px;
+}
+
 .post__author-img {
   width: 36px;
   height: auto;

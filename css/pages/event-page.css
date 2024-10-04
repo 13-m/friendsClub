@@ -138,6 +138,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
+  gap: 10px;
 }
 
 .event__date-list {
@@ -191,6 +192,20 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.back-icon,
+.right-icon {
+  transition: background 0.3s ease;
+}
+
+.event__date-arrow:hover .svg.back-icon {
+  background: url("../../img/back-w-icon.svg") no-repeat center center / contain;
+}
+
+.event__date-arrow:hover .svg.right-icon {
+  background: url("../../img/right-w-icon.svg") no-repeat center center /
+    contain;
 }
 
 .rigth-svg {
@@ -371,6 +386,45 @@
 .event__btn.add {
   color: #fff;
   background-color: #d8481a;
+}
+
+.pagination__wrapp-list,
+.pagination__list-inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.pagination__wrapp-list {
+  gap: 12px;
+}
+
+.pagination__list-inner {
+  gap: 8px;
+}
+
+.pagination__list-inner .pagination__item {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  color: #5b5b5b;
+  padding: 7px 13px;
+}
+
+.pagination__list-inner .pagination__item:hover {
+  background-color: #e0e0e0;
+  color: #2b2b2b;
+}
+
+.pagination-list {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.pagination__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .actions {

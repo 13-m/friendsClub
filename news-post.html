@@ -86,31 +86,31 @@
             <ul class="tooltipMenu__list">
               <li class="tooltipMenu__item">
                 <a href="lk.html?tab=tab1" class="tooltipMenu__link">
-                  <div class="svg user-icon"></div>
+                  <div class="svg user-l-icon"></div>
                   Профиль
                 </a>
               </li>
               <li class="tooltipMenu__item">
                 <a href="lk.html?tab=tab2" class="tooltipMenu__link">
-                  <div class="svg adv-icon"></div>
+                  <div class="svg adv-l-icon"></div>
                   Мероприятия
                 </a>
               </li>
               <li class="tooltipMenu__item">
                 <a href="lk.html?tab=tab3" class="tooltipMenu__link">
-                  <div class="svg microphone-grey-icon"></div>
+                  <div class="svg microphone-l-icon"></div>
                   Выступления</a
                 >
               </li>
               <li class="tooltipMenu__item">
                 <a href="lk.html?tab=tab4" class="tooltipMenu__link">
-                  <div class="svg articles-grey-icon"></div>
+                  <div class="svg articles-l-icon"></div>
                   Статьи</a
                 >
               </li>
               <li class="tooltipMenu__item">
                 <a href="lk.html?tab=tab5" class="tooltipMenu__link">
-                  <div class="svg video-grey-icon"></div>
+                  <div class="svg video-l-icon"></div>
                   Видео
                 </a>
               </li>
@@ -129,34 +129,45 @@
       <section class="post">
         <div class="post__container container">
           <a href="news.html" class="post__link">
-            <div class="svg back-icon"></div>
+            <div class="svg back-w-icon"></div>
             К&nbsp;новостям</a
           >
           <div class="post--mobile">
-            <h2 class="post__title">
-              Как проверить идею IT-продукта на&nbsp;жизнеспособность
-            </h2>
-            <p class="post__desc">Кафе и&nbsp;рестораны</p>
-            <div class="post__author-wrapp">
-              <img
-                src="img/user-img-1.jpg"
-                alt="Аватарка пользователя"
-                class="post__author-img"
-              />
-              <div class="post__info-wrapp">
-                <h3 class="post__author-name">Феодора Леонтьева</h3>
-                <ul class="post__awards-list">
-                  <li class="post__awards-item">
-                    <div class="svg awards-icon-1"></div>
-                  </li>
-                  <li class="post__awards-item">
-                    <div class="svg awards-icon-2"></div>
-                  </li>
-                  <li class="post__awards-item">
-                    <div class="svg awards-icon-3"></div>
-                  </li>
-                  <li class="post__awards-item awards-item-last">+3</li>
-                </ul>
+            <picture class="post__picture-bg">
+              <source
+                srcset="./img/post-img-1.png 2x, ./img/post-img-1.png 1x"
+                media="(max-width: 600px)" />
+              <source
+                srcset="./img/post-img-1.png 2x, ./img/post-img-1.png 1x"
+                media="(min-width: 601px)" />
+              <img src="./img/post-img-1.png" alt="Аватарка пользователя"
+            /></picture>
+            <div class="post__inner-info">
+              <h2 class="post__title">
+                Как проверить идею IT-продукта на&nbsp;жизнеспособность
+              </h2>
+              <p class="post__desc">Кафе и&nbsp;рестораны</p>
+              <div class="post__author-wrapp">
+                <img
+                  src="img/user-img-1.jpg"
+                  alt="Аватарка пользователя"
+                  class="post__author-img"
+                />
+                <div class="post__info-wrapp">
+                  <h3 class="post__author-name">Феодора Леонтьева</h3>
+                  <ul class="post__awards-list">
+                    <li class="post__awards-item">
+                      <div class="svg awards-icon-1"></div>
+                    </li>
+                    <li class="post__awards-item">
+                      <div class="svg awards-icon-2"></div>
+                    </li>
+                    <li class="post__awards-item">
+                      <div class="svg awards-icon-3"></div>
+                    </li>
+                    <li class="post__awards-item awards-item-last">+3</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -169,19 +180,19 @@
                 <div class="post__info-stat">
                   <p class="post__desc">Кафе и&nbsp;рестораны</p>
                   <span class="post__stat data">
-                    <div class="svg calendar-icon"></div>
+                    <div class="svg calendar-l-icon"></div>
                     11.04.24&nbsp;в 19:00
                   </span>
                   <span class="post__stat view">
-                    <div class="svg view-icon"></div>
+                    <div class="svg view-l-icon"></div>
                     3
                   </span>
                   <span class="post__stat like">
-                    <div class="svg like-icon"></div>
+                    <div class="svg like-l-icon"></div>
                     14
                   </span>
                   <span class="post__stat bookmark">
-                    <div class="svg like-icon"></div>
+                    <div class="svg like-l-icon"></div>
                     3
                   </span>
                 </div>
@@ -197,7 +208,21 @@
                     class="post__author-img"
                   />
                   <div class="post__info-wrapp">
-                    <h3 class="post__author-name">Феодора Леонтьева</h3>
+                    <div class="post__info-wrapp-name">
+                      <h3 class="post__author-name">Феодора Леонтьева</h3>
+                      <ul class="post__awards-list">
+                        <li class="post__awards-item">
+                          <div class="svg awards-icon-1"></div>
+                        </li>
+                        <li class="post__awards-item">
+                          <div class="svg awards-icon-2"></div>
+                        </li>
+                        <li class="post__awards-item">
+                          <div class="svg awards-icon-3"></div>
+                        </li>
+                        <li class="post__awards-item awards-item-last">+3</li>
+                      </ul>
+                    </div>
                     <p class="post__author-desc">Автор статьи</p>
                   </div>
                 </div>
@@ -205,19 +230,19 @@
               <div class="post__content">
                 <div class="post__info-stat--mobile">
                   <span class="post__stat data">
-                    <div class="svg calendar-icon"></div>
+                    <div class="svg calendar-l-icon"></div>
                     11.04.24&nbsp;в 19:00
                   </span>
                   <span class="post__stat view">
-                    <div class="svg view-icon"></div>
+                    <div class="svg view-l-icon"></div>
                     3
                   </span>
                   <span class="post__stat like">
-                    <div class="svg like-icon"></div>
+                    <div class="svg like-l-icon"></div>
                     14
                   </span>
                   <span class="post__stat bookmark">
-                    <div class="svg like-icon"></div>
+                    <div class="svg like-l-icon"></div>
                     3
                   </span>
                 </div>
@@ -266,11 +291,11 @@
                 </p>
                 <div class="post__wrapp-btn">
                   <button class="post__btn">
-                    <div class="svg like-icon"></div>
+                    <div class="svg like-w-icon"></div>
                     Нравится
                   </button>
                   <button class="post__btn">
-                    <div class="svg bookmarks-icon"></div>
+                    <div class="svg bookmarks-w-icon"></div>
                     В&nbsp;избранное
                   </button>
                 </div>

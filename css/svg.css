@@ -3,292 +3,273 @@
   height: auto;
   aspect-ratio: 1;
 }
-
 .notFound-icon {
-  background: url("../img/404-icon.svg") no-repeat center center / contain;
+  background: url("../img/404-icon.svg") no-repeat center / contain;
 }
-.add-icon {
-  background: url("../img/add-icon.svg") no-repeat center center / contain;
+.add-g-icon {
+  background: url("../img/add-g-icon.svg") no-repeat center / contain;
 }
-.add-red-icon {
-  background: url("../img/add-red-icon.svg") no-repeat center center / contain;
+.add-r-icon {
+  background: url("../img/add-r-icon.svg") no-repeat center / contain;
 }
-.add-light-icon {
-  background: url("../img/add-light-icon.svg") no-repeat center center / contain;
+.add-w-icon {
+  background: url("../img/add-w-icon.svg") no-repeat center / contain;
 }
-.adv-grey-icon {
-  background: url("../img/adv-grey-icon.svg") no-repeat center center / contain;
+.adv-g-icon {
+  background: url("../img/adv-g-icon.svg") no-repeat center / contain;
 }
-.adv-icon {
-  background: url("../img/adv-icon.svg") no-repeat center center / contain;
+.adv-l-icon {
+  background: url("../img/adv-l-icon.svg") no-repeat center / contain;
 }
-.adv-light-icon {
-  background: url("../img/adv-light-icon.svg") no-repeat center center / contain;
+.adv-w-icon {
+  background: url("../img/adv-w-icon.svg") no-repeat center / contain;
 }
-.articles-grey-icon {
-  background: url("../img/articles-grey-icon.svg") no-repeat center center /
-    contain;
+.articles-r-icon {
+  background: url("../img/articles-r-icon.svg") no-repeat center / contain;
 }
-.articles-icon {
-  background: url("../img/articles-icon.svg") no-repeat center center / contain;
+.articles-l-icon {
+  background: url("../img/articles-l-icon.svg") no-repeat center / contain;
 }
 .awards-icon-1 {
-  background: url("../img/awards-icon-1.svg") no-repeat center center / contain;
+  background: url("../img/awards-icon-1.svg") no-repeat center / contain;
 }
 .awards-icon-2 {
-  background: url("../img/awards-icon-2.svg") no-repeat center center / contain;
+  background: url("../img/awards-icon-2.svg") no-repeat center / contain;
 }
 .awards-icon-3 {
-  background: url("../img/awards-icon-3.svg") no-repeat center center / contain;
+  background: url("../img/awards-icon-3.svg") no-repeat center / contain;
 }
 .awards-icon-4 {
-  background: url("../img/awards-icon-4.svg") no-repeat center center / contain;
+  background: url("../img/awards-icon-4.svg") no-repeat center / contain;
 }
 .awards-icon-5 {
-  background: url("../img/awards-icon-5.svg") no-repeat center center / contain;
+  background: url("../img/awards-icon-5.svg") no-repeat center / contain;
 }
 .awards-icon-6 {
-  background: url("../img/awards-icon-6.svg") no-repeat center center / contain;
+  background: url("../img/awards-icon-6.svg") no-repeat center / contain;
 }
 .awards-icon-7 {
-  background: url("../img/awards-icon-7.svg") no-repeat center center / contain;
+  background: url("../img/awards-icon-7.svg") no-repeat center / contain;
 }
 .back-icon {
-  background: url("../img/back-icon.svg") no-repeat center center / contain;
+  background: url("../img/back-icon.svg") no-repeat center / contain;
 }
-.bookmarks-icon {
-  background: url("../img/bookmarks-icon.svg") no-repeat center center / contain;
+.back-w-icon {
+  background: url("../img/back-w-icon.svg") no-repeat center / contain;
 }
-.bookmarks-light-icon {
-  background: url("../img/bookmarks-light-icon.svg") no-repeat center center /
-    contain;
+.bookmarks-g-icon {
+  background: url("../img/bookmarks-g-icon.svg") no-repeat center / contain;
 }
-.bookmarks-red-icon {
-  background: url("../img/bookmarks-red-icon.svg") no-repeat center center /
-    contain;
+.bookmarks-l-icon {
+  background: url("../img/bookmarks-l-icon.svg") no-repeat center / contain;
 }
-.business-icon {
-  background: url("../img/business-icon.svg") no-repeat center center / contain;
+.bookmarks-r-icon {
+  background: url("../img/bookmarks-r-icon.svg") no-repeat center / contain;
 }
-.business-light-icon {
-  background: url("../img/business-light-icon.svg") no-repeat center center /
-    contain;
+.business-g-icon {
+  background: url("../img/business-g-icon.svg") no-repeat center / contain;
 }
-.business-red-icon {
-  background: url("../img/business-red-icon.svg") no-repeat center center /
-    contain;
+.business-l-icon {
+  background: url("../img/business-l-icon.svg") no-repeat center / contain;
 }
-.calendar-grey-icon {
-  background: url("../img/calendar-grey-icon.svg") no-repeat center center /
-    contain;
+.business-r-icon {
+  background: url("../img/business-r-icon.svg") no-repeat center / contain;
 }
-.calendar-icon {
-  background: url("../img/calendar-icon.svg") no-repeat center center / contain;
+.calendar-l-icon {
+  background: url("../img/calendar-l-icon.svg") no-repeat center / contain;
+}
+.calendar-r-icon {
+  background: url("../img/calendar-r-icon.svg") no-repeat center / contain;
 }
 .close-icon {
-  background: url("../img/close-icon.svg") no-repeat center center / contain;
+  background: url("../img/close-icon.svg") no-repeat center / contain;
 }
-.delete-icon {
-  background: url("../img/delete-icon.svg") no-repeat center center / contain;
+.delete-g-icon {
+  background: url("../img/delete-g-icon.svg") no-repeat center / contain;
 }
-.delete-red-icon {
-  background: url("../img/delete-red-icon.svg") no-repeat center center /
-    contain;
+.delete-r-icon {
+  background: url("../img/delete-r-icon.svg") no-repeat center / contain;
 }
-.dislike-icon {
-  background: url("../img/dislike-icon.svg") no-repeat center center / contain;
+.dislike-g-icon {
+  background: url("../img/dislike-g-icon.svg") no-repeat center / contain;
 }
-.dislike-red-icon {
-  background: url("../img/dislike-red-icon.svg") no-repeat center center /
-    contain;
+.dislike-r-icon {
+  background: url("../img/dislike-r-icon.svg") no-repeat center / contain;
 }
-.down-grey-icon {
-  background: url("../img/down-grey-icon.svg") no-repeat center center / contain;
+.down-g-icon {
+  background: url("../img/down-g-icon.svg") no-repeat center / contain;
 }
-.down-icon {
-  background: url("../img/down-icon.svg") no-repeat center center / contain;
+.down-l-icon {
+  background: url("../img/down-l-icon.svg") no-repeat center / contain;
 }
-.edit-icon {
-  background: url("../img/edit-icon.svg") no-repeat center center / contain;
+.edit-g-icon {
+  background: url("../img/edit-g-icon.svg") no-repeat center / contain;
 }
 .favicon {
-  background: url("../img/favicon.svg") no-repeat center center / contain;
+  background: url("../img/favicon.svg") no-repeat center / contain;
 }
-.filters-icon {
-  background: url("../img/filters-icon.svg") no-repeat center center / contain;
+.filters-g-icon {
+  background: url("../img/filters-g-icon.svg") no-repeat center / contain;
 }
-.flame-icon {
-  background: url("../img/flame-icon.svg") no-repeat center center / contain;
+.flame-r-icon {
+  background: url("../img/flame-r-icon.svg") no-repeat center / contain;
 }
-.friends-icon {
-  background: url("../img/friends-icon.svg") no-repeat center center / contain;
+.friends-r-icon {
+  background: url("../img/friends-r-icon.svg") no-repeat center / contain;
 }
-.hobby-grey-icon {
-  background: url("../img/hobby-grey-icon.svg") no-repeat center center /
-    contain;
+.hobby-g-icon {
+  background: url("../img/hobby-g-icon.svg") no-repeat center / contain;
 }
-.hobby-light-icon {
-  background: url("../img/hobby-light-icon.svg") no-repeat center center /
-    contain;
+.hobby-l-icon {
+  background: url("../img/hobby-l-icon.svg") no-repeat center / contain;
 }
-.hobby-red-icon {
-  background: url("../img/hobby-red-icon.svg") no-repeat center center / contain;
+.hobby-r-icon {
+  background: url("../img/hobby-r-icon.svg") no-repeat center / contain;
 }
 .insta-icon {
-  background: url("../img/insta-icon.svg") no-repeat center center / contain;
+  background: url("../img/insta-icon.svg") no-repeat center / contain;
+}
+.like-g-icon {
+  background: url("../img/like-g-icon.svg") no-repeat center / contain;
 }
 .like-green-icon {
-  background: url("../img/like-green-icon.svg") no-repeat center center /
-    contain;
+  background: url("../img/like-green-icon.svg") no-repeat center / contain;
 }
-.like-icon {
-  background: url("../img/like-icon.svg") no-repeat center center / contain;
+.like-l-icon {
+  background: url("../img/like-l-icon.svg") no-repeat center / contain;
 }
-.like-light-icon {
-  background: url("../img/like-light-icon.svg") no-repeat center center /
-    contain;
+.like-r-icon {
+  background: url("../img/like-r-icon.svg") no-repeat center / contain;
 }
-.like-red-icon {
-  background: url("../img/like-red-icon.svg") no-repeat center center / contain;
+.list-g-icon {
+  background: url("../img/list-g-icon.svg") no-repeat center / contain;
 }
-.list-icon {
-  background: url("../img/list-icon.svg") no-repeat center center / contain;
+.list-r-icon {
+  background: url("../img/list-r-icon.svg") no-repeat center / contain;
 }
-.list-red-icon {
-  background: url("../img/list-red-icon.svg") no-repeat center center / contain;
+.mail-g-icon {
+  background: url("../img/mail-g-icon.svg") no-repeat center / contain;
 }
-.mail-icon {
-  background: url("../img/mail-icon.svg") no-repeat center center / contain;
+.map-r-icon {
+  background: url("../img/map-r-icon.svg") no-repeat center / contain;
 }
-.map-icon {
-  background: url("../img/map-icon.svg") no-repeat center center / contain;
+.menu-g-icon {
+  background: url("../img/menu-g-icon.svg") no-repeat center / contain;
 }
-.menu-icon {
-  background: url("../img/menu-icon.svg") no-repeat center center / contain;
+.message-g-icon {
+  background: url("../img/message-g-icon.svg") no-repeat center / contain;
 }
-.message-icon {
-  background: url("../img/message-icon.svg") no-repeat center center / contain;
+.message-r-icon {
+  background: url("../img/message-r-icon.svg") no-repeat center / contain;
 }
-.message-grey-icon {
-  background: url("../img/message-grey-icon.svg") no-repeat center center /
-    contain;
+.microphone-l-icon {
+  background: url("../img/microphone-l-icon.svg") no-repeat center / contain;
 }
-.microphone-grey-icon {
-  background: url("../img/microphone-grey-icon.svg") no-repeat center center /
-    contain;
+.microphone-r-icon {
+  background: url("../img/microphone-r-icon.svg") no-repeat center / contain;
 }
-.microphone-icon {
-  background: url("../img/microphone-icon.svg") no-repeat center center /
-    contain;
+.more-g-icon {
+  background: url("../img/more-g-icon.svg") no-repeat center / contain;
 }
-.more-icon {
-  background: url("../img/more-icon.svg") no-repeat center center / contain;
+.note-g-icon {
+  background: url("../img/note-g-icon.svg") no-repeat center / contain;
 }
-.note-icon {
-  background: url("../img/note-icon.svg") no-repeat center center / contain;
+.note-r-icon {
+  background: url("../img/note-r-icon.svg") no-repeat center / contain;
 }
-.note--light-icon {
-  background: url("../img/note-light-icon.svg") no-repeat center center /
-    contain;
+.note-w-icon {
+  background: url("../img/note-w-icon.svg") no-repeat center / contain;
 }
-.note-red-icon {
-  background: url("../img/note-red-icon.svg") no-repeat center center / contain;
+.ok-g-icon {
+  background: url("../img/ok-g-icon.svg") no-repeat center / contain;
 }
 .ok-green-icon {
-  background: url("../img/ok-green-icon.svg") no-repeat center center / contain;
+  background: url("../img/ok-green-icon.svg") no-repeat center / contain;
 }
-.ok-icon {
-  background: url("../img/ok-icon.svg") no-repeat center center / contain;
+.phone-g-icon {
+  background: url("../img/phone-g-icon.svg") no-repeat center / contain;
 }
-.phone-icon {
-  background: url("../img/phone-icon.svg") no-repeat center center / contain;
+.planet-w-icon {
+  background: url("../img/planet-w-icon.svg") no-repeat center / contain;
 }
-.planet-icon {
-  background: url("../img/planet-icon.svg") no-repeat center center / contain;
+.plus-g-icon {
+  background: url("../img/plus-g-icon.svg") no-repeat center / contain;
 }
-.plus-icon {
-  background: url("../img/plus-icon.svg") no-repeat center center / contain;
+.plus-l-icon {
+  background: url("../img/plus-l-icon.svg") no-repeat center / contain;
 }
-.plus-light-icon {
-  background: url("../img/plus-light-icon.svg") no-repeat center center /
-    contain;
+.plus-r-icon {
+  background: url("../img/plus-r-icon.svg") no-repeat center / contain;
 }
-.plus-red-icon {
-  background: url("../img/plus-red-icon.svg") no-repeat center center / contain;
+.question-g-icon {
+  background: url("../img/question-g-icon.svg") no-repeat center / contain;
 }
-.question-icon {
-  background: url("../img/question-icon.svg") no-repeat center center / contain;
+.question-team-g-icon {
+  background: url("../img/question-team-g-icon.svg") no-repeat center / contain;
 }
-.question-team-icon {
-  background: url("../img/question-team-icon.svg") no-repeat center center /
-    contain;
+.question-team-r-icon {
+  background: url("../img/question-team-r-icon.svg") no-repeat center / contain;
 }
-.question-team-red-icon {
-  background: url("../img/question-team-red-icon.svg") no-repeat center center /
-    contain;
-}
-.review-icon {
-  background: url("../img/review-icon.svg") no-repeat center center / contain;
+.review-r-icon {
+  background: url("../img/review-r-icon.svg") no-repeat center / contain;
 }
 .right-icon {
-  background: url("../img/right-icon.svg") no-repeat center center / contain;
+  background: url("../img/right-icon.svg") no-repeat center / contain;
 }
-.right-light-icon {
-  background: url("../img/right-light-icon.svg") no-repeat center center /
-    contain;
+.right-w-icon {
+  background: url("../img/right-w-icon.svg") no-repeat center / contain;
 }
-.search-grey-icon {
-  background: url("../img/search-grey-icon.svg") no-repeat center center /
-    contain;
+.search-g-icon {
+  background: url("../img/search-g-icon.svg") no-repeat center / contain;
 }
-.search-light-icon {
-  background: url("../img/search-light-icon.svg") no-repeat center center /
-    contain;
+.search-l-icon {
+  background: url("../img/search-l-icon.svg") no-repeat center / contain;
 }
-.search-icon {
-  background: url("../img/search-icon.svg") no-repeat center center / contain;
+.search-w-icon {
+  background: url("../img/search-w-icon.svg") no-repeat center / contain;
 }
 .tg-icon {
-  background: url("../img/tg-icon.svg") no-repeat center center / contain;
+  background: url("../img/tg-icon.svg") no-repeat center / contain;
 }
-.trash-icon {
-  background: url("../img/trash-icon.svg") no-repeat center center / contain;
+.trash-g-icon {
+  background: url("../img/trash-g-icon.svg") no-repeat center / contain;
 }
-.trash-red-icon {
-  background: url("../img/trash-red-icon.svg") no-repeat center center / contain;
+.trash-r-icon {
+  background: url("../img/trash-r-icon.svg") no-repeat center / contain;
 }
 .up-icon {
-  background: url("../img/up-icon.svg") no-repeat center center / contain;
+  background: url("../img/up-icon.svg") no-repeat center / contain;
 }
 .user-add-icon {
-  background: url("../img/user-add-icon.svg") no-repeat center center / contain;
+  background: url("../img/user-add-icon.svg") no-repeat center / contain;
 }
-.user-grey-icon {
-  background: url("../img/user-grey-icon.svg") no-repeat center center / contain;
+.user-g-icon {
+  background: url("../img/user-g-icon.svg") no-repeat center / contain;
 }
-.user-icon {
-  background: url("../img/user-icon.svg") no-repeat center center / contain;
+.user-l-icon {
+  background: url("../img/user-l-icon.svg") no-repeat center / contain;
 }
-.user-red-icon {
-  background: url("../img/user-red-icon.svg") no-repeat center center / contain;
+.user-r-icon {
+  background: url("../img/user-r-icon.svg") no-repeat center / contain;
 }
-.video-grey-icon {
-  background: url("../img/video-grey-icon.svg") no-repeat center center /
-    contain;
+.video-l-icon {
+  background: url("../img/video-l-icon.svg") no-repeat center / contain;
 }
-.video-icon {
-  background: url("../img/video-icon.svg") no-repeat center center / contain;
+.video-r-icon {
+  background: url("../img/video-r-icon.svg") no-repeat center / contain;
 }
-.view-icon {
-  background: url("../img/view-icon.svg") no-repeat center center / contain;
+.view-g-icon {
+  background: url("../img/view-g-icon.svg") no-repeat center / contain;
 }
-.view-light-icon {
-  background: url("../img/view-light-icon.svg") no-repeat center center /
-    contain;
+.view-l-icon {
+  background: url("../img/view-l-icon.svg") no-repeat center / contain;
 }
-.view-red-icon {
-  background: url("../img/view-red-icon.svg") no-repeat center center / contain;
+.view-r-icon {
+  background: url("../img/view-r-icon.svg") no-repeat center / contain;
 }
-.vk {
-  background: url("../img/vk.svg") no-repeat center center / contain;
+.view-w-icon {
+  background: url("../img/view-w-icon.svg") no-repeat center / contain;
+}
+.vk-icon {
+  background: url("../img/vk.svg") no-repeat center / contain;
 }

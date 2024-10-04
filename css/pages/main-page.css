@@ -6,7 +6,6 @@
 
 /* временные отступы */
 .residents {
-  /* margin-bottom: 82px; */
   margin-bottom: 82px;
 }
 
@@ -373,33 +372,6 @@
   object-fit: cover;
   border-radius: 8px;
   aspect-ratio: 1.6;
-}
-
-.article__card-item:nth-child(1):before {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0) 20%,
-      rgba(0, 0, 0, 0.56) 100%
-    ),
-    url("../../img/poster-img-4.png") no-repeat center center / cover;
-}
-
-.article__card-item:nth-child(2):before {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0) 20%,
-      rgba(0, 0, 0, 0.56) 100%
-    ),
-    url("../../img/poster-img-5.png") no-repeat center center / cover;
-}
-
-.article__card-item:nth-child(3):before {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0) 20%,
-      rgba(0, 0, 0, 0.56) 100%
-    ),
-    url("../../img/poster-img-6.png") no-repeat center center / cover;
 }
 
 .article__span-teg {
