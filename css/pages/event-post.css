@@ -280,6 +280,22 @@
 }
 .about__item {
 }
+
+.about__item ul {
+  display: initial;
+  padding: initial;
+  color: #5b5b5b;
+  list-style: initial;
+}
+.about__item li {
+  margin-bottom: 4px;
+  color: #5b5b5b;
+}
+.about__item p {
+  margin: 0;
+  color: #5b5b5b;
+}
+
 .about__title {
   display: flex;
   align-items: center;
