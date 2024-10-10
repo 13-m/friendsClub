@@ -6,6 +6,24 @@
   background-color: #fff;
 }
 
+.about__container ul {
+}
+
+.about__container ul {
+  display: initial;
+  padding: initial;
+  color: #5b5b5b;
+  list-style: initial;
+}
+.about__container li {
+  margin-bottom: 4px;
+  color: #5b5b5b;
+}
+.about__container p {
+  margin: 0;
+  color: #5b5b5b;
+}
+
 img:not(picture img) {
   aspect-ratio: 1;
   width: 47%;
