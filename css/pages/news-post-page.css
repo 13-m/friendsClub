@@ -40,6 +40,20 @@
   padding: 48px 64px;
 }
 
+img:not(picture img) {
+  aspect-ratio: 1;
+  width: 47%;
+  object-fit: contain;
+  border-radius: 8px;
+  height: auto;
+  background: #808080a3;
+}
+
+img {
+  aspect-ratio: initial;
+  height: initial;
+}
+
 .post--mobile {
   display: none;
 }
@@ -159,6 +173,7 @@
 }
 
 .post__img {
+  aspect-ratio: initial;
   width: 100%;
   margin-bottom: 32px;
   object-fit: contain;

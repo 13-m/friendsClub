@@ -5,6 +5,19 @@
   padding: 48px 64px;
   background-color: #fff;
 }
+
+img:not(picture img) {
+  aspect-ratio: 1;
+  width: 47%;
+  object-fit: contain;
+  border-radius: 8px;
+  height: auto;
+  background: #808080a3;
+}
+
+img {
+}
+
 .container {
 }
 .about__title {
@@ -16,6 +29,7 @@
 }
 
 .about__img {
+  aspect-ratio: initial;
   width: 75%;
   border-radius: 8px;
   margin-bottom: 15px;
