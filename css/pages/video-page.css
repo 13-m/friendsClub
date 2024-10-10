@@ -42,6 +42,7 @@
   flex: auto 1 1;
   display: flex;
   gap: 8px;
+  min-width: 35%;
   padding-left: 8px;
   background-color: #5b5b5b;
   border-radius: 8px;

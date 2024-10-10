@@ -47,6 +47,7 @@
   flex: auto 1 1;
   display: flex;
   gap: 8px;
+  min-width: 35%;
   padding-left: 8px;
   background-color: #5b5b5b;
   border-radius: 8px;
@@ -105,9 +106,6 @@
   line-height: 22px;
   border-radius: 8px;
   color: #e0e0e0;
-}
-
-.form__label {
 }
 
 .form__input {

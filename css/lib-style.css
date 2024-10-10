@@ -49,9 +49,11 @@
 /* Select */
 
 .choices {
+  width: 100%;
   margin: 0;
   flex: auto 1 1;
   border-radius: 8px;
+  min-width: 20%;
 }
 
 .choices__inner {
