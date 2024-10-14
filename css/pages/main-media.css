@@ -142,7 +142,11 @@
     margin-bottom: 16px;
     position: relative;
     height: 270px;
-    padding: 18px;
+    padding: 20px 16px 16px;
+  }
+
+  .event__card-body {
+    padding: 20px 16px 16px;
   }
 
   .event__btn {

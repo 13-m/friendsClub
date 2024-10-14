@@ -454,6 +454,10 @@ button {
     );
   }
   /* Конец бургер меню */
+
+  .copy {
+    order: -1;
+  }
 }
 
 @media (max-width: 520px) {
