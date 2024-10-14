@@ -25,6 +25,9 @@
 .adv-w-icon {
   background: url("../img/adv-w-icon.svg") no-repeat center / contain;
 }
+.adv-r-icon {
+  background: url("../img/adv-r-icon.svg") no-repeat center / contain;
+}
 .articles-r-icon {
   background: url("../img/articles-r-icon.svg") no-repeat center / contain;
 }

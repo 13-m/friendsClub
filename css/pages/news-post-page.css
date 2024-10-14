@@ -87,6 +87,10 @@ img {
   align-items: center;
   gap: 6px;
   color: #5b5b5b;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .post__info-wrapp .svg {

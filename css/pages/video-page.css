@@ -105,6 +105,9 @@
   justify-content: space-between;
   gap: 36px;
   margin-bottom: 48px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .video__item {
@@ -217,6 +220,9 @@
 .pagination__list-inner {
   display: flex;
   flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .pagination__wrapp-list {
@@ -224,6 +230,10 @@
 }
 
 .pagination__list-inner {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   gap: 8px;
 }
 
@@ -240,6 +250,9 @@
 }
 
 .pagination-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: flex;
   flex-direction: row;
   gap: 8px;

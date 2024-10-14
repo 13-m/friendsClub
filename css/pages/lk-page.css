@@ -17,6 +17,9 @@
   flex-direction: row;
   width: 100%;
   margin-bottom: 28px;
+  display: flex;
+  padding: 0;
+  list-style: none;
 }
 
 .lk__nav-item:last-child {
@@ -70,6 +73,9 @@
 
 .lk__list {
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   flex-direction: column;
   gap: 48px;
 }
@@ -186,6 +192,10 @@
 .lk__list-input {
   flex-direction: column;
   gap: 16px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .lk__item-input {
@@ -319,6 +329,10 @@
 .lk__list-progress {
   flex-direction: column;
   gap: 16px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .lk__item-progress {
@@ -377,6 +391,8 @@
 .lk__edit-btn,
 .lk__list-btn {
   display: flex;
+  margin: 0;
+  list-style: none;
   align-items: center;
   background-color: transparent;
   border: none;
@@ -423,6 +439,9 @@
 
 .synergy .lk__list-input {
   margin-bottom: 48px;
+  display: flex;
+  padding: 0;
+  list-style: none;
 }
 /* page 4 profile */
 .label-hobby {
@@ -449,6 +468,10 @@
 .hobby__list {
   gap: 20px;
   flex-wrap: wrap;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .hobby__item,
@@ -491,6 +514,9 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .events .article__nav-list {
@@ -518,6 +544,9 @@
 
 .events__list-wrapp {
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   flex-direction: row;
   gap: 20px;
   margin-bottom: 24px;
@@ -599,6 +628,9 @@
 
 .events__list-entrant {
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   flex-direction: row;
   gap: 4px;
 }
@@ -682,6 +714,9 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .appearance .article__nav-list {
@@ -793,9 +828,12 @@
 }
 
 .appearance__list-entrant {
-  display: flex;
   flex-direction: row;
   gap: 4px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .appearance__img,
@@ -916,6 +954,8 @@
   gap: 20px;
   font-size: 20px;
   margin-bottom: 32px;
+  padding: 0;
+  list-style: none;
 }
 
 .article__nav-list::after {
@@ -976,6 +1016,10 @@
 }
 
 .article__content-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .article__content-item {
@@ -994,6 +1038,10 @@
 .article__list {
   flex-direction: column;
   gap: 32px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .article__item {

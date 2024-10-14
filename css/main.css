@@ -47,21 +47,17 @@ body.loaded {
   opacity: 1;
 }
 
-ul {
+/* ul {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
-}
+} */
 
 svg {
   width: 20px;
   height: auto;
   aspect-ratio: 1 / 1;
-}
-
-svg path {
-  /* fill: #ababab; */
 }
 
 header {
@@ -126,6 +122,9 @@ button {
 .nav__list {
   display: flex;
   flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav__item {
@@ -192,6 +191,9 @@ button {
   display: flex;
   flex-direction: column;
   bottom: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .tooltipMenu ul li:hover {
@@ -380,6 +382,9 @@ button {
   }
 
   .nav__list--burger {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
@@ -568,6 +573,9 @@ button {
     display: flex;
     flex-direction: row;
     gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
   .tooltipMenu__awards-item {

@@ -170,6 +170,9 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .residents__item {
@@ -220,6 +223,9 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style:none;
 }
 
 .card__item-decr {
@@ -253,10 +259,16 @@
   gap: 8px;
   color: #000;
   margin-right: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .card__list-awards--mobile {
   display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .card__img--mobile {
@@ -287,6 +299,9 @@
   flex-direction: row;
   gap: 5px;
   align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .card__item-sector {
@@ -330,6 +345,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .card__item-major {
@@ -357,6 +375,9 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .card__item-info {
@@ -376,6 +397,9 @@
   display: flex;
   flex-direction: row;
   gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .card__item-btn {
@@ -388,9 +412,6 @@
   gap: 5px;
   color: #2b2b2b;
   font-size: 14px;
-}
-
-.card__list-achievements {
 }
 
 .card__span {
