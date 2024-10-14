@@ -12,7 +12,11 @@
 }
 
 .event__text {
-  margin-bottom: auto !important;
+  margin-bottom: 30px !important;
+}
+
+.event__decr-wrapp {
+  margin-top: auto !important;
 }
 
 .event__item:nth-child(1) .event__picture {
