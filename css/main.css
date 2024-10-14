@@ -614,10 +614,6 @@ button {
 
   /* tooltip end */
 
-  footer {
-    background: transparent;
-  }
-
   .footer__container {
     padding: 32px 0;
   }
