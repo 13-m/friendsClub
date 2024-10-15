@@ -158,10 +158,6 @@
     flex: 1;
     justify-content: center;
   }
-
-  .post__btn path {
-    fill: #fff;
-  }
 }
 
 @media (max-width: 460px) {

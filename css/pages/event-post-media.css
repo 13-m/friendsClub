@@ -78,10 +78,6 @@
     height: 36px;
   }
 
-  .post__link path {
-    fill: #fff;
-  }
-
   .post__body {
     padding: 40px 30px;
   }
@@ -151,21 +147,9 @@
     color: #fff;
   }
 
-  .post-btn path {
-    fill: #fff;
-  }
-
-  .post__item-m path {
-    fill: var(--color-text-red);
-  }
-
   .post__subtitle {
     margin: 0;
     margin-bottom: 12px;
-  }
-
-  .user-svg path {
-    fill: var(--color-text-red);
   }
 
   .post__wrapp-desc {

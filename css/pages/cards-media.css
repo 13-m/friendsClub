@@ -144,6 +144,7 @@
   .appearance__picture,
   .appearance__picture img {
     width: 100%;
+    aspect-ratio: 1;
   }
 
   .appearance__body {
@@ -252,10 +253,6 @@
   .person__link.mobile .back-svg {
     width: 36px;
     height: 36px;
-  }
-
-  .person__link.mobile .back-svg path {
-    fill: #fff;
   }
 
   .person__content {
@@ -398,16 +395,6 @@
 
   .person__item-interaction.more .person__btn-interaction {
     display: flex;
-  }
-
-  .user-add-svg circle,
-  .user-add-svg rect {
-    fill: #fff;
-  }
-
-  .person__btn-interaction svg path,
-  .person__note-label svg path {
-    fill: #fff;
   }
 
   .mobile-body {

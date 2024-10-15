@@ -74,7 +74,7 @@
   gap: 12px;
 }
 
-.news__card-img {
+.news__card-link {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -83,6 +83,12 @@
   right: 0;
   bottom: 0;
   z-index: -1;
+  border-radius: 8px;
+}
+
+.news__card-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -98,35 +104,21 @@
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.45) 59.88%
   );
-  /* url("../../img/poster-img-1.png") no-repeat center center / cover; */
 }
 
-.news__card-item:nth-child(1) .view-svg path {
-  fill: #ababab;
-}
-
-.news__card-item:nth-child(2) .news__card-img {
+.news__card-item:nth-child(2) .news__card-link {
   height: auto;
 }
 
-.news__card-item:nth-child(3) .news__card-img {
+.news__card-item:nth-child(3) .news__card-link {
   height: auto;
 }
 
 .news__card-item:nth-child(n + 2) {
-  /* flex: 1; */
   width: 25%;
 }
 
-/* .news__card-item:nth-child(n + 2):before {
-  content: "";
-  margin-bottom: 12px;
-  width: 100%;
-  height: 170px;
-  border-radius: 8px;
-} */
-
-.news__card-item:nth-child(n + 2) .news__card-img {
+.news__card-item:nth-child(n + 2) .news__card-link {
   position: relative;
 }
 
@@ -149,6 +141,11 @@
 .news__card-item:nth-child(n + 2) .span-teg {
   top: 13px;
   left: 8px;
+}
+
+.news__subtitle-link {
+  color: inherit;
+  text-decoration: none;
 }
 
 .news__subtitle {
@@ -215,10 +212,6 @@
   aspect-ratio: 1 / 1;
 }
 
-.view-svg path {
-  fill: #5b5b5b;
-}
-
 .residents__container {
   border-radius: 8px;
   position: relative;
@@ -251,6 +244,7 @@
 }
 
 .residents__link {
+  text-decoration: none;
 }
 
 .residents__list {
@@ -264,11 +258,22 @@
 }
 
 .residents__item {
+  position: relative;
   width: 220px;
   padding-bottom: 20px;
 }
 
+.residents__links {
+  text-decoration: none;
+}
+
 .residents__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
   text-decoration: none;
 }
 
@@ -398,10 +403,6 @@
   aspect-ratio: 1 / 1;
 }
 
-.user-svg path {
-  fill: #d8481a;
-}
-
 .article__name {
   display: flex;
   gap: 4px;
@@ -438,18 +439,6 @@
   background-color: #fff;
 }
 
-/* .event__container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -88px;
-  bottom: 0;
-  right: -88px;
-  border-radius: 8px;
-  background-color: #fff;
-  z-index: -1;
-} */
-
 .event__wrapp {
   display: flex;
   flex-direction: row;
@@ -467,6 +456,9 @@
 }
 
 .event__body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -487,6 +479,7 @@
 .event__main-card {
   position: relative;
   display: flex;
+  overflow: hidden;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
@@ -495,6 +488,20 @@
   border-radius: 8px;
 }
 
+.event__main-card::after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  position: absolute;
+  background: linear-gradient(
+    161.01deg,
+    rgba(0, 0, 0, 0.5025) 12.8%,
+    rgba(0, 0, 0, 0.75) 76.56%
+  );
+}
 .event__card-img {
   position: absolute;
   width: 100%;
@@ -515,6 +522,7 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+  z-index: 1;
 }
 
 .event__date {
@@ -535,12 +543,9 @@
   font-size: 14px;
 }
 
-.microphone-svg path {
-  fill: #d8481a;
-}
-
-.calendar-svg path {
-  fill: #d8481a;
+.event__slogan-link {
+  color: inherit;
+  text-decoration: none;
 }
 
 .event__slogan {
@@ -576,6 +581,7 @@
 }
 
 .event__list {
+  z-index: 1;
   display: flex;
   gap: 4px;
   margin: 0;
@@ -627,6 +633,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   justify-content: space-between;
   height: 270px;
   margin-bottom: 16px;
@@ -634,13 +641,25 @@
   border-radius: 8px;
 }
 
-/* .event__card:nth-of-type(1) .event__card-body {
-  background: url("../../img/poster-img-8.png") no-repeat center center / cover;
+.event__card-body::after {
+  z-index: 0;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(
+    161.01deg,
+    rgba(0, 0, 0, 0.5025) 12.8%,
+    rgba(0, 0, 0, 0.75) 76.56%
+  );
 }
 
-.event__card:nth-of-type(2) .event__card-body {
-  background: url("../../img/poster-img-9.png") no-repeat center center / cover;
-} */
+.event__heading-link {
+  color: inherit;
+  text-decoration: none;
+}
 
 .event__heading {
   max-width: 350px;

@@ -197,12 +197,6 @@
     font-size: 14px;
   }
 
-  .view-svg path,
-  .like-svg path,
-  .bookmark-svg path {
-    fill: var(--color-text-red);
-  }
-
   .appearance__caption-text {
     margin: 0;
     display: flex;

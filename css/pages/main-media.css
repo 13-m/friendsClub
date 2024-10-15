@@ -189,6 +189,10 @@
     gap: 12px;
   }
 
+  .news__card-item:nth-child(1) .news__card-link {
+    position: relative;
+  }
+
   .news__card-img {
     position: relative;
   }
@@ -215,7 +219,7 @@
     font-size: 12px;
   }
 
-  .card-item:nth-child(n + 2) .news__card-img,
+  .card-item:nth-child(n + 2) .news__card-link,
   .card-item:nth-child(n + 2) .article__card-img {
     position: absolute;
     width: 180px;

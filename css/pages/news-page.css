@@ -53,14 +53,6 @@
   background-color: #767676;
 }
 
-.search-svg path {
-  fill: #ababab;
-}
-
-.down-svg path {
-  fill: #e0e0e0;
-}
-
 .form__input {
   padding: 10px 0;
   border: none;
@@ -103,10 +95,17 @@
 }
 
 .news__item {
+  position: relative;
   width: 47%;
 }
 
 .news__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
   text-decoration: none;
 }
 
@@ -193,12 +192,6 @@
   gap: 4px;
 }
 
-.view-svg path,
-.like-svg path,
-.bookmark-svg path {
-  fill: #ababab;
-}
-
 .news__bookmark {
 }
 
@@ -245,12 +238,4 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-
-.pagination-prev svg path {
-  fill: #ababab;
-}
-
-.pagination-next svg path {
-  fill: #ababab;
 }

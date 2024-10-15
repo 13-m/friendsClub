@@ -67,10 +67,6 @@ body.lock-scroll {
   height: 36px;
 }
 
-.close-svg path {
-  fill: #ababab;
-}
-
 #popup-file-input {
   position: absolute;
   top: 0;

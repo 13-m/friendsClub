@@ -233,18 +233,6 @@ button {
   text-decoration: none;
 }
 
-.tooltipMenu__link svg {
-  display: block;
-  width: 20px;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  fill: white;
-}
-
-.tooltipMenu__link svg path {
-  fill: #ababab;
-}
-
 .tooltipMenu.tooltip-open {
   visibility: visible;
 }
@@ -605,9 +593,6 @@ button {
   }
   .tooltipMenu__list .tooltipMenu__item {
     padding: 0;
-  }
-  .tooltipMenu__link svg path {
-    fill: #d8481a;
   }
 
   .tooltipMenu__list {

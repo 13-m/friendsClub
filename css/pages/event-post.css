@@ -54,10 +54,6 @@ img {
   aspect-ratio: 1 / 1;
 }
 
-.back-svg path {
-  fill: #ababab;
-}
-
 .post__head {
   display: flex;
   flex-direction: row;
@@ -91,20 +87,12 @@ img {
   cursor: pointer;
 }
 
-.post__btn path {
-  fill: #fff;
-}
-
 .post__place {
   display: flex;
   flex-direction: row;
   gap: 5px;
   align-items: center;
   color: var(--color-text-red);
-}
-
-.post__place path {
-  fill: var(--color-text-red);
 }
 
 .post__wrapp {
@@ -120,10 +108,6 @@ img {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.post__info path {
-  fill: var(--color-text-red);
 }
 
 .calendar-svg {
@@ -157,10 +141,6 @@ img {
   display: flex;
   flex-direction: row;
   gap: 24px;
-}
-
-.event__picture-caption path {
-  fill: var(--color-text-red);
 }
 
 .wrapp {
@@ -325,10 +305,6 @@ img {
   gap: 8px;
   margin: 0;
   margin-bottom: 20px;
-}
-
-.about__title path {
-  fill: var(--color-text-red);
 }
 
 .about__text {

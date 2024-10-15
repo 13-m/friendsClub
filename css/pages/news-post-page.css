@@ -26,10 +26,6 @@
   aspect-ratio: 1 / 1;
 }
 
-.back-svg path {
-  fill: #ababab;
-}
-
 .post__body-wrapp {
   border-radius: 8px;
   background-color: #fff;
@@ -147,10 +143,6 @@ img {
   margin: 0;
 }
 
-.post__stat path {
-  fill: var(--color-text-red);
-}
-
 .post__stat {
   display: flex;
   flex-direction: row;
@@ -263,11 +255,4 @@ img {
   border: none;
   border-radius: 8px;
   background-color: #f0f0f0;
-}
-
-.post__btn path {
-  fill: #5b5b5b;
-}
-
-.awards-svg path {
 }
